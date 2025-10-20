@@ -1,0 +1,130 @@
+\documentclass[12pt,a4paper,oneside]{report}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{hyperref}
+\usepackage{cite}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{listings}
+\usepackage{xcolor}
+
+% Page geometry
+\geometry{
+    left=3cm,
+    right=2.5cm,
+    top=2.5cm,
+    bottom=2.5cm
+}
+
+% Line spacing
+\onehalfspacing
+
+% Header and footer
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\leftmark}
+\fancyhead[R]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% Hyperref settings
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+    citecolor=blue,
+    pdftitle={Master Thesis},
+    pdfauthor={Your Name}
+}
+
+% Code listing settings
+\lstset{
+    basicstyle=\ttfamily\small,
+    breaklines=true,
+    frame=single,
+    numbers=left,
+    numberstyle=\tiny,
+    keywordstyle=\color{blue},
+    commentstyle=\color{green!50!black},
+    stringstyle=\color{red}
+}
+
+% Document information
+\title{Master Thesis Title}
+\author{Your Name}
+\date{\today}
+
+\begin{document}
+
+% Title page
+\begin{titlepage}
+    \centering
+    \vspace*{2cm}
+    
+    {\huge\bfseries Master Thesis Title\par}
+    \vspace{2cm}
+    
+    {\Large\itshape Your Name\par}
+    \vspace{1cm}
+    
+    {\large Supervisor: Dr. Supervisor Name\par}
+    \vspace{2cm}
+    
+    {\large A thesis submitted in partial fulfillment of the requirements\\
+    for the degree of Master of Science\par}
+    \vspace{1cm}
+    
+    {\large Department Name\\
+    University Name\par}
+    \vspace{1cm}
+    
+    {\large \today\par}
+\end{titlepage}
+
+% Abstract
+\begin{abstract}
+This is the abstract of the thesis. It should provide a brief summary of the research, including the problem statement, methodology, key findings, and conclusions. The abstract typically ranges from 150-300 words.
+\end{abstract}
+
+% Acknowledgments
+\chapter*{Acknowledgments}
+\addcontentsline{toc}{chapter}{Acknowledgments}
+I would like to thank my supervisor, colleagues, and family for their support during this research.
+
+% Table of contents
+\tableofcontents
+
+% List of figures
+\listoffigures
+\addcontentsline{toc}{chapter}{List of Figures}
+
+% List of tables
+\listoftables
+\addcontentsline{toc}{chapter}{List of Tables}
+
+% Main content
+\include{chapters/01-introduction}
+\include{chapters/02-literature-review}
+\include{chapters/03-methodology}
+\include{chapters/04-results}
+\include{chapters/05-discussion}
+\include{chapters/06-conclusion}
+
+% Bibliography
+\bibliographystyle{plain}
+\bibliography{references}
+\addcontentsline{toc}{chapter}{Bibliography}
+
+% Appendices
+\appendix
+\include{appendices/appendix-a}
+
+\end{document}
