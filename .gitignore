@@ -1,0 +1,53 @@
+# LaTeX auxiliary files
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.out
+*.toc
+*.fmt
+*.fot
+*.cb
+*.cb2
+.*.lb
+
+# LaTeX intermediate files
+*.dvi
+*.xdv
+*-converted-to.*
+
+# Bibliography auxiliary files
+*.bbl
+*.bcf
+*.blg
+*-blx.aux
+*-blx.bib
+*.run.xml
+
+# Build tool auxiliary files
+*.fdb_latexmk
+*.synctex
+*.synctex(busy)
+*.synctex.gz
+*.synctex.gz(busy)
+*.pdfsync
+
+# Build directories
+build/
+out/
+
+# Generated PDFs (comment out if you want to track PDFs)
+# *.pdf
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# Editor specific files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+*.bak
