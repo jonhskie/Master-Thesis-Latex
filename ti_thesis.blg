@@ -1,15 +1,15 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
 [0] Config.pm:310> INFO - Logfile is 'ti_thesis.blg'
-[69] biber:340> INFO - === Mon Oct 20, 2025, 23:59:09
+[70] biber:340> INFO - === Tue Oct 21, 2025, 01:48:13
 [82] Biber.pm:419> INFO - Reading 'ti_thesis.bcf'
-[134] Biber.pm:979> INFO - Found 25 citekeys in bib section 0
+[133] Biber.pm:979> INFO - Found 25 citekeys in bib section 0
 [144] Biber.pm:4419> INFO - Processing section 0
 [152] Biber.pm:4610> INFO - Looking for bibtex file 'literatur.bib' for section 0
 [153] bibtex.pm:1713> INFO - LaTeX decoding ...
-[169] bibtex.pm:1519> INFO - Found BibTeX data source 'literatur.bib'
-[311] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[311] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[311] Biber.pm:4239> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-US'
-[312] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
-[327] bbl.pm:660> INFO - Writing 'ti_thesis.bbl' with encoding 'UTF-8'
-[334] bbl.pm:763> INFO - Output to ti_thesis.bbl
+[176] bibtex.pm:1519> INFO - Found BibTeX data source 'literatur.bib'
+[326] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[326] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[326] Biber.pm:4239> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-US'
+[326] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[345] bbl.pm:660> INFO - Writing 'ti_thesis.bbl' with encoding 'UTF-8'
+[352] bbl.pm:763> INFO - Output to ti_thesis.bbl

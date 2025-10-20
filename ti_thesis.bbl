@@ -19,57 +19,82 @@
 
 \refsection{0}
   \datalist[entry]{anyt/global//global/global}
-    \entry{Alnowaiser2023}{article}{}
-      \true{moreauthor}
-      \true{morelabelname}
-      \name{author}{1}{}{%
-        {{hash=e84d29eee5af34b4322ee409b28637ac}{%
+    \entry{AA23}{article}{}
+      \name{author}{2}{}{%
+        {{hash=63e8f9affc68257d38a51c2ad10f8fa5}{%
            family={Alnowaiser},
            familyi={A\bibinitperiod},
-           given={Author},
-           giveni={A\bibinitperiod}}}%
-      }
-      \strng{namehash}{d3a12facb5bc3a591f7d146502017e96}
-      \strng{fullhash}{d3a12facb5bc3a591f7d146502017e96}
-      \strng{bibnamehash}{d3a12facb5bc3a591f7d146502017e96}
-      \strng{authorbibnamehash}{d3a12facb5bc3a591f7d146502017e96}
-      \strng{authornamehash}{d3a12facb5bc3a591f7d146502017e96}
-      \strng{authorfullhash}{d3a12facb5bc3a591f7d146502017e96}
-      \field{labelalpha}{Aln+23}
-      \field{sortinit}{A}
-      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Journal/Conference}
-      \field{note}{Update with full citation}
-      \field{title}{Digital Twins: Definitions and Concepts}
-      \field{year}{2023}
-    \endentry
-    \entry{Araujo2023}{article}{}
-      \true{moreauthor}
-      \true{morelabelname}
-      \name{author}{1}{}{%
-        {{hash=e6bd0b08978950e93a72eed11a20ff40}{%
-           family={Araújo},
+           given={K.\bibnamedelimi K.},
+           giveni={K\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=f301202b9239e0ffb60a5f0e1b438b80}{%
+           family={Ahmed},
            familyi={A\bibinitperiod},
-           given={Author},
-           giveni={A\bibinitperiod}}}%
+           given={M.\bibnamedelimi A.},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
       }
-      \strng{namehash}{b65a5585a436288e170cc742893ba7de}
-      \strng{fullhash}{b65a5585a436288e170cc742893ba7de}
-      \strng{bibnamehash}{b65a5585a436288e170cc742893ba7de}
-      \strng{authorbibnamehash}{b65a5585a436288e170cc742893ba7de}
-      \strng{authornamehash}{b65a5585a436288e170cc742893ba7de}
-      \strng{authorfullhash}{b65a5585a436288e170cc742893ba7de}
-      \field{labelalpha}{Ara+23}
+      \strng{namehash}{ad805f93cabba91eef0cb1fd7148c0e3}
+      \strng{fullhash}{ad805f93cabba91eef0cb1fd7148c0e3}
+      \strng{bibnamehash}{ad805f93cabba91eef0cb1fd7148c0e3}
+      \strng{authorbibnamehash}{ad805f93cabba91eef0cb1fd7148c0e3}
+      \strng{authornamehash}{ad805f93cabba91eef0cb1fd7148c0e3}
+      \strng{authorfullhash}{ad805f93cabba91eef0cb1fd7148c0e3}
+      \field{labelalpha}{AA23}
       \field{sortinit}{A}
       \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Journal/Conference}
-      \field{note}{Update with full citation}
-      \field{title}{Validation Challenges for Robotic and Autonomous Systems}
+      \field{journaltitle}{Arabian Journal for Science and Engineering}
+      \field{number}{2}
+      \field{title}{Digital Twin: Current Research Trends and Future Directions}
+      \field{volume}{48}
       \field{year}{2023}
+      \field{pages}{1075\bibrangedash 1095}
+      \range{pages}{21}
+    \endentry
+    \entry{AMV23}{article}{}
+      \name{author}{3}{}{%
+        {{hash=232b0d6930c9ed000a95bd1f597efd1b}{%
+           family={Araujo},
+           familyi={A\bibinitperiod},
+           given={Hugo},
+           giveni={H\bibinitperiod}}}%
+        {{hash=427863b5f96f900b7ad7d195ed42a828}{%
+           family={Mousavi},
+           familyi={M\bibinitperiod},
+           given={Mohammad\bibnamedelima Reza},
+           giveni={M\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=2d464e4969bfac360060328c0ec4430e}{%
+           family={Varshosaz},
+           familyi={V\bibinitperiod},
+           given={Mahsa},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{ae8f0709843b592e8c1fbefe03a4d297}
+      \strng{fullhash}{ae8f0709843b592e8c1fbefe03a4d297}
+      \strng{bibnamehash}{ae8f0709843b592e8c1fbefe03a4d297}
+      \strng{authorbibnamehash}{ae8f0709843b592e8c1fbefe03a4d297}
+      \strng{authornamehash}{ae8f0709843b592e8c1fbefe03a4d297}
+      \strng{authorfullhash}{ae8f0709843b592e8c1fbefe03a4d297}
+      \field{labelalpha}{AMV23}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1049-331X}
+      \field{journaltitle}{ACM Transactions on Software Engineering and Methodology}
+      \field{number}{2}
+      \field{title}{Testing, Validation, and Verification of Robotic and Autonomous Systems: A Systematic Review}
+      \field{volume}{32}
+      \field{year}{2023}
+      \verb{doi}
+      \verb 10.1145/3542945
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/3542945
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/3542945
+      \endverb
     \endentry
     \entry{Babic2020}{inproceedings}{}
       \true{moreauthor}
@@ -201,31 +226,47 @@
       \field{title}{Radar Target Simulator for End-to-End Validation}
       \field{year}{2021}
     \endentry
-    \entry{Drechsler2022}{inproceedings}{}
+    \entry{DSR22}{article}{}
       \true{moreauthor}
       \true{morelabelname}
-      \name{author}{1}{}{%
-        {{hash=8b44341f118260264a630ff8d3d69318}{%
+      \name{author}{3}{}{%
+        {{hash=cebca3dcc8e5e4edf7c429f073d33110}{%
            family={Drechsler},
            familyi={D\bibinitperiod},
-           given={Author},
-           giveni={A\bibinitperiod}}}%
+           given={Maikol},
+           giveni={M\bibinitperiod}}}%
+        {{hash=abcb73ea883599855ed1c5bcfe186547}{%
+           family={Sharma},
+           familyi={S\bibinitperiod},
+           given={Varun},
+           giveni={V\bibinitperiod}}}%
+        {{hash=1837205584ba8934b0f1ac98259be7d0}{%
+           family={Reway},
+           familyi={R\bibinitperiod},
+           given={Fabio},
+           giveni={F\bibinitperiod}}}%
       }
-      \strng{namehash}{b690feeb64b4b22b45fd8f31d9f16aa1}
-      \strng{fullhash}{b690feeb64b4b22b45fd8f31d9f16aa1}
-      \strng{bibnamehash}{b690feeb64b4b22b45fd8f31d9f16aa1}
-      \strng{authorbibnamehash}{b690feeb64b4b22b45fd8f31d9f16aa1}
-      \strng{authornamehash}{b690feeb64b4b22b45fd8f31d9f16aa1}
-      \strng{authorfullhash}{b690feeb64b4b22b45fd8f31d9f16aa1}
-      \field{labelalpha}{Dre+22}
+      \strng{namehash}{9e1e1e5f92a5aeae6efc1ef13d05d02d}
+      \strng{fullhash}{9e1e1e5f92a5aeae6efc1ef13d05d02d}
+      \strng{bibnamehash}{9e1e1e5f92a5aeae6efc1ef13d05d02d}
+      \strng{authorbibnamehash}{9e1e1e5f92a5aeae6efc1ef13d05d02d}
+      \strng{authornamehash}{9e1e1e5f92a5aeae6efc1ef13d05d02d}
+      \strng{authorfullhash}{9e1e1e5f92a5aeae6efc1ef13d05d02d}
+      \field{labelalpha}{DSR+22}
       \field{sortinit}{D}
       \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{booktitle}{Proceedings}
-      \field{note}{Update with full citation}
-      \field{title}{DynViL: Dynamic Vehicle-in-the-Loop using CARLA}
+      \field{journaltitle}{SAE International Journal of Connected and Automated Vehicles}
+      \field{month}{6}
+      \field{title}{Dynamic Vehicle-in-the-Loop: A Novel Method for Testing Automated Driving Functions}
+      \field{volume}{5}
       \field{year}{2022}
+      \field{pages}{1\bibrangedash 14}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.4271/12-05-04-0029
+      \endverb
     \endentry
     \entry{Grieves2017}{misc}{}
       \name{author}{1}{}{%
@@ -250,31 +291,34 @@
       \field{title}{Origins of the Digital Twin Concept}
       \field{year}{2017}
     \endentry
-    \entry{Hu2005}{inproceedings}{}
-      \true{moreauthor}
-      \true{morelabelname}
+    \entry{Hu05}{inproceedings}{}
       \name{author}{1}{}{%
-        {{hash=c37bdfcaefcd8297bb55694c37f50b63}{%
+        {{hash=4f0a16da447808fc8b84cec1c86d6f64}{%
            family={Hu},
            familyi={H\bibinitperiod},
-           given={Author},
-           giveni={A\bibinitperiod}}}%
+           given={Xiaolin},
+           giveni={X\bibinitperiod}}}%
       }
-      \strng{namehash}{55a04a455b0fdc569028c8a883f67790}
-      \strng{fullhash}{55a04a455b0fdc569028c8a883f67790}
-      \strng{bibnamehash}{55a04a455b0fdc569028c8a883f67790}
-      \strng{authorbibnamehash}{55a04a455b0fdc569028c8a883f67790}
-      \strng{authornamehash}{55a04a455b0fdc569028c8a883f67790}
-      \strng{authorfullhash}{55a04a455b0fdc569028c8a883f67790}
-      \field{labelalpha}{Hu+05}
+      \strng{namehash}{4f0a16da447808fc8b84cec1c86d6f64}
+      \strng{fullhash}{4f0a16da447808fc8b84cec1c86d6f64}
+      \strng{bibnamehash}{4f0a16da447808fc8b84cec1c86d6f64}
+      \strng{authorbibnamehash}{4f0a16da447808fc8b84cec1c86d6f64}
+      \strng{authornamehash}{4f0a16da447808fc8b84cec1c86d6f64}
+      \strng{authorfullhash}{4f0a16da447808fc8b84cec1c86d6f64}
+      \field{labelalpha}{Hu05}
       \field{sortinit}{H}
       \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{booktitle}{Proceedings}
-      \field{note}{Update with full citation}
-      \field{title}{Robot-in-the-Loop Concept}
+      \field{booktitle}{2005 IEEE International Conference on Robotics and Automation}
+      \field{isbn}{0-7803-9178-0}
+      \field{title}{Applying robot-in-the-loop-simulation to mobile robot systems}
       \field{year}{2005}
+      \field{pages}{506\bibrangedash 513}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/ICAR.2005.1507456
+      \endverb
     \endentry
     \entry{Kwon2025}{article}{}
       \true{moreauthor}
@@ -354,32 +398,6 @@
       \field{title}{DT for Mobile Robot Design with CoppeliaSim}
       \field{year}{2021}
     \endentry
-    \entry{Makhataeva2020}{article}{}
-      \true{moreauthor}
-      \true{morelabelname}
-      \name{author}{1}{}{%
-        {{hash=50d98fcccd78a8ce8bc6e642508d7058}{%
-           family={Makhataeva},
-           familyi={M\bibinitperiod},
-           given={Author},
-           giveni={A\bibinitperiod}}}%
-      }
-      \strng{namehash}{f58c92f0fd57b05c46aa3e93a7a743b2}
-      \strng{fullhash}{f58c92f0fd57b05c46aa3e93a7a743b2}
-      \strng{bibnamehash}{f58c92f0fd57b05c46aa3e93a7a743b2}
-      \strng{authorbibnamehash}{f58c92f0fd57b05c46aa3e93a7a743b2}
-      \strng{authornamehash}{f58c92f0fd57b05c46aa3e93a7a743b2}
-      \strng{authorfullhash}{f58c92f0fd57b05c46aa3e93a7a743b2}
-      \field{labelalpha}{Mak+20}
-      \field{sortinit}{M}
-      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Journal/Conference}
-      \field{note}{Update with full citation}
-      \field{title}{AR for Robotics: A Survey}
-      \field{year}{2020}
-    \endentry
     \entry{Marques2024}{article}{}
       \true{moreauthor}
       \true{morelabelname}
@@ -432,34 +450,69 @@
       \field{title}{Hardware-in-the-Loop for Mechatronics}
       \field{year}{2022}
     \endentry
-    \entry{Milgram1994}{inproceedings}{}
+    \entry{MK94}{article}{}
       \name{author}{2}{}{%
-        {{hash=d57f1b339e2089ac1411a8c32cef1cb7}{%
+        {{hash=3d361485c7612c1cbafda0dc9aace152}{%
            family={Milgram},
            familyi={M\bibinitperiod},
-           given={Paul},
+           given={P.},
            giveni={P\bibinitperiod}}}%
-        {{hash=510bc74af0101eb8fa9ec3ddf4db5b2c}{%
+        {{hash=87a4326bc6fbbe229b6ccb54d636b39b}{%
            family={Kishino},
            familyi={K\bibinitperiod},
-           given={Fumio},
+           given={F.},
            giveni={F\bibinitperiod}}}%
       }
-      \strng{namehash}{647ca6082ff6db4a282769334a54c7d3}
-      \strng{fullhash}{647ca6082ff6db4a282769334a54c7d3}
-      \strng{bibnamehash}{647ca6082ff6db4a282769334a54c7d3}
-      \strng{authorbibnamehash}{647ca6082ff6db4a282769334a54c7d3}
-      \strng{authornamehash}{647ca6082ff6db4a282769334a54c7d3}
-      \strng{authorfullhash}{647ca6082ff6db4a282769334a54c7d3}
+      \strng{namehash}{2d62584fbd8536305fb49cd42bfaa096}
+      \strng{fullhash}{2d62584fbd8536305fb49cd42bfaa096}
+      \strng{bibnamehash}{2d62584fbd8536305fb49cd42bfaa096}
+      \strng{authorbibnamehash}{2d62584fbd8536305fb49cd42bfaa096}
+      \strng{authornamehash}{2d62584fbd8536305fb49cd42bfaa096}
+      \strng{authorfullhash}{2d62584fbd8536305fb49cd42bfaa096}
       \field{labelalpha}{MK94}
       \field{sortinit}{M}
       \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{booktitle}{Proceedings}
-      \field{note}{Update with full citation}
+      \field{journaltitle}{IEICE Transactions on Information Systems}
+      \field{number}{12}
       \field{title}{A Taxonomy of Mixed Reality Visual Displays}
+      \field{volume}{E77-D}
       \field{year}{1994}
+      \field{pages}{1321\bibrangedash 1329}
+      \range{pages}{9}
+    \endentry
+    \entry{MV20}{article}{}
+      \name{author}{2}{}{%
+        {{hash=81b933a1badb798b8554f1c9b6b88c53}{%
+           family={Makhataeva},
+           familyi={M\bibinitperiod},
+           given={Z.},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=aa205deffacea396eb3f62379fd0ef05}{%
+           family={Varol},
+           familyi={V\bibinitperiod},
+           given={H.\bibnamedelimi A.},
+           giveni={H\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{0daf6dede512ffbbc1a9c43be2adfeaf}
+      \strng{fullhash}{0daf6dede512ffbbc1a9c43be2adfeaf}
+      \strng{bibnamehash}{0daf6dede512ffbbc1a9c43be2adfeaf}
+      \strng{authorbibnamehash}{0daf6dede512ffbbc1a9c43be2adfeaf}
+      \strng{authornamehash}{0daf6dede512ffbbc1a9c43be2adfeaf}
+      \strng{authorfullhash}{0daf6dede512ffbbc1a9c43be2adfeaf}
+      \field{labelalpha}{MV20}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Robotics}
+      \field{number}{2}
+      \field{title}{Augmented Reality for Robotics: A Review}
+      \field{volume}{9}
+      \field{year}{2020}
+      \field{pages}{21}
+      \range{pages}{1}
     \endentry
     \entry{Perez2020}{inproceedings}{}
       \true{moreauthor}
