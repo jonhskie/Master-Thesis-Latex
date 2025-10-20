@@ -1,0 +1,71 @@
+\documentclass[
+	twoside,
+%	draft,
+	fontsize=12pt,
+	headsepline,
+	cleardoublepage=empty,
+	numbers=noenddot,
+	bibliography=totoc,
+]{scrbook}
+
+\usepackage{ti}
+
+% customize name, title, ...
+\renewcommand{\thesisAuthor}{Mira Miranda}
+\renewcommand{\thesisTitle}{Lorem ipsum Dolor sit amet consetetur\\ Sadips cing Elitr sed Diamnonumy}
+\renewcommand{\thesisDate}{Osnabrück, Mai 2019}
+\renewcommand{\thesisId}{B~00}
+\renewcommand{\thesisType}{Bachelorarbeit} % Bachelorarbeit/Masterarbeit/Seminararbeit 
+\renewcommand{\thesisCourse}{Naturwissenschaftliche Informatik}
+\renewcommand{\thesisSupervisor}{Martina Musterfrau\\ Martin Mustermann}
+
+% hyphenation
+\hyphenation{
+Pro-zes-sor-e-le-men-te
+Pro-zes-sor-e-le-men-ten
+Pro-zes-sor-e-le-men-tes
+}
+
+\begin{document}
+\pagenumbering{roman}
+\include{chapters/deckblatt}
+\include{chapters/abstract}  
+
+\tableofcontents
+
+%% content
+\cleardoublepage
+\pagenumbering{arabic}
+
+\include{chapters/einleitung}
+% ...
+
+%% apendix
+\listoffigures
+\lstlistoflistings
+%\cleardoublepage
+%\addcontentsline{toc}{chapter}{Literaturverzeichnis}
+%\bibliographystyle{alpha}
+%\bibliographystyle{geralpha} % benoetigt packet bibgerm
+%\bibliography{literatur}
+\printbibliography
+
+%%
+\cleardoublepage
+\thispagestyle{empty}
+\subsection*{Erklärung zur selbstständigen Abfassung der [Bachelor-/Master-/Seminararbeit]}
+
+\textbf{Erklärung bitte den jeweiligen Anforderungen entsprechend anpassen}
+
+Ich versichere, dass ich die eingereichte Bachelorarbeit selbstständig und ohne unerlaubte Hilfe verfasst habe. Anderer als der von mir angegebenen Hilfsmittel und Schriften habe ich mich nicht bedient. Alle wörtlich oder sinngemäß den Schriften anderer Autoren entnommenen Stellen habe ich kenntlich gemacht.
+
+
+\thesisDate
+
+~
+
+~
+
+\thesisAuthor
+
+\end{document}

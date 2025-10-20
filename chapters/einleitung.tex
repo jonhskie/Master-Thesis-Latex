@@ -1,0 +1,228 @@
+\chapter{Einleitung} \label{kap:einleitung}
+Diese Vorlage soll es den Studierenden in der Arbeitsgruppe Technische Informatik
+erleichtern, die Ausarbeitung ihrer Arbeit nach den geltenden Vorgaben
+in \LaTeX\ anzufertigen.
+
+Im Folgenden werden die Vorgaben näher erläutert und einige Tipps gegeben,
+wie häufig auftretende Fehler vermieden werden können. 
+Hierzu sind natürlich jederzeit Anregungen und Verbesserungsvorschläge
+erwünscht.
+
+\section{Struktur der Arbeit}
+Die Arbeit untergliedert sich in drei Teile, die sogenannte Titelei,
+den Textteil und den Anhang. Listet man alle vorkommenden Komponenten
+in der Reihenfolge ihrer Anordnung auf, so ergibt sich folgende
+Aufstellung \cite{GuKa92}:
+\begin{description}
+  \item[Titelei:] ~
+  \begin{itemize}
+    \item Haupttitel (Deckblatt)
+    \item Zusammenfassung (Abstract)
+    \item Inhaltsverzeichnis
+  \end{itemize}
+  \item[Textteil:] ~
+  \begin{itemize}
+    \item Textteil
+  \end{itemize}
+  \item[Anhangteil:] ~
+  \begin{itemize}
+    \item Gesammelte Anmerkungen (Anhang)
+    \item Abbildungs-, Tabellen-, Abkürzungs-, Symbolverzeichnis
+    \item Literaturverzeichnis
+    \item Glossar
+    \item Register
+    \item Nachtrag oder Schlusswort
+    \item Versicherungserklärung
+  \end{itemize}
+\end{description}
+Dabei müssen nicht alle in der Liste aufgeführten Teile in einer Arbeit vorhanden sein.
+Standardmäßig beginnt jeder der genannten Teile auf einer neuen rechten Seite.
+Gezählt wird die Pagina (Seitenzahl) bei 1 beginnend, und zwar für die Titelei
+und den Textteil getrennt, während der Anhang mit fortlaufenden Seitenzahlen hinter
+dem Textteil folgt. Für die Titelei werden römische Seitenzahlen,
+für den Text- und Anhangteil arabische benutzt.
+
+\section{Text}
+Um den Text der Arbeit zu strukturieren, werden mehrere Sätze zu einem Absatz
+zusammengefasst und mehrere Absätze mit einer Überschrift versehen.
+Damit der Leser weiß, was im nächsten Abschnitt behandelt wird,
+folgt auf jede Überschrift mindestens ein Absatz.
+D.\,h.\@ auf eine Überschrift folgt niemals direkt eine weitere Überschrift
+bzw.\@ Unterüberschrift.
+
+Da der Text im Blocksatz gesetzt wird, wird ggf.\@ der Platz zwischen
+zwei Wörtern vergrößert.
+Dabei vergrößert \LaTeX\ den Platz nach einem Satz stärker,
+als den zwischen zwei Wörtern.
+Wenn Sie nun mitten in einem Satz einen Punkt vor einem Leerzeichen setzen,
+wie z.\,B.\@ bei Abkürzungen, soll dies ja nicht der Fall sein.
+Deswegen müssen Sie dies mit einem $\backslash$@ kennzeichnen
+(z.\,B.$\backslash$@ ).
+Bei Abkürzungen wird ein schmales Leerzeichen ($\backslash$,) gesetzt, 
+um u.\,a.\@ das Auseinanderziehen, bzw.\@ Umbrechen innerhalb des Abkürzung 
+zu verhindern (z.$\backslash$,B.).
+
+Bei einem Zeilenumbruch kann es natürlich auch vorkommen, dass ein Wort
+getrennt werden muss. Falls \LaTeX\ ein Wort falsch trennt, können Sie dies
+z.\,B.\@ durch feste mögliche Trennzeichen ($\backslash$-) direkt in dem Wort
+korrigieren oder indem Sie alle mögliche Trennungen vorher \LaTeX\
+mit dem Befehl $\backslash$hyphenation\{\} bekannt machen.
+Verweise auf eine Web-Seite sollten mit dem Befehl $\backslash$url\{<text>\} gekennzeichnet werden,
+damit diese u.\,a.\@ passend umgebrochen werden (z.\,B.\@ \url{https://www.inf.uos.de/arbeitsgruppen/technische_informatik.html}).
+
+Ein Absatz wird in \LaTeX\ bei der Eingabe durch eine Leerzeile gekennzeichnet.
+Dies ist vor allem bei eingebetteten Objekten, wie z.\,B.\@ Formeln, zu beachten.
+D.\,h.\@ wenn eine Formel in einem Absatz steht, sind vor bzw.\@ nach der Formel
+nur Leerzeilen einzufügen, wenn hier ein neuer Absatz beginnt.
+Feste Zeilenumbrüche sind generell verboten.
+
+\minisec{Minisec}
+Zur weiteren Gliederung kann ein Abschnitt mit den Befehlen $\backslash$subsection\{\} und $\backslash$subsubsection\{\} weiter unterteilt werden. Möchten Sie zur besseren Lesbarkeit Überschriften zu Textabschnitten hinzufügen, die jedoch nicht im Inhaltsverzeichnis aufgeführt werden sollen, so können Sie den Befehl $\backslash$minisec\{\} verwenden.
+
+
+\section{Formeln}
+Sowohl in Formeln als auch im Text werden Variablen kursiv gesetzt.
+Da \LaTeX\ dies innerhalb der Formelumgebung automatisch macht,
+sind Variablen auch im Text entsprechend in einer Formelumgebung zu setzen.
+Im Gegensatz zu den Variablen werden Einheiten normal gesetzt.
+Um diese fest an den Wert zu binden und gleichzeitig einen nicht zu
+großen Abstand zwischen Wert und Einheit zu erzeugen, sind diese
+mit dem Befehl $\backslash$unit[<Wert>]\{<Einheit>\}
+(z.\,B.\@ \unit[3]{m}) zu setzen.
+Dies funktioniert im normalen Text, wie auch in der Formelumgebung.
+Weiterhin ist es möglich, Einheiten auch als Bruch zu setzen
+(z.\,B.\@ mit $\backslash$nicefrac\{<Zähler>\}\{<Nenner>\}: \nicefrac{m}{s},
+bzw.\@ $\backslash$unitfrac[<Wert>]\{<Zähler>\}\{<Nenner>\}:
+\unitfrac[30]{m}{s}).
+\begin{equation} \label{eq:beispiel}
+  I = I_S \cdot \left( \exph{\left( \frac{U}{U_T}\right)} - 1\right) = \unit[3,1415]{A}
+\end{equation}
+
+\section{Grafiken}
+\begin{figure}[hbt]
+  \begin{center}
+  \includegraphics[width=0.5\columnwidth]{images/Skizze}
+  \caption{Ein kleines Gespenst als Beispiel für eine Abbildung \cite{GuKa92}}
+  \label{fig:Skizze}
+  \end{center}
+\end{figure}
+Grafiken werden am besten, wie in Abbildung \ref{fig:Skizze}, als PDF-Grafik eingebunden.
+Die Schriftart sollte nach Möglichkeit für alle Grafiken einheitliche sein. Die Schriftgröße sollte idealerweise der Schriftgröße im Fließtext entsprechen. Wenn dies nicht möglich ist sollten Sie auf jeden Fall sicherstellen, dass der Text in Grafiken nicht deutlich größer als der Fließtext ist und dass er lesbar, also nicht zu klein gesetzt ist.
+
+\section{Grafiken mit Ti\textit{k}Z}
+Eine elegante Möglichkeit, Grafiken zu erstellen und einzubinden, bietet das Paket Ti\textit{k}Z. Hiermit können Grafiken, Schaltpläne wie in Abbildung \ref{fig:Insulated-gate-bipolar-transistor-equivalent-circuit}, 
+Ablaufpläne, Diagramme usw. direkt im Dokument erstellt werden. Ein weiterer Vorteil von Ti\textit{k}Z-Grafiken
+ist die Skalierbarkeit innerhalb von Dokumenten, sodass keine unschönen Pixelgrafiken entstehen. Viele hilfreiche Beispiele finden sie im Netz oder direkt auf 
+\url{http://www.texample.net/}.
+MATALAB Diagramme können mit Hilfe der \texttt{MATLAB}-Funktion
+\texttt{matlab2tikz} direkt zu Ti\textit{k}Z Grafiken exportiert werden.
+
+\begin{figure}[hbt]
+  \begin{center}
+  \input{images/bipolarEquivalent}
+  \caption{Ti\textit{k}Z-Beispiel einer äquivalenten Bipolarschaltung}
+  \label{fig:Insulated-gate-bipolar-transistor-equivalent-circuit}
+  \end{center}
+\end{figure}
+
+
+\section{Timing-Diagramme}
+Um Timing-Diagramme darzustellen kann das Package Tikz-timing verwendet werden. Die Dokumentation mit vielen Möglichkeiten zur Darstellung finden sie unter \url{http://texdoc.net/texmf-dist/doc/latex/tikz-timing/tikz-timing.pdf}. \\
+Ein Beispiel ist in Abbildung \ref{fig:ub_slave_burst_write} dargestellt.
+
+\begin{figure}[hbt]
+ \centering
+  \caption{[User-Bus Slave] Burst write transaction using CS0}
+
+\begin{tikztimingtable}[timing/slope = 0.2, timing/coldist=5pt,xscale=2.05,yscale=1.1,semithick]
+	UB\_S\_CLK &  [C] 18{C}\\
+	UB\_S\_RESET\_N	& 18H	\\
+	UB\_S\_ADR	&  2.25U 4D{addr} 2D{addr+4} 4D{addr+8} 2D{addr+C} 2D{addr+10}1.75U\\
+	UB\_S\_DATA\_RD	& 18U	\\
+	UB\_S\_DATA\_WR	& 2.25U 4D{d(0)} 2D{d(1)} 2U 2D{d(2)} 2D{d(3)} 2D{d(4)} 1.75U\\
+	UB\_S\_BE\_N	& 2.25U 14D{be\_n}  1.75U\\
+	UB\_S\_READY\_N	& 4.25H 4.25L 2H 5.75L 1.75H\\
+	UB\_S\_VALID\_N	& 2.25H 6L 2H 6L 1.75H	\\
+	UB\_S\_WR		& 2.25L 14H 1.75L\\
+	UB\_S\_RD		& 18L	\\
+	UB\_S\_BURST	& 2.25Z 12H 2L 1.75Z	\\
+	UB\_S\_POST\_WR	&  2.25Z 14H 1.75Z	\\
+	UB\_S\_PREF\_RD	&  2.25Z 14L 1.75Z	\\
+	UB\_S\_CS		&   2.25Z 14L 1.75Z\\
+\extracode
+\vertlines[help lines,opacity=0.3]{}
+\end{tikztimingtable}
+\label{fig:ub_slave_burst_write}
+\end{figure}
+
+
+\section{Tabellen}
+Tabellen können direkt im \LaTeX-Quellcode erstellt werden. Eine einfache Alternative bietet das Makro \texttt{Excel2LaTeX}, mit dem sich in \texttt{Excel} erstellte Tabellen einfach exportieren lassen. Das Layout der Tabelle muss anschließend in der Regel noch von Hand überarbeitet werden.
+
+\begin{table}[htb]
+  \begin{center}
+  \begin{tabular}{lll}
+  \toprule
+  \textbf{IEC-} & \textbf{Abstufungsfaktor} & \textbf{Toleranz} \\
+  \textbf{Normenreihe} & \textbf{Schrittfaktor} & \\
+  \midrule
+  E6  & 10\textsuperscript{1/6}  & $\pm$ 20\% \\
+  E12 & 10\textsuperscript{1/12} & $\pm$ 10\% \\
+  E24 & 10\textsuperscript{1/24} & $\pm$ 5\%  \\
+  \bottomrule
+  \end{tabular}
+  \caption{Beispiel für eine Tabelle.}
+  \label{tab:beispiel}
+  \end{center}
+\end{table}
+
+
+
+\section{Quellcode}
+Um Quellcode darzustellen, bietet sich das Paket Listings an, 
+welches durch die Verwendung eines anderen Fonts und das Hervorheben 
+der Syntax den Quellcode vom restlichen Text abhebt 
+(siehe~Listing~\ref{list:beispiel}). 
+Die Gestaltung der Listings-Umgebung kann dem jeweiligen 
+Verwendungszweck angepasst werden.
+\lstset{language=C, basicstyle=\footnotesize}
+\begin{lstlisting}[float=!ht, frame=tb, captionpos=b, caption={Beispiel zum Hindernisvermeiden.}, label={list:beispiel}]
+void obstacle_avoidance(int *motor0,int *motor1)
+{
+  int w0,w1,w2,sensleft,sensright,random;
+  w0=1; 
+  w1=2;
+  w2=3;
+
+  random=(50*(rand()%2));
+  sensleft =((w0*sens_get_reflected_value(0))+
+             (w1*sens_get_reflected_value(1))+
+             (w2*sens_get_reflected_value(2)))/(w0+w1+w2);
+  sensright=((w0*sens_get_reflected_value(5))+
+             (w1*sens_get_reflected_value(4))+
+             (w2*sens_get_reflected_value(3)))/(w0+w1+w2);
+
+  if(sensleft <= (440+random))
+  {
+    *motor1 = (-(sensleft/60));
+  }
+  else
+  {
+    *motor1 = (-7-(sensleft/60));
+  }
+  
+  if(sensright <= (440-random))
+  {
+    *motor0 = (-(sensright/60));
+  }
+  else
+  {
+    *motor0 = (-7-(sensright/60));
+  }
+} 
+\end{lstlisting}
+
+
+\section{Literaturreferenzen}
+Für ein möglichst einheitlich formatiertes und sortiertes Literaturverzeichnis kann \textsc{BibLa}\TeX\ verwendet werden. Dazu werden die einzelnen Referenzen in eine Datenbank-Datei (z.\,B.\@ literatur.bib) eingetragen, aus der die benötigten Einträge einheitlich formatiert und sortiert in eine
+Zwischendatei geschrieben und anschließend von \LaTeX\ auswertet werden. 
