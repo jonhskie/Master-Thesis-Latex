@@ -1,0 +1,85 @@
+\chapter{Background and Related Work}
+\label{chap:background}
+Your text on the fundamentals and a review of existing literature and work.
+
+\section{Robot-in-the-
+Loop-Testing}
+\label{sec:RitL}
+The validation and verification of modern Robotic and Autonomous Systems (RAS) is a significant challenge due to their inherent complexity \cite{Araujo2023}. This complexity arises from integrating many different fields, including software, mechanical, and electrical engineering \cite{Araujo2023}. A central difficulty is testing the connection between the system's software ("cyber") and its hardware ("physical") aspects at the same time \cite{Araujo2023}. To address this, the "X-in-the-Loop" (XitL) simulation paradigm acts as a crucial bridge, connecting the flexibility of pure software simulation with the high fidelity of full-scale physical testing \cite{Brayanov2019}.
+
+A foundational XitL method is Hardware-in-the-Loop (HIL) simulation, which is a critical technique for testing complex mechatronic products \cite{Mihalic2022, Brayanov2019}. The main principle of HIL is creating a closed loop between the real hardware being tested and a real-time computer simulation that represents the rest of the system or its operational environment \cite{Mihalic2022}. This setup effectively "tricks" the hardware into behaving as if it were operating in the complete, real system, allowing for thorough testing across a wide range of virtual scenarios \cite{Brayanov2019}. The primary reason for using HIL is to shorten development cycles and prevent costly or dangerous failures by making exhaustive testing possible before the system is deployed on the actual physical "plant" \cite{Mihalic2022}. Because of this, HIL is essential in safety-critical industries like automotive, aerospace, and robotics, where real-world testing can be too expensive, dangerous, or even impossible \cite{Brayanov2019}.
+
+Building on the HIL concept, Robot-in-the-Loop (RitL) simulation is a specialized paradigm where the hardware under test is a complete robotic system, such as an uncrewed vehicle \cite{Mihalic2022}. RitL is directly related to HIL, replacing parts of a pure simulation with the physical robot to increase the test's fidelity \cite{Hu2005}. As illustrated in Figure \ref{fig:ritl_concept}, a typical RitL configuration has the robot's real actuators operating in the physical world while its perception is fed by a simulated virtual environment \cite{Hu2005, Mihalic2022}. This creates a hybrid reality where, for instance, the robot might use "virtual sensors" to see objects in the simulation while using its real motors as HIL actuators to move physically \cite{Hu2005}. To keep the physical and virtual worlds synchronized, the real robot often has a "virtual counterpart" in the simulation whose state is updated as the physical robot moves and acts \cite{Hu2005}.
+
+\begin{figure}[h]
+\centering
+% \includegraphics[width=0.8\textwidth]{path/to/ritl_concept_diagram.png}
+\caption{Conceptual diagram of a Robot-in-the-Loop (RitL) simulation, showing the real robot interacting with a virtual environment. The real robot's actions affect its virtual counterpart, and the virtual environment provides sensor data back to the real robot.}
+\label{fig:ritl_concept}
+\end{figure}
+
+The main benefit of RitL is the ability to conduct repeatable testing of high-level software, like navigation algorithms, using the dynamics of real hardware \cite{Mihalic2022}. This avoids the cost, complexity, and danger of a full physical testbed \cite{Mihalic2022}. RitL is therefore invaluable for safely validating system performance in a lab. This is especially important for safety-critical applications or for testing in environments that are hard to replicate, such as a Mars rover mission or a large-scale robot swarm \cite{Hu2005, Mihalic2022}.
+
+
+
+The RitL paradigm has been widely applied to validate complex autonomous systems, especially in the automotive industry through Vehicle-in-the-Loop (VitL) testing. The "Dynamic Vehicle-in-the-Loop" (DynViL) architecture, for instance, integrates a real test vehicle with the high-fidelity CARLA simulator, which is built on the Unreal Engine \cite{Drechsler2022}. As shown in Figure \ref{fig:vitl_setup}, this approach allows a physical vehicle on an empty track to be stimulated by sensor data from a complex virtual world \cite{Drechsler2022}. This enables the safe and repeatable testing of automated driving functions in scenarios that would be dangerous to replicate physically \cite{Drechsler2022}. A similar "Vehicle-in-Virtual-Environment" (VVE) method also uses CARLA and the Unreal Engine to create a closed loop where the real vehicle's motion is tracked and reflected in the virtual world, allowing its control systems to react to simulated events \cite{Cao2023}.
+
+\begin{figure}[h]
+\centering
+% \includegraphics[width=0.9\textwidth]{path/to/vitl_setup_diagram.png}
+\caption{An example of a Vehicle-in-the-Loop (VitL) setup, illustrating a real car on a test track connected to a high-fidelity simulator like CARLA that generates virtual traffic and sensor data. Adapted from Drechsler et al. (2022) and Cao et al. (2023).}
+\label{fig:vitl_setup}
+\end{figure}
+
+These examples show a clear trend towards using powerful, game-engine-based simulators to test autonomous vehicles. This approach increases safety and efficiency, and it bridges the gap between pure simulation, which lacks real vehicle dynamics, and physical testing, which is often not repeatable \cite{Cao2023}. Furthermore, some frameworks extend this concept to directly stimulate the vehicle's sensors. For instance, a Radar Target Simulator (RTS) can feed artificial radar echoes from a virtual scene to the vehicle's real radar sensor, allowing for end-to-end validation of the entire perception and control pipeline \cite{Diewald2021}.
+
+
+The versatility of the X-in-the-Loop concept is shown by its application in other domains. In marine robotics, a VIL framework was developed to test the long-term autonomy of a robot swarm. In this system, a real Autonomous Surface Vehicle (ASV) interacts with many simulated underwater sensor nodes to validate complex cooperative behaviors without the high logistical cost of deploying a full physical swarm \cite{Babic2020}. In the aerospace domain, the RFlySim platform uses an FPGA-based HIL system to create a high-fidelity simulation for safely testing UAV autopilot systems in a lab, which reduces the need for expensive and risky outdoor flights \cite{Dai2021}.
+
+The evolution of these methods points towards an even more integrated future. This includes the introduction of "Scenario-in-the-Loop" (SciL) frameworks that aim to completely blur the lines between real and virtual testing \cite{Szalay2021}. These next-generation systems rely on creating comprehensive digital twins of the entire test environment and coordinating a mix of real and virtual objects to run complex, mixed-reality test scenarios \cite{Szalay2021}.
+
+\section{Digital Twins}
+\label{sec:DT}
+A key concept that underpins many modern "X-in-the-Loop" frameworks is the Digital Twin (DT). The DT serves as the virtual counterpart to a physical system, acting as a virtual copy that enables real-time monitoring and simulation \cite{Alnowaiser2023}. The core idea is to create a digital information model of a physical system that stays linked to it throughout its entire lifecycle \cite{Grieves2017}.
+
+This model, first called the "Information Mirroring Model," has three primary components: the physical product, its corresponding virtual model, and the data connection that links them \cite{Grieves2017, Alnowaiser2023}. A conceptual diagram of this structure is shown in Figure \ref{fig:dt_concept}. The virtual model is more than a simple geometric shape; it is often a complex simulation that can model a system's mechanical, electrical, and software properties \cite{Leng2021}. The data connection is bi-directional, allowing sensor data to flow from the real world to update the virtual model. In turn, the virtual model can send commands back to control or optimize the physical system \cite{Grieves2017, Leng2021}. This continuous, synchronized data exchange is the defining feature of a Digital Twin \cite{Alnowaiser2023}.
+
+\begin{figure}[h]
+\centering
+% \includegraphics[width=0.8\textwidth]{path/to/dt_concept_diagram.png}
+\caption{The foundational concept of a Digital Twin, illustrating the three core components: the physical entity, the virtual model, and the bi-directional data connection that links them. Adapted from Grieves et al. (2017).}
+\label{fig:dt_concept}
+\end{figure}
+
+In robotics, Digital Twins are often built using specialized simulation software. The Robot Operating System (ROS) typically acts as the middleware connecting the virtual simulation to the physical hardware. For instance, Stączek et al. used the Gazebo simulator with ROS to create a DT of a factory floor, which they used to test and optimize the navigation algorithms of a mobile robot in narrow corridors \cite{Staczek2021}. A similar approach was taken by R. Singh et al., who developed a DT of a greenhouse in Gazebo to validate a deep learning-based harvesting robot \cite{Singh2024a}. Other simulators like CoppeliaSim and Webots are also common. Magrin et al. used CoppeliaSim and ROS to create a DT as a learning tool for mobile robot design \cite{Magrin2021}, while Marques et al. used Webots for an Automated Guided Vehicle (AGV), synchronizing it via an OPC-UA server \cite{Marques2024}. These examples show a common method of using traditional simulators to model robot kinematics and sensor feedback for closed-loop testing.
+
+More recently, modern game engines have become a popular choice for creating Digital Twins, as they offer higher-fidelity graphics and more realistic physics. The Unity game engine, in particular, is used to build powerful, performant, and visually rich virtual environments. This can be seen in Figure \ref{fig:dt_environments}. For example, Pérez et al. used Unity3D to develop a DT of a multi-robot cell that included an immersive Virtual Reality (VR) interface for virtual commissioning and operator training \cite{Perez2020}.
+
+\begin{figure}[h]
+\centering
+% \includegraphics[width=0.9\textwidth]{path/to/dt_environments_comparison.png}
+\caption{A comparison of robotic Digital Twin environments, showing a typical view from a traditional simulator (left) versus a high-fidelity visualization from a modern game engine like Unity (right).}
+\label{fig:dt_environments}
+\end{figure}
+
+The technical capabilities of these engines are also a key factor. Yang et al. used Unity and its integrated NVIDIA PhysX engine to simulate the complex physics of a UAV. They also demonstrated how to create virtual sensors, such as a LiDAR, directly within the game engine using its raycasting API \cite{Yang2020}. The performance and reliability of these game engine-based frameworks have also been a focus of research. Kwon et al. developed a safety-critical DT in Unity and ROS 2, achieving a low data-transmission latency of just 13 ms for predicting collisions \cite{Kwon2025}. Similarly, M. Singh et al. created a Unity and ROS-based DT and conducted extensive performance validation, reporting a communication latency of 77.67 ms and a positional accuracy of 99.99\% \cite{Singh2024b}.
+
+\section{Mixed Reality}
+\label{sec:MR}
+Beyond the testing paradigm and the digital twin, the way a user interacts with the system is another critical part of a modern robotics framework. Virtual, Augmented, and Mixed Reality (VAM) have become promising technologies for improving the information exchange between humans and robots \cite{Walker2023}. In robotics, Augmented Reality (AR) is an especially powerful tool for enhancing Human-Robot Interaction (HRI) by integrating 3D virtual objects into a real-world environment in real-time \cite{Makhataeva2020}.
+
+The relationship between these technologies is formally described by the foundational "Reality-Virtuality (RV) Continuum" concept, first introduced by Milgram and Kishino \cite{Milgram1994, Skarbez2021, Makhataeva2020}. As illustrated in Figure \ref{fig:rv_continuum}, this continuum is a scale that is anchored by a purely real environment at one end and a completely virtual one at the other \cite{Milgram1994, Skarbez2021, Makhataeva2020}.
+
+\begin{figure}[h]
+\centering
+% \includegraphics[width=0.9\textwidth]{path/to/rv_continuum.png} % Placeholder for the image
+\caption{The Reality-Virtuality Continuum, illustrating the spectrum from a real environment to a completely virtual one. Mixed Reality (MR) encompasses both Augmented Reality (AR) and Augmented Virtuality (AV). Adapted from Milgram \& Kishino (1994) \cite{Milgram1994} and Walker et al. (2023) \cite{Walker2023}.}
+\label{fig:rv_continuum}
+\end{figure}
+
+A conventional Virtual Reality (VR) environment represents the continuum's virtual endpoint. In VR, the user is totally immersed in and can interact with a completely synthetic world \cite{Milgram1994}. This approach is very useful for HRI research, as it allows for testing interactions with virtual robots in scenarios that might be unsafe or too expensive for physical hardware \cite{Walker2023}. The general term Mixed Reality (MR) describes the entire spectrum between the two extremes, where real and virtual worlds are merged within a single display \cite{Milgram1994}. MR is made up of two main categories: Augmented Reality (AR) and Augmented Virtuality (AV) \cite{Milgram1994, Makhataeva2020}. AR involves augmenting a real environment with virtual objects \cite{Milgram1994}. This allows HRI researchers to place a robot's 3D data and intentions directly into the user's physical space \cite{Walker2023}. The opposite is Augmented Virtuality (AV), where a primarily virtual world is enhanced with elements from the real world, like live video feeds \cite{Milgram1994}.
+
+
+\subsection{A Sub-Concept}
+\label{ssec:sub_concept}
+Text...
