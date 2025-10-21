@@ -268,6 +268,64 @@
       \verb 10.4271/12-05-04-0029
       \endverb
     \endentry
+    \entry{EM21}{book}{}
+      \name{author}{2}{}{%
+        {{hash=2de84b34836f051ab619e7222056a348}{%
+           family={Engberg},
+           familyi={E\bibinitperiod},
+           given={Maria},
+           giveni={M\bibinitperiod}}}%
+        {{hash=af08dbcbaed9c0c262b59ec1f2ea8e75}{%
+           family={Macintyre},
+           familyi={M\bibinitperiod},
+           given={Blair},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{9e29098782d7a4e2be7c4057c057a4b0}
+      \strng{fullhash}{9e29098782d7a4e2be7c4057c057a4b0}
+      \strng{bibnamehash}{9e29098782d7a4e2be7c4057c057a4b0}
+      \strng{authorbibnamehash}{9e29098782d7a4e2be7c4057c057a4b0}
+      \strng{authornamehash}{9e29098782d7a4e2be7c4057c057a4b0}
+      \strng{authorfullhash}{9e29098782d7a4e2be7c4057c057a4b0}
+      \field{labelalpha}{EM21}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780262366250}
+      \field{month}{11}
+      \field{title}{Reality Media: Augmented and Virtual Reality}
+      \field{year}{2021}
+      \verb{doi}
+      \verb 10.7551/mitpress/11708.001.0001
+      \endverb
+    \endentry
+    \entry{Geh24}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=2780568b03b12772eb1bbe1cd58b87fd}{%
+           family={Gehricke},
+           familyi={G\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Universität Osnabrück}%
+      }
+      \strng{namehash}{2780568b03b12772eb1bbe1cd58b87fd}
+      \strng{fullhash}{2780568b03b12772eb1bbe1cd58b87fd}
+      \strng{bibnamehash}{2780568b03b12772eb1bbe1cd58b87fd}
+      \strng{authorbibnamehash}{2780568b03b12772eb1bbe1cd58b87fd}
+      \strng{authornamehash}{2780568b03b12772eb1bbe1cd58b87fd}
+      \strng{authorfullhash}{2780568b03b12772eb1bbe1cd58b87fd}
+      \field{labelalpha}{Geh24}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Virtual Environment for mobile Robotic Applications}
+      \field{type}{mathesis}
+      \field{year}{2024}
+    \endentry
     \entry{Grieves2017}{misc}{}
       \name{author}{1}{}{%
         {{hash=4b5d6786e8fb5cd63db15f454210559d}{%
@@ -317,7 +375,7 @@
       \field{pages}{506\bibrangedash 513}
       \range{pages}{8}
       \verb{doi}
-      \verb 10.1109/ICAR.2005.1507456
+      \verb https://doi.org/10.1109/ICAR.2005.1507456
       \endverb
     \endentry
     \entry{Kwon2025}{article}{}
@@ -674,6 +732,34 @@
       \field{title}{Scenario-in-the-Loop (SciL) Frameworks}
       \field{year}{2021}
     \endentry
+    \entry{Uni23}{software}{}
+      \name{author}{1}{}{%
+        {{hash=3f56ad8f8e05fcad24de3fcf878fb50b}{%
+           family={{Unity Technologies}},
+           familyi={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{3f56ad8f8e05fcad24de3fcf878fb50b}
+      \strng{fullhash}{3f56ad8f8e05fcad24de3fcf878fb50b}
+      \strng{bibnamehash}{3f56ad8f8e05fcad24de3fcf878fb50b}
+      \strng{authorbibnamehash}{3f56ad8f8e05fcad24de3fcf878fb50b}
+      \strng{authornamehash}{3f56ad8f8e05fcad24de3fcf878fb50b}
+      \strng{authorfullhash}{3f56ad8f8e05fcad24de3fcf878fb50b}
+      \field{labelalpha}{Uni23}
+      \field{sortinit}{U}
+      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Game development platform}
+      \field{title}{Unity}
+      \field{version}{2023.2.3}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://unity.com/
+      \endverb
+      \verb{url}
+      \verb https://unity.com/
+      \endverb
+    \endentry
     \entry{Walker2023}{article}{}
       \true{moreauthor}
       \true{morelabelname}
@@ -727,6 +813,7 @@
       \field{year}{2020}
     \endentry
   \enddatalist
+  \missing{NOT FINAL}
 \endrefsection
 \endinput
 
