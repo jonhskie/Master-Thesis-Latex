@@ -122,6 +122,40 @@
       \field{title}{Vehicle-in-the-Loop in Marine Robotics}
       \field{year}{2020}
     \endentry
+    \entry{BM18}{book}{}
+      \name{author}{2}{}{%
+        {{hash=fb7fd3e44cd1357335603d69aefb2097}{%
+           family={Ben-Ari},
+           familyi={B\bibinithyphendelim A\bibinitperiod},
+           given={Mordechai},
+           giveni={M\bibinitperiod}}}%
+        {{hash=e5ddc7316d0ced1da47649dcf0b45593}{%
+           family={Mondada},
+           familyi={M\bibinitperiod},
+           given={Francesco},
+           giveni={F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer Open}%
+      }
+      \strng{namehash}{d2c69125f6b9acbbc7bc8f7f600e2457}
+      \strng{fullhash}{d2c69125f6b9acbbc7bc8f7f600e2457}
+      \strng{bibnamehash}{d2c69125f6b9acbbc7bc8f7f600e2457}
+      \strng{authorbibnamehash}{d2c69125f6b9acbbc7bc8f7f600e2457}
+      \strng{authornamehash}{d2c69125f6b9acbbc7bc8f7f600e2457}
+      \strng{authorfullhash}{d2c69125f6b9acbbc7bc8f7f600e2457}
+      \field{labelalpha}{BM18}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-3-319-62533-1}
+      \field{title}{Elements of Robotics}
+      \field{year}{2018}
+      \verb{doi}
+      \verb 10.1007/978-3-319-62533-1
+      \endverb
+    \endentry
     \entry{Brayanov2019}{inproceedings}{}
       \true{moreauthor}
       \true{morelabelname}
@@ -174,6 +208,60 @@
       \field{title}{Vehicle-in-Virtual-Environment method}
       \field{year}{2023}
     \endentry
+    \entry{Cas21}{article}{}
+      \name{author}{6}{}{%
+        {{hash=e99a346a78b23fd8a277406e393780df}{%
+           family={Casalaro},
+           familyi={C\bibinitperiod},
+           given={Giuseppina\bibnamedelima Lucia},
+           giveni={G\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=9318112b33ced3ff0650631bb9d2afc6}{%
+           family={Cattivera},
+           familyi={C\bibinitperiod},
+           given={Giulio},
+           giveni={G\bibinitperiod}}}%
+        {{hash=35a9bb6983bbaa9de4c2f261ac007d1b}{%
+           family={Ciccozzi},
+           familyi={C\bibinitperiod},
+           given={Federico},
+           giveni={F\bibinitperiod}}}%
+        {{hash=3ff6e286502b85077eabb7e86849d893}{%
+           family={Malavolta},
+           familyi={M\bibinitperiod},
+           given={Ivano},
+           giveni={I\bibinitperiod}}}%
+        {{hash=d0867beb1da32a9bd2c3f3776f5101c7}{%
+           family={Wortmann},
+           familyi={W\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod}}}%
+        {{hash=bc8a90f8b7bbdb3e1b2b85a140a3be1e}{%
+           family={Pelliccione},
+           familyi={P\bibinitperiod},
+           given={Patrizio},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{10ec007fba20f5d805760e02aa2c7c40}
+      \strng{fullhash}{0b8f9ea304105aa3409d434c8550d8df}
+      \strng{bibnamehash}{10ec007fba20f5d805760e02aa2c7c40}
+      \strng{authorbibnamehash}{10ec007fba20f5d805760e02aa2c7c40}
+      \strng{authornamehash}{10ec007fba20f5d805760e02aa2c7c40}
+      \strng{authorfullhash}{0b8f9ea304105aa3409d434c8550d8df}
+      \field{labelalpha}{CCC+21}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Software and Systems Modeling}
+      \field{title}{Model-driven engineering for mobile robotic systems: a systematic mapping study}
+      \field{volume}{21}
+      \field{year}{2021}
+      \field{pages}{19\bibrangedash 49}
+      \range{pages}{31}
+      \verb{doi}
+      \verb 10.1007/s10270-021-00908-8
+      \endverb
+    \endentry
     \entry{Dai2021}{inproceedings}{}
       \true{moreauthor}
       \true{morelabelname}
@@ -225,6 +313,53 @@
       \field{note}{Update with full citation}
       \field{title}{Radar Target Simulator for End-to-End Validation}
       \field{year}{2021}
+    \endentry
+    \entry{Dos17}{inproceedings}{}
+      \name{author}{5}{}{%
+        {{hash=72308762399d6ab62bbd9391c64c7bfd}{%
+           family={Dosovitskiy},
+           familyi={D\bibinitperiod},
+           given={Alexey},
+           giveni={A\bibinitperiod}}}%
+        {{hash=f1f2a36b2020857c1c8f6c2402336e2a}{%
+           family={Ros},
+           familyi={R\bibinitperiod},
+           given={German},
+           giveni={G\bibinitperiod}}}%
+        {{hash=7057213461868d1b1bc32960a3b2bf64}{%
+           family={Codevilla},
+           familyi={C\bibinitperiod},
+           given={Felipe},
+           giveni={F\bibinitperiod}}}%
+        {{hash=884ed6eb3033cfd08aebfa6144f705c7}{%
+           family={López},
+           familyi={L\bibinitperiod},
+           given={Antonio},
+           giveni={A\bibinitperiod}}}%
+        {{hash=9025300f43a193cfed8e10e924f2a117}{%
+           family={Koltun},
+           familyi={K\bibinitperiod},
+           given={Vladlen},
+           giveni={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{75cf12ea9cf4f5cfffb22861c75cb6e2}
+      \strng{fullhash}{cdb29eaeeaba08d200a97e1d31411d1f}
+      \strng{bibnamehash}{75cf12ea9cf4f5cfffb22861c75cb6e2}
+      \strng{authorbibnamehash}{75cf12ea9cf4f5cfffb22861c75cb6e2}
+      \strng{authornamehash}{75cf12ea9cf4f5cfffb22861c75cb6e2}
+      \strng{authorfullhash}{cdb29eaeeaba08d200a97e1d31411d1f}
+      \field{labelalpha}{DRC+17}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{1st Conference on Robot Learning (CoRL 2017)}
+      \field{eprinttype}{arXiv}
+      \field{title}{{CARLA}: An Open Urban Driving Simulator}
+      \field{year}{2017}
+      \verb{eprint}
+      \verb 1711.03938
+      \endverb
     \endentry
     \entry{DSR22}{article}{}
       \true{moreauthor}
@@ -481,6 +616,34 @@
       \field{note}{Update with full citation}
       \field{title}{Webots-based AGV with OPC-UA Synchronization}
       \field{year}{2024}
+    \endentry
+    \entry{Mic04}{article}{}
+      \name{author}{1}{}{%
+        {{hash=0570ba8f8531970e01d12c943d7fba8b}{%
+           family={Michel},
+           familyi={M\bibinitperiod},
+           given={Olivier},
+           giveni={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{0570ba8f8531970e01d12c943d7fba8b}
+      \strng{fullhash}{0570ba8f8531970e01d12c943d7fba8b}
+      \strng{bibnamehash}{0570ba8f8531970e01d12c943d7fba8b}
+      \strng{authorbibnamehash}{0570ba8f8531970e01d12c943d7fba8b}
+      \strng{authornamehash}{0570ba8f8531970e01d12c943d7fba8b}
+      \strng{authorfullhash}{0570ba8f8531970e01d12c943d7fba8b}
+      \field{labelalpha}{Mic04}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1729-8806}
+      \field{journaltitle}{International Journal of Advanced Robotic Systems}
+      \field{number}{1}
+      \field{title}{Webots TM: Professional Mobile Robot Simulation}
+      \field{volume}{1}
+      \field{year}{2004}
+      \field{pages}{39\bibrangedash 42}
+      \range{pages}{4}
     \endentry
     \entry{Mihalic2022}{article}{}
       \true{moreauthor}
