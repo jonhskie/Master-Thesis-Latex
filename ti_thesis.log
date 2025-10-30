@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.20)  30 OCT 2025 11:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.20)  30 OCT 2025 12:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1310,13 +1310,6 @@ Package biblatex Info: ... file 'ti_thesis.bbl' found.
 
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
-(biblatex)                Geg24
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
 (biblatex)                NOT FINAL
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
@@ -1507,13 +1500,10 @@ Underfull \vbox (badness 7722) has occurred while \output is active []
 
  [2]
 
-LaTeX Warning: Citation 'Geg24' on page 3 undefined on input line 15.
-
-LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
-(Font)              scaled to size 11.52008pt on input line 15.
-
 LaTeX Warning: Citation 'NOT FINAL' on page 3 undefined on input line 17.
 
+LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
+(Font)              scaled to size 11.52008pt on input line 17.
 
 LaTeX Warning: Citation 'NOT FINAL' on page 3 undefined on input line 17.
 
@@ -1649,18 +1639,18 @@ Package logreq Info: Writing requests to 'ti_thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 57960 strings out of 474222
- 1303641 string characters out of 5748732
- 2537058 words of memory out of 5000000
+ 57964 strings out of 474222
+ 1303681 string characters out of 5748732
+ 2537046 words of memory out of 5000000
  79025 multiletter control sequences out of 15000+600000
- 622083 words of font info for 312 fonts, out of 8000000 for 9000
+ 622318 words of font info for 315 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  108i,8n,131p,10936b,2063s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchri8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr8t.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chri8t.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8ac.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on ti_thesis.pdf (33 pages, 177031 bytes).
+Output written on ti_thesis.pdf (33 pages, 176146 bytes).
 PDF statistics:
- 531 PDF objects out of 1000 (max. 8388607)
- 469 compressed objects within 5 object streams
+ 532 PDF objects out of 1000 (max. 8388607)
+ 470 compressed objects within 5 object streams
  104 named destinations out of 1000 (max. 500000)
  68333 words of extra memory for PDF output out of 74296 (max. 10000000)
 
