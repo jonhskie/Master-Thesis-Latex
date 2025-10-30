@@ -4,8 +4,8 @@
 \contentsline {section}{\numberline {2.1}Robot-in-the-Loop-Testing}{5}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Digital Twins}{7}{section.2.2}%
 \contentsline {section}{\numberline {2.3}Mixed Reality}{9}{section.2.3}%
-\contentsline {section}{\numberline {2.4}The VERA Framework and EMARO}{10}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Comparison of Simulation Engines?}{10}{section.2.5}%
+\contentsline {section}{\numberline {2.4}The VERA Framework and EMARO}{9}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Comparison of Simulation Engines?}{9}{section.2.5}%
 \contentsline {chapter}{\numberline {3}Requirements}{11}{chapter.3}%
 \contentsline {chapter}{\numberline {4}Concept and Implementation}{13}{chapter.4}%
 \contentsline {section}{\numberline {4.1}System Architecture}{13}{section.4.1}%
