@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.20)  30 OCT 2025 13:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.20)  30 OCT 2025 16:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1528,22 +1528,22 @@ LaTeX Warning: Reference `fig:ritl_concept' on page 5 undefined on input line 10
 
 [5]
 
-LaTeX Warning: Reference `fig:vitl_setup' on page 6 undefined on input line 23.
+LaTeX Warning: Reference `fig:vitl_setup' on page 6 undefined on input line 21.
 
 [6]
 
-LaTeX Warning: Reference `fig:dt_concept' on page 7 undefined on input line 43.
+LaTeX Warning: Reference `fig:dt_concept' on page 7 undefined on input line 40.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [7]
 
-LaTeX Warning: Reference `fig:dt_environments' on page 8 undefined on input line 54.
+LaTeX Warning: Reference `fig:dt_environments' on page 8 undefined on input line 51.
 
 [8]
 
-LaTeX Warning: Reference `fig:rv_continuum' on page 9 undefined on input line 69.
+LaTeX Warning: Reference `fig:rv_continuum' on page 9 undefined on input line 66.
 
 ) [9]
 \openout2 = `chapters/requirements.aux'.
@@ -1653,10 +1653,10 @@ Here is how much of TeX's memory you used:
  1144 hyphenation exceptions out of 8191
  108i,8n,131p,10936b,2063s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchri8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr8t.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chri8t.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8ac.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on ti_thesis.pdf (33 pages, 175794 bytes).
+Output written on ti_thesis.pdf (33 pages, 176154 bytes).
 PDF statistics:
- 532 PDF objects out of 1000 (max. 8388607)
- 470 compressed objects within 5 object streams
+ 535 PDF objects out of 1000 (max. 8388607)
+ 473 compressed objects within 5 object streams
  104 named destinations out of 1000 (max. 500000)
  68333 words of extra memory for PDF output out of 74296 (max. 10000000)
 

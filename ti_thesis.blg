@@ -1,17 +1,17 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
 [0] Config.pm:310> INFO - Logfile is 'ti_thesis.blg'
-[71] biber:340> INFO - === Thu Oct 30, 2025, 13:52:53
-[87] Biber.pm:419> INFO - Reading 'ti_thesis.bcf'
-[139] Biber.pm:979> INFO - Found 33 citekeys in bib section 0
-[148] Biber.pm:4419> INFO - Processing section 0
-[157] Biber.pm:4610> INFO - Looking for bibtex file 'literatur.bib' for section 0
-[158] bibtex.pm:1713> INFO - LaTeX decoding ...
-[181] bibtex.pm:1519> INFO - Found BibTeX data source 'literatur.bib'
-[369] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[369] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[370] Biber.pm:4239> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-US'
-[370] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
-[394] bbl.pm:660> INFO - Writing 'ti_thesis.bbl' with encoding 'UTF-8'
-[403] bbl.pm:763> INFO - Output to ti_thesis.bbl
-[403] Biber.pm:131> WARN - I didn't find a database entry for 'NOT FINAL' (section 0)
-[403] Biber.pm:133> INFO - WARNINGS: 1
+[73] biber:340> INFO - === Thu Oct 30, 2025, 16:28:19
+[88] Biber.pm:419> INFO - Reading 'ti_thesis.bcf'
+[138] Biber.pm:979> INFO - Found 33 citekeys in bib section 0
+[147] Biber.pm:4419> INFO - Processing section 0
+[156] Biber.pm:4610> INFO - Looking for bibtex file 'literatur.bib' for section 0
+[157] bibtex.pm:1713> INFO - LaTeX decoding ...
+[183] bibtex.pm:1519> INFO - Found BibTeX data source 'literatur.bib'
+[354] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[354] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[354] Biber.pm:4239> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-US'
+[354] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[377] bbl.pm:660> INFO - Writing 'ti_thesis.bbl' with encoding 'UTF-8'
+[386] bbl.pm:763> INFO - Output to ti_thesis.bbl
+[386] Biber.pm:131> WARN - I didn't find a database entry for 'NOT FINAL' (section 0)
+[386] Biber.pm:133> INFO - WARNINGS: 1
