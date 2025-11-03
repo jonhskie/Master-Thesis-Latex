@@ -10,8 +10,8 @@
 \contentsline {subsubsection}{\numberline {2.4.2.1}Virtual Environment Positioning System (VEPS)}{12}{subsubsection.2.4.2.1}%
 \contentsline {subsubsection}{\numberline {2.4.2.2}Virtual Environment Manager}{12}{subsubsection.2.4.2.2}%
 \contentsline {subsubsection}{\numberline {2.4.2.3}Visualization System (RViz and Pygame)}{13}{subsubsection.2.4.2.3}%
-\contentsline {subsection}{\numberline {2.4.3}Platform Evolution and Identified Limitations}{14}{subsection.2.4.3}%
-\contentsline {subsubsection}{\numberline {2.4.3.1}Evolution of the Positioning System}{14}{subsubsection.2.4.3.1}%
+\contentsline {subsection}{\numberline {2.4.3}Platform Changes and Identified Limitations}{14}{subsection.2.4.3}%
+\contentsline {subsubsection}{\numberline {2.4.3.1}Changes of the Positioning System}{14}{subsubsection.2.4.3.1}%
 \contentsline {subsubsection}{\numberline {2.4.3.2}Identified Limitations of the Original Software}{14}{subsubsection.2.4.3.2}%
 \contentsline {chapter}{\numberline {3}Requirements}{17}{chapter.3}%
 \contentsline {chapter}{\numberline {4}Concept and Implementation}{19}{chapter.4}%
