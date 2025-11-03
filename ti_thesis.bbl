@@ -701,6 +701,29 @@
       \field{type}{mathesis}
       \field{year}{2024}
     \endentry
+    \entry{Grieves15}{article}{}
+      \name{author}{1}{}{%
+        {{hash=4b5d6786e8fb5cd63db15f454210559d}{%
+           family={Grieves},
+           familyi={G\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{4b5d6786e8fb5cd63db15f454210559d}
+      \strng{fullhash}{4b5d6786e8fb5cd63db15f454210559d}
+      \strng{bibnamehash}{4b5d6786e8fb5cd63db15f454210559d}
+      \strng{authorbibnamehash}{4b5d6786e8fb5cd63db15f454210559d}
+      \strng{authornamehash}{4b5d6786e8fb5cd63db15f454210559d}
+      \strng{authorfullhash}{4b5d6786e8fb5cd63db15f454210559d}
+      \field{labelalpha}{Gri15}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{03}
+      \field{title}{Digital Twin: Manufacturing Excellence through Virtual Factory Replication}
+      \field{year}{2015}
+    \endentry
     \entry{Grieves2017}{inbook}{}
       \name{author}{2}{}{%
         {{hash=4b5d6786e8fb5cd63db15f454210559d}{%

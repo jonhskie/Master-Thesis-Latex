@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.20)  2 NOV 2025 19:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.20)  3 NOV 2025 09:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1524,42 +1524,89 @@ LaTeX Warning: Citation 'NOT FINAL' on page 5 undefined on input line 3.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 15.25815pt on input line 4.
 
+LaTeX Warning: Citation 'NOT FINAL' on page 5 undefined on input line 10.
+
+
 LaTeX Warning: Reference `fig:ritl_concept' on page 5 undefined on input line 10.
+
+
+LaTeX Warning: Citation 'NOT FINAL' on page 5 undefined on input line 10.
 
 [5]
 
-LaTeX Warning: Reference `fig:vitl_setup' on page 6 undefined on input line 21.
+LaTeX Warning: Citation 'NOT FINAL' on page 6 undefined on input line 15.
 
-[6]
 
-LaTeX Warning: Reference `fig:dt_concept' on page 7 undefined on input line 40.
+LaTeX Warning: Citation 'NOT FINAL' on page 6 undefined on input line 15.
 
+
+LaTeX Warning: Citation 'NOT FINAL' on page 6 undefined on input line 15.
+
+
+LaTeX Warning: Citation 'NOT FINAL' on page 6 undefined on input line 15.
+
+
+Underfull \hbox (badness 2205) in paragraph at lines 15--15
+[][][]\T1/mdbch/m/n/12 (+20) [[]]The real robot's ac-tions af-fect its vir-tual coun-ter-part,
+ []
+
+<images/vehicle_in_the_loop_dsr+22.jpg, id=202, 248.3679pt x 204.2832pt>
+File: images/vehicle_in_the_loop_dsr+22.jpg Graphic file (type jpg)
+<use images/vehicle_in_the_loop_dsr+22.jpg>
+Package pdftex.def Info: images/vehicle_in_the_loop_dsr+22.jpg  used on input line 25.
+(pdftex.def)             Requested size: 384.10965pt x 315.95924pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[7]
+[6]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Warning: Reference `fig:dt_environments' on page 8 undefined on input line 51.
+ [7 <./images/vehicle_in_the_loop_dsr+22.jpg>]
+<images/info_mirror_model_Grieves15.png, id=240, 813.0375pt x 434.8245pt>
+File: images/info_mirror_model_Grieves15.png Graphic file (type png)
+<use images/info_mirror_model_Grieves15.png>
+Package pdftex.def Info: images/info_mirror_model_Grieves15.png  used on input line 44.
+(pdftex.def)             Requested size: 341.43442pt x 182.5985pt.
+ [8 <./images/info_mirror_model_Grieves15.png>]
+
+LaTeX Warning: Citation 'NOT FINAL' on page 9 undefined on input line 51.
 
 
-Underfull \vbox (badness 6542) has occurred while \output is active []
+LaTeX Warning: Reference `fig:dt_environments' on page 9 undefined on input line 51.
 
- [8]
 
-LaTeX Warning: Reference `fig:rv_continuum' on page 9 undefined on input line 66.
+LaTeX Warning: Citation 'NOT FINAL' on page 9 undefined on input line 51.
 
-) [9]
+
+LaTeX Warning: Citation 'NOT FINAL' on page 9 undefined on input line 56.
+
+
+LaTeX Warning: Citation 'NOT FINAL' on page 9 undefined on input line 56.
+
+
+LaTeX Warning: Citation 'NOT FINAL' on page 9 undefined on input line 56.
+
+
+LaTeX Warning: Citation 'NOT FINAL' on page 9 undefined on input line 56.
+
+[9]
+<images/reality_virtuality_continuum_wpc+23.png, id=290, 1520.079pt x 410.13225pt>
+File: images/reality_virtuality_continuum_wpc+23.png Graphic file (type png)
+<use images/reality_virtuality_continuum_wpc+23.png>
+Package pdftex.def Info: images/reality_virtuality_continuum_wpc+23.png  used on input line 70.
+(pdftex.def)             Requested size: 384.10965pt x 103.63423pt.
+) [10 <./images/reality_virtuality_continuum_wpc+23.png>]
 \openout2 = `chapters/requirements.aux'.
 
- (./chapters/requirements.tex [10
+ (./chapters/requirements.tex
+chapter 3.
+) [11
 
 
 
 
 
 ]
-chapter 3.
-) [11]
 \openout2 = `chapters/concept_implementation.aux'.
 
  (./chapters/concept_implementation.tex [12
@@ -1668,18 +1715,18 @@ Package logreq Info: Writing requests to 'ti_thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 57993 strings out of 474222
- 1304104 string characters out of 5748732
- 2539086 words of memory out of 5000000
- 79028 multiletter control sequences out of 15000+600000
+ 58020 strings out of 474222
+ 1305287 string characters out of 5748732
+ 2540750 words of memory out of 5000000
+ 79054 multiletter control sequences out of 15000+600000
  624084 words of font info for 337 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 108i,8n,131p,10936b,2063s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,8n,131p,10936b,3335s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchri8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr8t.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8ac.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on ti_thesis.pdf (33 pages, 184441 bytes).
+Output written on ti_thesis.pdf (33 pages, 1300950 bytes).
 PDF statistics:
- 581 PDF objects out of 1000 (max. 8388607)
- 520 compressed objects within 6 object streams
- 104 named destinations out of 1000 (max. 500000)
- 68325 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 610 PDF objects out of 1000 (max. 8388607)
+ 541 compressed objects within 6 object streams
+ 105 named destinations out of 1000 (max. 500000)
+ 68340 words of extra memory for PDF output out of 74296 (max. 10000000)
 
