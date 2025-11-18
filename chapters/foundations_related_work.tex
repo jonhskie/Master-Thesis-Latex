@@ -88,7 +88,105 @@ The core concept of VERA is to project a dynamic, interactive virtual environmen
     \label{fig:vera_platform}
 \end{figure}
 
-\subsection{The EMARO Test Platform  (Mehr detaillierte Beschreibung?)}
+\section{Robot Operating System 2 (ROS~2)}
+\label{sec:ros2}
+The Robot Operating System 2 (ROS~2) is not a conventional operating system, but rather a middleware framework designed to simplify the development of complex robotic systems \cite{MFG22}. It was redesigned from the ground up to meet the challenges set forth by modern, production-grade robotics in domains ranging from logistics and agriculture to space missions, and it has become the standard for both research and industry \cite{macenski2023survey, MFG22}. At its core, ROS~2's design is guided by principles of distribution, abstraction, asynchrony, and modularity, which together facilitate the creation of scalable and robust robotic applications \cite{MFG22}.
+
+The architecture of ROS~2 is based on a distributed network of independent programs called \textbf{Nodes} \cite{MFG22}. A node is a single, self-contained executable that performs a specific task, such as controlling a motor, processing sensor data, or, in the case of this thesis, bridging communication to the Unity simulation \cite{MFG22}. These nodes communicate through a set of defined patterns. The most common pattern is the publish-subscribe mechanism called \textbf{Topics}, as illustrated in Figure \ref{fig:ros2_comm_concept} \cite{MFG22}. In this model, nodes can publish data (as messages) to a topic, while other nodes can subscribe to that topic to receive the data asynchronously \cite{MFG22}. For tasks requiring a direct request and a guaranteed response, ROS~2 provides \textbf{Services}, which follow a synchronous request-response pattern \cite{MFG22}. For long-running tasks that require continuous feedback and the ability to be preempted, ROS~2 provides a unique communication pattern called \textbf{Actions} \cite{MFG22}. An action consists of a goal, a feedback stream, and a final result, making it ideal for managing tasks like navigation, where a robot's progress toward a goal needs to be monitored over time \cite{macenski2020marathon2}.
+
+\begin{figure}[h]
+    \centering
+    \begin{tikzpicture}[node distance=1.5cm and 2cm, auto, >=stealth]
+        % --- NODES USING THE 'align' OPTION FOR ROBUSTNESS ---
+        \node[draw, rectangle, rounded corners, align=center] (pub_node) {Node A \\ \textbf{(Publisher)}};
+        \node[draw, ellipse, fill=blue!20, right=of pub_node, align=center] (topic) {Topic \\ \texttt{/sensor\_data}};
+        \node[draw, rectangle, rounded corners, right=of topic, align=center] (sub_node1) {Node B \\ \textbf{(Subscriber)}};
+        \node[draw, rectangle, rounded corners, below=of sub_node1, yshift=-0.25cm, align=center] (sub_node2) {Node C \\ \textbf{(Subscriber)}};
+
+        % Arrows
+        \draw[->, thick] (pub_node) -- (topic) node[midway, above] {Message};
+        \draw[->, thick] (topic) -- (sub_node1);
+        \draw[->, thick] (topic) -- (sub_node2);
+    \end{tikzpicture}
+    \caption{The ROS~2 publish-subscribe model. Node A publishes messages to a central topic, and multiple subscriber nodes (B and C) can receive that data without direct knowledge of the publisher.}
+    \label{fig:ros2_comm_concept}
+\end{figure}
+
+A crucial component for any mobile robot is the management of coordinate frames, which ROS~2 handles through its transform library, \textbf{tf2} \cite{foote2013tf}. The tf2 library provides a standard way to keep track of the spatial relationships between different parts of the robot and the environment, organizing them into a tree-like data structure, as shown in Figure \ref{fig:tf_tree_concept} \cite{foote2013tf}. This allows any node in the system to query the position and orientation of any frame relative to another at any point in time, which is essential for transforming sensor data into a useful frame of reference \cite{foote2013tf}.
+
+\begin{figure}[h]
+    \centering
+    \begin{tikzpicture}[
+        level 1/.style={sibling distance=3.5cm},
+        level 2/.style={sibling distance=2.2cm}, % Adjusted spacing
+        edge from parent/.style={draw, -latex},
+        every node/.style={draw, rectangle, rounded corners, text centered, font=\small} % Made font slightly smaller for compactness
+    ]
+    \node {world}
+        child { node {robot\_base\_link}
+            child { node {camera\_link} }
+            child { node {imu\_link} }
+            child { node {gripper\_link} }
+        };
+    \end{tikzpicture}
+    \caption{A simplified example of a ROS~2 transform tree (tf tree). The library manages the hierarchical relationships, allowing a program to easily calculate the transform from the \texttt{camera\_link} to the \texttt{world} frame, for example.}
+    \label{fig:tf_tree_concept}
+\end{figure}
+
+In the architecture of this thesis, ROS~2 serves as the central \textbf{data backbone}, a concept adapted from digital engineering that describes an integrated communication layer for all relevant system knowledge \cite{perzylo2020backbone}. This "glue" connects the physical EMARO robot, its tracking system, and the virtual Unity environment. The digital twin of the EMAROS robot subscribes to ROS~2 topics to receive real-time data from the physical world, allowing it to synchronize its state through this communication layer \cite{singh2024unity}. For this project, the high-performance \texttt{ros2-for-unity} asset by Robotec.AI is used \cite{Rob24}. This solution is particularly advantageous because it does not bridge the communication but instead implements the ROS~2 middleware stack (RCL and below) directly within Unity. This means that entities within the simulation become "native" ROS~2 nodes, allowing them to respect Quality of Service (QoS) settings and achieve significantly lower latencies than bridged solutions \cite{Rob24}.
+
+For advanced navigation tasks for both the physical robot and its virtual counterpart, this thesis utilizes \textbf{Navigation2 (Nav2)}, the official, next-generation autonomous navigation framework for ROS~2 \cite{macenski2020marathon2}. Nav2 was built from the ground up to orchestrate planning, control, and recovery tasks using configurable Behavior Trees, which are highly modular and can be modified at runtime to create unique navigation behaviors \cite{macenski2020marathon2}. At its core, Nav2 separates the task of navigation into two main components: a \textbf{global planner}, which finds an acceptable, long-range route through the environment, and a \textbf{local trajectory planner} (or controller), which generates velocity commands to follow that route while reacting to immediate obstacles \cite{macenski2023survey}. By leveraging the Nav2 stack, a high-level goal (e.g., a coordinate in the environment) can be sent via a ROS~2 action to either the physical EMARO robot or the purely virtual model, and the system will autonomously handle all complex path planning and collision avoidance.
+
+\section{Simulation Engines for Robotics}
+\label{sec:sim_engines}
+
+Selecting the appropriate simulation engine is a foundational decision for the architecture of a Digital Twin. The simulator must serve as a synchronized virtual replica of the physical system, requiring a platform that balances computational efficiency with environmental realism \cite{Singh2025}. For this project, the selection process is driven by specific criteria derived from the requirements of Industry 5.0 applications: Visual Fidelity, Physics Accuracy, Native VR/AR Support, and the balance between Community Support and Learning Curve \cite{Gonzalez2025}.
+
+\subsection{Traditional Robotics Simulators}
+\textbf{Gazebo} is the most widely used simulator for Industry 4.0 applications due to its deep integration with ROS and its open-source nature \cite{Gonzalez2025}. It provides detailed physics simulations and sensor data emulation, making it ideal for precise engineering applications \cite{Singh2025}. However, while Gazebo benefits from a vast community and extensive documentation, it possesses notable limitations regarding visualization. Its rendering quality is described as "moderate," lacking the photorealism required for immersive Extended Reality (XR) experiences \cite{dosSantos2025}. Furthermore, studies note that Gazebo presents a steep learning curve for new users due to its complex configuration and less intuitive user interface compared to modern commercial tools \cite{Singh2025, Gonzalez2025}.
+
+\textbf{Webots} is another prominent open-source platform, valued for its cross-platform support and extensive library of robot models \cite{Kargar2024}. While efficient for educational purposes, its rendering capabilities lag behind modern game engines, making it less suitable for high-fidelity XR visuals.
+
+\subsection{Alternative Physics-Based Simulators}
+Several other simulators were identified in the literature but were deemed less suitable for the specific XR requirements of this thesis. \textbf{CoppeliaSim (formerly V-REP)} is widely used for automation but offers limited physics realism compared to high-end tools and suffers from scalability constraints \cite{Gonzalez2025}. \textbf{MuJoCo} is highly regarded for contact-rich tasks and Reinforcement Learning (RL) but focuses almost exclusively on physics stability rather than visualization, lacking the built-in XR frameworks necessary for Mixed Reality interaction \cite{Gonzalez2025}.
+
+\subsection{High-Fidelity and Game-Based Engines}
+To address the visualization limitations of traditional simulators, the robotics community has increasingly adopted game engines.
+
+\textbf{NVIDIA Isaac Sim} represents the state-of-the-art in industrial simulation, offering photorealism (ray-tracing) and advanced GPU-accelerated physics via PhysX \cite{dosSantos2025}. It excels in generating synthetic data for AI perception \cite{Kargar2024}. However, Isaac Sim imposes a high hardware barrier, strictly requiring high-end NVIDIA RTX GPUs \cite{dosSantos2025}. Additionally, as a proprietary platform, it limits accessibility for educational contexts compared to open-source or widely accessible game engines.
+
+\textbf{Unreal Engine} is renowned for "best-in-class" photorealistic visuals and the ability to handle massive open-world environments \cite{Gonzalez2025}. However, it presents a steep learning curve due to its reliance on C++, making it less accessible for rapid prototyping compared to alternatives like Unity \cite{Coronado2023}.
+
+\textbf{Unity Engine} has emerged as the dominant platform for Industry 5.0 applications, specifically those focusing on HRI and XR \cite{Gonzalez2025}. It offers a balance of high-fidelity graphics and a robust physics engine (PhysX) \cite{Singh2025}. Unity is recognized for its mature XR ecosystem and massive asset store, which significantly lowers the barrier to entry for developers. Literature highlights that Unity's user-friendly interface and supportive community facilitate a smoother learning curve compared to Gazebo or Unreal, particularly for users without deep C++ expertise \cite{Singh2025, Coronado2023}.
+
+Crucially, Unity does not support ROS~2 natively out-of-the-box. Integration must be achieved through external plugins. This thesis utilizes the \textbf{ROS2 For Unity} plugin, available via GitHub from Robotec.AI \cite{Rob24}. This asset provides a high-performance communication solution by loading the ROS~2 middleware stack (RCL layer) directly into the Unity engine. Unlike bridged solutions, this allows simulation entities to function as "native" ROS~2 nodes within the Unity environment, respecting Quality of Service (QoS) settings and achieving significantly lower latencies \cite{Rob24}.
+
+\subsection{Comparison and Selection}
+Table \ref{tab:sim_comparison} summarizes the capabilities of these engines.
+
+\begin{table}[h]
+\centering
+\caption{Comparison of Simulation Platforms for Mixed Reality Digital Twins \cite{Gonzalez2025, Kargar2024, Singh2025, Coronado2023}.}
+\label{tab:sim_comparison}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\textbf{Feature} & \textbf{Gazebo} & \textbf{Isaac Sim} & \textbf{Unreal Engine} & \textbf{Unity} \\ \hline
+\textbf{Primary Use Case} & Control \& Navigation & AI \& Photorealism & Photorealism & HRI \& XR (VR/AR) \\ \hline
+\textbf{Visual Fidelity} & Moderate & Very High & Very High & High \\ \hline
+\textbf{Physics Engine} & ODE/Bullet/DART & PhysX 5 (GPU) & Chaos/PhysX & PhysX \\ \hline
+\textbf{Learning Curve} & Steep & Advanced & Steep (C++) & Moderate (C\#) \\ \hline
+\textbf{Community Support} & High (ROS specific) & Moderate & High (Gaming) & Very High (XR/Gaming) \\ \hline
+\textbf{ROS 2 Integration} & Native & Bridge & Bridge & Plugin (Native Stack) \\ \hline
+\textbf{Hardware Req.} & Low & Very High (RTX) & High & Moderate \\ \hline
+\end{tabular}%
+}
+\end{table}
+
+\subsubsection{Rationale for Using the Unity Engine}
+Based on this analysis, **Unity** is selected as the core simulation engine. It provides the necessary XR framework for Mixed Reality \cite{Coronado2023} and offers superior visualization compared to Gazebo \cite{Gonzalez2025}. Furthermore, it balances accessibility with power; its C\# scripting and vast community support offer a more manageable learning curve than Unreal Engine \cite{Coronado2023}, while the \texttt{ros2-for-unity} plugin ensures high-performance, low-latency communication \cite{Rob24}.
+
+\section{The VERA Framework and EMARO}
 \label{sec:emaro}
 
 The capabilities of the VERA framework were demonstrated using a specific hardware testbed, the EMARO (Educational Modular Autonomous Robot Osnabrück) \cite{Geh24}. EMARO is a mobile, autonomous, and modular mini-robot developed at Osnabrück University, designed specifically for teaching and research in robotics, artificial intelligence, and computer engineering \cite{Geh24}.

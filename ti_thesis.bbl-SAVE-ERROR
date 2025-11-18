@@ -439,111 +439,6 @@
       \verb https://doi.org/10.3390/s23115088
       \endverb
     \endentry
-    \entry{Coronado2023}{article}{}
-      \name{author}{3}{}{%
-        {{hash=13021c04a800ad153040c471ab993f83}{%
-           family={Coronado},
-           familyi={C\bibinitperiod},
-           given={Enrique},
-           giveni={E\bibinitperiod}}}%
-        {{hash=a3e45eb8412c971db2d7f5c2728b055a}{%
-           family={Itadera},
-           familyi={I\bibinitperiod},
-           given={Shunki},
-           giveni={S\bibinitperiod}}}%
-        {{hash=1b618683b8339c17b5fb811a8e32993b}{%
-           family={Ramirez-Alpizar},
-           familyi={R\bibinithyphendelim A\bibinitperiod},
-           given={Ixchel\bibnamedelima G.},
-           giveni={I\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
-      }
-      \strng{namehash}{02a64919dd11a589bf3f22c3bb768a74}
-      \strng{fullhash}{02a64919dd11a589bf3f22c3bb768a74}
-      \strng{bibnamehash}{02a64919dd11a589bf3f22c3bb768a74}
-      \strng{authorbibnamehash}{02a64919dd11a589bf3f22c3bb768a74}
-      \strng{authornamehash}{02a64919dd11a589bf3f22c3bb768a74}
-      \strng{authorfullhash}{02a64919dd11a589bf3f22c3bb768a74}
-      \field{labelalpha}{CIR23}
-      \field{sortinit}{C}
-      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{This article identifies and summarizes software tools and frameworks proposed in the Human–Robot Interaction (HRI) literature for developing extended reality (XR) experiences using game engines. This review includes primary studies proposing Virtual Reality (VR), Augmented Reality (AR), and Mixed Reality (MR) solutions where humans can control or interact with real robotic platforms using devices that extend the user’s reality. The objective of this article is not to present an extensive list of applications and tools. Instead, we present recent, relevant, common, and accessible frameworks and software tools implemented in research articles published in high-impact robotics conferences and journals. For this, we searched papers published during a seven-years period between 2015 and 2022 in relevant databases for robotics (Science Direct, IEEE Xplore, ACM digital library, Springer Link, and Web of Science). Additionally, we present and classify the application context of the reviewed articles in four groups: social robotics, programming of industrial robots, teleoperation of industrial robots, and Human–Robot collaboration (HRC).}
-      \field{issn}{2076-3417}
-      \field{journaltitle}{Applied Sciences}
-      \field{number}{3}
-      \field{title}{Integrating Virtual, Mixed, and Augmented Reality to Human–Robot Interaction Applications Using Game Engines: A Brief Review of Accessible Software Tools and Frameworks}
-      \field{volume}{13}
-      \field{year}{2023}
-      \verb{doi}
-      \verb 10.3390/app13031292
-      \endverb
-      \verb{urlraw}
-      \verb https://www.mdpi.com/2076-3417/13/3/1292
-      \endverb
-      \verb{url}
-      \verb https://www.mdpi.com/2076-3417/13/3/1292
-      \endverb
-    \endentry
-    \entry{dosSantos2025}{inproceedings}{}
-      \name{author}{7}{}{%
-        {{hash=0a084c2d93d248dfa3bd59c95cbece99}{%
-           family={Dos\bibnamedelima Santos},
-           familyi={D\bibinitperiod\bibinitdelim S\bibinitperiod},
-           given={Juliana},
-           giveni={J\bibinitperiod}}}%
-        {{hash=8355a5bd4128a56dfd316b7eaffb3515}{%
-           family={Bicho},
-           familyi={B\bibinitperiod},
-           given={Murilo},
-           giveni={M\bibinitperiod}}}%
-        {{hash=6977c4b247dd2423ff99b1062c9b16de}{%
-           family={Froes},
-           familyi={F\bibinitperiod},
-           given={Tony},
-           giveni={T\bibinitperiod}}}%
-        {{hash=5bf489a303ea640becd1da98e65edd7a}{%
-           family={Dorneles},
-           familyi={D\bibinitperiod},
-           given={Gabriel},
-           giveni={G\bibinitperiod}}}%
-        {{hash=b71519ab9846b0d532b89f57635bcab0}{%
-           family={Botelho},
-           familyi={B\bibinitperiod},
-           given={Silvia},
-           giveni={S\bibinitperiod}}}%
-        {{hash=b11f4f40339bfda1c6166a798af48d86}{%
-           family={Gonçalves},
-           familyi={G\bibinitperiod},
-           given={Eder},
-           giveni={E\bibinitperiod}}}%
-        {{hash=de9d71778fceb3409f5692e0d209cd17}{%
-           family={Pias},
-           familyi={P\bibinitperiod},
-           given={Marcelo},
-           giveni={M\bibinitperiod}}}%
-      }
-      \strng{namehash}{d856817ce944469d0d7e1c6449f9d093}
-      \strng{fullhash}{258bae567caaa2f649263a26f4939ec4}
-      \strng{bibnamehash}{d856817ce944469d0d7e1c6449f9d093}
-      \strng{authorbibnamehash}{d856817ce944469d0d7e1c6449f9d093}
-      \strng{authornamehash}{d856817ce944469d0d7e1c6449f9d093}
-      \strng{authorfullhash}{258bae567caaa2f649263a26f4939ec4}
-      \field{labelalpha}{DBF+25}
-      \field{sortinit}{D}
-      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{IECON 2025 – 51st Annual Conference of the IEEE Industrial Electronics Society}
-      \field{title}{Benchmarking Digital Twins for Tower Cranes: Isaac Sim vs. Gazebo}
-      \field{year}{2025}
-      \field{pages}{1\bibrangedash 8}
-      \range{pages}{8}
-      \verb{doi}
-      \verb 10.1109/IECON58223.2025.11221823
-      \endverb
-      \keyw{Visualization;Energy consumption;Cranes;Poles and towers;Graphics processing units;Benchmark testing;Rendering (computer graphics);Real-time systems;Hardware;Digital twins;Digital Twin;Tower Crane;Gazebo Simulator;NVIDIA Isaac Sim;GPU Benchmarking}
-    \endentry
     \entry{Diewald2021}{article}{}
       \name{author}{9}{}{%
         {{hash=7bfb1f61ea84f24fe254ba99d73ddbf2}{%
@@ -780,52 +675,6 @@
       \verb 10.7551/mitpress/11708.001.0001
       \endverb
     \endentry
-    \entry{Gonzalez2025}{article}{}
-      \name{author}{3}{}{%
-        {{hash=2188e0c955a5936415fc40e932b6e2ad}{%
-           family={Flores\bibnamedelima Gonzalez},
-           familyi={F\bibinitperiod\bibinitdelim G\bibinitperiod},
-           given={Jose\bibnamedelima M.},
-           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
-        {{hash=13021c04a800ad153040c471ab993f83}{%
-           family={Coronado},
-           familyi={C\bibinitperiod},
-           given={Enrique},
-           giveni={E\bibinitperiod}}}%
-        {{hash=8999557b9dbc1de0d945c8d0100a5e3b}{%
-           family={Yamanobe},
-           familyi={Y\bibinitperiod},
-           given={Natsuki},
-           giveni={N\bibinitperiod}}}%
-      }
-      \strng{namehash}{fb70f996d0e0babc12b77015b6075329}
-      \strng{fullhash}{fb70f996d0e0babc12b77015b6075329}
-      \strng{bibnamehash}{fb70f996d0e0babc12b77015b6075329}
-      \strng{authorbibnamehash}{fb70f996d0e0babc12b77015b6075329}
-      \strng{authornamehash}{fb70f996d0e0babc12b77015b6075329}
-      \strng{authorfullhash}{fb70f996d0e0babc12b77015b6075329}
-      \field{labelalpha}{FCY25}
-      \field{sortinit}{F}
-      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Simulators play a critical role in the development and testing of Industry 4.0 and Industry 5.0 applications. However, few studies have examined their capabilities beyond physics modeling, particularly in terms of connectivity and integration within broader robotic ecosystems. This review addresses this gap by focusing on ROS-compatible simulators. Using the SEGRESS methodology in combination with the PICOC framework, this study systematically analyzes 65 peer-reviewed articles published between 2021 and 2025 to identify key trends, capabilities, and application domains of ROS-integrated robotic simulators in industrial and manufacturing contexts. Our findings indicate that Gazebo is the most commonly used simulator in Industry 4.0, primarily due to its strong compatibility with ROS, while Unity is most prevalent in Industry 5.0 for its advanced visualization, support for human interaction, and extended reality (XR) features. Additionally, the study examines the adoption of ROS and ROS 2, and identifies complementary communication and integration technologies that help address the current interoperability challenges of ROS. These insights are intended to inform researchers and practitioners about the current landscape of simulation platforms and the core technologies frequently incorporated into robotics research.}
-      \field{issn}{2076-3417}
-      \field{journaltitle}{Applied Sciences}
-      \field{number}{15}
-      \field{title}{ROS-Compatible Robotics Simulators for Industry 4.0 and Industry 5.0: A Systematic Review of Trends and Technologies}
-      \field{volume}{15}
-      \field{year}{2025}
-      \verb{doi}
-      \verb 10.3390/app15158637
-      \endverb
-      \verb{urlraw}
-      \verb https://www.mdpi.com/2076-3417/15/15/8637
-      \endverb
-      \verb{url}
-      \verb https://www.mdpi.com/2076-3417/15/15/8637
-      \endverb
-    \endentry
     \entry{foote2013tf}{inproceedings}{}
       \name{author}{1}{}{%
         {{hash=0d11ace6e44e4742ea1692d7ddf4819e}{%
@@ -968,51 +817,6 @@
       \verb{doi}
       \verb https://doi.org/10.1109/ICAR.2005.1507456
       \endverb
-    \endentry
-    \entry{Kargar2024}{article}{}
-      \name{author}{4}{}{%
-        {{hash=19511abeac34e5990738e8b38539bc5d}{%
-           family={Kargar},
-           familyi={K\bibinitperiod},
-           given={Seyed\bibnamedelima Mohamad},
-           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
-        {{hash=3f92eb742f255085cdebed8bc2706718}{%
-           family={Yordanov},
-           familyi={Y\bibinitperiod},
-           given={Borislav},
-           giveni={B\bibinitperiod}}}%
-        {{hash=64c051cfb6299ab6d402a5a17093d14f}{%
-           family={Harvey},
-           familyi={H\bibinitperiod},
-           given={Carlo},
-           giveni={C\bibinitperiod}}}%
-        {{hash=ed235dcda2d8cea2b1cf6552f9f5ce07}{%
-           family={Asadipour},
-           familyi={A\bibinitperiod},
-           given={Ali},
-           giveni={A\bibinitperiod}}}%
-      }
-      \strng{namehash}{0a37acb954b2a91ef6794d92134b8d68}
-      \strng{fullhash}{0a37acb954b2a91ef6794d92134b8d68}
-      \strng{bibnamehash}{0a37acb954b2a91ef6794d92134b8d68}
-      \strng{authorbibnamehash}{0a37acb954b2a91ef6794d92134b8d68}
-      \strng{authornamehash}{0a37acb954b2a91ef6794d92134b8d68}
-      \strng{authorfullhash}{0a37acb954b2a91ef6794d92134b8d68}
-      \field{labelalpha}{KYH+24}
-      \field{sortinit}{K}
-      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{IEEE Access}
-      \field{title}{Emerging Trends in Realistic Robotic Simulations: A Comprehensive Systematic Literature Review}
-      \field{volume}{12}
-      \field{year}{2024}
-      \field{pages}{191264\bibrangedash 191287}
-      \range{pages}{24}
-      \verb{doi}
-      \verb 10.1109/ACCESS.2024.3404881
-      \endverb
-      \keyw{Robots;Artificial intelligence;Training;Testing;Simulation;Operating systems;Mobile robots;Wheels;Simulation;artificial intelligence;robot operating system;wheeled mobile robot}
     \endentry
     \entry{Kwon2025}{article}{}
       \name{author}{5}{}{%
@@ -1319,16 +1123,16 @@
       \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{The Robot Operating System 2 (ROS 2) is rapidly impacting the intelligent machines sector — on space missions, large agriculture equipment, multi-robot fleets, and more. Its success derives from its focused design and improved capabilities targeting product-grade and modern robotic systems. Following ROS 2’s example, the mobile robotics ecosystem has been fully redesigned based on the transformed needs of modern robots and is experiencing active development not seen since its inception. This paper comes from the desks of the key ROS Navigation maintainers to review and analyze the state of the art of robotics navigation in ROS 2. We discuss current research products and historically robust methods that provide differing behaviors and support for most robot types, and we provide expert insights organized by the fundamental problems in the field.}
+      \field{abstract}{The Robot Operating System 2 (ROS 2) is rapidly impacting the intelligent machines sector — on space missions, large agriculture equipment, multi-robot fleets, and more. Its success derives from its focused design and improved capabilities targeting product-grade and modern robotic systems. Following ROS 2’s example, the mobile robotics ecosystem has been fully redesigned based on the transformed needs of modern robots and is experiencing active development not seen since its inception. This paper comes from the desks of the key ROS Navigation maintainers to review and analyze the state of the art of robotics navigation in ROS 2. This includes new systems without parallel in ROS 1 or other similar mobile robotics frameworks. We discuss current research products and historically robust methods that provide differing behaviors and support for most every robot type. This survey consists of overviews, comparisons, and expert insights organized by the fundamental problems in the field. Some of these implementations have yet to be described in literature and many have not been benchmarked relative to others. We end by providing a glimpse into the future of the ROS 2 mobile robotics ecosystem.}
       \field{issn}{0921-8890}
       \field{journaltitle}{Robotics and Autonomous Systems}
-      \field{title}{From the desks of ROS maintainers: A survey of modern \& capable mobile robotics algorithms in the Robot Operating System 2}
+      \field{title}{From the desks of ROS maintainers: A survey of modern & capable mobile robotics algorithms in the robot operating system 2}
       \field{volume}{168}
       \field{year}{2023}
       \field{pages}{104493}
       \range{pages}{1}
       \verb{doi}
-      \verb 10.1016/j.robot.2023.104493
+      \verb https://doi.org/10.1016/j.robot.2023.104493
       \endverb
       \verb{urlraw}
       \verb https://www.sciencedirect.com/science/article/pii/S092188902300132X
@@ -1380,7 +1184,7 @@
       \verb{doi}
       \verb 10.1109/IROS45743.2020.9341207
       \endverb
-      \keyw{Navigation; Service robots; Heuristic algorithms; Sensors; Safety; Task analysis; Testing}
+      \keyw{Navigation;Service robots;Heuristic algorithms;Sensors;Safety;Task analysis;Testing;Service Robots;Software;Middleware and Programming Environments;Behaviour-Based Systems}
     \endentry
     \entry{Marques2024}{article}{}
       \name{author}{3}{}{%
@@ -1555,7 +1359,7 @@
       \verb{doi}
       \verb 10.1109/ETFA46521.2020.9211943
       \endverb
-      \keyw{Robot motion; Knowledge based systems; Semantics; Ontologies}
+      \keyw{Robot motion;Fuses;Knowledge based systems;Semantics;Companies;Ontologies;Product design}
     \endentry
     \entry{Perez2020}{article}{}
       \name{author}{5}{}{%
@@ -1612,33 +1416,6 @@
       \endverb
       \verb{url}
       \verb https://doi.org/10.3390/app10103633
-      \endverb
-    \endentry
-    \entry{Rob24}{misc}{}
-      \name{author}{1}{}{%
-        {{hash=e3993bcf8680f241f7dee81ea4ff96b7}{%
-           family={{Robotec.AI}},
-           familyi={R\bibinitperiod}}}%
-      }
-      \strng{namehash}{e3993bcf8680f241f7dee81ea4ff96b7}
-      \strng{fullhash}{e3993bcf8680f241f7dee81ea4ff96b7}
-      \strng{bibnamehash}{e3993bcf8680f241f7dee81ea4ff96b7}
-      \strng{authorbibnamehash}{e3993bcf8680f241f7dee81ea4ff96b7}
-      \strng{authornamehash}{e3993bcf8680f241f7dee81ea4ff96b7}
-      \strng{authorfullhash}{e3993bcf8680f241f7dee81ea4ff96b7}
-      \field{labelalpha}{Rob21}
-      \field{sortinit}{R}
-      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{GitHub repository}
-      \field{title}{{ROS2 For Unity}}
-      \field{year}{2021}
-      \verb{urlraw}
-      \verb https://github.com/RobotecAI/ros2-for-unity
-      \endverb
-      \verb{url}
-      \verb https://github.com/RobotecAI/ros2-for-unity
       \endverb
     \endentry
     \entry{Singh2024b}{article}{}
@@ -1760,7 +1537,7 @@
       \field{extraalpha}{2}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{A digital twin (DT) is a virtual/digital model of a physical object interconnected through data exchange; this paper presents a framework using Unity and ROS to develop DTs and evaluates latency and accuracy for a robotic arm use case.}
+      \field{abstract}{A digital twin (DT) is a virtual/digital model of any physical object (physical twin), interconnected through data exchange. In the context of Industry 4.0, DTs are integral to intelligent automation driving innovation at scale by providing significant improvements in precision, flexibility, and real-time responsiveness. A critical challenge in developing DTs is achieving a model that reflects real-time conditions with precision and flexibility. This paper focuses on evaluating latency and accuracy, key metrics for assessing the efficacy of a DT, which often hinder scalability and adaptability in robotic applications. This article presents a comprehensive framework for developing DTs using Unity and Robot Operating System (ROS) as the main layers of digitalization and communication. The MoveIt package was used for motion planning and execution for the robotic arm, showcasing the framework’s versatility independent of proprietary constraints. Leveraging the versatility and open-source nature of these tools, the framework ensures interoperability, adaptability, and scalability, crucial for modern smart manufacturing applications. Our approach was validated by conducting extensive accuracy and latency tests. We measured latency by timestamping messages exchanged between the physical and digital twin, achieving a latency of 77.67 ms. Accuracy was assessed by comparing the joint positions of the DT and the physical robotic arm over multiple cycles, resulting in an accuracy rate of 99.99%. The results highlight the potential of DTs in enhancing operational efficiency and decision-making in manufacturing environments.}
       \field{issn}{1424-8220}
       \field{journaltitle}{Sensors}
       \field{number}{17}
@@ -1775,73 +1552,6 @@
       \endverb
       \verb{url}
       \verb https://www.mdpi.com/1424-8220/24/17/5680
-      \endverb
-    \endentry
-    \entry{Singh2025}{article}{}
-      \name{author}{7}{}{%
-        {{hash=fcdac3d1c0370d50d9ade1c68adf53e7}{%
-           family={Singh},
-           familyi={S\bibinitperiod},
-           given={Maulshree},
-           giveni={M\bibinitperiod}}}%
-        {{hash=ccebe31fc60fbf4af43f550ae48e798d}{%
-           family={Kapukotuwa},
-           familyi={K\bibinitperiod},
-           given={Jayasekara},
-           giveni={J\bibinitperiod}}}%
-        {{hash=4c6d46a5c48e9489b9f6dedc8c71d914}{%
-           family={Gouveia},
-           familyi={G\bibinitperiod},
-           given={Eber\bibnamedelimb Lawrence\bibnamedelima Souza},
-           giveni={E\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
-        {{hash=2a2654bd8a8aa9268e7a21e308e0d1b4}{%
-           family={Fuenmayor},
-           familyi={F\bibinitperiod},
-           given={Evert},
-           giveni={E\bibinitperiod}}}%
-        {{hash=d32e628881ed4370c656517178858e6a}{%
-           family={Qiao},
-           familyi={Q\bibinitperiod},
-           given={Yuansong},
-           giveni={Y\bibinitperiod}}}%
-        {{hash=4406e8ec11aada3ea6ae39cb12fc3df8}{%
-           family={Murray},
-           familyi={M\bibinitperiod},
-           given={Niall},
-           giveni={N\bibinitperiod}}}%
-        {{hash=489135b3b667ea33671a7d61fd19dbd1}{%
-           family={Devine},
-           familyi={D\bibinitperiod},
-           given={Declan},
-           giveni={D\bibinitperiod}}}%
-      }
-      \strng{namehash}{a59649ee1ff340f38e3c16ace92ef616}
-      \strng{fullhash}{329b52023f6f242f420ed0ba2a0dee5d}
-      \strng{bibnamehash}{a59649ee1ff340f38e3c16ace92ef616}
-      \strng{authorbibnamehash}{a59649ee1ff340f38e3c16ace92ef616}
-      \strng{authornamehash}{a59649ee1ff340f38e3c16ace92ef616}
-      \strng{authorfullhash}{329b52023f6f242f420ed0ba2a0dee5d}
-      \field{extraname}{3}
-      \field{labelalpha}{SKG+25}
-      \field{sortinit}{S}
-      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Digital twin (DT) technology has become a cornerstone in the simulation and analysis of real-world systems, offering unparalleled insights into the lifecycle management of physical assets. By providing a real-time synchronized replica of the physical entity, DTs enable predictive maintenance, performance optimization, and lifecycle extension, which are pivotal for industries aiming for digital transformation. This paper presents a comprehensive comparative study of DT development of a robotic arm using two prominent simulation platforms: Unity and Gazebo. Unity, with its roots in the gaming industry, offers robust real-time rendering and a user-friendly interface, making it a versatile choice for various industries. Gazebo, traditionally used in robotics, provides detailed physics simulations and sensor data emulation, which is ideal for precise engineering applications. We explored the performance of both platforms in creating accurate and dynamic digital replicas. Through qualitative and quantitative analyses, this study evaluates each platform’s strengths and limitations. The study assesses these platforms across key performance metrics such as accuracy, latency, graphic quality, and integration with the Robot Operating System (ROS). The DTs were developed using a consistent physical setup and communication layer to ensure fair comparisons. The results indicate that Unity performed better in terms of accurately mimicking the robotic arm with lower latency, making it ideal for applications requiring high-fidelity visualizations and real-time responsiveness. However, Gazebo excels in its ease of ROS integration and cost-effectiveness, making it a suitable choice for smaller robotics and automation projects. This study conducts an empirical comparison of these platforms in terms of their performance in creating DTs of robotic arms which is not readily available. This paper aims to guide developers and organizations in selecting the appropriate platform for their DT initiatives, ensuring efficient resource utilization and optimal outcomes.}
-      \field{issn}{2079-9292}
-      \field{journaltitle}{Electronics}
-      \field{number}{2}
-      \field{title}{Comparative Study of Digital Twin Developed in Unity and Gazebo}
-      \field{volume}{14}
-      \field{year}{2025}
-      \verb{doi}
-      \verb 10.3390/electronics14020276
-      \endverb
-      \verb{urlraw}
-      \verb https://www.mdpi.com/2079-9292/14/2/276
-      \endverb
-      \verb{url}
-      \verb https://www.mdpi.com/2079-9292/14/2/276
       \endverb
     \endentry
     \entry{Staczek2021}{article}{}
