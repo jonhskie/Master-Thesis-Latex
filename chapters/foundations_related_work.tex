@@ -137,10 +137,94 @@ In the architecture of this thesis, ROS~2 serves as the central \textbf{data bac
 
 For advanced navigation tasks for both the physical robot and its virtual counterpart, this thesis utilizes \textbf{Navigation2 (Nav2)}, the official, next-generation autonomous navigation framework for ROS~2 \cite{macenski2020marathon2}. Nav2 was built from the ground up to orchestrate planning, control, and recovery tasks using configurable Behavior Trees, which are highly modular and can be modified at runtime to create unique navigation behaviors \cite{macenski2020marathon2}. At its core, Nav2 separates the task of navigation into two main components: a \textbf{global planner}, which finds an acceptable, long-range route through the environment, and a \textbf{local trajectory planner} (or controller), which generates velocity commands to follow that route while reacting to immediate obstacles \cite{macenski2023survey}. By leveraging the Nav2 stack, a high-level goal (e.g., a coordinate in the environment) can be sent via a ROS~2 action to either the physical EMARO robot or the purely virtual model, and the system will autonomously handle all complex path planning and collision avoidance.
 
+
+\section{The VERA Framework}
+\label{sec:vera}
+
+This thesis builds directly upon the "Virtual Environment for mobile Robotic Applications" (VERA) framework, previously developed by Gehricke \cite{Geh24}. VERA was designed as a modular and scalable platform to bridge the validation gap between pure software simulation and real-world testing. By integrating concepts from Digital Twins, Augmented Reality (AR), and Vehicle-in-the-Loop (ViL) testing, it allows physical robots to interact with virtual environments that are projected into the real world \cite{Geh24}.
+
+The core concept of VERA is to project a dynamic, interactive virtual environment onto a physical floor where a real robot operates. The system synchronizes the virtual state with the physical robot's actions, enabling scenarios where the robot can detect and react to virtual obstacles as if they were real. This setup provides a flexible testbed for developing and evaluating robotic applications without the need to physically construct complex environments \cite{Geh24}.
+
+\begin{figure}[h]
+    \centering
+    % TODO: Insert Figure 4.1 from Gehricke's Thesis (The VERA hardware setup with projector)
+    % \includegraphics[width=0.8\textwidth]{images/vera_setup_placeholder.png}
+    \caption{The physical setup of the VERA platform, featuring a ceiling-mounted projector and tracking system above the test area. (Source: \cite{Geh24})}
+    \label{fig:vera_setup}
+\end{figure}
+
+\subsection{The EMARO Test Platform}
+\label{sec:emaro_platform}
+The capabilities of the framework are demonstrated using the EMARO (Educational Modular Autonomous Robot Osnabrück), a mobile mini-robot developed at Osnabrück University specifically for research and education in robotics and artificial intelligence \cite{Geh24}.
+
+EMARO is designed with a modular hardware architecture based on three main Printed Circuit Boards (PCBs): a \textbf{Host-PCB} for high-level computing, a \textbf{Power-PCB} for energy management and motor control, and a \textbf{Base-PCB} for integrating ground sensors. The specific variant used in this work is equipped with a Raspberry Pi Compute Module 4 (CM4) running Ubuntu and the Robot Operating System 2 (ROS~2) \cite{Geh24}.
+
+\begin{figure}[h]
+    \centering
+    % TODO: Insert Figure 3.1 from Gehricke's Thesis (The EMARO robot)
+    % \includegraphics[width=0.5\textwidth]{images/emaro_robot_placeholder.png}
+    \caption{The EMARO robot serves as the physical twin in the system, equipped with a modular sensor suite and running ROS~2. (Source: \cite{Geh24})}
+    \label{fig:emaro_robot}
+\end{figure}
+
+For environmental perception, the robot utilizes Time-of-Flight (ToF) distance sensors and an Inertial Measurement Unit (IMU) for orientation tracking. It also features two wide-angle cameras configured for stereo vision applications or line-following tasks. In the context of VERA, EMARO acts as the "Physical Twin," sending real-time telemetry (such as odometry, battery status, and sensor data) to the simulation framework via ROS~2 topics \cite{Geh24}.
+
+\subsection{Original VERA System Architecture}
+The software architecture of the original VERA framework was built entirely on ROS~2 and consisted of three main components: the Virtual Environment Positioning System (VEPS), the Environment Manager, and the Visualization System.
+
+\subsubsection{Virtual Environment Positioning System (VEPS)}
+Precise localization is critical for synchronizing the physical robot with the projected virtual world. The original VERA implementation utilized a depth-based approach, employing a ceiling-mounted Allied Vision Ruby 3D stereo camera to capture point clouds of the test area. A Median Absolute Deviation (MAD) algorithm filtered these point clouds to calculate the robot's centroid \cite{Geh24}.
+
+However, to ensure maximum robustness and precision for this thesis, the positioning system has been updated to use an **ArUco marker-based tracking system**, developed in parallel research by \cite{JuliaBA}. While the point-cloud method provided a markerless solution, the ArUco-based approach offers significantly higher reliability and lower noise in variable lighting conditions. By placing a fiducial marker on top of the EMARO robot, the system can determine the robot's 6D pose (position and orientation) with sub-millimeter precision. This pose is published to the ROS~2 network, allowing the simulation to update the position of the digital twin instantly.
+
+\begin{figure}[h]
+    \centering
+    % TODO: Insert a photo of the ArUco tracking setup or the camera view with markers
+    % \includegraphics[width=0.8\textwidth]{images/aruco_tracking_placeholder.png}
+    \caption{Visualization of the tracking system. The original VERA used point clouds (left), while the current iteration utilizes ArUco markers (right) for robust pose estimation \cite{JuliaBA}.}
+    \label{fig:veps_comparison}
+\end{figure}
+
+\subsubsection{Virtual Environment Manager}
+The Environment Manager acts as the central "brain" of the simulation. Implemented as a C++ ROS~2 node, it is responsible for parsing environment definitions stored in standard Gazebo \texttt{world.sdf} files. It manages the state of all virtual objects, tracking their positions and properties (e.g., whether an object is "movable" or "static") \cite{Geh24}.
+
+A key function of the manager is handling interactions between the robot and the virtual world. It runs a continuous loop (typically at 20Hz) that checks the distance between the robot's position (provided by VEPS) and virtual objects. If a collision is detected, the manager triggers predefined actions, such as removing a "collectible" object or stopping the robot. However, this manager relies on simple distance heuristics rather than a physics engine, limiting the complexity of interactions \cite{Geh24}.
+
+\subsubsection{Visualization System}
+The visualization component is responsible for rendering the virtual environment so it can be projected onto the physical floor. In the original VERA framework, this was achieved using a custom ROS~2 node built with **Pygame**, a Python library designed for 2D game development \cite{Geh24}.
+
+The visualizer subscribes to the object lists published by the Manager and the robot's path history. It renders a 2D top-down orthogonal view of the scene, drawing obstacles as simple geometric shapes. Additionally, it provides Augmented Reality (AR) features by projecting dynamic information directly into the workspace, such as the robot's driven path (visualized as a trail) and a system status panel displaying real-time CPU and battery usage behind the robot \cite{Geh24}.
+
+\begin{figure}[h]
+    \centering
+    % TODO: Insert Figure 4.11 from Gehricke's Thesis (The Pygame projection with path)
+    % \includegraphics[width=0.8\textwidth]{images/pygame_visualizer_placeholder.png}
+    \caption{The original VERA visualization rendered via Pygame, projecting the robot's path and virtual obstacles onto the floor. (Source: \cite{Geh24})}
+    \label{fig:pygame_vis}
+\end{figure}
+
+\subsection{Identified Limitations}
+While VERA successfully demonstrated the concept of Robot-in-the-Loop testing with AR projections, its original software implementation presents several critical limitations that this thesis aims to overcome:
+
+\begin{itemize}
+    \item \textbf{Lack of Realistic Physics:} The custom Environment Manager does not feature a physics engine. Collisions are detected using simple radius checks, meaning the robot cannot push objects, experience friction, or interact with complex geometries. This limits the realism of the Digital Twin \cite{Geh24}.
+    \item \textbf{Performance Scalability:} The Pygame-based visualizer processes rendering on the CPU and struggled with performance in complex scenarios. Gehricke \cite{Geh24} noted that in environments with a high number of dynamic objects (e.g., $>$800), the message queue became saturated, leading to significant latency and incomplete visual updates.
+    \item \textbf{Limited Interaction (No VR):} The system was designed strictly for 2D floor projections. There is no support for immersive Virtual Reality (VR) interfaces that would allow a human operator to view the scene in 3D or interact with the robot remotely. The integration of VR was explicitly identified as a necessary future step to enhance Human-Robot Interaction (HRI) \cite{Geh24}.
+\end{itemize}
+
+
+
 \section{Simulation Engines for Robotics}
 \label{sec:sim_engines}
 
-Selecting the appropriate simulation engine is a foundational decision for the architecture of a Digital Twin. The simulator must serve as a synchronized virtual replica of the physical system, requiring a platform that balances computational efficiency with environmental realism \cite{Singh2025}. For this project, the selection process is driven by specific criteria derived from the requirements of Industry 5.0 applications: Visual Fidelity, Physics Accuracy, Native VR/AR Support, and the balance between Community Support and Learning Curve \cite{Gonzalez2025}.
+To overcome the limitations of the original VERA framework—specifically the lack of physical realism and the inability to support immersive VR interaction—selecting a capable simulation engine is critical. The choice of platform significantly influences the efficiency, accuracy, and applicability of the Digital Twin \cite{Singh2025}. Therefore, the evaluation of simulation engines in this thesis is driven by four specific technical criteria essential for a functional Mixed Reality Digital Twin:
+
+\begin{itemize}
+    \item \textbf{Visual Fidelity:} High-quality rendering is required not just for aesthetics, but to support realistic sensor simulation (e.g., cameras) and to provide an immersive experience for the user in VR, which traditional simulators often lack \cite{dosSantos2025}.
+    \item \textbf{Physics Accuracy:} The engine must provide a robust physics backend to accurately predict the kinematic and dynamic behavior of the EMAROS robot, a capability missing in VERA's original custom manager \cite{Singh2025}.
+    \item \textbf{Native VR/AR Support:} To extend VERA with the proposed Virtual Reality interfaces, the engine must have a mature framework for XR devices, facilitating the creation of interactive environments without extensive middleware \cite{Coronado2023}.
+    \item \textbf{Robust ROS~2 Integration:} As ROS~2 serves as the data backbone of the system, the engine must support low-latency, high-throughput communication to synchronize the digital twin with the physical robot in real-time \cite{Singh2025}.
+\end{itemize}
 
 \subsection{Traditional Robotics Simulators}
 \textbf{Gazebo} is the most widely used simulator for Industry 4.0 applications due to its deep integration with ROS and its open-source nature \cite{Gonzalez2025}. It provides detailed physics simulations and sensor data emulation, making it ideal for precise engineering applications \cite{Singh2025}. However, while Gazebo benefits from a vast community and extensive documentation, it possesses notable limitations regarding visualization. Its rendering quality is described as "moderate," lacking the photorealism required for immersive Extended Reality (XR) experiences \cite{dosSantos2025}. Furthermore, studies note that Gazebo presents a steep learning curve for new users due to its complex configuration and less intuitive user interface compared to modern commercial tools \cite{Singh2025, Gonzalez2025}.
@@ -185,83 +269,3 @@ Table \ref{tab:sim_comparison} summarizes the capabilities of these engines.
 
 \subsubsection{Rationale for Using the Unity Engine}
 Based on this analysis, **Unity** is selected as the core simulation engine. It provides the necessary XR framework for Mixed Reality \cite{Coronado2023} and offers superior visualization compared to Gazebo \cite{Gonzalez2025}. Furthermore, it balances accessibility with power; its C\# scripting and vast community support offer a more manageable learning curve than Unreal Engine \cite{Coronado2023}, while the \texttt{ros2-for-unity} plugin ensures high-performance, low-latency communication \cite{Rob24}.
-
-\section{The VERA Framework and EMARO}
-\label{sec:emaro}
-
-The capabilities of the VERA framework were demonstrated using a specific hardware testbed, the EMARO (Educational Modular Autonomous Robot Osnabrück) \cite{Geh24}. EMARO is a mobile, autonomous, and modular mini-robot developed at Osnabrück University, designed specifically for teaching and research in robotics, artificial intelligence, and computer engineering \cite{Geh24}.
-
-The robot's hardware architecture is modular, based on three main Printed Circuit Boards (PCBs): a \textbf{Host-PCB} that integrates the compute module, a \textbf{Power-PCB} for energy management and motor control, and a \textbf{Base-PCB} for integrating ground and distance sensors \cite{Geh24}. The variant used in the original VERA thesis was equipped with a Raspberry Pi Compute Module 4, an Inertial Measurement Unit (IMU) for orientation, and two wide-angle cameras configured for stereo vision applications \cite{Geh24}. The EMARO robot is shown in Figure \ref{fig:emaro_robot}.
-
-\begin{figure}[h]
-    \centering
-    % \includegraphics[width=0.4\textwidth]{figures/Geh24_Fig3-1.png}
-    \caption[The EMARO robot.]{The EMARO (Educational Modular Autonomous Robot Osnabrück) platform used as the physical testbed for the VERA framework. Adapted from \cite{Geh24}.}
-    \label{fig:emaro_robot}
-\end{figure}
-
-Critically for its integration, the entire system, including the EMARO, operates on the Robot Operating System 2 (ROS 2) \cite{Geh24}. Within the original VERA framework, EMARO navigated the projected environment autonomously by employing a camera-based, OpenCV line-following algorithm \cite{Geh24}. This \texttt{pathfinder} node processed the camera feeds to detect the projected line, calculate its centroid, and publish steering commands to the \texttt{/cmd\_vel} topic, enabling the robot to follow the path \cite{Geh24}. Data from the robot's IMU and system status (like CPU and RAM usage) were also published to ROS 2 topics, where VERA's visualizer could subscribe to them for AR projections \cite{Geh24}.
-
-\subsection{Original VERA System Architecture}
-\label{sec:vera_architecture}
-The software architecture of the original VERA framework was built on ROS 2 and consisted of three main components: a positioning system (VEPS), an environment manager, and a dual-instance visualization system \cite{Geh24}. The interaction between these components, as described in the original thesis, is shown in Figure \ref{fig:vera_sw_architecture}.
-
-\begin{figure}[h]
-    \centering
-    % \includegraphics[width=1.0\textwidth]{figures/Geh24_Fig4-4.png}
-    \caption[Original VERA software components.]{The software architecture of the original VERA framework, showing the data flow between the EMARO, the 3D Camera, the core VERA nodes (VEPS, Manager, Visualizer), and RViz. Adapted from \cite{Geh24}.}
-    \label{fig:vera_sw_architecture}
-\end{figure}
-
-\subsubsection{Virtual Environment Positioning System (VEPS)}
-The first component, the Virtual Environment Positioning System (VEPS), was responsible for the real-time localization of the EMARO \cite{Geh24}. This system did not use traditional vision, but instead relied on depth data \cite{Geh24}. It utilized an Allied Vision Ruby 3D stereo camera, mounted above the test area, to capture a 3D point cloud of the environment \cite{Geh24}.
-
-This point cloud data was processed in several steps. First, it was filtered to remove the ground plane and sensor noise, isolating the points corresponding to the robot \cite{Geh24}. Second, the \textbf{Median Absolute Deviation (MAD)} algorithm was applied to the remaining points to statistically find their center \cite{Geh24}. This calculated centroid was used as the robot's 2D $(x, y)$ position. This position was then smoothed using a Kalman filter and published as a ROS 2 transform (\texttt{/tf}) for other nodes to consume \cite{Geh24}. The evaluation of VEPS showed it could achieve processing times under 5ms at a 30 FPS update rate \cite{Geh24}.
-
-\subsubsection{Virtual Environment Manager}
-The second component was the Environment Manager, which acted as the central "brain" of the simulation \cite{Geh24}. This C++ ROS 2 node was responsible for parsing, managing, and updating the state of the virtual world \cite{Geh24}. It would load environments from standard Gazebo-compatible \textbf{\texttt{world.sdf}} files, which defined the models, poses, and custom properties (e.g., "movable" or "removable") of all virtual objects \cite{Geh24}.
-
-The manager ran a main loop on a 50ms timer \cite{Geh24}. In each loop, it would look up the robot's current position (published by VEPS) and perform collision checks between the robot and all spawnable objects in the environment \cite{Geh24}. If a collision was detected, the manager would update the object's state (e.g., marking it for removal) and publish these changes to the visualizers using ROS 2 \textbf{\texttt{MarkerArray}} messages over the \texttt{/objects} topic \cite{Geh24}. This node was also responsible for path tracking, recording the robot's position history and publishing it as a \texttt{/path} message for the AR visualization \cite{Geh24}.
-
-\subsubsection{Visualization System (RViz and Pygame)}
-Finally, the visualization system consisted of two separate, synchronized instances that both subscribed to the manager's \texttt{/objects} and \texttt{/path} topics \cite{Geh24}.
-
-\begin{enumerate}
-    \item \textbf{RViz:} The standard ROS visualization tool, RViz, was used as a 3D simulation interface \cite{Geh24}. It provided a detailed 3D view for debugging and monitoring, displaying the robot's digital twin (from its URDF model), the virtual objects, the robot's driven path, and other debug data like the VEPS point cloud \cite{Geh24}. An example of the RViz interface from the original thesis is shown in Figure \ref{fig:vera_rviz_view}.
-    
-    \begin{figure}[h]
-        \centering
-        % \includegraphics[width=0.7\textwidth]{figures/Geh24_Fig4-10.png}
-    \caption[RViz 3D view in VERA.]{The RViz simulation interface in the original VERA framework, showing a 3D view of the virtual objects (green), the EMARO's digital model (grey), and its driven path. Adapted from \cite{Geh24}.}
-        \label{fig:vera_rviz_view}
-    \end{figure}
-    
-    \item \textbf{2D Projector Node:} This was the custom-built component responsible for projecting the virtual world onto the physical floor \cite{Geh24}. This ROS 2 node, written in Python, used the \textbf{Pygame library} to render a 2D orthogonal, top-down view of the environment \cite{Geh24}. It subscribed to the manager's topics to draw all the virtual objects and the robot's path \cite{Geh24}. This node also rendered the AR-like features, such as a status display (showing EMARO's CPU and RAM usage) that was projected onto the floor behind the robot, following its position and orientation in real-time \cite{Geh24}. The final rendered output of this Pygame node is shown in Figure \ref{fig:vera_pygame_view}.
-
-    \begin{figure}[h]
-        \centering
-        % \includegraphics[width=0.7\textwidth]{figures/Geh24_Fig4-11.png}
-    \caption[Pygame 2D rendered projection in VERA.]{The 2D orthogonal view rendered by the custom Pygame visualizer, as it would be sent to the projector. It displays the objects (green), the robot's position (red dot), its path (cyan), and the AR status display. Adapted from \cite{Geh24}.}
-        \label{fig:vera_pygame_view}
-    \end{figure}
-\end{enumerate}
-\subsection{Platform Changes and Identified Limitations}
-\label{sec:vera_limitations}
-
-While the \texttt{[Geh24]} thesis established the VERA framework's concept, this thesis builds upon an evolved version of the platform and directly addresses the specific software limitations documented in the original work.
-
-\subsubsection{Changes of the Positioning System}
-The VERA platform is modular, and its components have been iterated upon. The point-cloud-based VEPS \cite{Geh24} is no longer in use. Instead, the platform for this thesis employs a more robust, marker-based tracking system. This system, developed in a separate bachelor's thesis \cite{Your_BA_Thesis_Citation}, uses ArUco markers and multiple cameras to provide a high-precision 6D pose (position and orientation) of the robot, which it publishes over a ROS 2 topic. This thesis consumes this pose data as a service. The internal implementation of the ArUco tracking system itself is outside the scope of this project.
-
-\subsubsection{Identified Limitations of the Original Software}
-While the positioning system was updated, the core software limitations of the original VERA manager and visualizer remained. These limitations, explicitly documented in the \texttt{[Geh24]} thesis, form the primary justification for this work:
-
-\begin{itemize}
-    \item \textbf{Lack of Realistic Physics:} The custom-built environment manager was a significant limitation as it did not include an enhanced physics engine for realistic interactions. The \texttt{[Geh24]} thesis concludes by listing the "integration of enhanced physics into the manager's implementation" as a primary direction for future work \cite{Geh24}.
-    
-    \item \textbf{Performance and Scalability Bottlenecks:} The evaluation of the \textbf{Pygame-based 2D visualizer} revealed significant performance limitations \cite{Geh24}. In scenarios with a high number of object updates (e.g., >800--1250 objects), the system's responsiveness failed, and marker latencies were observed to "spike into seconds" \cite{Geh24}. The original thesis identified the cause of this bottleneck: the visualizer's message queue could not process the high frequency of individual marker messages, leading to "delayed and incomplete updates" \cite{Geh24}.
-    
-    \item \textbf{Limited Interaction Modalities:} Finally, while the AR projections were successful, more immersive and interactive modalities were not implemented. The \texttt{[Geh24]} thesis concludes by suggesting a "virtual reality integration to interact with the simulated environment via VR headsets" as another "possible extension" of the system \cite{Geh24}.
-\end{itemize}
-
-These three documented limitations---a lack of physics, a non-scalable custom visualizer, and the absence of VR interaction---are the specific problems this thesis solves by replacing VERA's custom manager and Pygame visualizer with the Unity Engine.
