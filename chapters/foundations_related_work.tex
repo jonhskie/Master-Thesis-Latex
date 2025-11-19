@@ -74,20 +74,6 @@ The relationship between these technologies is formally described by the foundat
 
 A Virtual Reality (VR) environment is an endpoint of the continuum, where the user is totally immersed in and can interact with a fully synthetic world \cite{MK94}. This approach is useful for HRI research, as it allows for testing interactions with virtual robots in scenarios where it might be unsafe or too expensive for physical hardware \cite{Walker2023}. The general term Mixed Reality (MR) describes the entire spectrum between the two extremes, where real and virtual worlds are combined into a single display \cite{MK94}. MR is made up of two main categories: Augmented Reality (AR) and Augmented Virtuality (AV) \cite{MK94, MV20}. AR is the process of adding virtual objects to a real environment \cite{MK94}. This lets for example, HRI researchers to place 3D data and intentions of a robot directly into the physical space of an user \cite{Walker2023}. The opposite is Augmented Virtuality (AV), where a primarily virtual world is enhanced with elements from the real world, like live video feeds \cite{MK94}.
 
-\section{The VERA Framework and EMARO (Seperates Kapitel?)}
-\label{sec:vera}
-
-This thesis builds directly upon the "Virtual Environment for mobile Robotic Applications" (VERA) framework, a preceding master's thesis by Gehricke \cite{Geh24}. The VERA framework was designed as a modular platform to bridge the gap between pure simulation and real-world testing \cite{Geh24}. To achieve this, it integrated concepts from Digital Twins \cite{AA23}, Augmented Reality (AR) \cite{MV20}, and Vehicle-in-the-Loop (ViL) testing \cite{Geh24}.
-
-The core concept of VERA is to project a dynamic, interactive virtual environment onto a physical floor, where a real robot operates \cite{Geh24}. This system enables synchronized virtual and projected environments, allowing the robot to interact with both representations simultaneously \cite{Geh24}. This combination of simulation with real-world dynamics and AR-based visualization provides a flexible platform for developing and evaluating complex robotic tasks \cite{Geh24}. The physical setup of the VERA platform is shown in Figure \ref{fig:vera_platform}.
-
-\begin{figure}[h]
-    \centering
-    % \includegraphics[width=0.8\textwidth]{figures/Geh24_Fig4-1.png}
-    \caption[The VERA platform for testing mobile robotic applications.]{The VERA platform, including the overhead projector and 3D camera mounted on a cross-beam, and the physical test area on the floor. Adapted from \cite{Geh24}.}
-    \label{fig:vera_platform}
-\end{figure}
-
 \section{Robot Operating System 2 (ROS~2)}
 \label{sec:ros2}
 The Robot Operating System 2 (ROS~2) is not a conventional operating system, but rather a middleware framework designed to simplify the development of complex robotic systems \cite{MFG22}. It was redesigned from the ground up to meet the challenges set forth by modern, production-grade robotics in domains ranging from logistics and agriculture to space missions, and it has become the standard for both research and industry \cite{macenski2023survey, MFG22}. At its core, ROS~2's design is guided by principles of distribution, abstraction, asynchrony, and modularity, which together facilitate the creation of scalable and robust robotic applications \cite{MFG22}.
@@ -269,3 +255,12 @@ Table \ref{tab:sim_comparison} summarizes the capabilities of these engines.
 
 \subsubsection{Rationale for Using the Unity Engine}
 Based on this analysis, **Unity** is selected as the core simulation engine. It provides the necessary XR framework for Mixed Reality \cite{Coronado2023} and offers superior visualization compared to Gazebo \cite{Gonzalez2025}. Furthermore, it balances accessibility with power; its C\# scripting and vast community support offer a more manageable learning curve than Unreal Engine \cite{Coronado2023}, while the \texttt{ros2-for-unity} plugin ensures high-performance, low-latency communication \cite{Rob24}.
+
+\section{Motivation}
+\label{sec:motivation}
+
+While the original VERA framework successfully demonstrated the concept of Robot-in-the-Loop testing, its reliance on custom software components imposed significant technical limitations. The lack of a physics engine prevented realistic interaction, the Pygame-based visualizer suffered from performance bottlenecks in complex scenes, and the absence of Virtual Reality support limited the potential for immersive human-robot collaboration \cite{Geh24}.
+
+To overcome these constraints, this thesis proposes re-engineering the core architecture of VERA by integrating the \textbf{Unity Engine} with the \textbf{Robot Operating System 2 (ROS~2)}. Unity was selected for its robust physics simulation (PhysX), high-fidelity rendering, and mature XR framework, which directly address the shortcomings of the previous system \cite{Singh2025, Gonzalez2025}. By utilizing the \texttt{ros2-for-unity} asset, the system ensures high-performance, low-latency synchronization between the physical and virtual worlds \cite{Rob24}.
+
+The primary motivation is to establish a robust, physics-enabled Mixed Reality environment that bridges the gap between simulation and reality. This new development will be validated through the creation of specific \textbf{demonstration scenarios}. These scenarios will feature the EMAROS robot actively interacting with virtual elements, serving as a proof-of-concept for the system's enhanced physical realism, scalability, and immersive interactive capabilities.
