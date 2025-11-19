@@ -5,7 +5,7 @@
 \contentsline {section}{\numberline {2.2}Digital Twins}{8}{section.2.2}%
 \contentsline {section}{\numberline {2.3}Mixed Reality}{9}{section.2.3}%
 \contentsline {section}{\numberline {2.4}Robot Operating System 2 (ROS~2)}{10}{section.2.4}%
-\contentsline {section}{\numberline {2.5}The VERA Framework}{13}{section.2.5}%
+\contentsline {section}{\numberline {2.5}The VERA Framework}{12}{section.2.5}%
 \contentsline {subsection}{\numberline {2.5.1}The EMARO Test Platform}{13}{subsection.2.5.1}%
 \contentsline {subsection}{\numberline {2.5.2}Original VERA System Architecture}{14}{subsection.2.5.2}%
 \contentsline {subsubsection}{\numberline {2.5.2.1}Virtual Environment Positioning System (VEPS)}{14}{subsubsection.2.5.2.1}%
