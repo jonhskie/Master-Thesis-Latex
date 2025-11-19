@@ -215,7 +215,7 @@ Game engines have been widely adopted within the robotics community to overcome 
 
 \textbf{Unreal Engine} is renowned for photorealistic visuals is capable of handling big, open-world environments \cite{Gonzalez2025}. But it has a steep learning curve because of its dependency on C++ and therefore is not very well-suited for rapid prototyping compared to other engines like Unity \cite{Coronado2023}.
 
-\textbf{Unity Engine} is establishing itself as the primary platform for Industry 5.0 applications, in particular those focusing on HRI and MR \cite{Gonzalez2025}. It boasts a balance of high-fidelity graphics with a robust physics engine, PhysX \cite{Singh2025}. Unity is also known for having one of the most mature XR ecosystems, along with a huge asset store, which lowers the barrier to entry for developers\cite{Singh2025, Coronado2023}. Literature points out that the user-friendly interface of Unity and supportive community help with a softer learning curve compared to Gazebo or Unreal, particularly for users without deep C++ expertise \cite{Singh2025, Coronado2023}.
+\textbf{Unity Engine} is establishing itself as the primary platform for Industry 5.0 applications, in particular those focusing on HRI and MR \cite{Gonzalez2025}. It boasts a balance of high-fidelity graphics with a robust physics engine, PhysX \cite{Singh2025}. Unity is also known for having one of the most mature MR ecosystems, along with a huge asset store, which lowers the barrier to entry for developers\cite{Singh2025, Coronado2023}. Literature points out that the user-friendly interface of Unity and supportive community help with a softer learning curve compared to Gazebo or Unreal, particularly for users without deep C++ expertise \cite{Singh2025, Coronado2023}.
 ROS~2 is not natively supported by Unity. Support must be provided through third-party plugins. For the work described in this thesis, the \\textbf{ROS2 For Unity} plugin from Robotec.AI has been used ~\\cite{Rob24}. This asset offers high-performance communication by loading the ROS~2 middleware layer (RCL layer) directly inside the Unity engine \cite{Rob24}. Unlike bridged solutions, simulation entities now can act as native ROS~2 nodes in the context of Unity, thus respecting QoS and reaching lower latencies ~\cite{Rob24}.
 
 \subsection{Comparison and Selection}
@@ -229,11 +229,11 @@ Table \ref{tab:sim_comparison} summarizes the capabilities of these engines.
 \begin{tabular}{|l|c|c|c|c|}
 \hline
 \textbf{Feature} & \textbf{Gazebo} & \textbf{Isaac Sim} & \textbf{Unreal Engine} & \textbf{Unity} \\ \hline
-\textbf{Primary Use Case} & Control \& Navigation & AI \& Photorealism & Photorealism & HRI \& XR (VR/AR) \\ \hline
+\textbf{Primary Use Case} & Control \& Navigation & AI \& Photorealism & Photorealism & HRI \& MR (VR/AR) \\ \hline
 \textbf{Visual Fidelity} & Moderate & Very High & Very High & High \\ \hline
 \textbf{Physics Engine} & ODE/Bullet/DART & PhysX 5 (GPU) & Chaos/PhysX & PhysX \\ \hline
 \textbf{Learning Curve} & Steep & Advanced & Steep (C++) & Moderate (C\#) \\ \hline
-\textbf{Community Support} & High (ROS specific) & Moderate & High (Gaming) & Very High (XR/Gaming) \\ \hline
+\textbf{Community Support} & High (ROS specific) & Moderate & High (Gaming) & Very High (MR/Gaming) \\ \hline
 \textbf{ROS 2 Integration} & Native & Bridge & Bridge & Plugin (Native Stack) \\ \hline
 \textbf{Hardware Req.} & Low & Very High (RTX) & High & Moderate \\ \hline
 \end{tabular}%
@@ -241,12 +241,12 @@ Table \ref{tab:sim_comparison} summarizes the capabilities of these engines.
 \end{table}
 
 \subsubsection{Rationale for Using the Unity Engine}
-Based on this analysis, Unity is selected as the simulation engine. It has an integrated XR framework for Mixed Reality \cite{Coronado2023} and better visualization compared to Gazebo \cite{Gonzalez2025}. It maintains a balance between accessibility and performance, while C\# scripting, combined with large community support, makes learning it simpler than Unreal Engine \cite{Coronado2023}. In addition the \texttt{ros2-for-unity} plugin brings high-performance and low-latency communication \cite{Rob24}.
+Based on this analysis, Unity is selected as the simulation engine. It has an integrated MR framework for Mixed Reality \cite{Coronado2023} and better visualization compared to Gazebo \cite{Gonzalez2025}. It maintains a balance between accessibility and performance, while C\# scripting, combined with large community support, makes learning it simpler than Unreal Engine \cite{Coronado2023}. In addition the \texttt{ros2-for-unity} plugin brings high-performance and low-latency communication \cite{Rob24}.
 \section{Motivation}
 \label{sec:motivation}
 
 While the original framework of VERA was able to proof the concept of Robot-in-the-Loop testing, it has severe technical limitations due to its reliance on custom software components \cite{Geh24}. The lack of a physics engine prevented realistic interaction, the Pygame-based visualizer suffered from performance bottlenecks in complex scenes and Virtual Reality is not supported, limiting the potential for human-robot collaboration \cite{Geh24}.
 
-To overcome these limitations, this thesis proposes integrated the \textbf{Unity Engine} \cite{Uni23} into the architecture of VERA using the \textbf{Robot Operating System 2 (ROS~2)} \cite{macenski2023survey}. Unity is chosen because it offers advanced physics simulation through PhysX, sophisticated rendering and a mature framework framework for creation in XR \cite{Singh2025, Gonzalez2025}. All of these target the shortcomings of the past system \cite{Geh24}. Using the \texttt{ros2-for-unity} asset ensures low-latency, high-throughput synchronization between the physical and virtual world \cite{Rob24}.
+To overcome these limitations, this thesis proposes integrated the \textbf{Unity Engine} \cite{Uni23} into the architecture of VERA using the \textbf{Robot Operating System 2 (ROS~2)} \cite{macenski2023survey}. Unity is chosen because it offers advanced physics simulation through PhysX, sophisticated rendering and a mature framework framework for creation in MR \cite{Singh2025, Gonzalez2025}. All of these target the shortcomings of the past system \cite{Geh24}. Using the \texttt{ros2-for-unity} asset ensures low-latency, high-throughput synchronization between the physical and virtual world \cite{Rob24}.
 
 The primary motivation is to establish a robust, physics-enabled Mixed Reality environment that bridges the gap between simulation and reality. The new development will be verified by creating demonstration scenarios. These scenarios will include the EMAROS robot actively interacting with virtual elements, acting as a proof-of-concept for the improved physical realism of the system, scalability, and immersive interactive capabilities.
