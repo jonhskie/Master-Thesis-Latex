@@ -76,8 +76,8 @@ A Virtual Reality (VR) environment is an endpoint of the continuum, where the us
 
 \section{Robot Operating System 2 (ROS~2)}
 \label{sec:ros2}
-ROS~2 is not a traditional operating system but a middleware framework to simplify the creation of complex robotic systems \cite{MFG22}. It was redesigned from scratch to meet the challenges posed by modern production-grade robotics in logistics, agriculture, up to space missions and became the standard for both research and industry \cite{macenski2023survey, MFG22}. At its heart, ROS~2 is designed based on principles of distribution, abstraction, asynchrony, and modularity that together allow the development of scalable and robust applications \cite{MFG22}.
-The architecture of ROS~2 is based on a distributed network of independent programs called \textbf{Nodes} \cite{MFG22}. A node is a single, self-contained executable that performs a specific task, such as controlling a motor, processing sensor data, or, in the case of this thesis, bridging communication to the Unity simulation \cite{MFG22}. These nodes communicate through a set of defined patterns. The most common pattern is the publish-subscribe mechanism called \textbf{Topics}, as illustrated in Figure \ref{fig:ros2_comm_concept} \cite{MFG22}. In this model, nodes can publish data (as messages) to a topic, while other nodes can subscribe to that topic to receive the data asynchronously \cite{MFG22}. For tasks requiring a direct request and a guaranteed response, ROS~2 provides \textbf{Services}, which follow a synchronous request-response pattern \cite{MFG22}. For long-running tasks that require continuous feedback and the ability to be preempted, ROS~2 provides a unique communication pattern called \textbf{Actions} \cite{MFG22}. An action consists of a goal, a feedback stream, and a final result, making it ideal for managing tasks like navigation, where a robot's progress toward a goal needs to be monitored over time \cite{macenski2020marathon2}.
+ROS~2 is not a operating system but a middleware framework to simplify the creation of complex robotic systems \cite{MFG22}. It was redesigned from scratch to meet the challenges posed by modern production-grade robotics in logistics, agriculture, up to space missions and became the standard for both research and industry \cite{macenski2023survey, MFG22}. At its heart, ROS~2 is designed based on principles of distribution, abstraction, asynchrony, and modularity that together allow the development of scalable and robust applications \cite{MFG22}.
+The architecture of ROS~2 is based on a distributed network of independent programs called \textbf{Nodes } \cite{MFG22}. A node is a single, self-contained executable that performs a specific task, such as controlling a motor, processing sensor data, or, in the case of this thesis, bridging communication to the Unity simulation \cite{MFG22}. The nodes communicate through a set of defined patterns. The most common pattern is the publish-subscribe mechanism called \textbf{Topics}, illustrated in Figure \ref{fig:ros2_comm_concept} \cite{MFG22}. In this model, nodes can publish data as messages to a topic, while other nodes can subscribe to that topic to receive data asynchronously \cite{MFG22}. For tasks that require a direct request and a guaranteed response, ROS~2 offers \textbf{Services}, following a synchronous request-response pattern \cite{MFG22}. For long-running tasks that require continuous feedback and the ability to be preempted, ROS~2 provides a unique communication pattern called \textbf{Actions} \cite{MFG22}. An action consists of a goal, a feedback stream, and a final result, making it optimal for managing tasks like navigation where the progress of a robot toward a goal has to be monitored over time \cite{macenski2020marathon2}.
 
 \begin{figure}[h]
     \centering
@@ -93,11 +93,11 @@ The architecture of ROS~2 is based on a distributed network of independent progr
         \draw[->, thick] (topic) -- (sub_node1);
         \draw[->, thick] (topic) -- (sub_node2);
     \end{tikzpicture}
-    \caption{The ROS~2 publish-subscribe model. Node A publishes messages to a central topic, and multiple subscriber nodes (B and C) can receive that data without direct knowledge of the publisher.}
+    \caption{The ROS~2 publish-subscribe model. Node A publishes messages onto a central topic, and any number of subscriber nodes (B and C) may receive that data without direct knowledge of the publisher.}
     \label{fig:ros2_comm_concept}
 \end{figure}
 
-A crucial component for any mobile robot is the management of coordinate frames, which ROS~2 handles through its transform library, \textbf{tf2} \cite{foote2013tf}. The tf2 library provides a standard way to keep track of the spatial relationships between different parts of the robot and the environment, organizing them into a tree-like data structure, as shown in Figure \ref{fig:tf_tree_concept} \cite{foote2013tf}. This allows any node in the system to query the position and orientation of any frame relative to another at any point in time, which is essential for transforming sensor data into a useful frame of reference \cite{foote2013tf}.
+An essential part of any mobile robot is coordinate frame management, which in ROS~2 is accomplished through its transform library, \textbf{tf2} \cite{foote2013tf}. The tf2 library standardizes the tracking of spatial relationships between the various parts of the robot and environment, placing them into a tree-like data structure, as illustrated in Figure \ref{fig:tf_tree_concept} \cite{foote2013tf}. This permits any node in the system to request at any time the position and orientation of any frame relative to another, a feature critical for transforming sensor data into a useful frame of reference \cite{foote2013tf}.
 
 \begin{figure}[h]
     \centering
@@ -111,17 +111,15 @@ A crucial component for any mobile robot is the management of coordinate frames,
         child { node {robot\_base\_link}
             child { node {camera\_link} }
             child { node {imu\_link} }
-            child { node {gripper\_link} }
+            child { node {lidar\_link} }
         };
     \end{tikzpicture}
-    \caption{A simplified example of a ROS~2 transform tree (tf tree). The library manages the hierarchical relationships, allowing a program to easily calculate the transform from the \texttt{camera\_link} to the \texttt{world} frame, for example.}
+    \caption{A simplified example of a ROS~2 transform tree (tf tree). The library maintains the hierarchical relationships so that a program can easily determine the transform from the \texttt{camera\_link} to the \texttt{world} frame, for instance.}
     \label{fig:tf_tree_concept}
 \end{figure}
 
-In the architecture of this thesis, ROS~2 serves as the central \textbf{data backbone}, a concept adapted from digital engineering that describes an integrated communication layer for all relevant system knowledge \cite{perzylo2020backbone}. This "glue" connects the physical EMARO robot, its tracking system, and the virtual Unity environment. The digital twin of the EMAROS robot subscribes to ROS~2 topics to receive real-time data from the physical world, allowing it to synchronize its state through this communication layer \cite{singh2024unity}. For this project, the high-performance \texttt{ros2-for-unity} asset by Robotec.AI is used \cite{Rob24}. This solution is particularly advantageous because it does not bridge the communication but instead implements the ROS~2 middleware stack (RCL and below) directly within Unity. This means that entities within the simulation become "native" ROS~2 nodes, allowing them to respect Quality of Service (QoS) settings and achieve significantly lower latencies than bridged solutions \cite{Rob24}.
-
-For advanced navigation tasks for both the physical robot and its virtual counterpart, this thesis utilizes \textbf{Navigation2 (Nav2)}, the official, next-generation autonomous navigation framework for ROS~2 \cite{macenski2020marathon2}. Nav2 was built from the ground up to orchestrate planning, control, and recovery tasks using configurable Behavior Trees, which are highly modular and can be modified at runtime to create unique navigation behaviors \cite{macenski2020marathon2}. At its core, Nav2 separates the task of navigation into two main components: a \textbf{global planner}, which finds an acceptable, long-range route through the environment, and a \textbf{local trajectory planner} (or controller), which generates velocity commands to follow that route while reacting to immediate obstacles \cite{macenski2023survey}. By leveraging the Nav2 stack, a high-level goal (e.g., a coordinate in the environment) can be sent via a ROS~2 action to either the physical EMARO robot or the purely virtual model, and the system will autonomously handle all complex path planning and collision avoidance.
-
+In the architecture of this thesis, ROS~2 provides the central \textbf{data backbone}, a term borrowed from digital engineering that defines an integrated communication layer for all relevant system knowledge \cite{perzylo2020backbone}. This is the "glue" for connecting the physical EMARO robot and its tracking system with the virtual Unity environment. The digital twin of the EMAROS robot subscribes to ROS~2 topics to receive real-time data from the physical world and can synchronize its state through this communication layer \cite{singh2024unity}. In this project, the \texttt{ros2-for-unity} asset of Robotec.AI is utilized \cite{Rob24}. This approach has the particular advantage of not bridging the communication but instead implementing the ROS~2 middleware stack (RCL and below) directly in Unity. This makes entities in the simulation native ROS~2 nodes, letting them respect QoS (Quality of Service) settings and obtain latencies significantly lower than possible with bridged solutions \cite{Rob24}.
+For navigation for both the physical and virtual robots, this thesis utilizes \textbf{Navigation2 (Nav2)}, the official, next-generation autonomous navigation framework for ROS~2 ~\cite{macenski2020marathon2}. Nav2 was designed from the ground up to orchestrate planning, control, and recovery tasks using configurable Behavior Trees that are highly modular and can be changed at runtime to create custom navigation behaviors ~\cite{macenski2020marathon2}. Core to its operation, Nav2 separates the navigation task into two closely related, yet distinct components, namely a \textbf{global planner}, which seeks out an acceptable, long-range path through the environment, and a \textbf{local trajectory planner} or controller, which generates velocity commands in order to follow that route while reacting to immediate obstacles ~\cite{macenski2023survey}. Using the Nav2 stack, a high-level goal, e.g. a coordinate in the environment, can be sent via a ROS~2 action to either the physical EMARO robot, or the purely virtual model, and the system will take care of all complex path planning and collision avoidance autonomously.
 
 \section{The VERA Framework}
 \label{sec:vera}
@@ -134,7 +132,7 @@ The core concept of VERA is to project a dynamic, interactive virtual environmen
     \centering
     % TODO: Insert Figure 4.1 from Gehricke's Thesis (The VERA hardware setup with projector)
     % \includegraphics[width=0.8\textwidth]{images/vera_setup_placeholder.png}
-    \caption{The physical setup of the VERA platform, featuring a ceiling-mounted projector and tracking system above the test area. (Source: \cite{Geh24})}
+    \caption{The physical setup of the VERA platform, featuring a ceiling-mounted projector and tracking system above the test area. \cite{Geh24}}
     \label{fig:vera_setup}
 \end{figure}
 
@@ -148,7 +146,7 @@ EMARO is designed with a modular hardware architecture based on three main Print
     \centering
     % TODO: Insert Figure 3.1 from Gehricke's Thesis (The EMARO robot)
     % \includegraphics[width=0.5\textwidth]{images/emaro_robot_placeholder.png}
-    \caption{The EMARO robot serves as the physical twin in the system, equipped with a modular sensor suite and running ROS~2. (Source: \cite{Geh24})}
+    \caption{The EMARO robot serves as the physical twin in the system, equipped with a modular sensor suite and running ROS~2. \cite{Geh24}}
     \label{fig:emaro_robot}
 \end{figure}
 
@@ -184,7 +182,7 @@ The visualizer subscribes to the object lists published by the Manager and the r
     \centering
     % TODO: Insert Figure 4.11 from Gehricke's Thesis (The Pygame projection with path)
     % \includegraphics[width=0.8\textwidth]{images/pygame_visualizer_placeholder.png}
-    \caption{The original VERA visualization rendered via Pygame, projecting the robot's path and virtual obstacles onto the floor. (Source: \cite{Geh24})}
+    \caption{The original VERA visualization rendered via Pygame, projecting the robot's path and virtual obstacles onto the floor. \cite{Geh24}}
     \label{fig:pygame_vis}
 \end{figure}
 
@@ -196,8 +194,6 @@ While VERA successfully demonstrated the concept of Robot-in-the-Loop testing wi
     \item \textbf{Performance Scalability:} The Pygame-based visualizer processes rendering on the CPU and struggled with performance in complex scenarios. Gehricke \cite{Geh24} noted that in environments with a high number of dynamic objects (e.g., $>$800), the message queue became saturated, leading to significant latency and incomplete visual updates.
     \item \textbf{Limited Interaction (No VR):} The system was designed strictly for 2D floor projections. There is no support for immersive Virtual Reality (VR) interfaces that would allow a human operator to view the scene in 3D or interact with the robot remotely. The integration of VR was explicitly identified as a necessary future step to enhance Human-Robot Interaction (HRI) \cite{Geh24}.
 \end{itemize}
-
-
 
 \section{Simulation Engines for Robotics}
 \label{sec:sim_engines}
