@@ -46,14 +46,14 @@ This concept was initially known as the Information Mirroring Model and consists
 \label{fig:dt_concept}
 \end{figure}
 
-Digital Twins in robotics are frequently created using simulation software and the middleware that connects the virtual simulation to the actual hardware is often the Robot Operating System (ROS) \cite{MFG22}. Stączek et al. used the Gazebo simulator with ROS to create a DT of a factory floor, which they used to test and optimize the navigation algorithms of a mobile robot in narrow corridors \cite{Staczek2021}.  To validate a deep learning-based harvesting robot, R. Singh et al. adopted a similar strategy and created a DT of a greenhouse in Gazebo \cite{Singh2024a}. Other simulators like CoppeliaSim and Webots are also common. Magrin et al. used CoppeliaSim and ROS to create a DT as a learning tool for mobile robot design \cite{Magrin2021}, while Marques et al. used Webots for an Automated Guided Vehicle (AGV), synchronizing it via an OPC-UA server \cite{Marques2024}. These examples show a common approach of using traditional simulators to simulate robot kinematics and sensor feedback for closed-loop testing.
+Digital Twins in robotics are frequently created using simulation software and the middleware that connects the virtual simulation to the actual hardware is often the Robot Operating System (ROS) \cite{MFG22}. Stączek et al. used the Gazebo simulator with ROS to create a DT of a factory floor, which they used to test and optimize the navigation algorithms of a mobile robot in narrow corridors \cite{Staczek2021}.  To validate a deep learning-based harvesting robot, R. Singh et al. adopted a similar strategy and created a DT of a greenhouse in Gazebo \cite{Singh2024a}. Other simulators like CoppeliaSim and Webots are also common. Magrin et al. used CoppeliaSim and ROS to create a DT as a learning tool for mobile robot design \cite{Magrin2021}, while Marques et al. used Webots for an Automated Guided Vehicle (AGV), synchronizing it via an OPC-UA server \cite{Marques2024}. These examples show a common approach of using simulators to simulate robot kinematics and sensor feedback for closed-loop testing.
 
 More recently, game engines have become a popular choice for creating Digital Twins, as they offer more realistic graphics and physics. Unity \cite{Uni23}, for instance, is used developers to build virtual environments that are highly realistic. \cite{NOT FINAL}This can be seen in Figure \ref{fig:dt_environments}\cite{NOT FINAL}. Pérez et al. used Unity to develop a DT of a multi-robot cell with a Virtual Reality (VR) interface for virtual commissioning and operator training \cite{Perez2020}.
 
 \begin{figure}[h]
 \centering
 % \includegraphics[width=0.9\textwidth]{path/to/dt_environments_comparison.png}
-\caption{\cite{NOT FINAL}A comparison of robotic Digital Twin environments, showing a view from a traditional simulator (left) versus a high-fidelity visualization from a modern game engine like Unity (right).\cite{NOT FINAL}}
+\caption{\cite{NOT FINAL}A comparison of robotic Digital Twin environments, showing a view from a traditional robotics simulator (left) versus a high-fidelity visualization from a modern game engine like Unity (right).\cite{NOT FINAL}}
 \label{fig:dt_environments}
 \end{figure}
 
@@ -192,22 +192,22 @@ While VERA successfully demonstrated the concept of Robot-in-the-Loop testing wi
 \label{sec:sim_engines}
 The choice of a capable simulation engine is an important part in solving the limitations of the original VERA framework. The choice of platform affects the efficiency, accuracy, and applicability of the Digital Twin \cite{Singh2025}. Based on this, the review of simulation engines in this thesis is guided by four criteria which are required for a functional Mixed Reality Digital Twin:
 \begin{itemize}
-    \item \textbf{Visual Fidelity:} It is not only about rendering quality but to support realistic sensor simulation, such as cameras, and to provide an immersive experience to the user in VR that lacks in traditional simulators \cite{dosSantos2025}.
+    \item \textbf{Visual Fidelity:} It is not only about rendering quality but to support realistic sensor simulation, such as cameras, and to provide an immersive experience to the user in VR that lacks in traditional robotics simulators \cite{dosSantos2025}.
     \item \textbf{Physics Accuracy:} To accurately predict the kinematic and dynamic behaviour of the EMAROs robot, the engine needs to have a strong physics backend \cite{Singh2025}.
     \item \textbf{Native VR/AR Support:} In order to extend the VERA with the proposed Virtual Reality interfaces, the engine must have a mature framework for VR devices and provide capabilities for creating interactive environments without extensive middleware \cite{Coronado2023}.
     \item \textbf{Robust ROS~2 Integration:} ROS~2 forms the data backbone of the system and should enable low-latency, high-throughput communication to synchronize the digital twin with the physical robot in real-time \cite{Singh2025}.
 \end{itemize}
 
-\subsection{Traditional Robotics Simulators}
+\subsection{Robotics Simulators}
 \textbf{Gazebo} is the most used simulator in Industry 4.0 applications because of its deep integration with ROS and and the fact that it is open-source \cite{Singh2025}. It delivers detailed physics simulations along with sensor data emulations, making it ideal for precise engineering applications \cite{Singh2025}. However, while this simulator enjoys benefits from a large community and extensive documentation, there are noticeable drawbacks concerning visualization \cite{dosSantos2025}. For example, the rendering quality of Gazebo is only moderate and not photorealistic to an extent that would enable immersive VR experiences \cite{dosSantos2025}. Moreover, some works note that Gazebo has a steep learning curve for new users due to its complex configuration and less intuitive user interface compared to modern commercial tools \cite{Singh2025, Gonzalez2025}.
 
 \textbf{Webots} well established opensource platform, appreciated for cross-platform support and a large library of robot models \cite{Kargar2024}. Although it is quite effective in educational applications, the rendering capabilities of the software are somewhat dated compared to the current game engines, making it not fitting for highfidelity Mixed Reality graphics \cite{Kargar2024}.
 
-\subsection{Alternative Physics-Based Simulators}
+\subsection{Physics-Based Simulators}
 A few other simulators were found in literature but considered less appropriate for the particular VR needs of this thesis. \textbf{CoppeliaSim (previously known as V-REP)} is widely applied in automation, yet it has less physics realism compared to the professional ones, and its scaling is limited \cite{Gonzalez2025}. \textbf{MuJoCo} does well with contact-rich tasks and Reinforcement Learning but works almost exclusively on the stability of the physics and not the visualization, so it lacks the inbuilt VR frameworks necessary for Mixed Reality interaction \cite{Gonzalez2025}.
 
 \subsection{High-Fidelity and Game-Based Engines}
-Game engines have been widely adopted within the robotics community to overcome the visualization limitations of traditional simulators.
+Game engines have been widely adopted within the robotics community to overcome the visualization limitations of traditional robotics simulators.
 
 \textbf{NVIDIA Isaac Sim} is the state-of-the-art in industrial simulation \cite{dosSantos2025}. The platform is capable of photorealism through ray-tracing and has advanced GPU-accelerated physics through PhysX \cite{dosSantos2025}. It excels in generating synthetic data for AI perception \cite{Kargar2024}. But Isaac Sim has a very high hardware barrier where high-end NVIDIA RTX GPUs are specifically mandatory \cite{dosSantos2025}. Being proprietary, it more restricting for use in educational contexts compared to more open-source or widely accessible game engines \cite{dosSantos2025}.
 
@@ -217,7 +217,8 @@ Game engines have been widely adopted within the robotics community to overcome 
 ROS~2 is not natively supported by Unity. Support must be provided through third-party plugins. For the work described in this thesis, the \\textbf{ROS2 For Unity} plugin from Robotec.AI has been used ~\\cite{Rob24}. This asset offers high-performance communication by loading the ROS~2 middleware layer (RCL layer) directly inside the Unity engine \cite{Rob24}. Unlike bridged solutions, simulation entities now can act as native ROS~2 nodes in the context of Unity, thus respecting QoS and reaching lower latencies ~\cite{Rob24}.
 
 \subsection{Comparison and Selection}
-Table \ref{tab:sim_comparison} summarizes the capabilities of these engines.
+
+Based on this analysis, Unity is selected as the simulation engine. It has an integrated MR framework for Mixed Reality \cite{Coronado2023} and better visualization compared to Gazebo \cite{Gonzalez2025}. It maintains a balance between accessibility and performance, while C\# scripting, combined with large community support, makes learning it simpler than Unreal Engine \cite{Coronado2023}. In addition the \texttt{ros2-for-unity} plugin brings high-performance and low-latency communication \cite{Rob24}.
 
 \begin{table}[h]
 \centering
@@ -238,10 +239,8 @@ Table \ref{tab:sim_comparison} summarizes the capabilities of these engines.
 }
 \end{table}
 
-\subsubsection{Rationale for Using the Unity Engine}
-Based on this analysis, Unity is selected as the simulation engine. It has an integrated MR framework for Mixed Reality \cite{Coronado2023} and better visualization compared to Gazebo \cite{Gonzalez2025}. It maintains a balance between accessibility and performance, while C\# scripting, combined with large community support, makes learning it simpler than Unreal Engine \cite{Coronado2023}. In addition the \texttt{ros2-for-unity} plugin brings high-performance and low-latency communication \cite{Rob24}.
-\section{Motivation}
-\label{sec:motivation}
+\section{Discussion}
+\label{sec:discussion}
 
 While the original framework of VERA was able to proof the concept of Robot-in-the-Loop testing, it has severe technical limitations due to its reliance on custom software components \cite{Geh24}. The lack of a physics engine prevented realistic interaction, the Pygame-based visualizer suffered from performance bottlenecks in complex scenes and Virtual Reality is not supported, limiting the potential for human-robot collaboration \cite{Geh24}.
 
