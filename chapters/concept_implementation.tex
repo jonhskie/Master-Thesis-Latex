@@ -1,27 +1,42 @@
-\chapter{Concept and Implementation} \label{chap:concept}
+\chapter{Concept and Implementation}
+\label{ch:implementation}
 
+This chapter details the realization of the Mixed Reality Environment based on the requirements defined in Chapter \ref{ch:requirements}. It begins with the selection of the simulation engine, followed by the system architecture, and concludes with the implementation of specific interaction logic and scenarios.
 
+\section{Technology Selection}
+\label{sec:tech_selection}
 
-\section{System Architecture}
-\subsection{Integration of Unity, ROS~2, and EMAROs}
-components, their responsibilities, and deployment setup.
+To satisfy the platform capabilities defined in Section \ref{sec:platform_reqs} (FR-01 to FR-04), a suitable simulation engine must be selected. The following analysis compares four industry-standard platforms: Gazebo, NVIDIA Isaac Sim, Unreal Engine, and Unity.
 
-\subsection{Communication Concept}
-Topics, message types, timing, synchronization ...
+\subsection{Comparative Analysis}
+The comparison is based on visual fidelity, physics capabilities, learning curve, and native support for XR and ROS 2.
 
-\section{Development Milestones}
-\subsection{Base Integration}
-Initial data flow, messaging bridge, and minimal scenes.
+\begin{table}[h]
+\centering
+\caption{Comparison of Simulation Platforms for Mixed Reality Digital Twins \cite{Gonzalez2025, Kargar2024, Singh2025, Coronado2023}.}
+\label{tab:sim_comparison}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\textbf{Feature} & \textbf{Gazebo} & \textbf{Isaac Sim} & \textbf{Unreal Engine} & \textbf{Unity} \\ \hline
+\textbf{Primary Use Case} & Control \& Navigation & AI \& Photorealism & Photorealism & HRI \& MR (VR/AR) \\ \hline
+\textbf{Visual Fidelity} & Moderate & Very High & Very High & High \\ \hline
+\textbf{Physics Engine} & ODE/Bullet/DART & PhysX 5 (GPU) & Chaos/PhysX & PhysX \\ \hline
+\textbf{Learning Curve} & Steep & Advanced & Steep (C++) & Moderate (C\#) \\ \hline
+\textbf{Community Support} & High (ROS specific) & Moderate & High (Gaming) & Very High (MR/Gaming) \\ \hline
+\textbf{ROS 2 Integration} & Native & Bridge & Bridge & Plugin (Native Stack) \\ \hline
+\textbf{Hardware Req.} & Low & Very High (RTX) & High & Moderate \\ \hline
+\end{tabular}%
+}
+\end{table}
 
-\subsection{Realization of the Digital Twin}
-Robot modeling, environment setup, and synchronization.
+\subsection{Selection Rationale}
+Based on this analysis, the \textbf{Unity Engine} is selected as the implementation platform for this thesis. This decision is driven by three key factors that align with the requirements:
 
-\subsection{Interaction Scenarios}
-Scenarios and scripting. 
+\begin{itemize}
+    \item \textbf{XR Framework (FR-03):} Unity offers a mature, integrated framework for Mixed Reality (AR/VR) \cite{Coronado2023}, whereas Gazebo lacks native VR support.
+    \item \textbf{Visual \& Physics Balance (FR-01, FR-02):} Unity provides high-fidelity visualization and robust PhysX integration, offering a better balance between performance and quality compared to the high hardware demands of Isaac Sim \cite{Gonzalez2025}.
+    \item \textbf{Development Efficiency:} The use of C\# scripting, combined with extensive community support, makes Unity more accessible for rapid prototyping compared to the C++ complexity of Unreal Engine \cite{Coronado2023}.
+\end{itemize}
 
-\subsection{VR Integration}
-Devices and implementation, mabybe before Interaction Scenarios?
-
-\subsection{Pure Virtual Model}
-Implementation and use cases without the physical counterpart.
-
+Furthermore, the availability of the \texttt{ros2-for-unity} asset allows the simulation to function as a native ROS 2 node, satisfying the low-latency communication requirement (FR-04) without relying on external bridges \cite{Rob24}.
