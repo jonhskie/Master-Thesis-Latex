@@ -1,0 +1,56 @@
+\babel@toc {english}{}\relax 
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Background and Related Work}{5}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Robot-in-the-Loop-Testing}{5}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Digital Twins}{8}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Mixed Reality}{9}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Robot Operating System 2 (ROS~2)}{10}{section.2.4}%
+\contentsline {section}{\numberline {2.5}The VERA Framework}{12}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}The EMAROs Test Platform}{13}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Original VERA System Architecture}{14}{subsection.2.5.2}%
+\contentsline {subsubsection}{\numberline {2.5.2.1}Virtual Environment Positioning System (VEPS)}{14}{subsubsection.2.5.2.1}%
+\contentsline {subsubsection}{\numberline {2.5.2.2}Virtual Environment Manager}{14}{subsubsection.2.5.2.2}%
+\contentsline {subsubsection}{\numberline {2.5.2.3}Visualization System}{15}{subsubsection.2.5.2.3}%
+\contentsline {subsection}{\numberline {2.5.3}Identified Limitations}{15}{subsection.2.5.3}%
+\contentsline {section}{\numberline {2.6}Simulation Engines for Robotics}{16}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}Traditional Robotics Simulators}{16}{subsection.2.6.1}%
+\contentsline {subsection}{\numberline {2.6.2}Alternative Physics-Based Simulators}{17}{subsection.2.6.2}%
+\contentsline {subsection}{\numberline {2.6.3}High-Fidelity and Game-Based Engines}{17}{subsection.2.6.3}%
+\contentsline {subsection}{\numberline {2.6.4}Comparison and Selection}{18}{subsection.2.6.4}%
+\contentsline {subsubsection}{\numberline {2.6.4.1}Rationale for Using the Unity Engine}{18}{subsubsection.2.6.4.1}%
+\contentsline {section}{\numberline {2.7}Motivation}{19}{section.2.7}%
+\contentsline {chapter}{\numberline {3}Requirements}{21}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Simulation Platform Capabilities}{21}{section.3.1}%
+\contentsline {section}{\numberline {3.2}System Architecture \& Middleware}{22}{section.3.2}%
+\contentsline {section}{\numberline {3.3}EMAROS Digital Twin Interfaces}{22}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Perception \& Sensor Simulation}{23}{section.3.4}%
+\contentsline {section}{\numberline {3.5}General Interaction Infrastructure}{24}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Scenario-Specific Logic}{24}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Smart Farming Scenario}{24}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.2}Logistics \& Exploration Scenario}{25}{subsection.3.6.2}%
+\contentsline {subsection}{\numberline {3.6.3}Adaptive Navigation Scenario}{25}{subsection.3.6.3}%
+\contentsline {subsection}{\numberline {3.6.4}Competitive Game Scenario}{25}{subsection.3.6.4}%
+\contentsline {section}{\numberline {3.7}User Interface \& Mixed Reality}{25}{section.3.7}%
+\contentsline {section}{\numberline {3.8}Automated Verification Agents}{26}{section.3.8}%
+\contentsline {section}{\numberline {3.9}Non-Functional Requirements}{26}{section.3.9}%
+\contentsline {chapter}{\numberline {4}Concept and Implementation}{29}{chapter.4}%
+\contentsline {section}{\numberline {4.1}System Architecture}{29}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Integration of Unity, ROS~2, and EMAROs}{29}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Communication Concept}{29}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}Development Milestones}{29}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Base Integration}{29}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Realization of the Digital Twin}{29}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Interaction Scenarios}{29}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}VR Integration}{29}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.5}Pure Virtual Model}{30}{subsection.4.2.5}%
+\contentsline {chapter}{\numberline {5}Evaluation}{31}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Methodology}{31}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Test Scenarios}{31}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Metrics}{31}{subsection.5.1.2}%
+\contentsline {section}{\numberline {5.2}Execution and Results}{31}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Base Integration Performance}{31}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Scenario-dependent Performance}{31}{subsection.5.2.2}%
+\contentsline {section}{\numberline {5.3}Discussion}{31}{section.5.3}%
+\contentsline {chapter}{\numberline {6}Conclusion}{33}{chapter.6}%
+\contentsline {chapter}{\nonumberline Bibliography}{39}{chapter*.5}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
