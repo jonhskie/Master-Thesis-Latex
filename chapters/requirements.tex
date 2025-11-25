@@ -1,7 +1,7 @@
 \chapter{Requirements}
 \label{ch:requirements}
 
-This chapter defines the comprehensive requirements for the Mixed Reality Environment designed for the \textbf{EMAROS} (Educational Modular Autonomous Robot Osnabrück) platform. The primary objective is to create a versatile validation tool for Robot-in-the-Loop (RitL) testing. The requirements are categorized into \textbf{Platform Capabilities}, \textbf{System Architecture}, \textbf{Functional Capabilities}, and \textbf{Automated Verification}, ensuring that the system supports both interactive demonstration and rigorous, automated testing.
+This chapter defines the comprehensive requirements for the Mixed Reality Environment designed for the \textbf{EMAROS} (Educational Modular Autonomous Robot Osnabrück) platform. The primary objective is to create a versatile validation tool for Robot-in-the-Loop (RitL) testing. The requirements are categorized into \textbf{Platform Capabilities}, \textbf{System Architecture}, \textbf{Functional Capabilities}, \textbf{Scenario-Specific Logic}, and \textbf{Automated Scenario Execution}. This structure ensures the system supports both interactive user demonstration and fully autonomous robot operation.
 
 \section{Simulation Platform Capabilities}
 \label{sec:platform_reqs}
@@ -9,13 +9,13 @@ This chapter defines the comprehensive requirements for the Mixed Reality Enviro
 These requirements define the necessary technical capabilities of the underlying simulation engine. These criteria form the basis for the technology selection process in the implementation phase.
 
 \begin{itemize}
-    \item \textbf{FR-01: High-Fidelity Rendering:} The simulation engine must support photorealistic rendering pipelines to generate synthetic image data that accurately represents real-world lighting and material properties. This is essential for stimulating the EMAROS robot's computer vision algorithms with realistic input.
+    \item \textbf{FR-01: High-Visual-Fidelity Rendering:} The simulation engine must support rendering pipelines to generate image data that accurately represents real-world lighting and material properties. This is essential for stimulating the EMAROS robot's computer vision algorithms with realistic input.
     
-    \item \textbf{FR-02: Advanced Physics Simulation:} The engine must provide a rigid-body physics core capable of resolving mass, friction, linear drag, and angular drag. This is required to simulate physical interactions, such as the robot pushing obstacles or tools interacting with the ground surface.
+    \item \textbf{FR-02: Advanced Physics Simulation:} The engine must provide a physical system capable of resolving mass, friction and drag. This is required to simulate physical interactions, such as the robot pushing obstacles or tools interacting with the ground surface.
     
-    \item \textbf{FR-03: Extended Reality (XR) Support:} The platform must provide a mature framework for Virtual Reality (VR) and Augmented Reality (AR), enabling the projection of 3D content onto physical surfaces and the integration of immersive input devices without requiring extensive custom driver development.
+    \item \textbf{FR-03: VR and AR Support:} The platform must provide a mature framework for VR and AR, enabling the projection of 3D content onto physical surfaces and the integration of immersive input devices without requiring extensive custom driver development.
     
-    \item \textbf{FR-04: Native Middleware Integration:} The engine must support high-performance integration with the Robot Operating System 2 (ROS 2). To minimize communication latency, the simulation should function as a first-party participant in the network rather than relying on external bridge applications.
+    \item \textbf{FR-04: ROS Integration:} The engine must support integration with ROS 2. To minimize communication latency, the simulation should function as a first-party participant in the network rather than relying on external bridge applications.
 \end{itemize}
 
 \section{System Architecture \& Middleware}
@@ -26,7 +26,7 @@ The system architecture is defined by the constraints of the EMAROS hardware and
 \begin{itemize}
     \item \textbf{FR-05: Exclusive ROS 2 Communication:} All data exchange---including sensor streams, telemetry, control commands, and system management---must occur exclusively via standard ROS 2 communication patterns. This ensures the simulation remains compatible with the existing EMAROS software stack.
     
-    \item \textbf{FR-06: Deterministic Time Authority:} The system must act as the simulation time source by publishing a clock signal synchronized with the internal physics simulation. All simulated sensors must derive their timestamps from this source to prevent data drift in the robot's control algorithms.
+    \item \textbf{FR-06: Simulation Time:} The system must act as the simulation time source by publishing a clock signal synchronized with the internal physics simulation. All simulated sensors must derive their timestamps from this source to prevent data drift in the robot's control algorithms.
     
     \item \textbf{FR-07: Dynamic Scenario Management:} The system must provide a mechanism to unload the current environment and load a different validation scenario at runtime via a network command. This capability is required to execute automated test suites that span multiple environments without restarting the application.
     
@@ -43,36 +43,36 @@ The system must provide a digital representation specifically tailored to the ca
     
     \item \textbf{FR-10: Standalone Simulation Mode:} In the absence of physical hardware, the system must simulate the kinematic behavior of the EMAROS robot. It must convert velocity commands into physics-based movement and publish the resulting odometry, allowing navigation algorithms to be validated in a pure virtual environment.
     
-    \item \textbf{FR-11: Flexible Coordinate Management:} The system must publish dynamic transforms representing the robot's movement. Additionally, it must support the definition of static sensor offsets either internally or via external configuration, allowing the simulated sensor setup to be adapted to hardware changes without recompiling the software.
+    \item \textbf{FR-11: Transform Publishing:} The system must publish dynamic transforms representing the robot's movement. Additionally, it must support the definition of static sensor offsets either internally (within the editor) or via external configuration (ROS static transform publishers).
 \end{itemize}
 
 \section{Perception \& Sensor Simulation}
 \label{sec:perception_reqs}
 
-To support ``Scenario-in-the-Loop'' testing, the system must simulate the specific sensor suite equipped on the EMAROS robot.
+To support Scenario-in-the-Loop testing \cite{VTS21}, the system must simulate a sensor suite similar to that equipped on the EMAROS robot.
 
 \begin{itemize}
     \item \textbf{FR-12: Synthetic Camera Feed:} The system must render the scene from the perspective of the robot's onboard camera and publish it as a video stream. The resolution and update rate must be configurable to match the specific camera hardware used on the robot.
+        
+    \item \textbf{FR-13: Volumetric Sensor Simulation:} The system must simulate a 2D planar laser scanner by detecting geometry within a defined field of view. This sensor must detect both static environment walls and dynamic, user-placed obstacles to update the robot's navigation map.
     
-    \item \textbf{FR-13: Visual Consistency for Perception:} The simulation must support consistent material properties for task-relevant objects. This ensures that computer vision algorithms can reliably detect objects based on color signatures regardless of the environmental lighting conditions.
-    
-    \item \textbf{FR-14: Volumetric Sensor Simulation:} The system must simulate a 2D planar laser scanner by detecting geometry within a defined field of view. This sensor must detect both static environment walls and dynamic, user-placed obstacles to update the robot's navigation map.
-    
-    \item \textbf{FR-15: Sensor Verification Visualization:} The system must provide a visual debugging mode that displays the active field of view and ray paths of sensors, allowing users to verify sensor coverage and mounting orientation during setup.
+    \item \textbf{FR-14: Sensor Verification Visualization:} The system must provide a visual debugging mode that displays the active field of view and ray paths of sensors, allowing users to verify sensor coverage and mounting orientation during setup.
 \end{itemize}
 
 \section{General Interaction Infrastructure}
 \label{sec:interaction_reqs}
 
-These requirements define the generic capabilities for interacting with the simulation via the network, independent of specific scenarios.
+These requirements define the generic capabilities for interacting with the simulation via the network. These mechanisms serve as the foundation for specific scenarios.
 
 \begin{itemize}
-    \item \textbf{FR-16: Universal Command Interface:} The system must provide a standardized network interface to receive text-based commands and return execution status feedback. This generic interface allows the robot to trigger arbitrary simulation events (e.g., attaching tools, resetting states).
+    \item \textbf{FR-15: Universal Command Interface:} The system must provide a standardized network interface to receive text-based commands and return execution status feedback. This generic interface allows the robot to trigger arbitrary simulation events (e.g., attaching tools, resetting states).
     
-    \item \textbf{FR-17: Object Manipulation Capability:} The system must provide a mechanism for the robot to logically attach (``grasp'') and detach (``release'') objects via a network command, facilitating logistics and transport simulations.
+    \item \textbf{FR-16: Object Attachment Capability:} The system must provide a mechanism for the robot to logically attach (``grasp'') and detach (``release'') external objects via a network command. This capability must be generic enough to support both agricultural tools (Farming Scenario) and transportable items (Logistics Scenario).
     
-    \item \textbf{FR-18: Surface Modification Capability:} The system must allow the robot to dynamically modify the texture of the floor surface at its current location via a command. This capability is required to generate persistent visual trails for navigation tasks.
+    \item \textbf{FR-17: Surface Modification Capability:} The system must allow the robot to dynamically modify the texture of the floor surface at its current location via a command. This capability is required to generate persistent visual trails for navigation tasks.
     
+    \item \textbf{FR-18: Dynamic Obstacle Integration:} The system must support the real-time addition or modification of physical obstacles by the user in any active scenario. These changes must immediately update the physics simulation and sensor visibility calculations to ensure the robot's perception stack detects the new environmental state.
+
     \item \textbf{FR-19: Real-Time Telemetry Visualization:} The system must support the visualization of real-time robot status data (e.g., battery level, system load) directly within the 3D environment via network subscription.
 \end{itemize}
 
@@ -88,23 +88,30 @@ These requirements define the logic for specific environments used to validate t
     \item \textbf{FR-21: Tool-Based Interaction:} The scenario must simulate specific virtual implements (e.g., Seeder, Cultivator). Environmental state transitions must only occur when the robot interacts with a field area while the correct tool is active.
 \end{itemize}
 
-\subsection{Logistics \& Exploration Scenario}
+\subsection{Logistics Scenario}
 \begin{itemize}
     \item \textbf{FR-22: Goal Validation Logic:} The environment must contain logical zones capable of detecting the presence of specific target objects. Upon valid entry, the system must trigger a visual state change in the object to provide ground-truth confirmation that a transport task is complete.
     
     \item \textbf{FR-23: Dynamic Obstacle Handling:} The scenario must allow a user to place obstacles in real-time. The simulation must immediately update the physics and visibility calculations so the robot's sensors can detect the new blockage.
+    
+    \item \textbf{FR-24: Collectible Object Logic:} The scenario must populate the environment with specific objects identified as ``collectible.'' These objects must be physically interactable and capable of being attached to the robot via the general attachment capability.
+\end{itemize}
+
+\subsection{Surface Painting Scenario}
+\begin{itemize}
+    \item \textbf{FR-25: Dynamic Surface Modification:} The scenario must allow the robot to dynamically modify the texture of the floor surface at its current location via a command. This is required to generate persistent visual trails for line-following navigation tasks.
 \end{itemize}
 
 \subsection{Adaptive Navigation Scenario}
 \begin{itemize}
-    \item \textbf{FR-24: Proximity-Based Environment Mutation:} To test adaptive re-planning algorithms, the system must be capable of dynamically altering the environment layout (e.g., changing road segments) in areas distant from the robot, simulating a changing world.
+    \item \textbf{FR-26: Proximity-Based Environment Mutation:} To test adaptive re-planning algorithms, the system must be capable of dynamically altering the environment layout (e.g., changing road segments) in areas distant from the robot, simulating a changing world.
 \end{itemize}
 
 \subsection{Competitive Game Scenario}
 \begin{itemize}
-    \item \textbf{FR-25: Competitive Game Loop:} The system must manage a game state that tracks scores based on object positions and automatically resets the environment when a point is scored.
+    \item \textbf{FR-27: Competitive Game Loop:} The system must manage a game state that tracks scores based on object positions and automatically resets the environment when a point is scored.
     
-    \item \textbf{FR-26: Automated Opponent Entity:} The system must provide a physics-constrained, autonomous entity that reacts to dynamic objects in the scene, providing a moving target or competitor for the robot.
+    \item \textbf{FR-28: Automated Opponent Entity:} The system must provide an autonomous entity that reacts to dynamic objects in the scene, providing a moving target or competitor for the robot.
 \end{itemize}
 
 \section{User Interface \& Mixed Reality}
@@ -113,26 +120,30 @@ These requirements define the logic for specific environments used to validate t
 These requirements define how human users view and interact with the system.
 
 \begin{itemize}
-    \item \textbf{FR-27: Calibrated AR Projection:} The system must render a top-down, orthographic view of the scene. The projection parameters must be configurable to align the virtual view 1:1 with the physical dimensions of the testbed floor.
+    \item \textbf{FR-29: Calibrated AR Projection:} The system must render a top-down, orthographic view of the scene. The projection parameters must be configurable to align the virtual view 1:1 with the physical dimensions of the testbed floor.
     
-    \item \textbf{FR-28: VR Visualization:} The system must support a Virtual Reality mode allowing users to view the Digital Twin in 3D space. Status displays attached to the robot must automatically orient themselves to remain readable from the user's perspective.
+    \item \textbf{FR-30: VR Data Visualization:} The system must support a Virtual Reality mode allowing users to view the Digital Twin in 3D space. A floating data interface attached to the robot must automatically orient itself to remain readable from the user's perspective (VR headset or monitor).
     
-    \item \textbf{FR-29: Input Abstraction:} Navigation goals and interaction commands must be triggerable interchangeably by different input methods (e.g., Mouse, VR Controller, or Network Command) without altering the core logic.
+    \item \textbf{FR-31: Input Abstraction:} Navigation goals and interaction commands must be triggerable interchangeably by different input methods (e.g., Mouse, VR Controller, or Network Command) without altering the core logic.
     
-    \item \textbf{FR-30: Interactive Goal Setting:} Users must be able to define navigation targets by pointing at the virtual ground using the active input device.
+    \item \textbf{FR-32: Interactive Goal Setting:} Users must be able to define navigation targets by pointing at the virtual ground using the active input device.
+    
+    \item \textbf{FR-33: Interactive Visibility Control:} The user interface must provide a mechanism to toggle the visibility or active state of specific simulation components (e.g., roofs, debug visualizers, or specific object groups) at runtime via input actions.
+    
+    \item \textbf{FR-34: Dynamic Sensor Stream Selection:} The visualization system must allow the user to cycle through different available camera topics (e.g., switching between Raw and Compressed streams, or Front and Rear cameras) displayed on the projection surface or UI.
 \end{itemize}
 
-\section{Automated Verification Agents}
+\section{Automated Scenario Execution}
 \label{sec:automation_reqs}
 
-To validate the system's utility for testing, requirements are defined for the external automation agents (scripts).
+To validate the system's capability for high-level autonomy, the framework requires the development of autonomous control agents (scripts) that drive the robot to complete complex tasks without human intervention.
 
 \begin{itemize}
-    \item \textbf{FR-31: Sensor-Only Autonomy:} The automated agents must rely solely on simulated sensor data (Camera, LiDAR, Odometry) to make decisions, strictly avoiding access to the simulation's internal ground truth data.
+    \item \textbf{FR-35: Sensor-Based Autonomy:} The control agents must rely solely on simulated sensor data (Camera, LiDAR, Odometry) to make decisions, strictly avoiding access to the simulation's internal ground truth data.
     
-    \item \textbf{FR-32: Visual Perception Integration:} The agents must utilize computer vision algorithms to detect environmental states (e.g., crop maturity, object color, road markings) from the simulated camera feed.
+    \item \textbf{FR-36: Visual Perception Integration:} The agents must utilize computer vision algorithms to detect environmental states (e.g., crop maturity, object color, road markings) from the simulated camera feed.
     
-    \item \textbf{FR-33: Closed-Loop Control:} The agents must implement control logic that sends commands and waits for feedback or sensor verification before proceeding, ensuring robust task execution.
+    \item \textbf{FR-37: Closed-Loop Execution:} The agents must implement high-level logic (e.g., search, approach, manipulate) that utilizes the standard ROS 2 interfaces to robustly execute complex tasks and verify their success via feedback topics.
 \end{itemize}
 
 \section{Non-Functional Requirements}

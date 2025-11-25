@@ -1,26 +1,27 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
 [0] Config.pm:310> INFO - Logfile is 'ti_thesis.blg'
-[75] biber:340> INFO - === Tue Nov 25, 2025, 11:49:22
-[92] Biber.pm:419> INFO - Reading 'ti_thesis.bcf'
-[163] Biber.pm:979> INFO - Found 50 citekeys in bib section 0
-[173] Biber.pm:4419> INFO - Processing section 0
-[182] Biber.pm:4610> INFO - Looking for bibtex file 'literatur.bib' for section 0
-[185] bibtex.pm:1713> INFO - LaTeX decoding ...
-[226] bibtex.pm:1519> INFO - Found BibTeX data source 'literatur.bib'
-[589] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[589] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[589] Biber.pm:4239> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-US'
-[589] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
-[634] bbl.pm:660> INFO - Writing 'ti_thesis.bbl' with encoding 'UTF-8'
-[652] bbl.pm:763> INFO - Output to ti_thesis.bbl
-[652] Biber.pm:131> WARN - legacy month field 'April' in entry 'foote2013tf' is not an integer - this will probably not sort properly.
-[652] Biber.pm:131> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
-[652] Biber.pm:131> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
-[652] Biber.pm:131> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
-[652] Biber.pm:131> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
-[652] Biber.pm:131> WARN - I didn't find a database entry for 'NOT FINAL' (section 0)
-[653] Biber.pm:131> WARN - I didn't find a database entry for 'JuliaBA' (section 0)
-[653] Biber.pm:131> WARN - I didn't find a database entry for 'SKG+25' (section 0)
-[653] Biber.pm:131> WARN - I didn't find a database entry for 'DSR+22' (section 0)
-[653] Biber.pm:131> WARN - I didn't find a database entry for 'MFG+22' (section 0)
-[653] Biber.pm:133> INFO - WARNINGS: 10
+[75] biber:340> INFO - === Tue Nov 25, 2025, 16:14:24
+[88] Biber.pm:419> INFO - Reading 'ti_thesis.bcf'
+[161] Biber.pm:979> INFO - Found 51 citekeys in bib section 0
+[171] Biber.pm:4419> INFO - Processing section 0
+[179] Biber.pm:4610> INFO - Looking for bibtex file 'literatur.bib' for section 0
+[182] bibtex.pm:1713> INFO - LaTeX decoding ...
+[225] bibtex.pm:1519> INFO - Found BibTeX data source 'literatur.bib'
+[591] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[592] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[592] Biber.pm:4239> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-US'
+[592] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[637] bbl.pm:660> INFO - Writing 'ti_thesis.bbl' with encoding 'UTF-8'
+[658] bbl.pm:763> INFO - Output to ti_thesis.bbl
+[658] Biber.pm:131> WARN - legacy month field 'April' in entry 'foote2013tf' is not an integer - this will probably not sort properly.
+[659] Biber.pm:131> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
+[659] Biber.pm:131> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
+[659] Biber.pm:131> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
+[659] Biber.pm:131> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
+[659] Biber.pm:131> WARN - I didn't find a database entry for 'NOT FINAL' (section 0)
+[659] Biber.pm:131> WARN - I didn't find a database entry for 'JuliaBA' (section 0)
+[659] Biber.pm:131> WARN - I didn't find a database entry for 'SKG+25' (section 0)
+[659] Biber.pm:131> WARN - I didn't find a database entry for 'DSR+22' (section 0)
+[659] Biber.pm:131> WARN - I didn't find a database entry for 'MFG+22' (section 0)
+[659] Biber.pm:131> WARN - I didn't find a database entry for 'VTS21' (section 0)
+[659] Biber.pm:133> INFO - WARNINGS: 11
