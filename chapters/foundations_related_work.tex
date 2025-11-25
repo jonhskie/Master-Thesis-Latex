@@ -192,7 +192,7 @@ While VERA successfully demonstrated the concept of Robot-in-the-Loop testing wi
 \label{sec:sim_engines}
 The choice of a capable simulation engine is an important part in solving the limitations of the original VERA framework. The choice of platform affects the efficiency, accuracy, and applicability of the Digital Twin \cite{Singh2025}. Based on this, the review of simulation engines in this thesis is guided by four criteria which are required for a functional Mixed Reality Digital Twin:
 \begin{itemize}
-    \item \textbf{Visual Fidelity:} It is not only about rendering quality but to support realistic sensor simulation, such as cameras, and to provide an immersive experience to the user in VR that lacks in traditional robotics simulators \cite{dosSantos2025}.
+    \item \textbf{Visual-Fidelity:} It is not only about rendering quality but to support realistic sensor simulation, such as cameras, and to provide an immersive experience to the user in VR that lacks in traditional robotics simulators \cite{dosSantos2025}.
     \item \textbf{Physics Accuracy:} To accurately predict the kinematic and dynamic behaviour of the EMAROs robot, the engine needs to have a strong physics backend \cite{Singh2025}.
     \item \textbf{Native VR/AR Support:} In order to extend the VERA with the proposed Virtual Reality interfaces, the engine must have a mature framework for VR devices and provide capabilities for creating interactive environments without extensive middleware \cite{Coronado2023}.
     \item \textbf{Robust ROS~2 Integration:} ROS~2 forms the data backbone of the system and should enable low-latency, high-throughput communication to synchronize the digital twin with the physical robot in real-time \cite{Singh2025}.
@@ -201,12 +201,12 @@ The choice of a capable simulation engine is an important part in solving the li
 \subsection{Robotics Simulators}
 \textbf{Gazebo} is the most used simulator in Industry 4.0 applications because of its deep integration with ROS and and the fact that it is open-source \cite{Singh2025}. It delivers detailed physics simulations along with sensor data emulations, making it ideal for precise engineering applications \cite{Singh2025}. However, while this simulator enjoys benefits from a large community and extensive documentation, there are noticeable drawbacks concerning visualization \cite{dosSantos2025}. For example, the rendering quality of Gazebo is only moderate and not photorealistic to an extent that would enable immersive VR experiences \cite{dosSantos2025}. Moreover, some works note that Gazebo has a steep learning curve for new users due to its complex configuration and less intuitive user interface compared to modern commercial tools \cite{Singh2025, Gonzalez2025}.
 
-\textbf{Webots} well established opensource platform, appreciated for cross-platform support and a large library of robot models \cite{Kargar2024}. Although it is quite effective in educational applications, the rendering capabilities of the software are somewhat dated compared to the current game engines, making it not fitting for highfidelity Mixed Reality graphics \cite{Kargar2024}.
+\textbf{Webots} well established opensource platform, appreciated for cross-platform support and a large library of robot models \cite{Kargar2024}. Although it is quite effective in educational applications, the rendering capabilities of the software are somewhat dated compared to the current game engines, making it not fitting for high-fidelity Mixed Reality graphics \cite{Kargar2024}.
 
 \subsection{Physics-Based Simulators}
 A few other simulators were found in literature but considered less appropriate for the particular VR needs of this thesis. \textbf{CoppeliaSim (previously known as V-REP)} is widely applied in automation, yet it has less physics realism compared to the professional ones, and its scaling is limited \cite{Gonzalez2025}. \textbf{MuJoCo} does well with contact-rich tasks and Reinforcement Learning but works almost exclusively on the stability of the physics and not the visualization, so it lacks the inbuilt VR frameworks necessary for Mixed Reality interaction \cite{Gonzalez2025}.
 
-\subsection{High-Fidelity and Game-Based Engines}
+\subsection{High-Visual-Fidelity and Game-Based Engines}
 Game engines have been widely adopted within the robotics community to overcome the visualization limitations of traditional robotics simulators.
 
 \textbf{NVIDIA Isaac Sim} is the state-of-the-art in industrial simulation \cite{dosSantos2025}. The platform is capable of photorealism through ray-tracing and has advanced GPU-accelerated physics through PhysX \cite{dosSantos2025}. It excels in generating synthetic data for AI perception \cite{Kargar2024}. But Isaac Sim has a very high hardware barrier where high-end NVIDIA RTX GPUs are specifically mandatory \cite{dosSantos2025}. Being proprietary, it more restricting for use in educational contexts compared to more open-source or widely accessible game engines \cite{dosSantos2025}.
@@ -229,7 +229,7 @@ Based on this analysis, Unity is selected as the simulation engine. It has an in
 \hline
 \textbf{Feature} & \textbf{Gazebo} & \textbf{Isaac Sim} & \textbf{Unreal Engine} & \textbf{Unity} \\ \hline
 \textbf{Primary Use Case} & Control \& Navigation & AI \& Photorealism & Photorealism & HRI \& MR (VR/AR) \\ \hline
-\textbf{Visual Fidelity} & Moderate & Very High & Very High & High \\ \hline
+\textbf{Visual-Fidelity} & Moderate & Very High & Very High & High \\ \hline
 \textbf{Physics Engine} & ODE/Bullet/DART & PhysX 5 (GPU) & Chaos/PhysX & PhysX \\ \hline
 \textbf{Learning Curve} & Steep & Advanced & Steep (C++) & Moderate (C\#) \\ \hline
 \textbf{Community Support} & High (ROS specific) & Moderate & High (Gaming) & Very High (MR/Gaming) \\ \hline

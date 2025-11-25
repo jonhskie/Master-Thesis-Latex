@@ -12,7 +12,7 @@
 \contentsline {section}{\numberline {2.6}Simulation Engines for Robotics}{16}{section.2.6}%
 \contentsline {subsection}{\numberline {2.6.1}Robotics Simulators}{16}{subsection.2.6.1}%
 \contentsline {subsection}{\numberline {2.6.2}Physics-Based Simulators}{17}{subsection.2.6.2}%
-\contentsline {subsection}{\numberline {2.6.3}High-Fidelity and Game-Based Engines}{17}{subsection.2.6.3}%
+\contentsline {subsection}{\numberline {2.6.3}High-Visual-Fidelity and Game-Based Engines}{17}{subsection.2.6.3}%
 \contentsline {subsection}{\numberline {2.6.4}Comparison and Selection}{18}{subsection.2.6.4}%
 \contentsline {section}{\numberline {2.7}Synthesis? Discussion?}{18}{section.2.7}%
 \contentsline {chapter}{\numberline {3}Requirements}{21}{chapter.3}%
