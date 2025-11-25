@@ -8,9 +8,6 @@
 \contentsline {section}{\numberline {2.5}The VERA Framework}{12}{section.2.5}%
 \contentsline {subsection}{\numberline {2.5.1}The EMAROs Test Platform}{13}{subsection.2.5.1}%
 \contentsline {subsection}{\numberline {2.5.2}Original VERA System Architecture}{14}{subsection.2.5.2}%
-\contentsline {subsubsection}{\numberline {2.5.2.1}Virtual Environment Positioning System (VEPS)}{14}{subsubsection.2.5.2.1}%
-\contentsline {subsubsection}{\numberline {2.5.2.2}Virtual Environment Manager}{14}{subsubsection.2.5.2.2}%
-\contentsline {subsubsection}{\numberline {2.5.2.3}Visualization System}{15}{subsubsection.2.5.2.3}%
 \contentsline {subsection}{\numberline {2.5.3}Identified Limitations}{15}{subsection.2.5.3}%
 \contentsline {section}{\numberline {2.6}Simulation Engines for Robotics}{16}{section.2.6}%
 \contentsline {subsection}{\numberline {2.6.1}Traditional Robotics Simulators}{16}{subsection.2.6.1}%
@@ -18,7 +15,7 @@
 \contentsline {subsection}{\numberline {2.6.3}High-Fidelity and Game-Based Engines}{17}{subsection.2.6.3}%
 \contentsline {subsection}{\numberline {2.6.4}Comparison and Selection}{18}{subsection.2.6.4}%
 \contentsline {subsubsection}{\numberline {2.6.4.1}Rationale for Using the Unity Engine}{18}{subsubsection.2.6.4.1}%
-\contentsline {section}{\numberline {2.7}Motivation}{19}{section.2.7}%
+\contentsline {section}{\numberline {2.7}Motivation}{18}{section.2.7}%
 \contentsline {chapter}{\numberline {3}Requirements}{21}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Simulation Platform Capabilities}{21}{section.3.1}%
 \contentsline {section}{\numberline {3.2}System Architecture \& Middleware}{22}{section.3.2}%

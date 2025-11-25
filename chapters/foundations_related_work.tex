@@ -146,17 +146,17 @@ The modular hardware architecture of EMAROs is based on three main PCBs: a \\tex
     \centering
     % TODO: Insert Figure 3.1 from Gehricke's Thesis (The EMAROs robot)
     % \includegraphics[width=0.5\textwidth]{images/emaros_robot_placeholder.png}
-    \caption{The EMAROs robot serves as the physical twin in the system, equipped with a modular sensor suite and running ROS~2. \cite{Geh24}}
+    \caption{The EMAROs robot is the robotic platform used in the testbed, equipped with a modular sensor suite and running ROS~2 \cite{Geh24}.}
     \label{fig:emaros_robot}
 \end{figure}
 
 For environmental perception, the robot is equipped with Time-of-Flight (ToF) distance sensors and an Inertial Measurement Unit (IMU) for orientation tracking \cite{Geh24}. Moreover, there are two wide-angle cameras that can be configured for stereo vision applications or line-following tasks \cite{Geh24}. Within VERA, EMAROs takes on the role of a "Physical Twin," streaming real-time telemetry including odometry, battery status, and sensor data to the simulation framework via ROS~2 topics \cite{Geh24}.
 
 \subsection{Original VERA System Architecture}
-The software architecure of the original VERA framework was mainly a ROS~2 implementation, and its structure included only three main components: the Virtual Environment Positioning System (VEPS), the Environment Manager, and the Visualization System \cite{Geh24}.
-\subsubsection{Virtual Environment Positioning System (VEPS)}
-Accurate localization is important to synchronize the physical robot with the projected virtual world \cite{Geh24}. For this purpose, the original implementation of VERA relied on a depthbased approach where a ceiling-mounted Allied Vision Ruby 3D stereo camera captured point clouds of the test area \cite{Geh24}. The point clouds were filtered by a Median Absolute Deviation (MAD) algorithm to calculate the centroid of the robot \cite{Geh24}.
-However, for maximum robustness and precision for this thesis, the positioning system was updated to use an **ArUco marker-based tracking system** developed in parallel research by \cite{JuliaBA}. Although the point-cloud method provided a markerless solution, the ArUco-based approach has higher reliability and lower noise under changing light conditions  \cite{JuliaBA,Geh24}. By attaching a fiducial marker to the top of the EMAROs robot, the system is able to calculate the 6D pose (position and orientation) of the robot \cite{JuliaBA}. This pose is published into the ROS~2 network, where it can instantly update the position of the digital twin \cite{JuliaBA}.
+The software architecure of the original VERA framework was mainly a ROS~2 implementation, and its structure included only three main components: the \textbf{Virtual Environment Positioning System (VEPS)}, the \textbf{Environment Manager}, and the \textbf{Visualization System} \cite{Geh24}.
+
+Accurate localization is important to synchronize the physical robot with the projected virtual world and was provided by the \textbf{VEPS} in the original VERA framework \cite{Geh24}. The original VEPS implementation relied on a depth-based approach where a ceiling-mounted Allied Vision Ruby 3D stereo camera captured point clouds of the test area \cite{Geh24}. The point clouds were filtered by a Median Absolute Deviation (MAD) algorithm to calculate the centroid of the robot \cite{Geh24}.
+However, for maximum robustness and precision for this thesis, the positioning system was updated to use an ArUco marker-based tracking system developed in parallel research by \cite{JuliaBA}. Although the point-cloud method provided a markerless solution, the ArUco-based approach has higher reliability and lower noise under changing light conditions  \cite{JuliaBA,Geh24}. By attaching a fiducial marker to the top of the EMAROs robot, the system is able to calculate the 6D pose (position and orientation) of the robot \cite{JuliaBA}. This pose is published into the ROS~2 network, where it can instantly update the position of the digital twin \cite{JuliaBA}.
 
 \begin{figure}[h]
     \centering
@@ -166,14 +166,12 @@ However, for maximum robustness and precision for this thesis, the positioning s
     \label{fig:veps_comparison}
 \end{figure}
 
-\subsubsection{Virtual Environment Manager}
-The Environment Manager is the central brain of the simulation \cite{Geh24}. Implemented as a C++ ROS~2 node, it parses environment definitions from standard Gazebo \texttt{world.sdf} files \cite{Geh24}. It keeps track of the state of all virtual objects, including their positions and properties, such as whether an object is movable or static \cite{Geh24}.
+The \textbf{Virtual Environment Manager} is the central brain of the simulation \cite{Geh24}. Implemented as a C++ ROS~2 node, it parses environment definitions from standard Gazebo \texttt{world.sdf} files \cite{Geh24}. It keeps track of the state of all virtual objects, including their positions and properties, such as whether an object is movable or static \cite{Geh24}.
 One of the key roles of the manager is to manage the interactions of the robot with the virtual world \cite{Geh24}. It operates a continuous loop, typically at 20 Hz, which checks the distance between the position of the robot given by the VEPS and the virtual objects \cite{Geh24}. The manager triggers predefined actions if a collision is detected, such as removing a collectible object or stopping the robot \cite{Geh24}. It relies on basic distance heuristics and not a physics engine, hence limiting interactions to simple ones \cite{Geh24}.
 
-\subsubsection{Visualization System}
-The visualization component is responsible for rendering the virtual environment so it can be projected onto the physical floor \cite{Geh24}. In the original VERA framework, this was achieved using a custom ROS~2 node built with **Pygame**, a Python library designed for 2D game development \cite{Geh24}.
-
+The \textbf{Visualization System} is responsible for rendering the virtual environment so it can be projected onto the physical floor \cite{Geh24}. In the original VERA framework, this was achieved using a custom ROS~2 node built with Pygame, a Python library designed for 2D game development \cite{Geh24}.
 The visualizer subscribes to the object lists published by the Manager and the robot's path history \cite{Geh24}. It provides a 2D, top-down, orthogonal view of the scene, drawing obstacles as simple geometric shapes \cite{Geh24}. It gives Augmented Reality features, projecting dynamic information directly into the workspace \cite{Geh24}. The driven of the robot is displayed as a trail, while a system status panel with real-time CPU and battery usage is shown behind the robot \cite{Geh24}.
+
 \begin{figure}[h]
     \centering
     % TODO: Insert Figure 4.11 from Gehricke's Thesis (The Pygame projection with path)
