@@ -13,7 +13,7 @@ The comparison is based on visual fidelity, physics capabilities, learning curve
 
 \begin{table}[h]
 \centering
-\caption{Comparison of Simulation Platforms for Mixed Reality Digital Twins \cite{Gonzalez2025, Kargar2024, Singh2025, Coronado2023}.}
+\caption{Comparison of Simulation Platforms for Mixed Reality Digital Twins~\cite{Gonzalez2025, Kargar2024, Singh2025, Coronado2023}.}
 \label{tab:sim_comparison}
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{|l|c|c|c|c|}
@@ -34,9 +34,9 @@ The comparison is based on visual fidelity, physics capabilities, learning curve
 Based on this analysis, the \textbf{Unity Engine} is selected as the implementation platform for this thesis. This decision is driven by three key factors that align with the requirements:
 
 \begin{itemize}
-    \item \textbf{XR Framework (FR-03):} Unity offers a mature, integrated framework for Mixed Reality (AR/VR) \cite{Coronado2023}, whereas Gazebo lacks native VR support.
-    \item \textbf{Visual \& Physics Balance (FR-01, FR-02):} Unity provides high-fidelity visualization and robust PhysX integration, offering a better balance between performance and quality compared to the high hardware demands of Isaac Sim \cite{Gonzalez2025}.
-    \item \textbf{Development Efficiency:} The use of C\# scripting, combined with extensive community support, makes Unity more accessible for rapid prototyping compared to the C++ complexity of Unreal Engine \cite{Coronado2023}.
+    \item \textbf{XR Framework (FR-03):} Unity offers a mature, integrated framework for Mixed Reality (AR/VR)~\cite{Coronado2023}, whereas Gazebo lacks native VR support.
+    \item \textbf{Visual \& Physics Balance (FR-01, FR-02):} Unity provides high-fidelity visualization and robust PhysX integration, offering a better balance between performance and quality compared to the high hardware demands of Isaac Sim~\cite{Gonzalez2025}.
+    \item \textbf{Development Efficiency:} The use of C\# scripting, combined with extensive community support, makes Unity more accessible for rapid prototyping compared to the C++ complexity of Unreal Engine~\cite{Coronado2023}.
 \end{itemize}
 
-Furthermore, the availability of the \texttt{ros2-for-unity} asset allows the simulation to function as a native ROS 2 node, satisfying the low-latency communication requirement (FR-04) without relying on external bridges \cite{Rob24}.
+Furthermore, the availability of the \texttt{ros2-for-unity} asset allows the simulation to function as a native ROS 2 node, satisfying the low-latency communication requirement (FR-04) without relying on external bridges~\cite{Rob24}.

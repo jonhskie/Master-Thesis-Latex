@@ -1,7 +1,7 @@
 \chapter{Requirements}
 \label{ch:requirements}
 \cite{NOT FINAL}
-This chapter defines the comprehensive requirements for the Mixed Reality Environment designed for the \textbf{EMAROs} (Educational Modular Autonomous Robot Osnabrück) platform \cite{Geh24}. The primary objective is to create a versatile validation tool for RitL testing \cite{Hu05}. The requirements are categorized into \textbf{Platform Capabilities}, \textbf{System Architecture}, \textbf{Functional Capabilities}, \textbf{Scenario-Specific Logic}, and \textbf{Automated Scenario Execution}. This structure ensures the system supports both interactive user demonstration and fully autonomous robot operation.
+This chapter defines the comprehensive requirements for the Mixed Reality Environment designed for the \textbf{EMAROs} (Educational Modular Autonomous Robot Osnabrück) platform~\cite{Geh24}. The primary objective is to create a versatile validation tool for RitL testing~\cite{Hu05}. The requirements are categorized into \textbf{Platform Capabilities}, \textbf{System Architecture}, \textbf{Functional Capabilities}, \textbf{Scenario-Specific Logic}, and \textbf{Automated Scenario Execution}. This structure ensures the system supports both interactive user demonstration and fully autonomous robot operation.
 \cite{NOT FINAL}
 
 \section{Simulation Engine Capabilities}
@@ -10,22 +10,22 @@ This chapter defines the comprehensive requirements for the Mixed Reality Enviro
 These requirements define the technical capabilities of the simulation engine that will be used. The criteria provide a basis for the technology selection process in the implementation phase.
 
 \begin{itemize}
-    \item \textbf{FR-01: Photorealistic Image Generation:} The simulation engine must support rendering pipelines to generate image data representative of realworld lighting and material properties. This is important to feed the computer vision algorithms of the EMAROs \cite{Geh24} robot with realistic synthetic input.
+    \item \textbf{FR-01: Photorealistic Image Generation:} The simulation engine must support rendering pipelines to generate image data representative of realworld lighting and material properties. This is important to feed the computer vision algorithms of the EMAROs~\cite{Geh24} robot with realistic synthetic input.
     
-    \item \textbf{FR-02: Advanced Physics Simulation:} In order to overcome the shortcomings found in the previous VERA framework \cite{Geh24}, the engine must offer a system that can resolve mass, friction, and drag. This should help the simulation create physical interactions, like the robot pushing obstacles.
+    \item \textbf{FR-02: Advanced Physics Simulation:} In order to overcome the shortcomings found in the previous VERA framework~\cite{Geh24}, the engine must offer a system that can resolve mass, friction, and drag. This should help the simulation create physical interactions, like the robot pushing obstacles.
     
     \item \textbf{FR-03: VR and AR Support:}  The platform needs to offer a mature framework for VR and AR. This makes it possible to integrate VR output and input devices and project 3D content onto physical surfaces without the need to create custom drivers.
     
-    \item \textbf{FR-04: ROS Integration:} The engine should support the integration with ROS~2 \cite{MFG22}. Instead of depending on external bridge applications, the simulation should function as a first-party participant in the network to lower communication latency.
+    \item \textbf{FR-04: ROS Integration:} The engine should support the integration with ROS~2~\cite{MFG22}. Instead of depending on external bridge applications, the simulation should function as a first-party participant in the network to lower communication latency.
 \end{itemize}
 
 \section{System Architecture \& Middleware}
 \label{sec:architecture_reqs}
 
-The system architecture is defined by the constraints of the EMAROs \cite{Geh24} hardware and the need for standard robotic communication.
+The system architecture is defined by the constraints of the EMAROs~\cite{Geh24} hardware and the need for standard robotic communication.
 
 \begin{itemize}
-    \item \textbf{FR-05: Exclusive ROS 2 Communication:}  The simulation will only use standardised ROS~2 communication to exchange any data, including sensor streams, telemetry, control commands, and system management. This guarantees that the simulation will continue to work with both current and upcoming EMAROs \cite{Geh24} software.
+    \item \textbf{FR-05: Exclusive ROS 2 Communication:}  The simulation will only use standardised ROS~2 communication to exchange any data, including sensor streams, telemetry, control commands, and system management. This guarantees that the simulation will continue to work with both current and upcoming EMAROs~\cite{Geh24} software.
     
     \item \textbf{FR-06: Simulation Time:} The system must act as the simulation time source by publishing a clock signal. To avoid data drift in the robot's control algorithms, all simulated sensors and other publishers must obtain their timestamp from this source.
     
@@ -37,14 +37,14 @@ The system architecture is defined by the constraints of the EMAROs \cite{Geh24}
 \section{EMAROs Digital Twin Interfaces}
 \label{sec:digital_twin_reqs}
 
-The system must provide a digital representation of the EMAROs \cite{Geh24} platform.
+The system must provide a digital representation of the EMAROs~\cite{Geh24} platform.
 
 \begin{itemize}
     \item \textbf{FR-09: Physical Twin Synchronization:} The system must accept real-time pose updates from an external tracking system in order to synchronize the physical robot with the Digital Twin. Alignment of the collision boundaries is required for interaction with virtual objects.
     
     \item \textbf{FR-10: Tracking Failsafe:} The system must implement a failsafe mechanism that stops the real robot's movement updates if the data stream of the tracking system is interrupted for a defined threshold. This prevents unexpected movements due to signal loss.
 
-    \item \textbf{FR-11: Standalone Simulation Mode:} The system must mimic the kinematic behaviour of the EMAROs \cite{Geh24} robot in the absence of physical hardware. In order to validate navigation algorithms in a fully virtual environment, it must translate velocity commands into movement and publish the resulting odometry.
+    \item \textbf{FR-11: Standalone Simulation Mode:} The system must mimic the kinematic behaviour of the EMAROs~\cite{Geh24} robot in the absence of physical hardware. In order to validate navigation algorithms in a fully virtual environment, it must translate velocity commands into movement and publish the resulting odometry.
     
     \item \textbf{FR-12: Transform Publishing:} Dynamic transforms that depict the motion of the robot must be published by the system. It should also support the definition of static sensor offsets either internally within the Unity editor or via external configuration.
 \end{itemize}
@@ -52,7 +52,7 @@ The system must provide a digital representation of the EMAROs \cite{Geh24} plat
 \section{Perception \& Sensor Simulation}
 \label{sec:perception_reqs}
 
-To support SitL testing \cite{VTS21}, the system must simulate a sensor suite similar to that equipped on the EMAROs \cite{Geh24} robot.
+To support SitL testing~\cite{VTS21}, the system must simulate a sensor suite similar to that equipped on the EMAROs~\cite{Geh24} robot.
 
 \begin{itemize}
     \item \textbf{FR-13: Synthetic Camera Feed:} The system must render the scene from the perspective of the robot's camera and publish it as a video stream. The resolution and update rate must be similar to the specific camera hardware used on the robot.
@@ -128,9 +128,9 @@ These requirements define how human users view and interact with the system.
 \begin{itemize}
     \item \textbf{FR-31: AR Projection:} The system must render a top-down, orthographic view of the scene. The projection parameters must be configurable to align the virtual view 1:1 with the physical dimensions of the testbed floor.
     
-    \item \textbf{FR-32: VR Visualization:} The system must support a Virtual Reality mode allowing users to view the Digital Twin in 3D space to extend the Mixed Reality capabilities beyond the original AR projection \cite{Geh24, MV20}. A data interface attached to the robot must automatically orient itself to remain readable from the perspective of the user.
+    \item \textbf{FR-32: VR Visualization:} The system must support a Virtual Reality mode allowing users to view the Digital Twin in 3D space to extend the Mixed Reality capabilities beyond the original AR projection~\cite{Geh24, MV20}. A data interface attached to the robot must automatically orient itself to remain readable from the perspective of the user.
         
-    \item \textbf{FR-33: Interactive Goal Setting:} Users must be able to set navigation targets compatible with the \texttt{Nav2} stack \cite{macenski2020marathon2} by pointing at the virtual ground using the active input device.
+    \item \textbf{FR-33: Interactive Goal Setting:} Users must be able to set navigation targets compatible with the \texttt{Nav2} stack~\cite{macenski2020marathon2} by pointing at the virtual ground using the active input device.
     
     \item \textbf{FR-34: Visualization Control:} The user interface must allow runtime modification of the visual environment. This includes toggling the visibility of specific simulation components and selecting which sensor data streams are currently displayed on projection interface.
 \end{itemize}
@@ -156,7 +156,7 @@ The following constraints define the standards necessary to ensure the system pr
 \begin{itemize}
     \item \textbf{NFR-01: Processing Latency:} The system must minimize the processing delay between the reception of a ROS 2 state update and the rendering of the corresponding visual frame. This latency should consistently remain lower than the frame time of the environment to ensure the Digital Twin reacts instantly to incoming data.
   
-    \item \textbf{NFR-02: Frame Rate Stability:} The simulation must maintain a stable target frame rate of at least 60 frames per second to prevent simulator sickness in VR \cite{Chang20102020} and to ensure that AR projections do not exhibit visual artifacts that could confuse the robot's perception system.    
+    \item \textbf{NFR-02: Frame Rate Stability:} The simulation must maintain a stable target frame rate of at least 60 frames per second to prevent simulator sickness in VR~\cite{Chang20102020} and to ensure that AR projections do not exhibit visual artifacts that could confuse the robot's perception system.    
        
     \item \textbf{NFR-03: Component Independence:} The system architecture must allow for individual components to be added, removed, or changed without breaking the overall application.
     
