@@ -16,19 +16,19 @@
 \contentsline {subsection}{\numberline {2.6.4}Comparison and Selection}{18}{subsection.2.6.4}%
 \contentsline {section}{\numberline {2.7}Synthesis? Discussion?}{18}{section.2.7}%
 \contentsline {chapter}{\numberline {3}Requirements}{21}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Simulation Platform Capabilities}{21}{section.3.1}%
+\contentsline {section}{\numberline {3.1}Simulation Engine Capabilities}{21}{section.3.1}%
 \contentsline {section}{\numberline {3.2}System Architecture \& Middleware}{22}{section.3.2}%
-\contentsline {section}{\numberline {3.3}EMAROS Digital Twin Interfaces}{22}{section.3.3}%
+\contentsline {section}{\numberline {3.3}EMAROs Digital Twin Interfaces}{22}{section.3.3}%
 \contentsline {section}{\numberline {3.4}Perception \& Sensor Simulation}{23}{section.3.4}%
 \contentsline {section}{\numberline {3.5}General Interaction Infrastructure}{23}{section.3.5}%
-\contentsline {section}{\numberline {3.6}Scenario-Specific Logic}{24}{section.3.6}%
+\contentsline {section}{\numberline {3.6}Demonstrator \& Validation}{24}{section.3.6}%
 \contentsline {subsection}{\numberline {3.6.1}Smart Farming Scenario}{24}{subsection.3.6.1}%
-\contentsline {subsection}{\numberline {3.6.2}Logistics Scenario}{24}{subsection.3.6.2}%
+\contentsline {subsection}{\numberline {3.6.2}Logistics Scenario}{25}{subsection.3.6.2}%
 \contentsline {subsection}{\numberline {3.6.3}Surface Painting Scenario}{25}{subsection.3.6.3}%
 \contentsline {subsection}{\numberline {3.6.4}Adaptive Navigation Scenario}{25}{subsection.3.6.4}%
-\contentsline {subsection}{\numberline {3.6.5}Competitive Game Scenario}{25}{subsection.3.6.5}%
-\contentsline {section}{\numberline {3.7}User Interface \& Mixed Reality}{25}{section.3.7}%
-\contentsline {section}{\numberline {3.8}Automated Scenario Execution}{26}{section.3.8}%
+\contentsline {subsection}{\numberline {3.6.5}Competitive Game Scenario}{26}{subsection.3.6.5}%
+\contentsline {section}{\numberline {3.7}User Interface \& Mixed Reality}{26}{section.3.7}%
+\contentsline {section}{\numberline {3.8}Automated Scenario Execution}{27}{section.3.8}%
 \contentsline {section}{\numberline {3.9}Non-Functional Requirements}{27}{section.3.9}%
 \contentsline {chapter}{\numberline {4}Concept and Implementation}{29}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Technology Selection}{29}{section.4.1}%
