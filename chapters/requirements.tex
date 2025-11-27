@@ -156,10 +156,10 @@ To demonstrate the framework's utility as a validation platform, it is necessary
 \begin{itemize}
     \item \textbf{NFR-01: Processing Latency:} The system must minimize the internal processing delay between the reception of a ROS 2 state update and the rendering of the corresponding visual frame. This latency must be measurable via internal software logging and should consistently remain lower than the simulation frame interval (approx. 16.6ms at 60Hz) to ensure the Digital Twin reacts instantly to incoming data.
   
-    \item \textbf{NFR-02: Frame Rate Stability:} The simulation must maintain a stable target frame rate (e.g., 60 FPS) to prevent simulator sickness in VR and to ensure that AR projections do not exhibit visual artifacts that could confuse the robot's perception system.
+    \item \textbf{NFR-02: Frame Rate Stability:} The simulation must maintain a stable target frame rate of at least 60 frames per second to prevent simulator sickness in VR \cite{Chang20102020} and to ensure that AR projections do not exhibit visual artifacts that could confuse the robot's perception system.    
     
-    \item \textbf{NFR-03: Interface Modularity:} The automation scripts must be decoupled from the simulation implementation. A script written to control the robot in the simulation must work on the physical EMAROs \cite{Geh24} robot without modification.
-    
+    \item \textbf{NFR-03: Standalone Script Execution:} The control logic must be designed to run without a dependency on the simulation software. The automation scripts must be capable of launching and executing in a pure ROS 2 environment, interacting with the system only through published topics and services, regardless of whether the backend is the simulation or another entity.
+   
     \item \textbf{NFR-04: Scalability:} The system architecture must support scenes with a high density of dynamic objects without violating the frame rate stability requirement.
     
     \item \textbf{NFR-05: Configuration Flexibility:} Key system parameters, such as network topic names, robot dimensions, and projection resolution, must be accessible via a configuration interface to adapt to different laboratory setups without requiring source code modification.

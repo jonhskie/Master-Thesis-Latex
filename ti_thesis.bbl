@@ -485,6 +485,49 @@
       \verb https://www.mdpi.com/2076-3417/13/3/1292
       \endverb
     \endentry
+    \entry{Chang20102020}{article}{}
+      \name{author}{3}{}{%
+        {{hash=5e77d7f13f6680de78c20f70c6ff1330}{%
+           family={Chang},
+           familyi={C\bibinitperiod},
+           given={Eunhee},
+           giveni={E\bibinitperiod}}}%
+        {{hash=1faed6c9c8009c4908f825e7f56cceff}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={Hyun\bibnamedelima Taek},
+           giveni={H\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=5c9f4d862b204ce393824d7beb42b666}{%
+           family={Yoo},
+           familyi={Y\bibinitperiod},
+           given={Byounghyun},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Taylor \& Francis}%
+      }
+      \strng{namehash}{d40b4cfc7ce7c8eb15dd3e161fd0cc7c}
+      \strng{fullhash}{d40b4cfc7ce7c8eb15dd3e161fd0cc7c}
+      \strng{bibnamehash}{d40b4cfc7ce7c8eb15dd3e161fd0cc7c}
+      \strng{authorbibnamehash}{d40b4cfc7ce7c8eb15dd3e161fd0cc7c}
+      \strng{authornamehash}{d40b4cfc7ce7c8eb15dd3e161fd0cc7c}
+      \strng{authorfullhash}{d40b4cfc7ce7c8eb15dd3e161fd0cc7c}
+      \field{labelalpha}{CKY20}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Human–Computer Interaction}
+      \field{number}{17}
+      \field{title}{Virtual Reality Sickness: A Review of Causes and Measurements}
+      \field{volume}{36}
+      \field{year}{2020}
+      \field{pages}{1658\bibrangedash 1682}
+      \range{pages}{25}
+      \verb{doi}
+      \verb 10.1080/10447318.2020.1778351
+      \endverb
+    \endentry
     \entry{dosSantos2025}{inproceedings}{}
       \name{author}{7}{}{%
         {{hash=0a084c2d93d248dfa3bd59c95cbece99}{%
