@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.20)  27 NOV 2025 14:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.20)  27 NOV 2025 18:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1558,14 +1558,14 @@ chapter 1.
 ]
 LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
 (Font)              scaled to size 11.52008pt on input line 13.
+ [2]
+
+LaTeX Warning: Citation 'NOT FINAL' on page 3 undefined on input line 17.
 
 
-LaTeX Warning: Citation 'NOT FINAL' on page 2 undefined on input line 17.
+LaTeX Warning: Citation 'NOT FINAL' on page 3 undefined on input line 17.
 
-
-LaTeX Warning: Citation 'NOT FINAL' on page 2 undefined on input line 17.
-
-) [2] [3]
+) [3]
 \openout2 = `chapters/foundations_related_work.aux'.
 
  (./chapters/foundations_related_work.tex [4
@@ -1608,7 +1608,7 @@ Underfull \hbox (badness 2205) in paragraph at lines 15--15
 [][][]\T1/mdbch/m/n/12 (+20) [[]]The real robot's ac-tions af-fect its vir-tual coun-ter-part,
  []
 
-<images/vehicle_in_the_loop_dsr+22.jpg, id=225, 248.3679pt x 204.2832pt>
+<images/vehicle_in_the_loop_dsr+22.jpg, id=226, 248.3679pt x 204.2832pt>
 File: images/vehicle_in_the_loop_dsr+22.jpg Graphic file (type jpg)
 <use images/vehicle_in_the_loop_dsr+22.jpg>
 Package pdftex.def Info: images/vehicle_in_the_loop_dsr+22.jpg  used on input line 25.
@@ -1620,7 +1620,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [7 <./images/vehicle_in_the_loop_dsr+22.jpg>]
-<images/info_mirror_model_Grieves15.png, id=263, 813.0375pt x 434.8245pt>
+<images/info_mirror_model_Grieves15.png, id=264, 813.0375pt x 434.8245pt>
 File: images/info_mirror_model_Grieves15.png Graphic file (type png)
 <use images/info_mirror_model_Grieves15.png>
 Package pdftex.def Info: images/info_mirror_model_Grieves15.png  used on input line 44.
@@ -1648,7 +1648,7 @@ LaTeX Warning: Citation 'NOT FINAL' on page 9 undefined on input line 56.
 LaTeX Warning: Citation 'NOT FINAL' on page 9 undefined on input line 56.
 
 [9]
-<images/reality_virtuality_continuum_wpc+23.png, id=313, 1520.079pt x 410.13225pt>
+<images/reality_virtuality_continuum_wpc+23.png, id=314, 1520.079pt x 410.13225pt>
 File: images/reality_virtuality_continuum_wpc+23.png Graphic file (type png)
 <use images/reality_virtuality_continuum_wpc+23.png>
 Package pdftex.def Info: images/reality_virtuality_continuum_wpc+23.png  used on input line 70.
@@ -1849,18 +1849,18 @@ Package logreq Info: Writing requests to 'ti_thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 60408 strings out of 474222
- 1371226 string characters out of 5748732
+ 60400 strings out of 474222
+ 1371146 string characters out of 5748732
  2628708 words of memory out of 5000000
  81189 multiletter control sequences out of 15000+600000
- 636316 words of font info for 446 fonts, out of 8000000 for 9000
+ 635836 words of font info for 440 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  108i,12n,131p,10936b,3335s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchri8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chb8t.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr8t.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chri7m.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chri8t.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8ac.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on ti_thesis.pdf (51 pages, 1386588 bytes).
+Output written on ti_thesis.pdf (51 pages, 1386704 bytes).
 PDF statistics:
- 989 PDF objects out of 1000 (max. 8388607)
- 882 compressed objects within 9 object streams
+ 990 PDF objects out of 1000 (max. 8388607)
+ 883 compressed objects within 9 object streams
  161 named destinations out of 1000 (max. 500000)
  76676 words of extra memory for PDF output out of 89155 (max. 10000000)
 
