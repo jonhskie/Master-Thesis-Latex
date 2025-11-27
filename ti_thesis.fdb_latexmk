@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber ti_thesis"] 1764231133.29371 "ti_thesis.bcf" "ti_thesis.bbl" "ti_thesis" 1764250705.01873 0
-  "literatur.bib" 1763492200.59169 24582 5df9a3f0fb87b24f4f03e3d012275449 ""
+["biber ti_thesis"] 1764250756.07956 "ti_thesis.bcf" "ti_thesis.bbl" "ti_thesis" 1764250757.63201 0
+  "literatur.bib" 1764250752.43849 24957 34a8c5ac841e1032a4e955523f7f5435 ""
   "ti_thesis.bcf" 1764250704.78775 125394 d37cf0d02db9f86d444a723a3241a33e "pdflatex"
   (generated)
   "ti_thesis.bbl"
   "ti_thesis.blg"
   (rewritten before read)
-["pdflatex"] 1764250697.90949 "/home/jonas/Master-Thesis-Latex/ti_thesis.tex" "ti_thesis.pdf" "ti_thesis" 1764250705.01903 0
+["pdflatex"] 1764250697.90949 "/home/jonas/Master-Thesis-Latex/ti_thesis.tex" "ti_thesis.pdf" "ti_thesis" 1764250757.63219 0
   "/etc/texmf/web2c/texmf.cnf" 1760994886.87778 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/jonas/Master-Thesis-Latex/ti_thesis.tex" 1763495854.8637 1921 61ed511544cd40dff2ec7a8647a551ca ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -327,7 +327,7 @@
   "images/vehicle_in_the_loop_dsr+22.jpg" 1762155641.70101 218742 e0140306df01478cad9d44c5853a9d07 ""
   "ti.sty" 1760996874.60583 3399 55550a0a6edc8c29776dafba62819984 ""
   "ti_thesis.aux" 1764250704.75684 34275 b553764d2073029f1c29d59c1bee9d65 "pdflatex"
-  "ti_thesis.bbl" 1764231134.62957 88379 cfa011b58a361fbeabb378fd6185814e "biber ti_thesis"
+  "ti_thesis.bbl" 1764250757.58227 88379 cfa011b58a361fbeabb378fd6185814e "biber ti_thesis"
   "ti_thesis.lof" 1764250704.79162 1677 96a1d73a6ba4e739734e4eb7794a5cc6 "pdflatex"
   "ti_thesis.lol" 1764250704.79162 235 d6989944697d980c122f930d473e81b0 "pdflatex"
   "ti_thesis.out" 1764250701.09062 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
