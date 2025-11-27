@@ -983,6 +983,56 @@
       \verb 10.1007/978-3-319-38756-7_4
       \endverb
     \endentry
+    \entry{Horvath2019}{article}{}
+      \name{author}{5}{}{%
+        {{hash=e95fa283f1ea86b03a3acb3acdd4cd51}{%
+           family={Horváth},
+           familyi={H\bibinitperiod},
+           given={Márton},
+           giveni={M\bibinitperiod}}}%
+        {{hash=3d14e8a898ea99a74f5e905e35b6a60c}{%
+           family={Lu},
+           familyi={L\bibinitperiod},
+           given={Qiong},
+           giveni={Q\bibinitperiod}}}%
+        {{hash=7b64e6d10f1925a16fef7351c6f7303a}{%
+           family={Tettamanti},
+           familyi={T\bibinitperiod},
+           given={Tamas},
+           giveni={T\bibinitperiod}}}%
+        {{hash=e8e25ccf8d63a9b18a93ddbb8e00113f}{%
+           family={Török},
+           familyi={T\bibinitperiod},
+           given={Árpád},
+           giveni={Á\bibinitperiod}}}%
+        {{hash=85cae9a08c884f3665a90f96d1b242cb}{%
+           family={Szalay},
+           familyi={S\bibinitperiod},
+           given={Zsolt},
+           giveni={Z\bibinitperiod}}}%
+      }
+      \strng{namehash}{29a96fb36866d02e1226f33e944e4c33}
+      \strng{fullhash}{1cab6c8dfc7d18e722c4e15478f27c8f}
+      \strng{bibnamehash}{29a96fb36866d02e1226f33e944e4c33}
+      \strng{authorbibnamehash}{29a96fb36866d02e1226f33e944e4c33}
+      \strng{authornamehash}{29a96fb36866d02e1226f33e944e4c33}
+      \strng{authorfullhash}{1cab6c8dfc7d18e722c4e15478f27c8f}
+      \field{labelalpha}{HLT+19}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Transport and Telecommunication Journal}
+      \field{month}{04}
+      \field{title}{Vehicle-In-The-Loop (VIL) and Scenario-In-The-Loop (SCIL) Automotive Simulation Concepts from the Perspectives of Traffic Simulation and Traffic Control}
+      \field{volume}{20}
+      \field{year}{2019}
+      \field{pages}{153\bibrangedash 161}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.2478/ttj-2019-0014
+      \endverb
+    \endentry
     \entry{Hu05}{inproceedings}{}
       \name{author}{1}{}{%
         {{hash=4f0a16da447808fc8b84cec1c86d6f64}{%
@@ -1684,74 +1734,6 @@
       \verb https://github.com/RobotecAI/ros2-for-unity
       \endverb
     \endentry
-    \entry{Singh2024b}{article}{}
-      \name{author}{7}{}{%
-        {{hash=804237a4343b0803e007d06a54a6fa3e}{%
-           family={Singh},
-           familyi={S\bibinitperiod},
-           given={M.},
-           giveni={M\bibinitperiod}}}%
-        {{hash=0cd9bd025366bb97262f69b83f32f614}{%
-           family={Kapukotuwa},
-           familyi={K\bibinitperiod},
-           given={J.},
-           giveni={J\bibinitperiod}}}%
-        {{hash=4205fc6213fc723e918c55e418ec92a0}{%
-           family={Gouveia},
-           familyi={G\bibinitperiod},
-           given={E.\bibnamedelimi L.\bibnamedelimi S.},
-           giveni={E\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
-        {{hash=893df598e7c95b5b80169d1adf25eb62}{%
-           family={Fuenmayor},
-           familyi={F\bibinitperiod},
-           given={E.},
-           giveni={E\bibinitperiod}}}%
-        {{hash=cfb9f9ac980d8d294e8bc75867a850ac}{%
-           family={Qiao},
-           familyi={Q\bibinitperiod},
-           given={Y.},
-           giveni={Y\bibinitperiod}}}%
-        {{hash=f215767a6e2c88a9d1c43f2b6d34b4a4}{%
-           family={Murry},
-           familyi={M\bibinitperiod},
-           given={N.},
-           giveni={N\bibinitperiod}}}%
-        {{hash=64c2ceaff25745c6f2d660c85d03eaa8}{%
-           family={Devine},
-           familyi={D\bibinitperiod},
-           given={D.},
-           giveni={D\bibinitperiod}}}%
-      }
-      \strng{namehash}{0307acade8b8e1c71241aaf9c9e56109}
-      \strng{fullhash}{45af994f54622d7b9b6daa166606a8e7}
-      \strng{bibnamehash}{0307acade8b8e1c71241aaf9c9e56109}
-      \strng{authorbibnamehash}{0307acade8b8e1c71241aaf9c9e56109}
-      \strng{authornamehash}{0307acade8b8e1c71241aaf9c9e56109}
-      \strng{authorfullhash}{45af994f54622d7b9b6daa166606a8e7}
-      \field{extraname}{1}
-      \field{labelalpha}{SKG+24}
-      \field{sortinit}{S}
-      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
-      \field{extraalpha}{1}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Sensors}
-      \field{number}{17}
-      \field{title}{{Unity} and {ROS} as a {Digital} and Communication Layer for {Digital Twin} Application: Case Study of Robotic Arm in a Smart Manufacturing Cell}
-      \field{volume}{24}
-      \field{year}{2024}
-      \field{pages}{5680}
-      \range{pages}{1}
-      \verb{doi}
-      \verb 10.3390/s24175680
-      \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.3390/s24175680
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.3390/s24175680
-      \endverb
-    \endentry
     \entry{singh2024unity}{article}{}
       \name{author}{7}{}{%
         {{hash=fcdac3d1c0370d50d9ade1c68adf53e7}{%
@@ -1796,11 +1778,10 @@
       \strng{authorbibnamehash}{a59649ee1ff340f38e3c16ace92ef616}
       \strng{authornamehash}{a59649ee1ff340f38e3c16ace92ef616}
       \strng{authorfullhash}{6deff767c6b75e0f8bbe446ea1d6bba1}
-      \field{extraname}{2}
+      \field{extraname}{1}
       \field{labelalpha}{SKG+24}
       \field{sortinit}{S}
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
-      \field{extraalpha}{2}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{A digital twin (DT) is a virtual/digital model of a physical object interconnected through data exchange; this paper presents a framework using Unity and ROS to develop DTs and evaluates latency and accuracy for a robotic arm use case.}
@@ -1864,7 +1845,7 @@
       \strng{authorbibnamehash}{a59649ee1ff340f38e3c16ace92ef616}
       \strng{authornamehash}{a59649ee1ff340f38e3c16ace92ef616}
       \strng{authorfullhash}{329b52023f6f242f420ed0ba2a0dee5d}
-      \field{extraname}{3}
+      \field{extraname}{2}
       \field{labelalpha}{SKG+25}
       \field{sortinit}{S}
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
@@ -2010,7 +1991,7 @@
       \verb https://unity.com/
       \endverb
     \endentry
-    \entry{Szalay2021}{article}{}
+    \entry{Varga2021}{article}{}
       \name{author}{3}{}{%
         {{hash=7b49ff931ce3373d4705ff7498848d42}{%
            family={Varga},
@@ -2041,19 +2022,13 @@
       \field{labeltitlesource}{title}
       \field{journaltitle}{Transport and Telecommunication Journal}
       \field{month}{04}
-      \field{title}{System Architecture for {Scenario-In-The-Loop} Automotive Testing}
+      \field{title}{System Architecture for Scenario-In-The-Loop Automotive Testing}
       \field{volume}{22}
       \field{year}{2021}
       \field{pages}{141\bibrangedash 151}
       \range{pages}{11}
       \verb{doi}
       \verb 10.2478/ttj-2021-0011
-      \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.2478/ttj-2021-0011
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.2478/ttj-2021-0011
       \endverb
     \endentry
     \entry{Walker2023}{misc}{}

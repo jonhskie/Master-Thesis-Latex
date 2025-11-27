@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.20)  27 NOV 2025 18:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.20)  27 NOV 2025 20:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1278,11 +1278,11 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'english'.
- (./ti_thesis.aux (./chapters/deckblatt.aux) (./chapters/abstract.aux) (./chapters/introduction.aux) (./chapters/foundations_related_work.aux) (./chapters/requirements.aux) (./chapters/concept_implementation.aux
+ (./ti_thesis.aux (./chapters/deckblatt.aux) (./chapters/abstract.aux) (./chapters/introduction.aux) (./chapters/foundations_related_work.aux
 
-LaTeX Warning: Label `tab:sim_comparison' multiply defined.
+LaTeX Warning: Label `sec:DT' multiply defined.
 
-) (./chapters/evaluation.aux) (./chapters/conclusion_outlook.aux))
+) (./chapters/requirements.aux) (./chapters/concept_implementation.aux) (./chapters/evaluation.aux) (./chapters/conclusion_outlook.aux))
 \openout1 = `ti_thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
@@ -1608,7 +1608,7 @@ Underfull \hbox (badness 2205) in paragraph at lines 15--15
 [][][]\T1/mdbch/m/n/12 (+20) [[]]The real robot's ac-tions af-fect its vir-tual coun-ter-part,
  []
 
-<images/vehicle_in_the_loop_dsr+22.jpg, id=226, 248.3679pt x 204.2832pt>
+<images/vehicle_in_the_loop_dsr+22.jpg, id=224, 248.3679pt x 204.2832pt>
 File: images/vehicle_in_the_loop_dsr+22.jpg Graphic file (type jpg)
 <use images/vehicle_in_the_loop_dsr+22.jpg>
 Package pdftex.def Info: images/vehicle_in_the_loop_dsr+22.jpg  used on input line 25.
@@ -1616,25 +1616,20 @@ Package pdftex.def Info: images/vehicle_in_the_loop_dsr+22.jpg  used on input li
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[6]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [7 <./images/vehicle_in_the_loop_dsr+22.jpg>]
-<images/info_mirror_model_Grieves15.png, id=264, 813.0375pt x 434.8245pt>
+[6] [7 <./images/vehicle_in_the_loop_dsr+22.jpg>]
+<images/info_mirror_model_Grieves15.png, id=267, 813.0375pt x 434.8245pt>
 File: images/info_mirror_model_Grieves15.png Graphic file (type png)
 <use images/info_mirror_model_Grieves15.png>
 Package pdftex.def Info: images/info_mirror_model_Grieves15.png  used on input line 44.
 (pdftex.def)             Requested size: 341.43442pt x 182.5985pt.
- [8 <./images/info_mirror_model_Grieves15.png>]
-
-LaTeX Warning: Citation 'NOT FINAL' on page 9 undefined on input line 51.
 
 
-LaTeX Warning: Reference `fig:dt_environments' on page 9 undefined on input line 51.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-LaTeX Warning: Citation 'NOT FINAL' on page 9 undefined on input line 51.
+LaTeX Warning: Reference `fig:dt_environments' on page 8 undefined on input line 51.
 
+[8]
 
 LaTeX Warning: Citation 'NOT FINAL' on page 9 undefined on input line 56.
 
@@ -1647,8 +1642,8 @@ LaTeX Warning: Citation 'NOT FINAL' on page 9 undefined on input line 56.
 
 LaTeX Warning: Citation 'NOT FINAL' on page 9 undefined on input line 56.
 
-[9]
-<images/reality_virtuality_continuum_wpc+23.png, id=314, 1520.079pt x 410.13225pt>
+[9 <./images/info_mirror_model_Grieves15.png>]
+<images/reality_virtuality_continuum_wpc+23.png, id=318, 1520.079pt x 410.13225pt>
 File: images/reality_virtuality_continuum_wpc+23.png Graphic file (type png)
 <use images/reality_virtuality_continuum_wpc+23.png>
 Package pdftex.def Info: images/reality_virtuality_continuum_wpc+23.png  used on input line 70.
@@ -1660,41 +1655,48 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 9.6688pt on input line 110.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[11{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}] [12]
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 9.6688pt on input line 110.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[11] [12{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}]
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 12.71512pt on input line 139.
- [13]
-
-LaTeX Warning: Citation 'JuliaBA' on page 14 undefined on input line 159.
 
 
-LaTeX Warning: Citation 'JuliaBA' on page 14 undefined on input line 159.
+LaTeX Warning: Reference `fig:emaros_robot' on page 13 undefined on input line 141.
+
+[13]
+
+LaTeX Warning: Citation 'JuliaBA' on page 14 undefined on input line 158.
 
 
-LaTeX Warning: Citation 'JuliaBA' on page 14 undefined on input line 159.
+LaTeX Warning: Citation 'JuliaBA' on page 14 undefined on input line 158.
 
 
-LaTeX Warning: Citation 'JuliaBA' on page 14 undefined on input line 159.
+LaTeX Warning: Citation 'JuliaBA' on page 14 undefined on input line 158.
 
 
-LaTeX Warning: Citation 'JuliaBA' on page 14 undefined on input line 165.
+LaTeX Warning: Citation 'JuliaBA' on page 14 undefined on input line 158.
 
 
-LaTeX Warning: Citation 'JuliaBA' on page 14 undefined on input line 165.
+LaTeX Warning: Citation 'JuliaBA' on page 14 undefined on input line 164.
+
+
+LaTeX Warning: Citation 'JuliaBA' on page 14 undefined on input line 164.
 
 [14]
-LaTeX Font Info:    Trying to load font information for TS1+mdbch on input line 186.
+LaTeX Font Info:    Trying to load font information for TS1+mdbch on input line 185.
  (/usr/share/texlive/texmf-dist/tex/latex/mathdesign/mdbch/ts1mdbch.fd
 File: ts1mdbch.fd 2013/08/29 Fontinst v1.933 font definitions for TS1/mdbch.
 )
 LaTeX Font Info:    Font shape `TS1/mdbch/m/n' will be
-(Font)              scaled to size 11.52008pt on input line 186.
+(Font)              scaled to size 11.52008pt on input line 185.
 Package microtype Info: Character `texttwelveudash ' is missing
 (microtype)             in font `TS1/mdbch/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -1716,39 +1718,36 @@ Package microtype Info: Character `texttildelow ' is missing
 Package microtype Info: Character `textcelsius ' is missing
 (microtype)             in font `TS1/mdbch/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
-
-Underfull \vbox (badness 1314) has occurred while \output is active []
-
- [15] [16] [17] [18]) [19]
+ [15] [16] [17]) [18]
 \openout2 = `chapters/requirements.aux'.
 
- (./chapters/requirements.tex [20
+ (./chapters/requirements.tex
+chapter 3.
+
+LaTeX Warning: Citation 'NOT FINAL' on page 19 undefined on input line 3.
+
+
+LaTeX Warning: Citation 'NOT FINAL' on page 19 undefined on input line 5.
+
+[19
 
 
 
 
 
 ]
-chapter 3.
-
-LaTeX Warning: Citation 'NOT FINAL' on page 21 undefined on input line 3.
-
-
-LaTeX Warning: Citation 'NOT FINAL' on page 21 undefined on input line 5.
-
-[21]
 Overfull \hbox (6.07738pt too wide) in paragraph at lines 28--29
 \T1/mdbch/m/n/12 (-20) sim-u-la-tion will con-tinue to work with both cur-rent and up-com-ing EMAROs [[][]Geh24[][]]
  []
 
-[22]
+[20]
 
-LaTeX Warning: Citation 'VTS21' on page 23 undefined on input line 55.
+LaTeX Warning: Citation 'VTS21' on page 21 undefined on input line 55.
 
-[23] [24] [25] [26]) [27]
+[21] [22] [23] [24]) [25]
 \openout2 = `chapters/concept_implementation.aux'.
 
- (./chapters/concept_implementation.tex [28
+ (./chapters/concept_implementation.tex [26
 
 
 
@@ -1756,12 +1755,12 @@ LaTeX Warning: Citation 'VTS21' on page 23 undefined on input line 55.
 
 ]
 chapter 4.
-[29]) [30]
+[27]) [28]
 \openout2 = `chapters/evaluation.aux'.
 
  (./chapters/evaluation.tex
 chapter 5.
-) [31
+) [29
 
 
 
@@ -1770,7 +1769,7 @@ chapter 5.
 ]
 \openout2 = `chapters/conclusion_outlook.aux'.
 
- (./chapters/conclusion_outlook.tex [32
+ (./chapters/conclusion_outlook.tex [30
 
 
 
@@ -1778,7 +1777,7 @@ chapter 5.
 
 ]
 chapter 6.
-) [33] [34
+) [31] [32
 
 
 
@@ -1789,7 +1788,7 @@ Package tocbasic Info: character protrusion at lof deactivated on input line 50.
 \tf@lof=\write7
 \openout7 = `ti_thesis.lof'.
 
- [35] [36
+ [33] [34
 
 
 ]
@@ -1798,7 +1797,7 @@ Package tocbasic Info: character protrusion at lol deactivated on input line 51.
 \tf@lol=\write8
 \openout8 = `ti_thesis.lol'.
 
- [37] [38
+ [35] [36
 
 
 ]
@@ -1817,22 +1816,22 @@ Overfull \hbox (9.06294pt too wide) in paragraph at lines 58--58
 []\T1/mdbch/m/n/12 (-20) Rajmeet Bhourji, Lak-mal Senevi-ratne, and Ir-fan Hus-sain. ^^P  A Deep Learning-
  []
 
-[39] [40]
+[37] [38]
 Overfull \hbox (12.89154pt too wide) in paragraph at lines 58--58
 []\T1/mdbch/m/n/12 (-20) Seyed Mo-hamad Kar-gar, Borislav Yor-danov, Carlo Har-vey, and Ali Asadipour.
  []
 
-[41]
+[39] [40]
 Overfull \hbox (43.16673pt too wide) in paragraph at lines 58--58
 \T1/mdbch/m/n/12 (-20) A Re-view^^Q. In: \T1/mdbch/m/it/12 (-20) Robotics \T1/mdbch/m/n/12 (-20) 9.2 (Apr. 2020), p. 21. \T1/mdbch/m/fsc/12 (-20) doi\T1/mdbch/m/n/12 (-20) : [][]$\T1/cmtt/m/n/12 10 . 3390 / robotics9020021$[][]\T1/mdbch/m/n/12 (-20) .
  []
 
-[42]
+
 Overfull \hbox (14.49641pt too wide) in paragraph at lines 58--58
 \T1/cmtt/m/n/12 3390 / app10103633$[][]\T1/mdbch/m/n/12 (-20) . \T1/mdbch/m/fsc/12 (-20) url\T1/mdbch/m/n/12 (-20) : [][]$\T1/cmtt/m/n/12 https : / / doi . org / 10 . 3390 / app10103633$[][]\T1/mdbch/m/n/12 (-20) . 
  []
 
-[43] [44] [45
+[41] [42] [43
 
 
 ] (./ti_thesis.aux (./chapters/deckblatt.aux) (./chapters/abstract.aux) (./chapters/introduction.aux) (./chapters/foundations_related_work.aux) (./chapters/requirements.aux) (./chapters/concept_implementation.aux) (./chapters/evaluation.aux) (./chapters/conclusion_outlook.aux))
@@ -1854,18 +1853,18 @@ Package logreq Info: Writing requests to 'ti_thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 60404 strings out of 474222
- 1371182 string characters out of 5748732
- 2628708 words of memory out of 5000000
+ 60400 strings out of 474222
+ 1371159 string characters out of 5748732
+ 2628709 words of memory out of 5000000
  81189 multiletter control sequences out of 15000+600000
  636076 words of font info for 443 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  108i,12n,131p,10936b,3335s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchri8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chb8t.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr8t.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chri7m.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chri8t.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8ac.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on ti_thesis.pdf (51 pages, 1386934 bytes).
+Output written on ti_thesis.pdf (49 pages, 1384376 bytes).
 PDF statistics:
- 990 PDF objects out of 1000 (max. 8388607)
- 883 compressed objects within 9 object streams
- 161 named destinations out of 1000 (max. 500000)
- 76676 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 967 PDF objects out of 1000 (max. 8388607)
+ 866 compressed objects within 9 object streams
+ 157 named destinations out of 1000 (max. 500000)
+ 76668 words of extra memory for PDF output out of 89155 (max. 10000000)
 
