@@ -644,8 +644,6 @@ OUTPUT chapters/requirements.aux
 INPUT ./chapters/requirements.tex
 INPUT ./chapters/requirements.tex
 INPUT chapters/requirements.tex
-INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/mathdesign/mdbch/mdbchr7t.vf
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/mathdesign/mdbch/md-chr7t.tfm
 INPUT ./chapters/concept_implementation.tex
 INPUT ./chapters/concept_implementation.tex
 OUTPUT chapters/concept_implementation.aux
