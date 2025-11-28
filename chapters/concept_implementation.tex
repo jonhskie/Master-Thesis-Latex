@@ -49,104 +49,73 @@ Based on the comparative analysis, the \textbf{Unity Engine} was selected as the
 \section{System Architecture}
 \label{sec:system_architecture}
 
-
+text
 \subsection{High-Level Overview}
-The system is divided into three logical domains: the Physical Space containing the robot and tracking hardware, the Virtual Space hosting the Digital Twin and scenarios, and the ROS 2 middleware acting as the central data backbone (FR-05).
 
+text
 \subsection{Network Topology}
-To ensure modularity (NFR-03), the system utilizes a strict namespace separation between simulation nodes and autonomous agent nodes. This topology allows the agents to operate agnostic of whether they are controlling the real or virtual robot.
-
+text
 % ==============================================================================
 % 4.3 UNITY AND ROS 2 INTEGRATION
 % ==============================================================================
-\section{Integration of Unity and ROS 2 (The Environment)}
+\section{Integration of Unity and ROS 2}
 \label{sec:unity_integration}
-
-This section details the technical implementation of the simulation environment and the Digital Twin within the Unity Engine.
+text
 
 \subsection{The ROS 2 for Unity Plugin}
-% Introduced FIRST, so we can reference it in the next subsection.
-The \texttt{ros2-for-unity} asset is configured to instantiate the ROS 2 Client Library (rcl) directly within the Unity process memory. This enables high-throughput communication without external bridge applications (FR-04).
-
+text
 \subsection{Simulation Time Management}
-% Now we describe the implementation using the plugin introduced above.
-To prevent data drift between the simulation physics and the robot's control algorithms, a custom C\# script was developed. This script utilizes the plugin interface to publish the \texttt{/clock} topic, establishing Unity as the authoritative time source for the entire ROS 2 network (FR-06).
-
+text
 \subsection{Physical Twin Implementation}
-The Digital Twin of the EMAROS robot incorporates the physical properties of the real hardware, including mass and inertia (FR-02). Its pose is synchronized in real-time using data from the external ArUco tracking system (FR-09).
+text
 
 \subsection{Sensor Simulation}
-\begin{itemize}
-    \item \textbf{Virtual Camera:} A Unity rendering camera captures the scene and converts the frame buffer into standard ROS \texttt{sensor\_msgs/Image} messages (FR-13).
-    \item \textbf{LiDAR Raycasting:} The 2D laser scanner is simulated using Unity's physics raycasting API to detect obstacles and publish \texttt{sensor\_msgs/LaserScan} data (FR-14).
-\end{itemize}
-
+text
 % ==============================================================================
 % 4.4 MIXED REALITY INTERFACE
 % ==============================================================================
-\section{Mixed Reality Interface (The User View)}
+\section{Mixed Reality Interface}
 \label{sec:mr_interface}
-
-To support Human-Robot Interaction, the system implements both Augmented Reality projections and Virtual Reality interfaces.
+text
 
 \subsection{AR Projection}
-An orthographic camera is configured to render a top-down view of the scene, which is projected 1:1 onto the physical testbed floor to create the Augmented Reality environment (FR-31).
-
+text
 \subsection{VR Interaction}
-The VR interface allows a user to view the Digital Twin in 3D space. It includes "God-Mode" interaction capabilities, allowing users to manipulate virtual objects or set navigation goals directly using VR controllers (FR-33).
-
+text
 % ==============================================================================
 % 4.5 SCENARIO LOGIC (UNITY-SIDE)
 % ==============================================================================
-\section{Implementation of Scenario Logic (Unity-Side Behaviors)}
+\section{Implementation of Scenario Logic}
 \label{sec:unity_scenarios}
-
-While the robot is controlled by external agents, the rules of the environment and the behaviors of virtual objects are implemented via C\# scripts within Unity.
+text
 
 \subsection{Smart Farming Environment}
-The environment manages the state of field segments, visually toggling them between "Untouched" (green) and "Cultivated" (brown) when the robot's tool interacts with them (FR-20).
-
-\subsection{Logistics and Navigation Environment}
-This scenario implements "Collectible Objects" that attach to the robot upon contact (FR-22) and dynamic street segments that automatically rearrange themselves to test adaptive navigation (FR-26).
-
+text
+\subsection{Logistics Environment}
+text
 \subsection{Surface Painting Mechanics}
-To enable the Line Following scenario, a texture modification script allows users to draw paths directly onto the virtual floor mesh in real-time (FR-24).
-
+text
+\subsection{Adaptive Streets Scenario}
+text
 \subsection{Competitive Game and Unity Opponent}
-The competitive scenario includes a physics-based scoring system. Unlike the external ROS agents, the \textbf{Automated Adversary} is implemented entirely within Unity to track the game object and react to the player's movements with zero network latency (FR-30).
-
+text
 % ==============================================================================
 % 4.6 AUTONOMOUS AGENTS (ROS-SIDE)
 % ==============================================================================
-\section{Implementation of Autonomous Agents (ROS-Side)}
+\section{Implementation of Autonomous Agents}
 \label{sec:autonomous_agents}
-
-To validate the framework, specific autonomous agents were developed for each scenario. These agents share a common architecture based on the ROS 2 Navigation Stack (Nav2) and Finite State Machines (FSM), but utilize distinct perception logic.
+text
 
 \subsection{General Agent Architecture}
-Each agent follows a \textbf{Two-Node Pattern} to decouple perception from decision-making:
-\begin{enumerate}
-    \item \textbf{Perception Node:} Processes raw sensor data (Camera/LiDAR) and publishes high-level features.
-    \item \textbf{Control Node:} Executes a Finite State Machine (FSM) that sends goals to the Nav2 Action Server (FR-37).
-\end{enumerate}
-
+text
 \subsection{Smart Farming Agent}
-\textbf{Perception:} The perception node utilizes OpenCV to perform color-based segmentation, distinguishing between green (unharvested) and brown (harvested) zones.\\
-\textbf{Control:} The FSM directs the robot to systematically cover unharvested areas while managing the tool state.
-
+text
 \subsection{Logistics Agent}
-\textbf{Perception:} This node implements blob detection to identify colored "Collectible Objects" and recognizes the geometry of "Goal Zones."\\
-\textbf{Control:} The logistics FSM executes a four-stage sequence: \textit{Search} $\rightarrow$ \textit{Approach} $\rightarrow$ \textit{Attach} $\rightarrow$ \textit{Deliver}.
-
+text
 \subsection{Line Following Agent}
-\textbf{Perception:} Using the synthetic camera feed, this node applies contour detection algorithms to identify user-drawn lines or street markings.\\
-\textbf{Control:} Instead of global path planning, this agent utilizes a \textbf{Visual Servoing} state. It bypasses the Nav2 planner to send direct velocity commands (\texttt{cmd\_vel}) to align the robot with the detected line trajectory (FR-27).
-
-\subsection{Abstraction of Input Sources}
-A key feature of these agents is their source agnosticism (FR-36). By remapping the input topics, the exact same Perception Node can process either the synthetic video stream from Unity or the physical camera feed from the real world without code modification.
-
+text
 % ==============================================================================
 % 4.7 SUMMARY
 % ==============================================================================
 \section{Summary of Implementation}
-This chapter described the technical realization of the Mixed Reality Environment. By integrating the Unity Engine with ROS 2, a robust Digital Twin was created. The validity of this system is demonstrated by the implementation of complex scenarios and autonomous agents that can operate interchangeably in both virtual and physical contexts.
+text
