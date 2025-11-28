@@ -8,11 +8,11 @@
 \contentsline {section}{\numberline {2.5}The VERA Framework}{13}{section.2.5}%
 \contentsline {subsection}{\numberline {2.5.1}EMAROs Test Platform}{14}{subsection.2.5.1}%
 \contentsline {subsection}{\numberline {2.5.2}Original VERA System Architecture}{15}{subsection.2.5.2}%
-\contentsline {subsection}{\numberline {2.5.3}Identified Limitations}{17}{subsection.2.5.3}%
+\contentsline {subsection}{\numberline {2.5.3}Identified Limitations}{18}{subsection.2.5.3}%
 \contentsline {section}{\numberline {2.6}Simulation Engines for Robotics}{18}{section.2.6}%
-\contentsline {subsection}{\numberline {2.6.1}Robotics Simulators}{18}{subsection.2.6.1}%
+\contentsline {subsection}{\numberline {2.6.1}Robotics Simulators}{19}{subsection.2.6.1}%
 \contentsline {subsection}{\numberline {2.6.2}Physics-Based Simulators}{19}{subsection.2.6.2}%
-\contentsline {subsection}{\numberline {2.6.3}High-Visual-Fidelity and Game-Based Engines}{19}{subsection.2.6.3}%
+\contentsline {subsection}{\numberline {2.6.3}High-Visual-Fidelity and Game-Based Engines}{20}{subsection.2.6.3}%
 \contentsline {section}{\numberline {2.7}Synthesis? Discussion?}{20}{section.2.7}%
 \contentsline {chapter}{\numberline {3}Requirements}{23}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Simulation Engine Capabilities}{23}{section.3.1}%

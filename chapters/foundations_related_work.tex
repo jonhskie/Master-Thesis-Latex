@@ -142,7 +142,7 @@ The modular hardware architecture of EMAROs is based on three main PCBs: a \text
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\textwidth]{images/EMAROs_robot.png}
-    \caption{The EMAROs robot is the robotic platform used in the testbed, equipped with a modular sensor suite and running ROS~2~\cite{Geh24}.}
+    \caption{The EMAROs robot is the robotic platform used in the testbed, equipped with a modular sensor suite and running ROS~2.~\cite{Geh24}}
     \label{fig:EMAROs_robot}
 \end{figure}
 
@@ -154,12 +154,21 @@ The software architecure of the original VERA framework was mainly a ROS~2 imple
 Accurate localization is important to synchronize the physical robot with the projected virtual world and was provided by the \textbf{VEPS} in the original VERA framework~\cite{Geh24}. The original VEPS implementation relied on a depth-based approach where a ceiling-mounted Allied Vision Ruby 3D stereo camera captured point clouds of the test area~\cite{Geh24}. The point clouds were filtered by a Median Absolute Deviation (MAD) algorithm to calculate the centroid of the robot~\cite{Geh24}.
 However, for maximum robustness and precision for this thesis, the positioning system was updated to use an ArUco marker-based tracking system developed in parallel research by~\cite{JuliaBA}, as shown in Figure~\ref{fig:veps_comparison}. Although the point-cloud method provided a markerless solution, the ArUco-based approach has higher reliability and lower noise~\cite{JuliaBA,Geh24}. By attaching a fiducial marker to the top of the EMAROs robot, the system is able to calculate the 6D pose (position and orientation) of the robot~\cite{JuliaBA}. This pose is published into the ROS~2 network, where it can instantly update the position of the digital twin~\cite{JuliaBA}.
 
+
 \begin{figure}[H]
     \centering
-    % TODO: Insert a photo of the ArUco tracking setup or the camera view with markers
-    % \includegraphics[width=0.8\textwidth]{images/aruco_tracking_placeholder.png}
-    \caption{Visualization of the tracking system. The original VERA used point clouds (left), while the current iteration uses ArUco markers (right) for robust pose estimation~\cite{JuliaBA}.}
-    \label{fig:veps_comparison}
+    % Linkes Bild (nimmt 49% der Textbreite ein)
+    \begin{minipage}{0.49\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{images/point_cloud.png}
+    \end{minipage}%
+    \hfill% Abstandhalter
+    % Rechtes Bild (nimmt 49% der Textbreite ein)
+    \begin{minipage}{0.49\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{images/point_cloud.png}
+    \end{minipage}
+    \captionof{figure}{The original VERA used point clouds~\cite{Geh24}, while the current iteration uses ArUco markers for pose estimation~\cite{JuliaBA}.}
 \end{figure}
 
 The \textbf{Virtual Environment Manager} is the central brain of the simulation~\cite{Geh24}. Implemented as a C++ ROS~2 node, it parses environment definitions from standard Gazebo \texttt{world.sdf} files~\cite{Geh24}. It keeps track of the state of all virtual objects, including their positions and properties, such as whether an object is movable or static~\cite{Geh24}.
@@ -171,7 +180,7 @@ The visualizer subscribes to the object lists published by the Manager and the r
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{images/pygame_visualizer.png}
-    \caption{Original VERA visualization via Pygame, showing a projection of the robot's path and virtual obstacles onto the floor~\cite{Geh24}.}
+    \caption{Original VERA visualization via Pygame, showing a projection of the robot's path and virtual obstacles onto the floor.~\cite{Geh24}}
     \label{fig:pygame_vis}
 \end{figure}
 
