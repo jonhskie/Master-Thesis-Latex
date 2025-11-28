@@ -136,17 +136,17 @@ The core idea of VERA is projecting a dynamic, interactive virtual world onto th
     \label{fig:vera_setup}
 \end{figure}
 
-\subsection{The EMAROs Test Platform}
-\label{sec:emaros_platform}
-The capabilities of VERA are demonstrated by a mobile mini-robot called EMAROs (Educational Modular Autonomous Robot Osnabrück), shown in Figure~\ref{fig:emaros_robot}, which was developed at Osnabrück University specifically for research and education in robotics and artificial intelligence~\cite{Geh24}.
+\subsection{EMAROs Test Platform}
+\label{sec:EMAROs_platform}
+The capabilities of VERA are demonstrated by a mobile mini-robot called EMAROs (Educational Modular Autonomous Robot Osnabrück), shown in Figure~\ref{fig:EMAROs_robot}, which was developed at Osnabrück University specifically for research and education in robotics and artificial intelligence~\cite{Geh24}.
 The modular hardware architecture of EMAROs is based on three main PCBs: a \textbf{Host-PCB} containing high-level computing, a \textbf{Power-PCB} managing energy supply and motor control and a \textbf{Base-PCB} integrating ground sensors~\cite{Geh24}. The specific variant used in this work is equipped with a Raspberry Pi Compute Module 4 (CM4) running Ubuntu~24.04 and the Robot Operating System 2 (ROS~2)~\cite{Geh24}.
 
 \begin{figure}[h]
     \centering
     % TODO: Insert Figure 3.1 from Gehricke's Thesis (The EMAROs robot)
-    % \includegraphics[width=0.5\textwidth]{images/emaros_robot_placeholder.png}
+    % \includegraphics[width=0.5\textwidth]{images/EMAROs_robot_placeholder.png}
     \caption{The EMAROs robot is the robotic platform used in the testbed, equipped with a modular sensor suite and running ROS~2~\cite{Geh24}.}
-    \label{fig:emaros_robot}
+    \label{fig:EMAROs_robot}
 \end{figure}
 
 For obstacle avoidance, the robot is equipped with Time-of-Flight (ToF) distance sensors and an Inertial Measurement Unit (IMU) for orientation tracking~\cite{Geh24}. Moreover, there are two wide-angle cameras that can be configured for stereo vision applications or line-following tasks~\cite{Geh24}. Within VERA, EMAROs takes on the role of the robot, streaming real-time telemetry including odometry, battery status, and sensor data to the simulation framework via ROS~2 to create a digital twin~\cite{Geh24}.
@@ -222,4 +222,4 @@ The review of related work confirms that RitL testing~\cite{Hu05} combined with 
 
 However, due to its reliance on custom software components, the original VERA framework has significant technical limitations~\cite{Geh24}.  As explained in Section 2.5.3, the Pygame-based visualiser experiences performance bottlenecks in complex scenes and realistic object manipulation is impossible due to the lack of a dedicated physics engine~\cite{Geh24}. Moreover, the potential for researching Human-Robot Collaboration is limited by the lack of Virtual Reality support~\cite{Geh24}.
 
-To overcome these limitations, this thesis proposes integrating a simulation engine into the architecture of VERA using the \textbf{Robot Operating System 2 (ROS~2)}~\cite{MFG22}. The goal is to establish a robust, physics-enabled Mixed Reality environment that bridges the gap between simulation and reality. This new development will be verified by creating demonstration scenarios where the EMAROS robot actively interacts with virtual elements and will serve as a proof of concept for improved system physical realism scalability and immersive interaction.
+To overcome these limitations, this thesis proposes integrating a simulation engine into the architecture of VERA using the \textbf{Robot Operating System 2 (ROS~2)}~\cite{MFG22}. The goal is to establish a robust, physics-enabled Mixed Reality environment that bridges the gap between simulation and reality. This new development will be verified by creating demonstration scenarios where the EMAROs robot actively interacts with virtual elements and will serve as a proof of concept for improved system physical realism scalability and immersive interaction.
