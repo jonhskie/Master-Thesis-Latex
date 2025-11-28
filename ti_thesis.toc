@@ -33,14 +33,30 @@
 \contentsline {section}{\numberline {4.1}Technology Selection}{31}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}Comparative Analysis}{31}{subsection.4.1.1}%
 \contentsline {subsection}{\numberline {4.1.2}Selection Rationale}{32}{subsection.4.1.2}%
-\contentsline {chapter}{\numberline {5}Evaluation}{33}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Methodology}{33}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Test Scenarios}{33}{subsection.5.1.1}%
-\contentsline {subsection}{\numberline {5.1.2}Metrics}{33}{subsection.5.1.2}%
-\contentsline {section}{\numberline {5.2}Execution and Results}{33}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Base Integration Performance}{33}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Scenario-dependent Performance}{33}{subsection.5.2.2}%
-\contentsline {section}{\numberline {5.3}Discussion}{33}{section.5.3}%
-\contentsline {chapter}{\numberline {6}Conclusion}{35}{chapter.6}%
-\contentsline {chapter}{\nonumberline Bibliography}{41}{chapter*.5}%
+\contentsline {section}{\numberline {4.2}System Architecture}{32}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}High-Level Overview}{32}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Network Topology}{32}{subsection.4.2.2}%
+\contentsline {section}{\numberline {4.3}Integration of Unity and ROS 2 (The Environment)}{33}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}The ROS 2 for Unity Plugin}{33}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Simulation Time Management}{33}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Physical Twin Implementation}{33}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}Sensor Simulation}{33}{subsection.4.3.4}%
+\contentsline {section}{\numberline {4.4}Mixed Reality Interface (The User View)}{34}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}AR Projection}{34}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}VR Interaction}{34}{subsection.4.4.2}%
+\contentsline {section}{\numberline {4.5}Implementation of Scenario Logic (Unity-Side Behaviors)}{34}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Smart Farming Environment}{34}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Logistics and Navigation Environment}{34}{subsection.4.5.2}%
+\contentsline {subsection}{\numberline {4.5.3}Surface Painting Mechanics}{35}{subsection.4.5.3}%
+\contentsline {subsection}{\numberline {4.5.4}Competitive Game and Unity Opponent}{35}{subsection.4.5.4}%
+\contentsline {section}{\numberline {4.6}Implementation of Autonomous Agents (ROS-Side)}{35}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}General Agent Architecture}{35}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.2}Smart Farming Agent}{35}{subsection.4.6.2}%
+\contentsline {subsection}{\numberline {4.6.3}Logistics Agent}{36}{subsection.4.6.3}%
+\contentsline {subsection}{\numberline {4.6.4}Line Following Agent}{36}{subsection.4.6.4}%
+\contentsline {subsection}{\numberline {4.6.5}Abstraction of Input Sources}{36}{subsection.4.6.5}%
+\contentsline {section}{\numberline {4.7}Summary of Implementation}{36}{section.4.7}%
+\contentsline {chapter}{\numberline {5}Evaluation}{37}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Conclusion}{39}{chapter.6}%
+\contentsline {chapter}{\nonumberline Bibliography}{45}{chapter*.5}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
