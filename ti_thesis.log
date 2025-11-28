@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.20)  28 NOV 2025 06:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.20)  28 NOV 2025 07:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1614,89 +1614,103 @@ File: images/vehicle_in_the_loop_dsr+22.jpg Graphic file (type jpg)
 Package pdftex.def Info: images/vehicle_in_the_loop_dsr+22.jpg  used on input line 25.
 (pdftex.def)             Requested size: 384.10965pt x 315.95924pt.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[6] [7 <./images/vehicle_in_the_loop_dsr+22.jpg>]
-<images/info_mirror_model_Grieves15.png, id=267, 813.0375pt x 434.8245pt>
+ [6] [7 <./images/vehicle_in_the_loop_dsr+22.jpg>]
+<images/info_mirror_model_Grieves15.png, id=264, 813.0375pt x 434.8245pt>
 File: images/info_mirror_model_Grieves15.png Graphic file (type png)
 <use images/info_mirror_model_Grieves15.png>
 Package pdftex.def Info: images/info_mirror_model_Grieves15.png  used on input line 44.
 (pdftex.def)             Requested size: 341.43442pt x 182.5985pt.
 
+Underfull \vbox (badness 7273) has occurred while \output is active []
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+ [8]
 
-
-LaTeX Warning: Reference `fig:dt_environments' on page 8 undefined on input line 51.
-
-[8]
-
-LaTeX Warning: Citation 'NOT FINAL' on page 9 undefined on input line 56.
-
-
-LaTeX Warning: Citation 'NOT FINAL' on page 9 undefined on input line 56.
-
-
-LaTeX Warning: Citation 'NOT FINAL' on page 9 undefined on input line 56.
-
-
-LaTeX Warning: Citation 'NOT FINAL' on page 9 undefined on input line 56.
+LaTeX Warning: Reference `fig:dt_environments' on page 9 undefined on input line 51.
 
 [9 <./images/info_mirror_model_Grieves15.png>]
-<images/reality_virtuality_continuum_wpc+23.png, id=318, 1520.079pt x 410.13225pt>
+
+LaTeX Warning: Citation 'NOT FINAL' on page 10 undefined on input line 56.
+
+
+LaTeX Warning: Citation 'NOT FINAL' on page 10 undefined on input line 56.
+
+
+LaTeX Warning: Citation 'NOT FINAL' on page 10 undefined on input line 56.
+
+
+LaTeX Warning: Citation 'NOT FINAL' on page 10 undefined on input line 56.
+
+<images/reality_virtuality_continuum_wpc+23.png, id=315, 1520.079pt x 410.13225pt>
 File: images/reality_virtuality_continuum_wpc+23.png Graphic file (type png)
 <use images/reality_virtuality_continuum_wpc+23.png>
 Package pdftex.def Info: images/reality_virtuality_continuum_wpc+23.png  used on input line 70.
 (pdftex.def)             Requested size: 384.10965pt x 103.63423pt.
- [10 <./images/reality_virtuality_continuum_wpc+23.png>]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [10] [11 <./images/reality_virtuality_continuum_wpc+23.png>]
 LaTeX Font Info:    Font shape `T1/cmtt/m/n' will be
 (Font)              scaled to size 12.86407pt on input line 87.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 9.6688pt on input line 110.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[11] [12{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}]
+ [12{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}] [13]
+<images/vera_setup.jpg, id=384, 2055.68pt x 1818.795pt>
+File: images/vera_setup.jpg Graphic file (type jpg)
+<use images/vera_setup.jpg>
+Package pdftex.def Info: images/vera_setup.jpg  used on input line 132.
+(pdftex.def)             Requested size: 341.43442pt x 302.08641pt.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 12.71512pt on input line 139.
+(Font)              scaled to size 12.71512pt on input line 137.
+ [14 <./images/vera_setup.jpg>]
+<images/EMAROs_robot.png, id=397, 263.3037pt x 276.0714pt>
+File: images/EMAROs_robot.png Graphic file (type png)
+<use images/EMAROs_robot.png>
+Package pdftex.def Info: images/EMAROs_robot.png  used on input line 144.
+(pdftex.def)             Requested size: 213.39569pt x 223.74718pt.
 
 
-LaTeX Warning: Reference `fig:EMAROs_robot' on page 13 undefined on input line 141.
-
-[13]
-
-LaTeX Warning: Citation 'JuliaBA' on page 14 undefined on input line 158.
+LaTeX Warning: Citation 'JuliaBA' on page 15 undefined on input line 155.
 
 
-LaTeX Warning: Citation 'JuliaBA' on page 14 undefined on input line 158.
+LaTeX Warning: Reference `fig:veps_comparison' on page 15 undefined on input line 155.
 
 
-LaTeX Warning: Citation 'JuliaBA' on page 14 undefined on input line 158.
+LaTeX Warning: Citation 'JuliaBA' on page 15 undefined on input line 155.
 
 
-LaTeX Warning: Citation 'JuliaBA' on page 14 undefined on input line 158.
+LaTeX Warning: Citation 'JuliaBA' on page 15 undefined on input line 155.
 
 
-LaTeX Warning: Citation 'JuliaBA' on page 14 undefined on input line 164.
+LaTeX Warning: Citation 'JuliaBA' on page 15 undefined on input line 155.
+
+[15 <./images/EMAROs_robot.png>]
+
+LaTeX Warning: Citation 'JuliaBA' on page 16 undefined on input line 161.
 
 
-LaTeX Warning: Citation 'JuliaBA' on page 14 undefined on input line 164.
+LaTeX Warning: Citation 'JuliaBA' on page 16 undefined on input line 161.
 
-[14]
-LaTeX Font Info:    Trying to load font information for TS1+mdbch on input line 185.
+<images/pygame_visualizer.png, id=427, 807.61725pt x 701.62125pt>
+File: images/pygame_visualizer.png Graphic file (type png)
+<use images/pygame_visualizer.png>
+Package pdftex.def Info: images/pygame_visualizer.png  used on input line 173.
+(pdftex.def)             Requested size: 341.43442pt x 296.62738pt.
+[16]
+LaTeX Font Info:    Trying to load font information for TS1+mdbch on input line 181.
  (/usr/share/texlive/texmf-dist/tex/latex/mathdesign/mdbch/ts1mdbch.fd
 File: ts1mdbch.fd 2013/08/29 Fontinst v1.933 font definitions for TS1/mdbch.
 )
 LaTeX Font Info:    Font shape `TS1/mdbch/m/n' will be
-(Font)              scaled to size 11.52008pt on input line 185.
+(Font)              scaled to size 11.52008pt on input line 181.
 Package microtype Info: Character `texttwelveudash ' is missing
 (microtype)             in font `TS1/mdbch/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -1718,36 +1732,36 @@ Package microtype Info: Character `texttildelow ' is missing
 Package microtype Info: Character `textcelsius ' is missing
 (microtype)             in font `TS1/mdbch/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
- [15] [16] [17]) [18]
+ [17 <./images/pygame_visualizer.png>] [18] [19]) [20] [21]
 \openout2 = `chapters/requirements.aux'.
 
- (./chapters/requirements.tex
-chapter 3.
-
-LaTeX Warning: Citation 'NOT FINAL' on page 19 undefined on input line 3.
-
-
-LaTeX Warning: Citation 'NOT FINAL' on page 19 undefined on input line 5.
-
-[19
+ (./chapters/requirements.tex [22
 
 
 
 
 
 ]
+chapter 3.
+
+LaTeX Warning: Citation 'NOT FINAL' on page 23 undefined on input line 3.
+
+
+LaTeX Warning: Citation 'NOT FINAL' on page 23 undefined on input line 5.
+
+[23]
 Overfull \hbox (6.07738pt too wide) in paragraph at lines 28--29
 \T1/mdbch/m/n/12 (-20) sim-u-la-tion will con-tinue to work with both cur-rent and up-com-ing EMAROs [[][]Geh24[][]]
  []
 
-[20]
+[24]
 
-LaTeX Warning: Citation 'VTS21' on page 21 undefined on input line 55.
+LaTeX Warning: Citation 'VTS21' on page 25 undefined on input line 55.
 
-[21] [22] [23] [24]) [25]
+[25] [26] [27] [28]) [29]
 \openout2 = `chapters/concept_implementation.aux'.
 
- (./chapters/concept_implementation.tex [26
+ (./chapters/concept_implementation.tex [30
 
 
 
@@ -1755,12 +1769,12 @@ LaTeX Warning: Citation 'VTS21' on page 21 undefined on input line 55.
 
 ]
 chapter 4.
-[27]) [28]
+[31]) [32]
 \openout2 = `chapters/evaluation.aux'.
 
  (./chapters/evaluation.tex
 chapter 5.
-) [29
+) [33
 
 
 
@@ -1769,7 +1783,7 @@ chapter 5.
 ]
 \openout2 = `chapters/conclusion_outlook.aux'.
 
- (./chapters/conclusion_outlook.tex [30
+ (./chapters/conclusion_outlook.tex [34
 
 
 
@@ -1777,7 +1791,7 @@ chapter 5.
 
 ]
 chapter 6.
-) [31] [32
+) [35] [36
 
 
 
@@ -1788,7 +1802,7 @@ Package tocbasic Info: character protrusion at lof deactivated on input line 50.
 \tf@lof=\write7
 \openout7 = `ti_thesis.lof'.
 
- [33] [34
+ [37] [38
 
 
 ]
@@ -1797,7 +1811,7 @@ Package tocbasic Info: character protrusion at lol deactivated on input line 51.
 \tf@lol=\write8
 \openout8 = `ti_thesis.lol'.
 
- [35] [36
+ [39] [40
 
 
 ]
@@ -1816,12 +1830,12 @@ Overfull \hbox (9.06294pt too wide) in paragraph at lines 58--58
 []\T1/mdbch/m/n/12 (-20) Rajmeet Bhourji, Lak-mal Senevi-ratne, and Ir-fan Hus-sain. ^^P  A Deep Learning-
  []
 
-[37] [38]
+[41] [42]
 Overfull \hbox (12.89154pt too wide) in paragraph at lines 58--58
 []\T1/mdbch/m/n/12 (-20) Seyed Mo-hamad Kar-gar, Borislav Yor-danov, Carlo Har-vey, and Ali Asadipour.
  []
 
-[39] [40]
+[43] [44]
 Overfull \hbox (43.16673pt too wide) in paragraph at lines 58--58
 \T1/mdbch/m/n/12 (-20) A Re-view^^Q. In: \T1/mdbch/m/it/12 (-20) Robotics \T1/mdbch/m/n/12 (-20) 9.2 (Apr. 2020), p. 21. \T1/mdbch/m/fsc/12 (-20) doi\T1/mdbch/m/n/12 (-20) : [][]$\T1/cmtt/m/n/12 10 . 3390 / robotics9020021$[][]\T1/mdbch/m/n/12 (-20) .
  []
@@ -1831,7 +1845,7 @@ Overfull \hbox (14.49641pt too wide) in paragraph at lines 58--58
 \T1/cmtt/m/n/12 3390 / app10103633$[][]\T1/mdbch/m/n/12 (-20) . \T1/mdbch/m/fsc/12 (-20) url\T1/mdbch/m/n/12 (-20) : [][]$\T1/cmtt/m/n/12 https : / / doi . org / 10 . 3390 / app10103633$[][]\T1/mdbch/m/n/12 (-20) . 
  []
 
-[41] [42] [43
+[45] [46] [47
 
 
 ] (./ti_thesis.aux (./chapters/deckblatt.aux) (./chapters/abstract.aux) (./chapters/introduction.aux) (./chapters/foundations_related_work.aux) (./chapters/requirements.aux) (./chapters/concept_implementation.aux) (./chapters/evaluation.aux) (./chapters/conclusion_outlook.aux))
@@ -1853,18 +1867,18 @@ Package logreq Info: Writing requests to 'ti_thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 60400 strings out of 474222
- 1371159 string characters out of 5748732
- 2628704 words of memory out of 5000000
- 81189 multiletter control sequences out of 15000+600000
+ 60430 strings out of 474222
+ 1371925 string characters out of 5748732
+ 2629163 words of memory out of 5000000
+ 81215 multiletter control sequences out of 15000+600000
  636076 words of font info for 443 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  108i,12n,131p,10936b,3335s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchri8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chb8t.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr8t.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chri7m.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chri8t.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8ac.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on ti_thesis.pdf (49 pages, 1384235 bytes).
+Output written on ti_thesis.pdf (53 pages, 5311429 bytes).
 PDF statistics:
- 967 PDF objects out of 1000 (max. 8388607)
- 866 compressed objects within 9 object streams
- 157 named destinations out of 1000 (max. 500000)
- 76668 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 999 PDF objects out of 1000 (max. 8388607)
+ 889 compressed objects within 9 object streams
+ 161 named destinations out of 1000 (max. 500000)
+ 76683 words of extra memory for PDF output out of 89155 (max. 10000000)
 
