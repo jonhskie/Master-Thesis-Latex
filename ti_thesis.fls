@@ -582,11 +582,11 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/mathdesign/mdbch/mdbchrmb.t
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/mathdesign/mdbch/mdbchrmb.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/helvetic/phvb8t.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/helvetic/phvb8r.tfm
-OUTPUT ti_thesis.toc
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/mathdesign/mdbch/mdbchro8t.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/mathdesign/mdbch/mdbchro8t.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/mathdesign/mdbch/md-chro8y.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/mathdesign/mdbch/md-chro8t.tfm
+OUTPUT ti_thesis.toc
 INPUT ./chapters/introduction.tex
 INPUT ./chapters/introduction.tex
 OUTPUT chapters/introduction.aux
