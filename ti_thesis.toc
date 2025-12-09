@@ -17,63 +17,49 @@
 \contentsline {chapter}{\numberline {3}Requirements}{23}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Simulation Engine Capabilities}{23}{section.3.1}%
 \contentsline {section}{\numberline {3.2}System Architecture \& Middleware}{24}{section.3.2}%
-\contentsline {section}{\numberline {3.3}EMAROs Digital Twin Interfaces}{24}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Perception \& Sensor Simulation}{25}{section.3.4}%
-\contentsline {section}{\numberline {3.5}General Interaction Mechanisms}{25}{section.3.5}%
-\contentsline {section}{\numberline {3.6}Demonstrator \& Validation}{26}{section.3.6}%
-\contentsline {subsection}{\numberline {3.6.1}Smart Farming Scenario}{26}{subsection.3.6.1}%
-\contentsline {subsection}{\numberline {3.6.2}Logistics Scenario}{26}{subsection.3.6.2}%
-\contentsline {subsection}{\numberline {3.6.3}Surface Painting Scenario}{27}{subsection.3.6.3}%
-\contentsline {subsection}{\numberline {3.6.4}Adaptive Navigation Scenario}{27}{subsection.3.6.4}%
-\contentsline {subsection}{\numberline {3.6.5}Competitive Game Scenario}{27}{subsection.3.6.5}%
-\contentsline {section}{\numberline {3.7}User Interface \& Mixed Reality}{28}{section.3.7}%
-\contentsline {section}{\numberline {3.8}Automated Scenario Execution}{28}{section.3.8}%
-\contentsline {section}{\numberline {3.9}Non-Functional Requirements}{29}{section.3.9}%
-\contentsline {chapter}{\numberline {4}Concept and Implementation}{31}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Technology Selection}{31}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Comparative Analysis}{31}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Selection Rationale}{32}{subsection.4.1.2}%
-\contentsline {section}{\numberline {4.2}System Architecture}{32}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}High-Level Overview}{32}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Network Topology}{32}{subsection.4.2.2}%
-\contentsline {section}{\numberline {4.3}Integration of Unity and ROS 2}{33}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}The ROS 2 for Unity Plugin}{33}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Simulation Time Management}{33}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Physical Twin Implementation}{33}{subsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.3.4}Sensor Simulation}{33}{subsection.4.3.4}%
-\contentsline {section}{\numberline {4.4}Mixed Reality Interface}{33}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}AR Projection}{33}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}VR Interaction}{33}{subsection.4.4.2}%
-\contentsline {section}{\numberline {4.5}Implementation of Scenario Logic}{34}{section.4.5}%
-\contentsline {subsection}{\numberline {4.5.1}Smart Farming Environment}{34}{subsection.4.5.1}%
-\contentsline {subsection}{\numberline {4.5.2}Logistics Environment}{34}{subsection.4.5.2}%
-\contentsline {subsection}{\numberline {4.5.3}Surface Painting Mechanics}{34}{subsection.4.5.3}%
-\contentsline {subsection}{\numberline {4.5.4}Adaptive Streets Scenario}{34}{subsection.4.5.4}%
-\contentsline {subsection}{\numberline {4.5.5}Competitive Game and Unity Opponent}{34}{subsection.4.5.5}%
-\contentsline {section}{\numberline {4.6}Implementation of Autonomous Agents}{34}{section.4.6}%
-\contentsline {subsection}{\numberline {4.6.1}General Agent Architecture}{34}{subsection.4.6.1}%
-\contentsline {subsection}{\numberline {4.6.2}Smart Farming Agent}{35}{subsection.4.6.2}%
-\contentsline {subsection}{\numberline {4.6.3}Logistics Agent}{35}{subsection.4.6.3}%
-\contentsline {subsection}{\numberline {4.6.4}Line Following Agent}{35}{subsection.4.6.4}%
-\contentsline {section}{\numberline {4.7}Summary of Implementation}{35}{section.4.7}%
-\contentsline {chapter}{\numberline {5}Evaluation}{37}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Methodology}{37}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Hardware Setup}{37}{subsection.5.1.1}%
-\contentsline {subsection}{\numberline {5.1.2}Measurement Metrics}{37}{subsection.5.1.2}%
-\contentsline {section}{\numberline {5.2}System Performance Analysis}{37}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Base Integration Performance}{37}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Communication Latency}{37}{subsection.5.2.2}%
-\contentsline {subsection}{\numberline {5.2.3}Scalability and Stress Testing}{37}{subsection.5.2.3}%
-\contentsline {section}{\numberline {5.3}Scenario Verification}{38}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Smart Farming}{38}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Logictics}{38}{subsection.5.3.2}%
-\contentsline {subsection}{\numberline {5.3.3}Adaptive Streets}{38}{subsection.5.3.3}%
-\contentsline {subsection}{\numberline {5.3.4}Painting}{38}{subsection.5.3.4}%
-\contentsline {subsection}{\numberline {5.3.5}Competitive Pong Game)}{38}{subsection.5.3.5}%
-\contentsline {section}{\numberline {5.4}Mixed Reality Validation}{38}{section.5.4}%
-\contentsline {subsection}{\numberline {5.4.1}AR Projection Alignment}{38}{subsection.5.4.1}%
-\contentsline {subsection}{\numberline {5.4.2}VR Interface Usability}{38}{subsection.5.4.2}%
-\contentsline {section}{\numberline {5.5}Discussion}{39}{section.5.5}%
-\contentsline {chapter}{\numberline {6}Conclusion}{41}{chapter.6}%
-\contentsline {chapter}{\nonumberline Bibliography}{47}{chapter*.5}%
+\contentsline {section}{\numberline {3.3}Digital Twin Interfaces}{24}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Environment Capabilities}{25}{section.3.4}%
+\contentsline {section}{\numberline {3.5}User Interface \& Mixed Reality}{25}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Autonomous Agent Requirements}{26}{section.3.6}%
+\contentsline {section}{\numberline {3.7}Non-Functional Requirements}{26}{section.3.7}%
+\contentsline {chapter}{\numberline {4}Concept and Implementation}{29}{chapter.4}%
+\contentsline {subsection}{\numberline {4.0.1}Comparative Analysis}{30}{subsection.4.0.1}%
+\contentsline {subsection}{\numberline {4.0.2}Selection Rationale}{31}{subsection.4.0.2}%
+\contentsline {section}{\numberline {4.1}System Architecture}{32}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Hardware and Network Topology}{32}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Software Component Architecture}{33}{subsection.4.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.2.1}Unity Scripting Integration}{33}{subsubsection.4.1.2.1}%
+\contentsline {subsection}{\numberline {4.1.3}Time Synchronization Strategy}{34}{subsection.4.1.3}%
+\contentsline {subsection}{\numberline {4.1.4}Dynamic Scenario Management}{34}{subsection.4.1.4}%
+\contentsline {section}{\numberline {4.2}Robot Representation and Control}{35}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}The Virtual Robot Implementation}{35}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}The Digital Twin Implementation}{36}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Safety and Failsafe Mechanisms}{36}{subsection.4.2.3}%
+\contentsline {section}{\numberline {4.3}Environmental Simulation Capabilities}{37}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Physics-Based Interaction}{37}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Sensor Simulation}{38}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Dynamic Visuals and Terrain Modification}{39}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}Scenario and Object Management}{40}{subsection.4.3.4}%
+\contentsline {section}{\numberline {4.4}Mixed Reality and User Interaction}{42}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Augmented Telemetry and Diagnosis}{42}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Sensor Data Projection}{42}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Interactive Control Interfaces}{43}{subsection.4.4.3}%
+\contentsline {chapter}{\numberline {5}Evaluation}{45}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Methodology}{46}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Hardware Setup}{46}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Measurement Metrics}{46}{subsection.5.1.2}%
+\contentsline {section}{\numberline {5.2}System Performance Analysis}{46}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Rendering Performance and Scalability}{46}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}End-to-End Latency}{46}{subsection.5.2.2}%
+\contentsline {section}{\numberline {5.3}Validation of the Virtual Environment}{46}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Smart Farming Scenario}{46}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Logistics Scenario}{46}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}Adaptive Streets Scenario}{46}{subsection.5.3.3}%
+\contentsline {subsection}{\numberline {5.3.4}Competitive Game Scenario (Pong)}{46}{subsection.5.3.4}%
+\contentsline {section}{\numberline {5.4}Mixed Reality Validation}{46}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}AR Projection Alignment Accuracy}{46}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}VR Interface Usability}{46}{subsection.5.4.2}%
+\contentsline {section}{\numberline {5.5}Discussion}{46}{section.5.5}%
+\contentsline {chapter}{\numberline {6}Conclusion}{47}{chapter.6}%
+\contentsline {chapter}{\nonumberline Bibliography}{53}{chapter*.5}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
