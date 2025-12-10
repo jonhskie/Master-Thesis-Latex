@@ -1,36 +1,33 @@
 \chapter{Concept and Implementation}
 \label{ch:concept_and_implementation}
 
+This chapter describes the development of the Mixed Reality Environment, a platform designed to support RitL testing by combining simulation with augmented reality projection. The resulting system bridges the gap between purely digital simulations and real-world experiments by creating a common workspace where physical robots and virtual objects coexist and interact.
 
-This chapter details the realization of the Mixed Reality Environment, a cyber-physical platform designed to facilitate Robot-in-the-Loop (RitL) testing through high-fidelity simulation and augmented reality projection. The developed system serves as a bridge between pure software simulation and physical field testing, offering a unified workspace where physical robots and virtual entities coexist and interact according to shared physical laws.
-
-The core concept of the environment is the seamless superimposition of a simulated reality onto a physical workspace. Instead of testing robots in static physical arenas or purely virtual simulations, this system projects a dynamic, physics-based world directly onto the laboratory floor. As depicted in Figure \ref{fig:mr_environment_overview}, this setup allows a physical mobile robot to navigate a real-world substrate while perceiving and interacting with virtual elements, such as crop fields, dynamic obstacles, or interactive game objects, that are rendered in real-time. This projection serves a dual purpose: it provides immediate visual feedback to human observers and acts as optical stimulation for the robot's onboard perception systems.
+The central concept of this environment is the projection of a simulated world directly onto the laboratory floor. Rather than testing robots in completely physical setups or purely within software simulations, this system projects dynamic, physics-based elements into the real world. As can be seen from Figure \ref{fig:mr_environment_overview}, the physical robot moves across the real floor while sensing and acting upon virtual objects, such as a field, obstacles, or other entities. This projection has a dual purpose: it provides instant visual feedback to a human observer and enables the robot to receive synthetic sensor data that reflect the state of the virtual scene. This allows the robot to detect and respond to simulated entities as if they were physically present.
 
 \begin{figure}[ht]
-    \centering
-    %\includegraphics[width=0.9\textwidth]{figures/mr_environment_overview} % Placeholder for your figure
-    \caption{The Mixed Reality Environment in operation. The physical robot interacts with a projected "Smart Farming" scenario, where the digital twin (simulation) and the physical twin (reality) are spatially synchronized via ROS 2.}
-    \label{fig:mr_environment_overview}
+\centering
+%\includegraphics[width=0.9\textwidth]{figures/mr_environment_overview} % Placeholder for your figure
+\caption{The Mixed Reality Environment in operation. The physical robot interacts with a projected Smart Farming scenario, where the robot and the digital twin are synchronized via ROS 2.}
+\label{fig:mr_environment_overview}
 \end{figure}
 
-To support these diverse applications, the system integrates several interconnected functionalities into a unified engine architecture. Primarily, the system maintains a \textbf{Physics-Driven Digital Twin} of the robot. This twin is kinematically synchronized with the physical hardware but retains active physical properties using the engine's physics core. This enables complex interactions, such as pushing virtual crates or physically deflecting moving objects, ensuring that the simulation reacts realistically to the robot's physical presence rather than acting as a static background.
+To enable these applications, the system integrates several key functions into an architecture. First, it maintains a dynamic twin of the robot. This digital twin is synchronized with the movement of the physical hardware but can interact with the simulation's physics engine. This allows for complex actions, such as pushing virtual boxes or colliding with moving objects. This ensures the simulation responds realistically to the robot's physical presence rather than serving as a static background.
 
-Complementing the physical interaction is the generation of \textbf{Synthetic Sensor Data}. To support autonomous decision-making, the system generates perception streams that mirror the robot's physical perspective. This includes simulating volumetric LiDAR scans of virtual geometry and rendering camera feeds that match the optical properties of the physical robot. This functionality allows developers to test perception algorithms, such as mapping or object detection, against virtual data that is perfectly synchronized with the robot's real-world motion.
+In addition to maintaining a dynamic digital twin, the system also simulates sensor for the robot. It generates virtual LiDAR scans and camera images from the robot's perspective, allowing autonomous agents to receive virtual sensordata. This enables thorough testing of navigation and vision algorithms within the mixed reality environment.
 
-The architecture utilizes \textbf{ROS 2} as the central communication backbone \cite{MFG+22a}. By integrating a TCP/IP bridge directly into the simulation engine, the virtual environment acts as a first-party participant in the robot network. It handles time synchronization to prevent data drift, manages dynamic scenario loading, and facilitates the bi-directional exchange of telemetry and control commands.
+The architecture uses ROS~2~\cite{MFG22a} as the primary communication backbone. By integrating a ROS~2 nodes directly into the simulation engine, the virtual environment acts as a first-party participant in the robot's network. It manages time synchronization to prevent timing related errors, handles the loading of different scenarios and provides two-way exchange of status data and control commands.
 
-Beyond simulating sensor inputs, the environment enables \textbf{Bi-Directional Telemetry Visualization}. The system acts as an augmented diagnosis interface by projecting the robot's internal state directly back onto the physical workspace and the VR interface. Critical performance metrics, specifically CPU temperature, RAM usage, and real-time position coordinates, are visualized on floating information panels attached to the digital twin. Furthermore, the system displays the robot's live camera feed within the virtual context. This allows human operators to correlate the robot's physical behavior with its internal health and visual perception in real-time.
+Besides sensor simulation, the environment also supports real-time diagnostic feedback. The system functions as a monitoring tool by projecting the robot's internal operating data back onto the physical workspace and the VR interface. Performance metrics, such as temperature, RAM usage, and location coordinates, are shown on information panels attached to the digital twin in the 3D environment. Moreover, the system shows the robot's live camera feed within the virtual scene. This allows operators to observe the robot's physical behavior alongside its internal status and visual perception in real-time.
 
-To validate the flexibility and robustness of this architecture, three distinct \textbf{Autonomous Agents} were implemented and integrated into the system:
+To demonstrate the flexibility and reliability of this architecture, three different Autonomous Agents were implemented:
 \begin{itemize}
-    \item A \textbf{Smart Farming Agent} capable of navigating crop rows and manipulating tools to alter the state of the virtual field.
-    \item A \textbf{Logistics Agent} designed to search for, identify, and sort colored objects using a spatial memory system.
-    \item A \textbf{Line Following Agent} that utilizes visual servoing to track dynamic paths drawn by a human user in real-time.
+\item A Smart Farming Agent that autonomously explores a virtual field, identifies its boundaries, and operates simulated tools to perform fieldwork tasks.
+\item A Logistics Agent that autonomously searches for, identifies and sorts colored objects within the environment and brings them to designated zones.
+\item A Line Following Agent that uses visual tracking to follow paths drawn by a human user in real-time.
 \end{itemize}
 
-By integrating rigid-body physics, sensor simulation, and autonomous control logic into a synchronized projection loop, the system provides a flexible, scalable platform. The complexity of the test environment is limited only by software, not by physical infrastructure. The following sections detail the technology selection, the system architecture, and the specific implementation of these functionalities.
-
-
+The platform provides an adaptable and scalable testing solution by integrating physics, sensor simulation, and autonomous control logic into a synchronised mixed reality environment. The only factor limiting the test environment's complexity is software, not its physical design. The technological decisions, system architecture, and particular implementation of these elements will be covered in detail in the sections that follow.
 
 \subsection{Comparative Analysis}
 The candidates were evaluated based on five key criteria: visual fidelity, physics capabilities, learning curve, community support, and native integration with XR and ROS 2. The results of this comparison are summarized in Table \ref{tab:sim_comparison}.
@@ -154,6 +151,7 @@ This is handled by the \texttt{SceneManager.cs} script. When it receives a comma
     \item \textbf{Restart:} A fresh \texttt{ROS2UnityComponent} initializes, creating a new connection for the loaded scenario.
 \end{enumerate}
 This "fresh start" approach ensures that agents specific to one scenario (like the logistics logic) do not interfere with others.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Robot Representation and Control}
 \label{sec:robot_representation_and_control}
@@ -456,7 +454,7 @@ The Line Follower agent operates in an interactive playground where a human user
 Unlike the other agents, this implementation utilizes a dedicated, high-performance node: \texttt{line\_perception\_node.py}. This node is optimized for low-latency visual servoing:
 \begin{itemize}
     \item \textbf{ROI Cropping:} The image is cropped to the \textbf{bottom 50\% (configurable via parameters)}, focusing solely on the immediate path in front of the robot. This removes background noise and simplifies the processing required.
-    \item \textbf{Line Fitting:} The processor applies a color threshold to isolate the high-contrast line drawn by the user. It then utilizes \texttt{cv2.fitLine} to fit a vector through the detected white pixels.
+     \item \textbf{Line Fitting:} The processor applies a color threshold to isolate the high-contrast line drawn by the user. It then utilizes \texttt{cv2.fitLine} to fit a vector through the detected white pixels.
     \item \textbf{Error Calculation:} From this vector, the system calculates two control metrics: the \textit{Lateral Error} (horizontal distance of the line from the image center) and the \textit{Angular Error} (deviation of the line's heading from the robot's forward vector).
 \end{itemize}
 The debug view (Figure \ref{fig:line_debug}) visualizes the binary mask and overlays the calculated heading vector, allowing the operator to see the error terms driving the control loop.
