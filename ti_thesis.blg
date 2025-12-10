@@ -1,28 +1,32 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
 [0] Config.pm:310> INFO - Logfile is 'ti_thesis.blg'
-[79] biber:340> INFO - === Wed Dec 10, 2025, 03:04:11
-[97] Biber.pm:419> INFO - Reading 'ti_thesis.bcf'
-[172] Biber.pm:979> INFO - Found 53 citekeys in bib section 0
-[183] Biber.pm:4419> INFO - Processing section 0
-[192] Biber.pm:4610> INFO - Looking for bibtex file 'literatur.bib' for section 0
-[194] bibtex.pm:1713> INFO - LaTeX decoding ...
-[239] bibtex.pm:1519> INFO - Found BibTeX data source 'literatur.bib'
-[625] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[625] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[625] Biber.pm:4239> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-US'
-[625] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
-[673] bbl.pm:660> INFO - Writing 'ti_thesis.bbl' with encoding 'UTF-8'
-[692] bbl.pm:763> INFO - Output to ti_thesis.bbl
-[693] Biber.pm:131> WARN - legacy month field 'April' in entry 'foote2013tf' is not an integer - this will probably not sort properly.
-[693] Biber.pm:131> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
-[693] Biber.pm:131> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
-[693] Biber.pm:131> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
-[693] Biber.pm:131> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
-[693] Biber.pm:131> WARN - I didn't find a database entry for 'NOT FINAL' (section 0)
-[693] Biber.pm:131> WARN - I didn't find a database entry for 'JuliaBA' (section 0)
-[693] Biber.pm:131> WARN - I didn't find a database entry for 'MFG22a' (section 0)
-[693] Biber.pm:131> WARN - I didn't find a database entry for 'PLACEHOLDER_HARDWARE_SETUP' (section 0)
-[693] Biber.pm:131> WARN - I didn't find a database entry for 'ROS2ForUnityDocs' (section 0)
-[693] Biber.pm:131> WARN - I didn't find a database entry for 'MFG+22' (section 0)
-[693] Biber.pm:131> WARN - I didn't find a database entry for 'ACHTUNG DOPPENLT DRIN' (section 0)
-[693] Biber.pm:133> INFO - WARNINGS: 12
+[78] biber:340> INFO - === Wed Dec 10, 2025, 04:16:34
+[95] Biber.pm:419> INFO - Reading 'ti_thesis.bcf'
+[169] Biber.pm:979> INFO - Found 57 citekeys in bib section 0
+[180] Biber.pm:4419> INFO - Processing section 0
+[189] Biber.pm:4610> INFO - Looking for bibtex file 'literatur.bib' for section 0
+[192] bibtex.pm:1713> INFO - LaTeX decoding ...
+[236] bibtex.pm:1519> INFO - Found BibTeX data source 'literatur.bib'
+[616] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[617] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[617] Biber.pm:4239> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-US'
+[617] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[664] bbl.pm:660> INFO - Writing 'ti_thesis.bbl' with encoding 'UTF-8'
+[684] bbl.pm:763> INFO - Output to ti_thesis.bbl
+[684] Biber.pm:131> WARN - legacy month field 'April' in entry 'foote2013tf' is not an integer - this will probably not sort properly.
+[684] Biber.pm:131> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
+[685] Biber.pm:131> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
+[685] Biber.pm:131> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
+[685] Biber.pm:131> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
+[685] Biber.pm:131> WARN - I didn't find a database entry for 'NOT FINAL' (section 0)
+[685] Biber.pm:131> WARN - I didn't find a database entry for 'JuliaBA' (section 0)
+[685] Biber.pm:131> WARN - I didn't find a database entry for 'MFG22a' (section 0)
+[685] Biber.pm:131> WARN - I didn't find a database entry for 'PLACEHOLDER_HARDWARE_SETUP' (section 0)
+[685] Biber.pm:131> WARN - I didn't find a database entry for 'NAV2Ref' (section 0)
+[685] Biber.pm:131> WARN - I didn't find a database entry for 'EMAROs_Ref' (section 0)
+[685] Biber.pm:131> WARN - I didn't find a database entry for 'ALVR_Github' (section 0)
+[685] Biber.pm:131> WARN - I didn't find a database entry for 'ROS2ForUnityDocs' (section 0)
+[685] Biber.pm:131> WARN - I didn't find a database entry for 'UnityDocumentation' (section 0)
+[685] Biber.pm:131> WARN - I didn't find a database entry for 'MFG+22' (section 0)
+[685] Biber.pm:131> WARN - I didn't find a database entry for 'ACHTUNG DOPPENLT DRIN' (section 0)
+[685] Biber.pm:133> INFO - WARNINGS: 16
