@@ -28,8 +28,8 @@
 \contentsline {section}{\numberline {4.1}System Architecture}{32}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}Hardware and Network Topology}{32}{subsection.4.1.1}%
 \contentsline {subsection}{\numberline {4.1.2}Software Component Architecture}{33}{subsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.1.3}Time Synchronization Strategy}{34}{subsection.4.1.3}%
-\contentsline {subsection}{\numberline {4.1.4}Dynamic Scenario Management}{34}{subsection.4.1.4}%
+\contentsline {subsection}{\numberline {4.1.3}Time Synchronization}{34}{subsection.4.1.3}%
+\contentsline {subsection}{\numberline {4.1.4}Scenario Management}{34}{subsection.4.1.4}%
 \contentsline {section}{\numberline {4.2}Robot Representation and Control}{35}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}The Virtual Robot Implementation}{35}{subsection.4.2.1}%
 \contentsline {subsection}{\numberline {4.2.2}The Digital Twin Implementation}{36}{subsection.4.2.2}%
@@ -37,11 +37,11 @@
 \contentsline {section}{\numberline {4.3}Environmental Simulation Capabilities}{37}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}Physics-Based Interaction}{37}{subsection.4.3.1}%
 \contentsline {subsection}{\numberline {4.3.2}Sensor Simulation}{38}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Dynamic Visuals and Terrain Modification}{39}{subsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.3.4}Scenario and Object Management}{40}{subsection.4.3.4}%
+\contentsline {subsection}{\numberline {4.3.3}Dynamic Visuals and Terrain Modification}{40}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}Scenario and Object Management}{41}{subsection.4.3.4}%
 \contentsline {section}{\numberline {4.4}Mixed Reality and User Interaction}{42}{section.4.4}%
 \contentsline {subsection}{\numberline {4.4.1}Augmented Telemetry and Diagnosis}{42}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Sensor Data Projection}{42}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.2}Sensor Data Projection}{43}{subsection.4.4.2}%
 \contentsline {subsection}{\numberline {4.4.3}Interactive Control Interfaces}{43}{subsection.4.4.3}%
 \contentsline {section}{\numberline {4.5}Implementation of Autonomous Agents}{44}{section.4.5}%
 \contentsline {subsection}{\numberline {4.5.1}Navigation and Control Stack}{45}{subsection.4.5.1}%

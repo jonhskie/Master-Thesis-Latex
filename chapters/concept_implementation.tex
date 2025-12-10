@@ -108,9 +108,11 @@ For the Mixed Reality interface \textbf{(FR-16)}, the visual output from Unity i
 The software architecture follows a modular publisher-subscriber pattern. To integrate the Unity game engine with the robotic network, the system utilizes the \textit{ROS2ForUnity} library \cite{ROS2ForUnityDocs}.
 
 \textbf{ROS 2 Integration via MonoBehavior}
+
 The core of this integration is the \texttt{ROS2UnityComponent} class. This component acts as a central wrapper around the standard ROS 2 middleware. Inheriting from Unity's \texttt{MonoBehaviour} class, it must be attached to a \texttt{GameObject} in the scene to function. When the application starts, this component initializes the ROS 2 context, verifies that the connection is valid, and manages the lifecycle of the simulation's ROS~2 nodes. It allows other scripts to access the ROS network by referencing this central component to create publishers, subscribers, and service clients.
 
 \textbf{Unity Scripting and Execution Loops}
+
 The functionality of the digital twin is governed by C\# scripts that interact with the engine's internal state machine. To ensure that physical simulation remains deterministic while visualization remains smooth, the architecture exploits specific phases of the Unity execution loop:
 
 \begin{itemize}
@@ -134,27 +136,29 @@ Figure \ref{fig:software_architecture} provides an overview of how these Unity s
     \label{fig:software_architecture}
 \end{figure}
 
-\subsection{Time Synchronization Strategy}
+\subsection{Time Synchronization}
 \label{subsec:time_sync}
 
 A critical challenge in Robot-in-the-Loop testing is synchronizing the time between the simulation and the robot's software. If the simulation runs slower or faster than real-time, the robot's navigation algorithms might calculate incorrect velocities. To fulfill the requirement for \textbf{Time Synchronization (FR-05)}, the system decouples the ROS network from the computer's system time.
 
-The \texttt{ClockPublisher.cs} script in Unity acts as the master clock. It publishes the current simulation time to the \texttt{/clock} topic. The ROS 2 nodes running on the workstation (such as the navigation stack) are configured with \texttt{use\_sim\_time = true}, forcing them to synchronize their logic with the Unity engine.
+The \texttt{ClockPublisher.cs} script in Unity acts as the master clock. It publishes the current simulation time to the \texttt{/clock} topic. The ROS 2 nodes running on the workstation such as the navigation stack are configured with \texttt{use\_sim\_time = true}, forcing them to synchronize their logic with the Unity engine.
 
-To ensure consistency, a \texttt{RosTimeHelper.cs} utility is used by all simulated sensors (e.g., \texttt{LidarSensor.cs}, \texttt{CameraSensor.cs}). This script ensures that every piece of sensor data leaving Unity is stamped with the exact simulation time of the frame it was rendered in, preventing data drift.
+To ensure consistency, a \texttt{RosTimeHelper.cs} utility is used by all simulated sensors. This script ensures that every piece of sensor data leaving Unity is stamped with the exact simulation time of the frame it was rendered in, preventing data drift.
 
-\subsection{Dynamic Scenario Management}
+\subsection{Scenario Management}
 \label{subsec:scenario_management}
 
-To support the requirement for \textbf{Scenario Management (FR-06)}, the architecture allows the system to switch between different test environments (e.g., a Farm or a Warehouse) without restarting the entire application.
+To support the requirement for \textbf{Scenario Management (FR-06)}, the architecture allows the system to switch between different test environments without restarting the entire application.
 
 This is handled by the \texttt{SceneManager.cs} script. When it receives a command via the \texttt{/vera/load\_scenario} topic, it performs a clean reset sequence:
 \begin{enumerate}
-    \item \textbf{Shutdown:} The active ROS 2 connection is terminated. This removes all Unity nodes from the network, preventing "zombie" nodes from lingering and publishing invalid data.
+    \item \textbf{Shutdown:} The active ROS 2 connection is terminated. This ensures that all Unity nodes are properly removed from the network, preventing any lingering nodes from publishing outdated or invalid data.
     \item \textbf{Load:} The new environment scene is loaded asynchronously in Unity.
     \item \textbf{Restart:} A fresh \texttt{ROS2UnityComponent} initializes, creating a new connection for the loaded scenario.
 \end{enumerate}
-This "fresh start" approach ensures that agents specific to one scenario (like the logistics logic) do not interfere with others.
+This fresh start approach ensures that Unity components specific to one scenario do not interfere with others.
+
+%%%%%%%%%%%%%%%%%%%%%FERTIG%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%ABER NOCH NICHT DE AIed%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Robot Representation and Control}
