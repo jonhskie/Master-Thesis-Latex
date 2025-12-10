@@ -28,13 +28,15 @@ To demonstrate the flexibility and reliability of this architecture, three diffe
 \end{itemize}
 
 The platform provides an adaptable and scalable testing solution by integrating physics, sensor simulation, and autonomous control logic into a synchronised mixed reality environment. The only factor limiting the test environment's complexity is software, not its physical design. The technological decisions, system architecture, and particular implementation of these elements will be covered in detail in the sections that follow.
+%%%%%%%%%%%%%%%%%%%%%FERTIG%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 \subsection{Comparative Analysis}
-The candidates were evaluated based on five key criteria: visual fidelity, physics capabilities, learning curve, community support, and native integration with XR and ROS 2. The results of this comparison are summarized in Table \ref{tab:sim_comparison}.
+The simulation engines that were considered as candidates to implement the Mixed Reality Environment are: Gazebo, Isaac Sim, Unreal Engine, and Unity. All were evaluated based on five critical criteria: visual fidelity, physics capabilities, learning curve, community support, and native integration with VR, AR and ROS 2. Table \ref{tab:sim_comparison} summarizes the results of this evaluation.
 
 \begin{table}[H]
     \centering
-    \caption{Comparison of Simulation Platforms for Mixed Reality Digital Twins~\cite{Gonzalez2025, Kargar2024, Singh2025, Coronado2023}.}
+    \caption{Comparison of Simulation engines for Mixed Reality Digital Twins~\cite{Gonzalez2025, Kargar2024, Singh2025, Coronado2023}.}
     \label{tab:sim_comparison}
     \begin{tabularx}{\textwidth}{@{}lXXXX@{}}
         \toprule
@@ -55,25 +57,23 @@ The candidates were evaluated based on five key criteria: visual fidelity, physi
 Based on the comparative analysis, the \textbf{Unity Engine} was selected as the implementation platform for this thesis. This decision is driven by four key factors that align with the system requirements:
 
 \begin{itemize}
-    \item \textbf{XR Framework (FR-09):} Unity offers integrated framework for Mixed Reality (AR/VR) applications~\cite{Coronado2023}. In contrast, traditional simulators like Gazebo lack native VR support, which is critical for the proposed human-robot interaction interface.
+    \item \textbf{XR Framework (FR-09):} Unity has an integrated framework for VR applications~\cite{Coronado2023}. In contrast, simulators like Gazebo lack native VR support, which is critical for the proposed human-robot interaction interface.
     
-    \item \textbf{Visual \& Physics Balance (FR-04, FR-05):} Unity provides high-fidelity visualization alongside robust PhysX integration. This offers an optimal balance between performance and visual quality, avoiding the restrictive hardware requirements associated with NVIDIA Isaac Sim~\cite{Gonzalez2025}.
+    \item \textbf{Visual \& Physics Balance (FR-04, FR-05):} Unity provides high-fidelity visualization alongside PhysX integration. This offers an optimal balance between performance and visual quality, avoiding the restrictive hardware requirements associated with NVIDIA Isaac Sim~\cite{Gonzalez2025}.
     
-    \item \textbf{Development Efficiency:} The use of C\# scripting, combined with extensive documentation and community support, makes Unity more accessible for rapid prototyping than the C++ environment of Unreal Engine~\cite{Coronado2023}.
+    \item \textbf{Development Efficiency:} The use of C\# scripting, combined with documentation and community support, makes Unity more accessible for rapid prototyping than the C++ environment of Unreal Engine~\cite{Coronado2023}.
 
-    \item \textbf{ROS 2 Integration (FR-01):} The availability of the \texttt{ros2-for-unity} asset enables the simulation to function as a first-party participant in the ROS 2 network. This satisfies the low-latency communication requirement by eliminating the need for external bridge applications~\cite{Rob24}.
+    \item \textbf{ROS 2 Integration (FR-01):} The availability of the \texttt{ros2-for-unity} asset enables the simulation to function as a first-party participant in the ROS 2 network. This means it supports the low-latency communication requirement by avoiding external bridge applications~\cite{Rob24}.
 \end{itemize}
 
 
+%%%%%%%%%%%%%%%%%%%%%FERTIG%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{System Architecture}
 \label{sec:system_architecture}
 
-The realization of the Mixed Reality Environment requires a distributed software architecture that connects high-fidelity visualization with real-time robotic control. The system is designed to satisfy the requirement for \textbf{Middleware Integration (FR-04)} by establishing a unified communication layer between the simulation host and the autonomous agents.
+The realization of the Mixed Reality Environment requires a distributed software architecture that connects the advanced rendering capabilities of the Unity engine with real-time robotic control. The system is designed to satisfy the requirement for \textbf{Middleware Integration (FR-04)} by establishing a unified communication layer between the simulation host and the autonomous agents.
 
 \subsection{Hardware and Network Topology}
 \label{subsec:hardware_topology}
@@ -81,9 +81,9 @@ The realization of the Mixed Reality Environment requires a distributed software
 To ensure high performance and support for specific hardware peripherals, the system topology is consolidated into a single high-performance workstation and the mobile robot. As illustrated in Figure \ref{fig:hardware_topology}, the architecture consists of three distinct computational domains:
 
 \begin{enumerate}
-    \item \textbf{Windows Host (Simulation Layer):} The Unity engine runs natively on Windows 11. This operating system was selected because the Unity Editor does not currently support Virtual Reality (VR) interfaces on Linux. This layer handles the physics engine (PhysX), the rendering of the digital twin, and the interface for the VR headset. Additionally, a projector (Beamer) is connected to this host to visualize the environment on the physical floor \cite{PLACEHOLDER_HARDWARE_SETUP}.
+    \item \textbf{Simulation Host (Windows 11):} The Unity engine runs natively on Windows. This operating system was selected because the Unity Editor's VR interfaces are not currently supported on Linux. This layer handles the physics engine (PhysX), renders the digital twin, and interfaces with the VR headset. Additionally, a projector is connected to this host to visualize the environment on the physical floor \cite{PLACEHOLDER_HARDWARE_SETUP}.
     
-    \item \textbf{WSL/Ubuntu Guest (Control Layer):} The Robot Operating System 2 (ROS 2) runs within the Windows Subsystem for Linux (WSL, Ubuntu 24.04). This environment hosts the computationally intensive software, such as the autonomous navigation stack (\textit{Nav2}) and the mission logic agents. Running these components on the workstation rather than the robot is necessary to avoid overloading the robot's onboard computer, which can lead to system freezes during complex path planning tasks.
+    \item \textbf{Control Environment (WSL/Ubuntu):} ROS~2 runs within the Windows Subsystem for Linux (WSL, Ubuntu 24.04). This environment hosts the computationally intensive software, such as the autonomous navigation stack (\textit{Nav2}) and the mission logic agents. Running these components directly on the robot causes severe performance issues or system crashes due to limited onboard resources, so they are offloaded to the workstation to ensure stable and responsive operation.
     
     \item \textbf{Physical Robot (Hardware Layer):} The EMAROs robot operates as an independent node in the network. It runs a minimal instance of ROS 2 on an onboard Raspberry Pi to handle hardware drivers, such as motor controllers and IMU sensors. It connects to the workstation via Wi-Fi.
 \end{enumerate}
@@ -100,24 +100,28 @@ To ensure high performance and support for specific hardware peripherals, the sy
     \label{fig:hardware_topology}
 \end{figure}
 
-For the Mixed Reality interface \textbf{(FR-16)}, the visual output from the Unity simulation is streamed via Wi-Fi to the Meta Quest Pro headset using \textit{ALVR}, an open-source streaming solution. This setup allows the user to move freely without a cable tether.
+For the Mixed Reality interface \textbf{(FR-16)}, the visual output from Unity is streamed via Wi-Fi to the Meta Quest Pro headset using \textit{ALVR}, an open-source streaming solution. This setup allows the user to move freely without a cable tether.
 
 \subsection{Software Component Architecture}
 \label{subsec:software_components}
 
-The software architecture follows a modular publisher-subscriber pattern. To integrate the Unity game engine with the robotic network, the system utilizes the \textit{ROS2ForUnity} asset. Unlike external bridge solutions that send data over a network socket, this asset loads the native ROS 2 shared libraries directly into the Unity application process. This allows Unity scripts to function as fast, first-class ROS 2 nodes.
+The software architecture follows a modular publisher-subscriber pattern. To integrate the Unity game engine with the robotic network, the system utilizes the \textit{ROS2ForUnity} library \cite{ROS2ForUnityDocs}.
 
-\subsubsection{Unity Scripting Integration}
+\textbf{ROS 2 Integration via MonoBehavior}
+The core of this integration is the \texttt{ROS2UnityComponent} class. This component acts as a central wrapper around the standard ROS 2 middleware. Inheriting from Unity's \texttt{MonoBehaviour} class, it must be attached to a \texttt{GameObject} in the scene to function. When the application starts, this component initializes the ROS 2 context, verifies that the connection is valid, and manages the lifecycle of the simulation's ROS~2 nodes. It allows other scripts to access the ROS network by referencing this central component to create publishers, subscribers, and service clients.
 
-In Unity, the behavior of the digital twin is defined by C\# scripts that inherit from the \texttt{MonoBehaviour} base class. To ensure stable physical simulation and smooth visualization, the architecture utilizes specific Unity execution loops:
+\textbf{Unity Scripting and Execution Loops}
+The functionality of the digital twin is governed by C\# scripts that interact with the engine's internal state machine. To ensure that physical simulation remains deterministic while visualization remains smooth, the architecture exploits specific phases of the Unity execution loop:
 
 \begin{itemize}
-    \item \textbf{Initialization (Start):} Used by managers like the \texttt{ROS2UnityComponent} to establish the connection to the ROS network when the scene loads.
-    \item \textbf{Physics Loop (FixedUpdate):} This loop runs at a fixed time step (e.g., 50Hz), synchronized with the physics engine. Scripts that control robot movement, such as the \texttt{VirtualRobotController}, apply forces in this loop to ensure deterministic physical behavior and stable odometry calculation.
-    \item \textbf{Rendering Loop (Update):} This loop runs as fast as possible to render frames. Scripts responsible for visualization, such as the \texttt{RobotInfoBillboard} (which displays telemetry above the robot), function here to provide smooth visual feedback to the user.
+    \item \textbf{Initialization (\texttt{Start}):} This method is called exactly once when the script is first enabled, before any frames are updated. In this architecture, it is used to retrieve the reference to the \texttt{ROS2UnityComponent}, initialize the specific ROS nodes, and set up the necessary publishers and subscribers.
+    
+    \item \textbf{Physics Loop (\texttt{FixedUpdate}):} This method executes at a constant, user-defined time step, independent of the visual frame rate. All physics-based calculations, such as updating the robot's position based on received velocity commands or handling collision detection, occur in this loop. This ensures that the robot's physical behavior is consistent regardless of graphical performance.
+    
+    \item \textbf{Rendering Loop (\texttt{Update}):} This method runs once per frame. It is utilized for non-physical logic, such as updating UI elements, rendering diagnostic lines, or capturing camera frames for visualization. This separation ensures that high-frequency visual updates do not interfere with the stability of the physics engine.
 \end{itemize}
 
-Figure \ref{fig:software_architecture} provides an overview of how these Unity scripts interact with the external ROS 2 nodes via topics.
+Figure \ref{fig:software_architecture} provides an overview of how these Unity scripts interact with the external ROS 2 nodes via topics. Detailed descriptions of these components follow in Sections 4.2 and 4.3.
 
 \begin{figure}[ht]
     \centering
@@ -126,7 +130,7 @@ Figure \ref{fig:software_architecture} provides an overview of how these Unity s
     % Middle: Arrows representing ROS Topics (/scan, /camera/image, /cmd_vel).
     % Right side: ROS Nodes (Nav2 Stack, Perception Node, Mission State Machine).
     %\includegraphics[width=1.0\textwidth]{figures/software_architecture} 
-    \caption{Software Component Architecture. Unity scripts (left) act as ROS nodes, publishing sensor data and subscribing to control commands. The external control stack (right), running in WSL, processes this data to make autonomous decisions. Detailed descriptions of these components follow in Sections 4.2 and 4.3.}
+    \caption{Software Component Architecture. Unity scripts act as ROS nodes, publishing sensor data and subscribing to control commands. The external control stack, running in WSL, processes this data to make autonomous decisions.}
     \label{fig:software_architecture}
 \end{figure}
 
