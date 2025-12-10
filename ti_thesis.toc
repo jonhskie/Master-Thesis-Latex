@@ -46,7 +46,7 @@
 \contentsline {section}{\numberline {4.5}Implementation of Autonomous Agents}{44}{section.4.5}%
 \contentsline {subsection}{\numberline {4.5.1}Navigation and Control Stack}{44}{subsection.4.5.1}%
 \contentsline {subsection}{\numberline {4.5.2}Modular Perception Stack}{45}{subsection.4.5.2}%
-\contentsline {subsection}{\numberline {4.5.3}Agent 1: Smart Farming}{45}{subsection.4.5.3}%
+\contentsline {subsection}{\numberline {4.5.3}Agent 1: Smart Farming}{46}{subsection.4.5.3}%
 \contentsline {subsection}{\numberline {4.5.4}Agent 2: Logistics}{47}{subsection.4.5.4}%
 \contentsline {subsection}{\numberline {4.5.5}Agent 3: Line Follower}{49}{subsection.4.5.5}%
 \contentsline {chapter}{\numberline {5}Evaluation}{51}{chapter.5}%
