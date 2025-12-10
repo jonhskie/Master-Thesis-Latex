@@ -2624,17 +2624,16 @@
     <bcf:citekey order="231" intorder="1">UnityDocumentation</bcf:citekey>
     <bcf:citekey order="232" intorder="1">ROS2ForUnityDocs</bcf:citekey>
     <bcf:citekey order="233" intorder="1">ROS2ForUnityDocs</bcf:citekey>
-    <bcf:citekey order="234" intorder="1">EMAROs_Ref</bcf:citekey>
-    <bcf:citekey order="235" intorder="1">MFG+22</bcf:citekey>
+    <bcf:citekey order="234" intorder="1">MFG+22</bcf:citekey>
+    <bcf:citekey order="235" intorder="1">EMAROs_Ref</bcf:citekey>
     <bcf:citekey order="236" intorder="1">EMAROs_Ref</bcf:citekey>
-    <bcf:citekey order="237" intorder="1">EMAROs_Ref</bcf:citekey>
-    <bcf:citekey order="238" intorder="1">ACHTUNG DOPPENLT DRIN</bcf:citekey>
-    <bcf:citekey order="239" intorder="1">ROS2ForUnityDocs</bcf:citekey>
+    <bcf:citekey order="237" intorder="1">ACHTUNG DOPPENLT DRIN</bcf:citekey>
+    <bcf:citekey order="238" intorder="1">ROS2ForUnityDocs</bcf:citekey>
+    <bcf:citekey order="239" intorder="1">NAV2Ref</bcf:citekey>
     <bcf:citekey order="240" intorder="1">NAV2Ref</bcf:citekey>
     <bcf:citekey order="241" intorder="1">NAV2Ref</bcf:citekey>
     <bcf:citekey order="242" intorder="1">NAV2Ref</bcf:citekey>
     <bcf:citekey order="243" intorder="1">NAV2Ref</bcf:citekey>
-    <bcf:citekey order="244" intorder="1">NAV2Ref</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="anyt">
