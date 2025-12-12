@@ -57,13 +57,13 @@ The simulation engines that were considered as candidates to implement the Mixed
 Based on the comparative analysis, the \textbf{Unity Engine} was selected as the implementation platform for this thesis. This decision is driven by four key factors that align with the system requirements:
 
 \begin{itemize}
-    \item \textbf{VR Framework} \hyperref[req:FR-03]{FR-03}: Unity has an integrated framework for VR applications~\cite{Coronado2023}. In contrast, simulators like Gazebo lack native VR support, which is critical for the proposed human-robot interaction interface.
+    \item \textbf{VR Framework} (\hyperref[req:FR-03]{FR-03}): Unity has an integrated framework for VR applications~\cite{Coronado2023}. In contrast, simulators like Gazebo lack native VR support, which is critical for the proposed human-robot interaction interface.
     
     \item \textbf{Visual Fidelity \& Physics} (\hyperref[req:FR-01]{FR-01}, \hyperref[req:FR-02]{FR-02}): Unity provides high-fidelity visualization alongside PhysX integration. This offers an optimal balance between performance and visual quality, avoiding the restrictive hardware requirements associated with NVIDIA Isaac Sim~\cite{Gonzalez2025}.
     
     \item \textbf{Development Efficiency:} The use of C\# scripting, combined with documentation and community support, makes Unity more accessible for rapid prototyping than the C++ environment of Unreal Engine~\cite{Coronado2023}.
 
-    \item \textbf{ROS~2 Integration} \hyperref[req:FR-04]{FR-04}: The availability of the \texttt{ros2-for-unity} ~\cite{Rob24} asset enables the simulation to function as a first-party participant in the ROS~2 network. This means it supports the low-latency communication requirement by avoiding external bridge applications.
+    \item \textbf{ROS~2 Integration} (\hyperref[req:FR-04]{FR-04}): The availability of the \texttt{ros2-for-unity} ~\cite{Rob24} asset enables the simulation to function as a first-party participant in the ROS~2 network. This means it supports the low-latency communication requirement by avoiding external bridge applications.
 \end{itemize}
 
 
@@ -73,7 +73,7 @@ Based on the comparative analysis, the \textbf{Unity Engine} was selected as the
 \section{System Architecture}
 \label{sec:system_architecture}
 
-The realization of the Mixed Reality Environment requires a distributed software architecture that connects the advanced rendering capabilities of the Unity engine with real-time robotic control. The system is designed to satisfy the requirement for \textbf{Middleware Integration} \hyperref[req:FR-04]{FR-04} by establishing a one unified communication layer between the simulation host and the autonomous agents.
+The realization of the Mixed Reality Environment requires a distributed software architecture that connects the advanced rendering capabilities of the Unity engine with real-time robotic control. The system is designed to satisfy the requirement for \textbf{Middleware Integration} (\hyperref[req:FR-04]{FR-04}) by establishing a one unified communication layer between the simulation host and the autonomous agents.
 
 \subsection{Hardware and Network Topology}
 \label{subsec:hardware_topology}
@@ -135,7 +135,7 @@ Figure \ref{fig:software_architecture} provides an overview of how these Unity s
 \subsection{Time Synchronization}
 \label{subsec:time_sync}
 
-A critical challenge in Robot-in-the-Loop testing is how to synchronize time between the simulation and the robot's software. If the simulation runs slower or faster than real-time, the navigation algorithms of the robot may calculate velocities that are incorrect. To fulfill the requirement for Time Synchronization \hyperref[req:FR-05]{FR-05}, the system decouples the ROS network from the computer's system time.
+A critical challenge in Robot-in-the-Loop testing is how to synchronize time between the simulation and the robot's software. If the simulation runs slower or faster than real-time, the navigation algorithms of the robot may calculate velocities that are incorrect. To fulfill the requirement for Time Synchronization (\hyperref[req:FR-05]{FR-05}), the system decouples the ROS network from the computer's system time.
 
 The \texttt{ClockPublisher.cs} script in Unity acts as the master clock. It publishes the current simulation time to the \texttt{/clock} topic. The ROS~2 nodes running on the workstation such as the navigation stack are configured with \texttt{use\_sim\_time = true}, forcing them to synchronize their logic with the Unity engine.
 
@@ -158,7 +158,7 @@ The script does not directly change the position of the robot. Instead, it modif
 Simultaneously, the controller provides ground truth data. It tracks the movement of the robot in Unity, converts the coordinates to the ROS standard, and publishes a timestamped odometry and tf messages (\hyperref[req:FR-10]{FR-10}). This closes the control loop for the external navigation logic~\cite{MFG+22}.
 
 \subsection{The Digital Twin Implementation}
-When operating in RitL mode, the \texttt{PoseRobotController} takes control. In this configuration, the virtual robot stops acting as a dynamic entity and instead becomes a digital twin of the real EMAROs~\cite{EMAROs_Ref} robot \hyperref[req:FR-07]{FR-07}.
+When operating in RitL mode, the \texttt{PoseRobotController} takes control. In this configuration, the virtual robot stops acting as a dynamic entity and instead becomes a digital twin of the real EMAROs~\cite{EMAROs_Ref} robot (\hyperref[req:FR-07]{FR-07}).
 
 The controller listens to a pose topic given by the external ArUco tracking to move the digital twin. The incoming pose is provided in pixel coordinates from the tracking camera. It must be mapped onto the defined virtual area. On every new incoming pose, the script converts the pixel coordinates into Unity world space. To ensure alignment, an offset parameter enables the operator to perform a calibration of the digital twin so that its center is aligned with the physical mounting position of the tracking marker. The script republishes the synchronized pose as odometry and tf messages (\hyperref[req:FR-10]{FR-10}).
 
@@ -235,7 +235,7 @@ The data extraction pipeline transfers the raw pixel data from the Graphics Proc
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%FERTIG ABER AI%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Scenario and Object Management}
-To support the requirement for \textbf{Scenario Management}\hyperref[req:FR-06]{FR-06}, the architecture allows the system to switch between different test environments without restarting the entire application.
+To support the requirement for \textbf{Scenario Management} (\hyperref[req:FR-06]{FR-06}), the architecture allows the system to switch between different test environments without restarting the entire application.
 
 This is handled by the \texttt{SceneManager.cs} script. When it receives a command via the \texttt{/vera/load\_scenario} topic, it performs a clean reset sequence:
 \begin{enumerate}
