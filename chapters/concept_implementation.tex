@@ -14,9 +14,9 @@ The central concept of this environment is the projection of a simulated world d
 
 To enable these applications, the system integrates several key functions into an architecture. First, it maintains a dynamic twin of the robot. This digital twin is synchronized with the movement of the physical hardware but can interact with the simulation's physics engine. This allows for complex actions, such as pushing virtual boxes or colliding with moving objects. This ensures the simulation responds realistically to the robot's physical presence rather than serving as a static background.
 
-In addition to maintaining a dynamic digital twin, the system also simulates sensor for the robot. It generates virtual LiDAR scans and camera images from the robot's perspective, allowing autonomous agents to receive virtual sensordata. This enables thorough testing of navigation and vision algorithms within the mixed reality environment.
+In addition to maintaining a dynamic digital twin, the system also simulates sensors for the robot. It generates virtual LiDAR scans and camera images from the robot's perspective, allowing autonomous agents to receive virtual sensordata. This enables thorough testing of navigation and vision algorithms within the mixed reality environment.
 
-The architecture uses ROS~2~\cite{MFG22a} as the primary communication backbone. By integrating a ROS~2 nodes directly into the simulation engine, the virtual environment acts as a first-party participant in the robot's network. It manages time synchronization to prevent timing related errors, handles the loading of different scenarios and provides two-way exchange of status data and control commands.
+The architecture uses ROS~2~\cite{MFG22a} as the primary communication backbone. By integrating ROS~2 nodes directly into the simulation engine, the virtual environment acts as a first-party participant in the robot's network. It manages time synchronization to prevent timing related errors, handles the loading of different scenarios and provides two-way exchange of status data and control commands.
 
 Besides sensor simulation, the environment also supports real-time diagnostic feedback. The system functions as a monitoring tool by projecting the robot's internal operating data back onto the physical workspace and the VR interface. Performance metrics, such as temperature, RAM usage, and location coordinates, are shown on information panels attached to the digital twin in the 3D environment. Moreover, the system shows the robot's live camera feed within the virtual scene. This allows operators to observe the robot's physical behavior alongside its internal status and visual perception in real-time.
 
@@ -63,7 +63,7 @@ Based on the comparative analysis, the \textbf{Unity Engine} was selected as the
     
     \item \textbf{Development Efficiency:} The use of C\# scripting, combined with documentation and community support, makes Unity more accessible for rapid prototyping than the C++ environment of Unreal Engine~\cite{Coronado2023}.
 
-    \item \textbf{ROS~2 Integration (FR-01):} The availability of the \texttt{ros2-for-unity} asset enables the simulation to function as a first-party participant in the ROS~2 network. This means it supports the low-latency communication requirement by avoiding external bridge applications~\cite{Rob24}.
+    \item \textbf{ROS~2 Integration (FR-01):} The availability of the \texttt{ros2-for-unity} ~\cite{Rob24} asset enables the simulation to function as a first-party participant in the ROS~2 network. This means it supports the low-latency communication requirement by avoiding external bridge applications.
 \end{itemize}
 
 
@@ -163,7 +163,7 @@ This fresh start approach ensures that Unity components specific to one scenario
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Robot Representation and Control}
 \label{sec:robot_representation_and_control}
-The robot in the Mixed Reality Environment runs in one of two modes: either as a completely simulated virtual robot or as a synchronized Digital Twin of the physical EMAROs~\cite{EMAROs_Ref} platform. To ensure consistency, both of these modes use the same visual and geometric model. This model is a simple cylinder that approximates the physical size of the robot for collision detection while keeping computational costs low. The behavior of this cylinder depends on the active control script, allowing the system to switch between physics-based simulation and position-based synchronization based on the requirements of the test.
+The robot in the Mixed Reality Environment runs in one of two modes: either as a completely simulated virtual robot or as a synchronized Digital Twin of the physical EMAROs~\cite{EMAROs_Ref} platform. To ensure consistency, both of these modes use the same visual and geometric model. This model is a simple cylinder that approximates the physical size of the robot for collision detection while keeping computational costs low. The behavior of this cylinder depends on the active control script, allowing the system to switch between physics-based simulation and position-based synchronization based on the requirements of the test. To select the desired mode, the user can enable in the Unity Editor either the model of the digital twin or the purely virtual robot.
 
 \subsection{The Purely Virtual Robot}
 In the standalone simulation mode, the robot is controlled by the \texttt{VirtualRobotController}. This component allows for the validation of high-level control logic in a safe environment before it is deployed on real hardware. Unlike simulations that teleport a robot to a target point, this implementation uses the Unity physics engine PhysX to simulate realistic movement (FR-09).
@@ -175,7 +175,7 @@ The script does not directly change the position of the robot. Instead, it modif
 Simultaneously, the controller provides ground truth data. It tracks the movement of the robot in Unity, converts the coordinates to the ROS standard, and publishes a timestamped odometry and tf messages (FR-10). This closes the control loop for the external navigation logic~\cite{MFG+22}.
 
 \subsection{The Digital Twin Implementation}
-When operating in RitL mode, the \texttt{PoseRobotController} takes control. In this configuration, the virtual robot stops acting as a dynamic entity and instead becomes a digital twin of the real EMAROss~\cite{EMAROs_Ref} robot (FR-07).
+When operating in RitL mode, the \texttt{PoseRobotController} takes control. In this configuration, the virtual robot stops acting as a dynamic entity and instead becomes a digital twin of the real EMAROs~\cite{EMAROs_Ref} robot (FR-07).
 
 The controller listens to a pose topic given by the external ArUco tracking to move the digital twin. The incoming pose is provided in pixel coordinates from the tracking camera. It must be mapped onto the defined virtual area. On every new incoming pose, the script converts the pixel coordinates into Unity world space. To ensure alignment, an offset parameter enables the operator to perform a calibration of the Digital Twin so that its center is aligned with the physical mounting position of the tracking marker. The script republishes the synchronized pose as odometry and tf messages (FR-10).
 
@@ -234,7 +234,7 @@ The modification logic relies on physics raycasting to identify the coordinates 
 \subsection{Sensor Simulation}
 To validate the perception algorithms of the autonomous agents, the system provides simulated sensors capable of generating synthetic data, including video feeds and ranging data (FR-11).
 
-The \texttt{LidarSensor} component simulates a 2D planar laser scanner wich can be attached to the virtual model of the robot. Unlike GPU-based depth buffers often used in visual rendering, this implementation utilizes the Unity physics engine's raycasting API to query the scene geometry directly. In every simulation step, the component executes a loop corresponding to the configured number of beams (e.g., 360). For each beam, the system calculates a direction vector based on the scan angle. Since Unity utilizes a Left-Handed coordinate system (Y-up) and ROS uses a Right-Handed system (Z-up), the script employs a custom extension method to transform the desired scan angle into the correct Unity world-space vector.
+The \texttt{LidarSensor} component simulates a 2D planar laser scanner which can be attached to the virtual model of the robot. Unlike GPU-based depth buffers often used in visual rendering, this implementation utilizes the Unity physics engine's raycasting API to query the scene geometry directly. In every simulation step, the component executes a loop corresponding to the configured number of beams (e.g., 360). For each beam, the system calculates a direction vector based on the scan angle. Since Unity utilizes a Left-Handed coordinate system (Y-up) and ROS uses a Right-Handed system (Z-up), the script employs a custom extension method to transform the desired scan angle into the correct Unity world-space vector.
 
 For each beam a \texttt{Physics.Raycast} is cast along the computed direction. If the ray intersects a collider on the configured collision layer, its hit distance is recorded; otherwise the beam is reported as an infinite range. The collected distances are packaged into a standard \texttt{sensor\_msgs/LaserScan} message. Immediately after the raycast loop finishes, the message header is stamped with the current simulation time from the \texttt{ClockPublisher}. This exact timestamping preserves temporal alignment with the navigation stack and prevents the ROS~2 transform (TF) system from rejecting the scan due to extrapolation errors caused by unsynchronized timestamps.
 \begin{figure}[H]
@@ -277,7 +277,7 @@ To fulfill the requirement for a 1:1 Augmented Reality projection \textbf{(FR-15
 
 The camera is positioned at a fixed height looking downward. The alignment with the physical floor is achieved by calculating the exact \textit{Orthographic Size} parameter, which determines the vertical half-extent of the camera's viewing volume in world units \cite{UnityDocumentation}. By mapping the pixel resolution of the projector to the metric dimensions of the projection area, the system ensures that one unit in the simulation corresponds exactly to one meter on the physical floor.
 
-To display this view on the physical floor, the ceiling-mounted projector acts as a secondary monitor for the workstation. During operation, the Game View window within the Unity Editor is undocked, moved to the projector's screen space, and maximized to fill the projection area
+To display this view on the physical floor, the ceiling-mounted projector acts as a secondary monitor for the workstation. During operation, the Game View window within the Unity Editor is undocked, moved to the projector's screen space, and maximized to fill the projection area.
 
 \subsection{Augmented Telemetry and Diagnosis}
 
@@ -319,14 +319,14 @@ In complex mixed reality scenarios, the density of visual information can become
 
 To validate the capabilities of the Mixed Reality Environment, the system hosts three distinct autonomous agents. These agents are robotic applications that utilize the synthetic sensor data provided by the Digital Twin to make decisions (FR-19). They serve to demonstrate the system's ability to support various domains of robotics, from agricultural field coverage to logic-based logistics.
 
-The high-level decision-making for all agents is orchestrated using \textit{YASMIN} (Yet Another State MachINe), a ROS~2-native library that allows for the creation of hierarchical, interruptible mission behaviors. This architecture ensures that the robot can switch between reactive behaviors (e.g., obstacle avoidance) and deliberative tasks (e.g., path planning) seamlessly.
+The high-level decision-making for all agents is orchestrated using \textit{YASMIN} (Yet Another State MachINe)\cite{YASMIN}, a ROS~2-native library that allows for the creation of hierarchical, interruptible mission behaviors. This architecture ensures that the robot can switch between reactive behaviors (e.g., obstacle avoidance) and deliberative tasks (e.g., path planning) seamlessly.
 
 \subsection{Navigation and Control Stack}
 \label{subsec:nav_stack}
 
-The fundamental capability of movement is provided by the \textit{Navigation2 (Nav2)} stack~\cite{NAV2Ref}. To address the varying physical characteristics of the simulated versus the physical robot, the architecture employs a dual-configuration strategy. Two distinct parameter sets—\texttt{nav2\_params\_virtual.yaml} and \texttt{nav2\_params\_robot.yaml}—are maintained. While they share the same behavioral tree structure, they utilize different tuning for inflation radii and cost scaling to account for the physical robot's safety margins and sensor noise.
+The fundamental capability of movement is provided by the \textit{Navigation2 (Nav2)} stack~\cite{NAV2Ref}. To address the varying physical characteristics of the simulated versus the physical robot, the architecture employs a dual-configuration strategy. Two distinct parameter sets—\texttt{nav2\_params\_virtual.yaml} and \texttt{nav2\_params\_robot.yaml}—are maintained. While they share the same behavioral tree structure, they utilize different tuning for inflation radii and cost scaling to account for the physical robot's safety margins and sensor noise. The appropriate parameter set is selected automatically at launch time based on the active system mode (Simulation vs. Robot-in-the-Loop), ensuring the navigation stack is always tuned to the current constraints.
 
-A critical design choice in the controller configuration is the use of the \textbf{Rotation Shim Controller} wrapping the \textbf{DWB Local Planner}. In tight operating environments of the projection area, standard differential drive controllers often fail to navigate sharp turns without collision. The Rotation Shim intercepts navigation commands and forces the robot to rotate in place to align with the path heading before attempting to move forward. This ensures that the robot can maneuver in confined spaces where the available turning radius is smaller than the robot's kinematic limits.
+A critical design choice in the controller configuration is the use of the \textbf{Rotation Shim Controller} wrapping the \textbf{DWB Local Planner}. Standard differential drive controllers often attempt to execute arc turns. In the confined space of the projection area, these arcs would cause the robot's footprint to collide with the costmap. The Rotation Shim intercepts navigation commands and forces the robot to rotate in place to align with the path heading before attempting to move forward. This ensures that the robot can maneuver in confined spaces where the available turning radius is smaller than the robot's kinematic limits.
 
 To ensure that the robot does not collide with virtual object during autonomous operation, a \textbf{Collision Monitor} node runs in parallel with the navigation stack. Configured with a defined polygon representing the robot's footprint plus a safety margin, this node monitors the virtual LiDAR stream of the robot directly. If an obstacle breaches the safety polygon, the monitor overrides the navigation stack and publishes a zero-velocity command to the motor controller, acting as a software-level emergency stop.
 
@@ -346,7 +346,7 @@ The Line Following agent utilizes a standalone \texttt{line\_perception\_node.py
 \label{subsec:agent_farming}
 
 \textbf{Scenario Context}
-This agent operates in a simulated farm with an agricultural field. The goal is to identify the field boundaries and poition and sequentially apply three tools (plow, seeder, harvester) to the field.
+This agent operates in a simulated farm with an agricultural field. The goal is to identify the field boundaries and position and sequentially apply three tools (plow, seeder, harvester) to the field.
 
 \textbf{Perception Modes}
 The agent utilizes four distinct perception processors depending on the active state:
@@ -367,7 +367,7 @@ The real-time debug stream (Figure \ref{fig:farm_debug}) visualizes these detect
 \end{figure}
 
 \textbf{State Machine Logic}
-The mission is governed by a hierarchical YASMIN state machine (Figure \ref{fig:farm_state_machine}) which executes two distinct phases:
+The mission is governed by a hierarchical YASMIN state machine \cite{YASMIN} (Figure \ref{fig:farm_state_machine}) which executes two distinct phases:
 
 \textbf{Phase 1: Field Mapping (Initialization)}
 \begin{enumerate}
@@ -416,7 +416,7 @@ To assist in debugging, the perception node publishes an annotated video stream 
 \end{figure}
 
 \textbf{State Machine Logic}
-The mission logic is defined in \texttt{mission\_state\_machine.py} (Logistics variant) and implements a "Search-Retrieve-Deliver" loop. A key feature of this agent is the utilization of the YASMIN \textbf{Blackboard} to implement spatial memory, allowing the robot to learn the environment structure over time.
+The mission logic is defined in \texttt{mission\_state\_machine.py} (Logistics variant) and implements a "Search-Retrieve-Deliver" loop. A key feature of this agent is the utilization of the YASMIN \textbf{Blackboard} \cite{YASMIN} to implement spatial memory, allowing the robot to learn the environment structure over time.
 
 \begin{enumerate}
     \item \textbf{FindBox:} The robot executes the \texttt{find\_box\_action\_server}. This generates a spiral pattern of waypoints using the Nav2 stack~\cite{NAV2Ref} to efficiently cover the floor plan. The robot navigates these waypoints until the \texttt{BoxDetectionProcessor} identifies a valid target in the camera's Region of Interest.

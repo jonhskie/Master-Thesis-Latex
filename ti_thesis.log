@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.20)  12 DEC 2025 04:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.20)  12 DEC 2025 05:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1427,6 +1427,13 @@ Package biblatex Warning: The following entry could not be found
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
 
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                YASMIN
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
 )
 Package biblatex Info: Reference section=0 on input line 31.
 Package biblatex Info: Reference segment=0 on input line 31.
@@ -1811,58 +1818,58 @@ chapter 3.
 
 Underfull \vbox (badness 2726) has occurred while \output is active []
 
- [23] [24] [25] [26]) [27]
+ [23] [24] [25]) [26]
 \openout2 = `chapters/concept_implementation.aux'.
 
- (./chapters/concept_implementation.tex [28
+ (./chapters/concept_implementation.tex
+chapter 4.
+
+LaTeX Warning: Reference `fig:mr_environment_overview' on page 27 undefined on input line 6.
+
+
+LaTeX Warning: Citation 'MFG22a' on page 27 undefined on input line 19.
+
+[27
 
 
 
 
 
 ]
-chapter 4.
-
-LaTeX Warning: Reference `fig:mr_environment_overview' on page 29 undefined on input line 6.
-
-
-LaTeX Warning: Citation 'MFG22a' on page 29 undefined on input line 19.
-
-[29]
 Underfull \hbox (badness 10000) in paragraph at lines 53--53
 []|\T1/phv/m/n/12 (+20) HRI & MR
  []
 
-[30]
+[28]
 Underfull \vbox (badness 2635) has occurred while \output is active []
 
- [31]
+ [29]
 
-LaTeX Warning: Reference `fig:hardware_topology' on page 32 undefined on input line 81.
+LaTeX Warning: Reference `fig:hardware_topology' on page 30 undefined on input line 81.
 
 
-LaTeX Warning: Citation 'PLACEHOLDER_HARDWARE_SETUP' on page 32 undefined on input line 84.
+LaTeX Warning: Citation 'PLACEHOLDER_HARDWARE_SETUP' on page 30 undefined on input line 84.
 
 LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
 (Font)              scaled to size 11.52008pt on input line 86.
 
-LaTeX Warning: Citation 'NAV2Ref' on page 32 undefined on input line 86.
+LaTeX Warning: Citation 'NAV2Ref' on page 30 undefined on input line 86.
 
 
-LaTeX Warning: Citation 'EMAROs_Ref' on page 32 undefined on input line 88.
+LaTeX Warning: Citation 'EMAROs_Ref' on page 30 undefined on input line 88.
 
 
-LaTeX Warning: Citation 'ALVR_Github' on page 32 undefined on input line 103.
+LaTeX Warning: Citation 'ALVR_Github' on page 30 undefined on input line 103.
 
-[32]
+[30]
 
-LaTeX Warning: Citation 'ROS2ForUnityDocs' on page 33 undefined on input line 108.
-
-
-LaTeX Warning: Citation 'ROS2ForUnityDocs' on page 33 undefined on input line 112.
+LaTeX Warning: Citation 'ROS2ForUnityDocs' on page 31 undefined on input line 108.
 
 
-LaTeX Warning: Citation 'UnityDocumentation' on page 33 undefined on input line 116.
+LaTeX Warning: Citation 'ROS2ForUnityDocs' on page 31 undefined on input line 112.
+
+
+LaTeX Warning: Citation 'UnityDocumentation' on page 31 undefined on input line 116.
 
 LaTeX Font Info:    Font shape `T1/cmtt/b/n' in size <12> not available
 (Font)              Font shape `T1/cmtt/bx/n' tried instead on input line 119.
@@ -1871,18 +1878,18 @@ LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <12> not available
 LaTeX Font Info:    Font shape `T1/cmtt/m/n' will be
 (Font)              scaled to size 12.86407pt on input line 119.
 
-LaTeX Warning: Citation 'ROS2ForUnityDocs' on page 33 undefined on input line 119.
+LaTeX Warning: Citation 'ROS2ForUnityDocs' on page 31 undefined on input line 119.
 
-[33]
+[31]
 
-LaTeX Warning: Reference `fig:software_architecture' on page 34 undefined on input line 126.
+LaTeX Warning: Reference `fig:software_architecture' on page 32 undefined on input line 126.
 
-[34]
+[32]
 
-LaTeX Warning: Citation 'ROS2ForUnityDocs' on page 35 undefined on input line 157.
+LaTeX Warning: Citation 'ROS2ForUnityDocs' on page 33 undefined on input line 157.
 
 
-LaTeX Warning: Citation 'EMAROs_Ref' on page 35 undefined on input line 166.
+LaTeX Warning: Citation 'EMAROs_Ref' on page 33 undefined on input line 166.
 
 
 Overfull \hbox (33.09029pt too wide) in paragraph at lines 169--170
@@ -1890,18 +1897,18 @@ Overfull \hbox (33.09029pt too wide) in paragraph at lines 169--170
  []
 
 
-LaTeX Warning: Citation 'MFG+22' on page 35 undefined on input line 175.
+LaTeX Warning: Citation 'MFG+22' on page 33 undefined on input line 175.
 
-[35]
+[33]
 
-LaTeX Warning: Citation 'EMAROs_Ref' on page 36 undefined on input line 178.
+LaTeX Warning: Citation 'EMAROs_Ref' on page 34 undefined on input line 178.
 
-[36] [37]
+[34] [35]
 Underfull \vbox (badness 4913) has occurred while \output is active []
 
- [38] [39]
+ [36] [37]
 
-LaTeX Warning: Citation 'ROS2ForUnityDocs' on page 40 undefined on input line 259.
+LaTeX Warning: Citation 'ROS2ForUnityDocs' on page 38 undefined on input line 259.
 
 
 Overfull \hbox (52.01898pt too wide) in paragraph at lines 259--260
@@ -1913,32 +1920,35 @@ Overfull \hbox (4.4346pt too wide) in paragraph at lines 261--262
 \T1/mdbch/m/n/12 (-20) con-fig-u-ra-tion it-self^^Vspecific GameOb-jects are gov-erned by the \T1/cmtt/m/n/12 PersistAcrossScenes
  []
 
-[40]
+[38]
 
-LaTeX Warning: Citation 'UnityDocumentation' on page 41 undefined on input line 276.
-
-
-LaTeX Warning: Citation 'UnityDocumentation' on page 41 undefined on input line 276.
+LaTeX Warning: Citation 'UnityDocumentation' on page 39 undefined on input line 276.
 
 
-LaTeX Warning: Citation 'UnityDocumentation' on page 41 undefined on input line 278.
+LaTeX Warning: Citation 'UnityDocumentation' on page 39 undefined on input line 276.
 
-[41]
+
+LaTeX Warning: Citation 'UnityDocumentation' on page 39 undefined on input line 278.
+
+[39]
 Underfull \vbox (badness 6141) has occurred while \output is active []
 
- [42]
+ [40]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [43]
+ [41]
 
-LaTeX Warning: Citation 'NAV2Ref' on page 44 undefined on input line 327.
+LaTeX Warning: Citation 'YASMIN' on page 42 undefined on input line 322.
+
+
+LaTeX Warning: Citation 'NAV2Ref' on page 42 undefined on input line 327.
 
 
 Overfull \hbox (9.78773pt too wide) in paragraph at lines 327--328
 \T1/mdbch/m/n/12 (-20) pa-ram-e-ter sets^^V\T1/cmtt/m/n/12 nav2_params_virtual.yaml \T1/mdbch/m/n/12 (-20) and \T1/cmtt/m/n/12 nav2_params_robot.yaml\T1/mdbch/m/n/12 (-20) ^^Vare
  []
 
-[44]
+[42]
 Overfull \hbox (17.94872pt too wide) in paragraph at lines 342--345
 \T1/cmtt/m/n/12 line_perception_node.py\T1/mdbch/m/n/12 (-20) . This sep-a-ra-tion al-lows for a stream-lined, high-performance
  []
@@ -1948,7 +1958,7 @@ Overfull \hbox (2.13475pt too wide) in paragraph at lines 355--356
 []\T1/mdbch/b/n/12 (-20) Edge De-tec-tion (\T1/cmtt/m/n/12 EdgeDetectionProcessor\T1/mdbch/b/n/12 (-20) ): \T1/mdbch/m/n/12 (-20) Used dur-ing the ap-proach phase.
  []
 
-
+[43]
 Overfull \hbox (76.81993pt too wide) in paragraph at lines 356--357
 []\T1/mdbch/b/n/12 (-20) Edge Ad-just-ment & Fol-low-ing: \T1/mdbch/m/n/12 (-20) Im-ple-mented via two pro-ces-sors (\T1/cmtt/m/n/12 EdgeAdjustmentProcessor
  []
@@ -1958,12 +1968,14 @@ Overfull \hbox (5.65587pt too wide) in paragraph at lines 356--357
 \T1/mdbch/m/n/12 (-20) and track-ing. They uti-lize the Prob-a-bilis-tic Hough Trans-form (\T1/cmtt/m/n/12 cv2.HoughLinesP\T1/mdbch/m/n/12 (-20) )
  []
 
-[45]
 
-LaTeX Warning: Reference `fig:farm_debug' on page 46 undefined on input line 360.
+LaTeX Warning: Reference `fig:farm_debug' on page 44 undefined on input line 360.
 
 
-LaTeX Warning: Reference `fig:farm_state_machine' on page 46 undefined on input line 370.
+LaTeX Warning: Citation 'YASMIN' on page 44 undefined on input line 370.
+
+
+LaTeX Warning: Reference `fig:farm_state_machine' on page 44 undefined on input line 370.
 
 
 Overfull \hbox (0.46489pt too wide) in paragraph at lines 376--377
@@ -1971,27 +1983,30 @@ Overfull \hbox (0.46489pt too wide) in paragraph at lines 376--377
  []
 
 
-LaTeX Warning: Citation 'NAV2Ref' on page 46 undefined on input line 382.
+LaTeX Warning: Citation 'NAV2Ref' on page 44 undefined on input line 382.
 
-[46]
+[44]
 
-LaTeX Warning: Reference `fig:logistics_debug' on page 47 undefined on input line 409.
+LaTeX Warning: Reference `fig:logistics_debug' on page 45 undefined on input line 409.
 
-[47]
+[45]
 
-LaTeX Warning: Citation 'NAV2Ref' on page 48 undefined on input line 422.
+LaTeX Warning: Citation 'YASMIN' on page 46 undefined on input line 419.
+
+
+LaTeX Warning: Citation 'NAV2Ref' on page 46 undefined on input line 422.
 
 
 Overfull \hbox (24.0133pt too wide) in paragraph at lines 423--424
 \T1/mdbch/m/n/12 (-20) The \T1/cmtt/m/n/12 AttachBox \T1/mdbch/m/n/12 (-20) ac-tion sends a for-mat-ted string com-mand (e.g., \T1/cmtt/m/n/12 "attach,box_red"\T1/mdbch/m/n/12 (-20) )
  []
 
-[48]
+[46]
 
-LaTeX Warning: Reference `fig:line_debug' on page 49 undefined on input line 450.
+LaTeX Warning: Reference `fig:line_debug' on page 47 undefined on input line 450.
 
 
-LaTeX Warning: Citation 'NAV2Ref' on page 49 undefined on input line 460.
+LaTeX Warning: Citation 'NAV2Ref' on page 47 undefined on input line 460.
 
 
 Overfull \hbox (56.00894pt too wide) in paragraph at lines 463--464
@@ -1999,14 +2014,14 @@ Overfull \hbox (56.00894pt too wide) in paragraph at lines 463--464
  []
 
 
-LaTeX Warning: Citation 'NAV2Ref' on page 49 undefined on input line 465.
+LaTeX Warning: Citation 'NAV2Ref' on page 47 undefined on input line 465.
 
 
 Overfull \hbox (101.1839pt too wide) in paragraph at lines 465--466
 []\T1/mdbch/b/n/12 (-20) FollowLine: \T1/mdbch/m/n/12 (-20) The robot en-gages a PID con-troller im-ple-mented in \T1/cmtt/m/n/12 follow_line_action_server.py\T1/mdbch/m/n/12 (-20) .
  []
 
-[49]) [50]
+[47]) [48]
 \openout2 = `chapters/evaluation.aux'.
 
  (./chapters/evaluation.tex
@@ -2014,24 +2029,24 @@ chapter 5.
 )
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [51
+ [49
 
 
 
 
 
-] [52]
+] [50]
 \openout2 = `chapters/conclusion_outlook.aux'.
 
  (./chapters/conclusion_outlook.tex
 chapter 6.
-) [53
+) [51
 
 
 
 
 
-] [54
+] [52
 
 
 
@@ -2042,7 +2057,7 @@ Package tocbasic Info: character protrusion at lof deactivated on input line 50.
 \tf@lof=\write7
 \openout7 = `ti_thesis.lof'.
 
- [55] [56
+ [53] [54
 
 
 ]
@@ -2051,7 +2066,7 @@ Package tocbasic Info: character protrusion at lol deactivated on input line 51.
 \tf@lol=\write8
 \openout8 = `ti_thesis.lol'.
 
- [57] [58
+ [55] [56
 
 
 ]
@@ -2068,12 +2083,12 @@ Overfull \hbox (9.06294pt too wide) in paragraph at lines 58--58
 []\T1/mdbch/m/n/12 (-20) Rajmeet Bhourji, Lak-mal Senevi-ratne, and Ir-fan Hus-sain. ^^P  A Deep Learning-
  []
 
-[59] [60]
+[57] [58]
 Overfull \hbox (12.89154pt too wide) in paragraph at lines 58--58
 []\T1/mdbch/m/n/12 (-20) Seyed Mo-hamad Kar-gar, Borislav Yor-danov, Carlo Har-vey, and Ali Asadipour.
  []
 
-[61] [62]
+[59] [60]
 Overfull \hbox (43.16673pt too wide) in paragraph at lines 58--58
 \T1/mdbch/m/n/12 (-20) A Re-view^^Q. In: \T1/mdbch/m/it/12 (-20) Robotics \T1/mdbch/m/n/12 (-20) 9.2 (Apr. 2020), p. 21. \T1/mdbch/m/fsc/12 (-20) doi\T1/mdbch/m/n/12 (-20) : [][]$\T1/cmtt/m/n/12 10 . 3390 / robotics9020021$[][]\T1/mdbch/m/n/12 (-20) .
  []
@@ -2083,7 +2098,7 @@ Overfull \hbox (14.49641pt too wide) in paragraph at lines 58--58
 \T1/cmtt/m/n/12 3390 / app10103633$[][]\T1/mdbch/m/n/12 (-20) . \T1/mdbch/m/fsc/12 (-20) url\T1/mdbch/m/n/12 (-20) : [][]$\T1/cmtt/m/n/12 https : / / doi . org / 10 . 3390 / app10103633$[][]\T1/mdbch/m/n/12 (-20) . 
  []
 
-[63] [64] [65
+[61] [62] [63
 
 
 ] (./ti_thesis.aux (./chapters/deckblatt.aux) (./chapters/abstract.aux) (./chapters/introduction.aux) (./chapters/foundations_related_work.aux) (./chapters/requirements.aux) (./chapters/concept_implementation.aux) (./chapters/evaluation.aux) (./chapters/conclusion_outlook.aux))
@@ -2105,18 +2120,18 @@ Package logreq Info: Writing requests to 'ti_thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 60604 strings out of 474222
- 1374143 string characters out of 5748732
- 2631331 words of memory out of 5000000
+ 60602 strings out of 474222
+ 1374133 string characters out of 5748732
+ 2631345 words of memory out of 5000000
  81278 multiletter control sequences out of 15000+600000
  637558 words of font info for 460 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  108i,12n,131p,10936b,3335s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchri8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chb8t.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr8t.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chri7m.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chri8t.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8ac.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on ti_thesis.pdf (73 pages, 8426735 bytes).
+Output written on ti_thesis.pdf (71 pages, 8426283 bytes).
 PDF statistics:
- 1268 PDF objects out of 1440 (max. 8388607)
- 1132 compressed objects within 12 object streams
- 250 named destinations out of 1000 (max. 500000)
+ 1258 PDF objects out of 1440 (max. 8388607)
+ 1124 compressed objects within 12 object streams
+ 248 named destinations out of 1000 (max. 500000)
  76888 words of extra memory for PDF output out of 89155 (max. 10000000)
 
