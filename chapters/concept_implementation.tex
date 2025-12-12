@@ -100,7 +100,7 @@ To ensure high performance and support for specific hardware peripherals, the sy
     \label{fig:hardware_topology}
 \end{figure}
 
-For the Mixed Reality interface \textbf{(FR-16)}, the visual output from Unity is streamed via Wi-Fi to the Meta Quest Pro headset using \textit{ALVR}~\cite{ALVR_Github}, an open-source streaming solution. This setup allows the user to move freely without a cable tether.
+For the VR interface (\hyperref[req:FR-16]{FR-16}), the visual output from Unity is streamed via Wi-Fi to the Meta Quest Pro headset using \textit{ALVR}~\cite{ALVR_Github}, an open-source streaming solution. This setup allows the user to move freely without a cable tether.
 
 \subsection{Software Component Architecture}
 \label{subsec:software_components}
@@ -258,7 +258,7 @@ A primary objective of the framework is to enhance the transparency of the robot
 \subsection{Environment Projection}
 \label{subsec:environment_projection}
 
-To fulfill the requirement for a 1:1 Augmented Reality projection \textbf{(FR-15)}, the system utilizes a dedicated Unity camera component configured in orthographic projection mode \cite{UnityDocumentation}. Unlike perspective cameras, the orthographic view preserves parallel lines and consistent object scales regardless of their distance from the camera\cite{UnityDocumentation}. This property is essential for projecting a map that aligns physically with the flat laboratory floor.
+To fulfill the requirement for a 1:1 Augmented Reality projection (\hyperref[req:FR-15]{FR-15}), the system utilizes a dedicated Unity camera component configured in orthographic projection mode \cite{UnityDocumentation}. Unlike perspective cameras, the orthographic view preserves parallel lines and consistent object scales regardless of their distance from the camera\cite{UnityDocumentation}. This property is essential for projecting a map that aligns physically with the flat laboratory floor.
 
 The camera is positioned at a fixed height looking downward. The alignment with the physical floor is achieved by calculating the exact \textit{Orthographic Size} parameter, which determines the vertical half-extent of the camera's viewing volume in world units \cite{UnityDocumentation}. By mapping the pixel resolution of the projector to the metric dimensions of the projection area, the system ensures that one unit in the simulation corresponds exactly to one meter on the physical floor.
 
@@ -266,14 +266,14 @@ To display this view on the physical floor, the ceiling-mounted projector acts a
 
 \subsection{Augmented Telemetry and Diagnosis}
 
-To fulfill the Telemetry Display requirement (FR-14), the system implements the \texttt{RobotInfoBillboard} component. This script serves as a central data aggregator, establishing ROS~2 subscriptions based on a configurable list of topic definitions. It processes diverse message types and utilizes regular expressions to extract specific metrics, such as CPU and RAM usage, from text payloads.
+To fulfill the Telemetry Display requirement (\hyperref[req:FR-14]{FR-14}), the system implements the \texttt{RobotInfoBillboard} component. This script serves as a central data aggregator, establishing ROS~2 subscriptions based on a configurable list of topic definitions. It processes diverse message types and utilizes regular expressions to extract specific metrics, such as CPU and RAM usage, from text payloads.
 
 For visualization in standard desktop views and AR projections, the system employs Unity's immediate mode GUI (\texttt{OnGUI}). The script calculates the screen-space coordinates of the robot's anchor using \texttt{Camera.WorldToScreenPoint} and applies rotational matrices to align the text. This ensures that the interface remains legible and strictly aligned with the screen plane, creating a floating overlay locked to the robot's position.
 
 In contrast, screen-space rendering is unsuitable for Virtual Reality due to depth perception issues. To address this, the architecture supports a World Space Canvas for VR users. In this configuration, textual information is rendered onto a 3D plane floating physically above the digital twin. To ensure readability from any perspective, the canvas implements a constraint that continuously orients the UI to face the VR headset, allowing operators to inspect the robot's status naturally within the virtual environment.
 
 \subsection{Sensor Data Projection}
-While the digital twin visualizes the robot's kinematics, it does not inherently convey what the robot sees. To bridge this gap, the system utilizes the \texttt{RosImageToMaterial} component to project the robot's internal perception directly into the environment (FR-15).
+While the digital twin visualizes the robot's kinematics, it does not inherently convey what the robot sees. To bridge this gap, the system utilizes the \texttt{RosImageToMaterial} component to project the robot's internal perception directly into the environment.
 
 This component subscribes to ROS~2 camera topics. Upon receiving a frame—either raw or compressed—it decodes the data into a Unity \texttt{Texture2D} and applies it to a material on a planar mesh attached to the robot's chassis.
 
@@ -287,7 +287,7 @@ In the AR setup, this plane is positioned horizontally above the robot, projecti
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%FERTIG ABER AI%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Interactive Control Interfaces}
-The system enables users to actively modify the simulation state and direct the robot's actions (FR-17, FR-18). The implementation follows an input-agnostic architecture, where the core logic relies on 3D raycasting rather than specific hardware events. This design allows the system to support both standard mouse inputs and 3D VR controllers interchangeably.
+The system enables users to actively modify the simulation state (\hyperref[req:FR-13]{FR-13}) and direct the robot's actions (\hyperref[req:FR-17]{FR-17}). The implementation follows an input-agnostic architecture, where the core logic relies on 3D raycasting rather than specific hardware events. This design allows the system to support both standard mouse inputs and 3D VR controllers interchangeably.
 
 The \texttt{NavigationGoalController} facilitates high-level control of the robot. In the desktop configuration, it casts a ray from the camera through the mouse cursor coordinates. When the ray intersects with the ground layer, the script calculates the target point and orientation based on the user's drag gesture. This data is serialized into a \texttt{geometry\_msgs/PoseStamped} message and published to the \texttt{/goal\_pose} topic, triggering the ROS~2 navigation stack. For Virtual Reality, this logic utilizes the \texttt{XR Ray Interactor}, enabling the operator to point at the virtual floor and dispatch the robot using the controller's trigger.
 
@@ -295,21 +295,21 @@ To support dynamic scenarios like Line Following, the user must be able to alter
 
 Beyond painting, the VR interface leverages the physics engine to allow direct object manipulation. Users can physically grab and move interactive objects, such as the logistics boxes, using the VR controller's grip function. This allows for the manual reset of test scenarios or the introduction of dynamic obstacles (e.g., dropping a box in the robot's path) to validate the system's reactive planning capabilities.
 
-In complex mixed reality scenarios, the density of visual information can become overwhelming. To manage this, the \texttt{VisibilityToggleManager} allows users to selectively hide or reveal specific visualization aids attached to the robot. This component maps input actions to the rendering state of the \texttt{RobotInfoBillboard}, the projected camera plane, and even the robot's visual cylinder body. This feature allows operators to declutter the view when necessary—for example, hiding the large floating billboard to inspect the interaction between the robot's chassis and a tool—without disabling the underlying functionality.
+In complex mixed reality scenarios, the density of visual information can become overwhelming. To manage this, the \texttt{VisibilityToggleManager} (\hyperref[req:FR-18]{FR-18}) allows users to selectively hide or reveal specific visualization aids attached to the robot. This component maps input actions to the rendering state of the \texttt{RobotInfoBillboard}, the projected camera plane, and even the robot's visual cylinder body. This feature allows operators to declutter the view when necessary—for example, hiding the large floating billboard to inspect the interaction between the robot's chassis and a tool—without disabling the underlying functionality.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%fertig aber ai%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Implementation of Autonomous Agents}
 \label{sec:autonomous_agents}
 
-To validate the capabilities of the Mixed Reality Environment, the system hosts three distinct autonomous agents. These agents are robotic applications that utilize the synthetic sensor data provided by the digital twin to make decisions (FR-19). They serve to demonstrate the system's ability to support various domains of robotics, from agricultural field coverage to logic-based logistics.
+To validate the capabilities of the Mixed Reality Environment, the system hosts three distinct autonomous agents. These agents are robotic applications that utilize the synthetic sensor data provided by the digital twin to make decisions (\hyperref[req:FR-19]{FR-19}). They serve to demonstrate the system's ability to support various domains of robotics, from agricultural field coverage to logic-based logistics.
 
 The high-level decision-making for all agents is orchestrated using \textit{YASMIN} (Yet Another State MachINe)\cite{YASMIN}, a ROS~2-native library that allows for the creation of hierarchical, interruptible mission behaviors. This architecture ensures that the robot can switch between reactive behaviors (e.g., obstacle avoidance) and deliberative tasks (e.g., path planning) seamlessly.
 
 \subsection{Navigation and Control Stack}
 \label{subsec:nav_stack}
 
-The fundamental capability of movement is provided by the \textit{Navigation2 (Nav2)} stack~\cite{NAV2Ref}. To address the varying physical characteristics of the simulated versus the physical robot, the architecture employs a dual-configuration strategy. Two distinct parameter sets—\texttt{nav2\_params\_virtual.yaml} and \texttt{nav2\_params\_robot.yaml}—are maintained. While they share the same behavioral tree structure, they utilize different tuning for inflation radii and cost scaling to account for the physical robot's safety margins and sensor noise. The appropriate parameter set is selected automatically at launch time based on the active system mode (Simulation vs. Robot-in-the-Loop), ensuring the navigation stack is always tuned to the current constraints.
+The fundamental capability of movement is provided by the \textit{Navigation2 (Nav2)} stack~\cite{NAV2Ref} (\hyperref[req:FR-17]{FR-17}). To address the varying physical characteristics of the simulated versus the physical robot, the architecture employs a dual-configuration strategy. Two distinct parameter sets—\texttt{nav2\_params\_virtual.yaml} and \texttt{nav2\_params\_robot.yaml}—are maintained. While they share the same behavioral tree structure, they utilize different tuning for inflation radii and cost scaling to account for the physical robot's safety margins and sensor noise. The appropriate parameter set is selected automatically at launch time based on the active system mode (Simulation vs. Robot-in-the-Loop), ensuring the navigation stack is always tuned to the current constraints.
 
 A critical design choice in the controller configuration is the use of the \textbf{Rotation Shim Controller} wrapping the \textbf{DWB Local Planner}. Standard differential drive controllers often attempt to execute arc turns. In the confined space of the projection area, these arcs would cause the robot's footprint to collide with the costmap. The Rotation Shim intercepts navigation commands and forces the robot to rotate in place to align with the path heading before attempting to move forward. This ensures that the robot can maneuver in confined spaces where the available turning radius is smaller than the robot's kinematic limits.
 
@@ -318,7 +318,7 @@ To ensure that the robot does not collide with virtual object during autonomous 
 \subsection{Modular Perception Stack}
 \label{subsec:perception_architecture}
 
-To interpret the visual data generated by the \texttt{CameraSensor}, the agents employ specialized computer vision pipelines tailored to their operational requirements. This satisfies the requirement for Perception Compatibility (FR-20) by ensuring algorithms function identically on virtual and real camera feeds.
+To interpret the visual data generated by the \texttt{CameraSensor} (\hyperref[req:FR-19]{FR-19}), the agents employ specialized computer vision pipelines tailored to their operational requirements.
 
 \textbf{Modular Perception Node (Farm \& Logistics)}
 For the Smart Farming and Logistics agents, a modular \texttt{perception\_node.py} was developed. Rather than running all detection algorithms simultaneously, which would consume excessive computational resources, this node acts as a central dispatcher. It switches between specialized processors based on the current mission state defined by the state machine (e.g., switching from \textit{Field Detection} to \textit{Edge Following}).
