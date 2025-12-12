@@ -270,6 +270,14 @@ When an "ADD" or "MODIFY" command is received, the system checks if the object a
 \label{sec:mixed_reality_and_user_interaction}
 
 A primary objective of the framework is to enhance the transparency of the robotic system by providing intuitive, real-time feedback to human operators. This is achieved through a Mixed Reality (MR) interface that visualizes internal robot states and allows for direct environmental manipulation. This section details the implementation of augmented telemetry, sensor projection, and the interactive control systems designed for both desktop and Virtual Reality (VR) contexts.
+\subsection{Environment Projection}
+\label{subsec:environment_projection}
+
+To fulfill the requirement for a 1:1 Augmented Reality projection \textbf{(FR-15)}, the system utilizes a dedicated Unity camera component configured in \textit{Orthographic} projection mode \cite{UnityDocumentation}. Unlike perspective cameras, the orthographic view preserves parallel lines and consistent object scales regardless of their distance from the camera\cite{UnityDocumentation}. This property is essential for projecting a map that aligns physically with the flat laboratory floor.
+
+The camera is positioned at a fixed height looking downward. The alignment with the physical floor is achieved by calculating the exact \textit{Orthographic Size} parameter, which determines the vertical half-extent of the camera's viewing volume in world units \cite{UnityDocumentation}. By mapping the pixel resolution of the projector to the metric dimensions of the projection area, the system ensures that one unit in the simulation corresponds exactly to one meter on the physical floor.
+
+To display this view on the physical floor, the ceiling-mounted projector acts as a secondary monitor for the workstation. During operation, the Game View window within the Unity Editor is undocked, moved to the projector's screen space, and maximized to fill the projection area
 
 \subsection{Augmented Telemetry and Diagnosis}
 
