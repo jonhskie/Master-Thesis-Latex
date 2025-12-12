@@ -105,7 +105,7 @@ For the VR interface (\hyperref[req:FR-16]{FR-16}), the visual output from Unity
 \subsection{Software Component Architecture}
 \label{subsec:software_components}
 
-The software architecture follows a modular publisher-subscriber pattern. To integrate the Unity game engine with the robotic network, the system utilizes the \textit{ROS2ForUnity} library \cite{ROS2ForUnityDocs}.
+The software architecture follows a modular publisher-subscriber pattern. To integrate the Unity game engine with the robotic network, the system utilizes the \textit{ROS2ForUnity} library (\hyperref[req:FR-04]{FR-04}) \cite{ROS2ForUnityDocs}.
 
 The core of this integration is the \texttt{ROS2UnityComponent}~\cite{ROS2ForUnityDocs} class. This component acts as a wrapper around the standard ROS~2 middleware. Inheriting from Unity's \texttt{MonoBehaviour} class, it must be attached to a \texttt{GameObject} in the scene to function. Upon startup, this component initializes the ROS~2 context, makes sure that a valid connection is established, and handles the lifecycle of the ROS~2 nodes running within the simulation. It allows other scripts to access the ROS~2 network by referencing this central component to create publishers, subscribers, and service clients.
 
