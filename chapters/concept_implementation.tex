@@ -5,7 +5,7 @@ This chapter describes the development of the Mixed Reality Environment, a platf
 
 The central concept of this environment is the projection of a simulated world directly onto the laboratory floor. Rather than testing robots in completely physical setups or purely within software simulations, this system projects dynamic, physics-based elements into the real world. As can be seen from Figure \ref{fig:mr_environment_overview}, the physical robot moves across the real floor while sensing and acting upon virtual objects, such as a field, obstacles, or other entities. This projection has a dual purpose: it provides instant visual feedback to a human observer and enables the robot to receive synthetic sensor data that reflect the state of the virtual scene. This allows the robot to detect and respond to simulated entities as if they were physically present.
 
-\begin{figure}[ht]
+\begin{figure}[H]
 \centering
 %\includegraphics[width=0.9\textwidth]{figures/mr_environment_overview} % Placeholder for your figure
 \caption{The Mixed Reality Environment in operation. The physical robot interacts with a projected Smart Farming scenario, where the robot and the digital twin are synchronized via ROS~2.}
@@ -88,7 +88,7 @@ To ensure high performance and support for specific hardware peripherals, the sy
     \item \textbf{Physical Robot (Hardware Layer):} The EMAROs~\cite{EMAROs_Ref} robot operates as an independent node in the network. It uses Ubuntu 24.04 and runs ROS~2~Jazzy on an onboard Raspberry Pi to handle hardware drivers, such as motor controllers and IMU sensors. It connects to the workstation via Wi-Fi.
 \end{enumerate}
 
-\begin{figure}[ht]
+\begin{figure}[H]
     \centering
     % TODO: Create a diagram showing:
     % 1. PC Box (split into Windows and WSL sections).
@@ -125,7 +125,7 @@ The functionality of the digital twin is driven by C\# scripts that interact wit
 
 Figure \ref{fig:software_architecture} provides an overview of how these Unity scripts interact with the external ROS~2 nodes via topics. Detailed descriptions of these components follow in Sections 4.2 and 4.3.
 
-\begin{figure}[ht]
+\begin{figure}[H]
     \centering
     % TODO: Create a diagram showing:
     % Left side: Unity Components (LidarSensor, CameraSensor, VirtualRobotController).
@@ -172,15 +172,15 @@ The controller acts as a ROS~2 node that accepts velocity commands (\texttt{cmd\
 
 The script does not directly change the position of the robot. Instead, it modifies the velocity of the physics body. By applying limits to acceleration, the system simulates mass and inertia for the robot. The robot can push lightweight virtual objects, but heavy obstacles or walls will stop its movement. This provides realistic feedback to the navigation system.
 
-Simultaneously, the controller provides ground truth data. It tracks the movement of the robot in Unity, converts the coordinates to the ROS standard, and publishes a timestamped odometry message. This closes the control loop for the external navigation logic~\cite{MFG+22}.
+Simultaneously, the controller provides ground truth data. It tracks the movement of the robot in Unity, converts the coordinates to the ROS standard, and publishes a timestamped odometry and tf messages (FR-10). This closes the control loop for the external navigation logic~\cite{MFG+22}.
 
 \subsection{The Digital Twin Implementation}
 When operating in RitL mode, the \texttt{PoseRobotController} takes control. In this configuration, the virtual robot stops acting as a dynamic entity and instead becomes a digital twin of the real EMAROss~\cite{EMAROs_Ref} robot (FR-07).
 
-The controller listens to a pose topic given by the external ArUco tracking. On every new incoming pose, the script converts the coordinates into Unity world space. To ensure alignment, an offset parameter enables the operator to perform a calibration of the Digital Twin so that its center is aligned with the physical mounting position of the tracking marker.
+The controller listens to a pose topic given by the external ArUco tracking to move the digital twin. The incoming pose is provided in pixel coordinates from the tracking camera. It must be mapped onto the defined virtual area. On every new incoming pose, the script converts the pixel coordinates into Unity world space. To ensure alignment, an offset parameter enables the operator to perform a calibration of the Digital Twin so that its center is aligned with the physical mounting position of the tracking marker. The script republishes the synchronized pose as odometry and tf messages (FR-10).
 
 Unlike the purely virtual robot, the Digital Twin overrides the physics engine. It is set to a kinematic state, meaning it is immune to virtual forces. If the physical robot moves, the Digital Twin moves with it, ignoring virtual barriers. This allows the physical robot to push virtual objects with absolute force. This way, the state of the virtual world always reflects physical reality.
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     % \includegraphics[width=0.8\textwidth]{figures/control_architecture.png}
     % use here the real virtaul image of the robots, maybe make them in diffrent color. add pfeile to show data flow
@@ -211,7 +211,7 @@ When a valid target is identified, the system attaches it to the robot. In Unity
 
 At the same time, the controller disables collisions between the robot and the tool using \texttt{Physics.IgnoreCollision}. Without this step, snapping the tool to the robot would cause their geometries to overlap. The physics engine would attempt to separate them forcibly, potentially causing the equipment to be ejected erratically.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     % \includegraphics[width=0.8\textwidth]{figures/attachment.png}
     \caption{The robot model with an attached object. The kinematic coupling ensures the object moves rigidly with the robot chassis during transport. }
@@ -223,7 +223,7 @@ To fulfill the requirement for dynamic environment interaction regarding surface
 
 The modification logic relies on physics raycasting to identify the coordinates of the surface at the point of contact. When a valid hit is detected on the target surface, the \texttt{TrackPainter} which is attached to the robot model calculates the pixel coordinates on the texture map. It then modifies the pixel buffer directly using \texttt{SetPixels32}, changing the color to a configured color and thickness. Crucially, these changes are committed to the GPU using the \texttt{Apply} method. In complex scenarios, multiple agents (e.g., the robot, a VR controller, or a mouse interface) may attempt to modify the terrain simultaneously. To manage this, the \texttt{SharedPaintTextureRegistry} functions as a singleton manager. It maintains a dictionary of active textures and ensures that all painters operate on a single, shared instance of the \texttt{Texture2D}. This prevents race conditions where one agent overwrites the work of another and ensures data consistency across the simulation.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     % \includegraphics[width=0.8\textwidth]{figures/texture_painting.png}
     \caption{The dynamic terrain modification system. A raycast determines the UV coordinate of the tool's contact point (left), which is used to update the shared texture registry (right), permanently altering the ground appearance.}
@@ -237,7 +237,7 @@ To validate the perception algorithms of the autonomous agents, the system provi
 The \texttt{LidarSensor} component simulates a 2D planar laser scanner wich can be attached to the virtual model of the robot. Unlike GPU-based depth buffers often used in visual rendering, this implementation utilizes the Unity physics engine's raycasting API to query the scene geometry directly. In every simulation step, the component executes a loop corresponding to the configured number of beams (e.g., 360). For each beam, the system calculates a direction vector based on the scan angle. Since Unity utilizes a Left-Handed coordinate system (Y-up) and ROS uses a Right-Handed system (Z-up), the script employs a custom extension method to transform the desired scan angle into the correct Unity world-space vector.
 
 For each beam a \texttt{Physics.Raycast} is cast along the computed direction. If the ray intersects a collider on the configured collision layer, its hit distance is recorded; otherwise the beam is reported as an infinite range. The collected distances are packaged into a standard \texttt{sensor\_msgs/LaserScan} message. Immediately after the raycast loop finishes, the message header is stamped with the current simulation time from the \texttt{ClockPublisher}. This exact timestamping preserves temporal alignment with the navigation stack and prevents the ROS~2 transform (TF) system from rejecting the scan due to extrapolation errors caused by unsynchronized timestamps.
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     % \includegraphics[width=0.8\textwidth]{figures/lidar_raycasting.png}
     \caption{Visualization of the LiDAR simulation in the editor. Red lines indicate raycasts that did not hit an obstacle within range, while yellow lines indicate valid hits registered by the physics engine.}
@@ -286,7 +286,7 @@ This component subscribes to ROS~2 camera topics. Upon receiving a frame—eithe
 
 In the AR setup, this plane is positioned horizontally above the robot, projecting the camera stream onto the floor moving along with the robot. Similarly, in VR, this projection functions as a virtual dashboard, allowing the user to see the camera stream from a top-down perspective.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     % \includegraphics[width=0.8\textwidth]{figures/augmented_telemetry.png}
     \caption{The Augmented Telemetry interface. A billboard displays system stats (top), while the \texttt{RosImageToMaterial} component projects the live OpenCV debug feed onto a plane attached to the robot (bottom), visualizing the internal state of the perception stack.}
@@ -300,7 +300,7 @@ The \texttt{NavigationGoalController} facilitates high-level control of the robo
 
 To support dynamic scenarios like Line Following, the user must be able to alter the environment at runtime. The \texttt{MouseSurfacePainter} component enables users to draw directly onto the terrain texture using a continuous raycast. In VR, this allows the operator to naturally draw paths or obstacles in 3D space that the physical robot can immediately perceive and follow.
 
-Beyond painting, the VR interface leverages the physics engine to allow direct object manipulation. Users can physically grab and move interactive objects, such as the logistics boxes, using the VR controller's grip function. This allows for the manual reset of test scenarios or the introduction of dynamic obstacles (e.g., dropping a box in the robot's path) to validate the system's reactive planning capabilities (FR-22).
+Beyond painting, the VR interface leverages the physics engine to allow direct object manipulation. Users can physically grab and move interactive objects, such as the logistics boxes, using the VR controller's grip function. This allows for the manual reset of test scenarios or the introduction of dynamic obstacles (e.g., dropping a box in the robot's path) to validate the system's reactive planning capabilities.
 
 In complex mixed reality scenarios, the density of visual information can become overwhelming. To manage this, the \texttt{VisibilityToggleManager} allows users to selectively hide or reveal specific visualization aids attached to the robot. This component maps input actions to the rendering state of the \texttt{RobotInfoBillboard}, the projected camera plane, and even the robot's visual cylinder body. This feature allows operators to declutter the view when necessary—for example, hiding the large floating billboard to inspect the interaction between the robot's chassis and a tool—without disabling the underlying functionality.
 
@@ -351,7 +351,7 @@ The agent utilizes four distinct perception processors depending on the active s
 
 The real-time debug stream (Figure \ref{fig:farm_debug}) visualizes these detections, overlaying the regression line (green) or the equipment bounding box (blue) onto the camera feed.
 
-\begin{figure}[ht]
+\begin{figure}[H]
     \centering
     %\includegraphics[width=0.8\textwidth]{figures/farm_perception_debug} 
     \caption{Debug view of the Smart Farming agent. Left: Edge detection visualizing the crop/soil boundary intersection. Right: Equipment detection highlighting the target tool for attachment.}
@@ -378,29 +378,29 @@ The mission is governed by a hierarchical YASMIN state machine (Figure \ref{fig:
     \item \textbf{Return \& Unequip:} The robot returns the tool to its origin and detaches it. The state machine then loops back to search for the next tool in the sequence (Seeder, then Harvester).
 \end{enumerate}
 
-\begin{figure}[ht]
+\begin{figure}[H]
     \centering
     %\includegraphics[width=0.8\textwidth]{figures/farm_agent_fsm} 
     \caption{The Smart Farming State Machine. The robot first maps the field boundaries (FollowEdge) to identify corners, then uses these corners to generate coverage paths for various tools.}
     \label{fig:farm_state_machine}
 \end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%fertig aber ai%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Agent 2: Logistics}
 \label{subsec:agent_logistics}
 
 \textbf{Scenario Context}
-The Logistics agent operates in a dynamic warehouse environment populated with colored transport boxes (Red, Blue, Green, Yellow) and corresponding projected delivery zones. The robot's objective is to autonomously search for items, physically attach them, identify the correct sorting destination, and transport the payload. This scenario validates the system's capabilities regarding object manipulation (FR-13), spatial memory, and error recovery.
+The Logistics agent operates in a warehouse environment populated with colored transport boxes and corresponding projected delivery zones. The robot's objective is to autonomously search for items, physically attach them, identify the correct sorting destination, and transport the payload.
 
 \textbf{Perception Modes}
 The agent employs the modular \texttt{perception\_node.py}, switching between two specialized processors based on the mission phase:
 \begin{enumerate}
-    \item \textbf{Box Detection (\texttt{BoxDetectionProcessor}):} This processor isolates manipulatable objects from the background. It applies an HSV color mask to filter specific target colors (or iterates through all known colors for an "Any" search). It utilizes \texttt{cv2.findContours} to identify object blobs, filtering them by a minimum area threshold to reject sensor noise. The centroid of the largest valid contour is calculated using image moments (\texttt{cv2.moments}) to provide a steering target.
-    \item \textbf{Zone Detection (\texttt{ZoneDetectionProcessor}):} This processor is tuned to detect the flat, projected delivery zones on the floor. While similar to box detection, it uses distinct HSV ranges to account for the additive lighting nature of the projector and calculates the zone's center to ensure the robot drops the box inside the boundary.
+    \item \textbf{Box Detection (\texttt{BoxDetectionProcessor}):} This processor isolates manipulatable objects from the background. It applies an HSV color mask to filter target colors and utilizes \texttt{cv2.findContours} to identify object blobs, filtering them by a minimum area threshold to reject sensor noise. The centroid of the largest valid contour is calculated using image moments (\texttt{cv2.moments}) to provide a steering target.
+    \item \textbf{Zone Detection (\texttt{ZoneDetectionProcessor}):} This processor is tuned to detect the flat, projected delivery zones on the floor. While similar to box detection, it uses distinct HSV ranges and calculates the zone's center.
 \end{enumerate}
 
 To assist in debugging, the perception node publishes an annotated video stream (Figure \ref{fig:logistics_debug}). The system draws bounding contours around valid targets and overlays classification labels (e.g., "RED BOX", "Distance: 1.2m") and the active search status directly onto the feed.
 
-\begin{figure}[ht]
+\begin{figure}[H]
     \centering
     %\includegraphics[width=0.8\textwidth]{figures/logistics_perception_debug} 
     \caption{Debug view of the Logistics agent. The processor identifies a red transport box, drawing a contour around it and calculating the centroid (red dot) for the approach vector.}
@@ -411,29 +411,29 @@ To assist in debugging, the perception node publishes an annotated video stream 
 The mission logic is defined in \texttt{mission\_state\_machine.py} (Logistics variant) and implements a "Search-Retrieve-Deliver" loop. A key feature of this agent is the utilization of the YASMIN \textbf{Blackboard} to implement spatial memory, allowing the robot to learn the environment structure over time.
 
 \begin{enumerate}
-    \item \textbf{FindBox (Spiral Search):} The robot executes the \texttt{find\_box\_action\_server}. This generates a spiral pattern of waypoints using the Nav2 stack~\cite{NAV2Ref} to efficiently cover the floor plan. The robot navigates these waypoints until the \texttt{BoxDetectionProcessor} identifies a valid target in the camera's Region of Interest.
-    \item \textbf{AttachBox:} Upon reaching the target, the robot performs a precision approach. The \texttt{AttachBox} action sends a formatted string command (e.g., \texttt{"attach,box\_red"}) via the \texttt{/robot\_command} topic to the Unity \texttt{AttachmentCommandManager}, which kinematically locks the virtual box to the robot's chassis for stable transport.
-    \item \textbf{Spatial Memory Query:} Before searching for the destination, the agent queries the Blackboard. If the location of the matching delivery zone (e.g., "Red Zone") was discovered and cached during a previous traversal, the search phase is skipped.
+    \item \textbf{FindBox:} The robot executes the \texttt{find\_box\_action\_server}. This generates a spiral pattern of waypoints using the Nav2 stack~\cite{NAV2Ref} to efficiently cover the floor plan. The robot navigates these waypoints until the \texttt{BoxDetectionProcessor} identifies a valid target in the camera's Region of Interest.
+    \item \textbf{AttachBox:} Upon reaching the target, the robot performs a predefined approach. The \texttt{AttachBox} action sends a formatted string command (e.g., \texttt{"attach,box\_red"}) via the \texttt{/robot\_command} topic to the Unity \texttt{AttachmentCommandManager}, which kinematically locks the virtual box to the robot's chassis for transport.
+    \item \textbf{Spatial Memory Query:} Before searching for the destination, the agent queries the Blackboard. If the location of the matching delivery zone (e.g., "Red Zone") was discovered and cached during a previous traversal or was given by the user, the search phase is skipped.
     \item \textbf{FindDeliveryZone / NavigateToZone:} If the location is unknown, the robot triggers \texttt{FindDeliveryZone} to execute a new spiral search. If the location is known, it uses \texttt{NavigateToZone} to drive directly to the stored coordinates.
     \item \textbf{VerifyZoneColor (Recovery):} Upon arriving at the target, the robot executes the \texttt{VerifyZoneColor} action. This serves as a critical reliability check. If the camera view is obstructed (e.g., by the carried box) or odometry drift has occurred, the robot performs a "Spin Recovery" maneuver. It rotates 90 degrees left and right to re-acquire the visual target before confirming the drop.
     \item \textbf{DropBox:} Finally, the robot drives forward into the zone and triggers the detach command, releasing the object into the sorting area.
 \end{enumerate}
 
-\begin{figure}[ht]
+\begin{figure}[H]
     \centering
     %\includegraphics[width=0.8\textwidth]{figures/logistics_agent_fsm} 
     \caption{The Logistics Agent State Machine. The logic flows from searching for boxes to delivering them, utilizing the Blackboard to store and recall zone locations to optimize efficiency over time.}
     \label{fig:logistics_state_machine}
 \end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%fertig aber ai%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Agent 3: Line Follower}
 \label{subsec:agent_line}
 
 \textbf{Scenario Context}
-The Line Follower agent operates in an interactive playground where a human user can draw paths on the virtual ground in real-time. The robot must identify and track this line immediately. This scenario serves as a stress test for the system's end-to-end latency and validates the \textbf{Reactive Behavior (FR-22)} capability, as the path is not pre-calculated but defined dynamically by the user.
+The Line Follower agent operates in an interactive playground where a user using the robot, a mouse or in VR can draw paths on the virtual ground in real-time. The robot must identify and track this line immediately.
 
 \textbf{Perception Modes}
-Unlike the other agents, this implementation utilizes a dedicated, high-performance node: \texttt{line\_perception\_node.py}. This node is optimized for low-latency visual servoing:
+Unlike the other agents, this implementation utilizes the dedicated node \texttt{line\_perception\_node.py}:
 \begin{itemize}
     \item \textbf{ROI Cropping:} The image is cropped to the \textbf{bottom 50\% (configurable via parameters)}, focusing solely on the immediate path in front of the robot. This removes background noise and simplifies the processing required.
      \item \textbf{Line Fitting:} The processor applies a color threshold to isolate the high-contrast line drawn by the user. It then utilizes \texttt{cv2.fitLine} to fit a vector through the detected white pixels.
@@ -441,7 +441,7 @@ Unlike the other agents, this implementation utilizes a dedicated, high-performa
 \end{itemize}
 The debug view (Figure \ref{fig:line_debug}) visualizes the binary mask and overlays the calculated heading vector, allowing the operator to see the error terms driving the control loop.
 
-\begin{figure}[ht]
+\begin{figure}[H]
     \centering
     %\includegraphics[width=0.8\textwidth]{figures/line_perception_debug} 
     \caption{Debug view of the Line Follower. The system isolates the user-drawn path (binary mask) and fits a vector (blue line) to calculate lateral and angular errors for the PID controller.}
@@ -452,12 +452,12 @@ The debug view (Figure \ref{fig:line_debug}) visualizes the binary mask and over
 While the previous agents relied on the Nav2 stack~\cite{NAV2Ref} for motion planning, this agent implements a custom \textbf{Visual Servoing} control loop. The \texttt{mission\_state\_machine.py} orchestrates a three-stage sequence:
 
 \begin{enumerate}
-    \item \textbf{FindLine:} The robot executes a spiral search pattern using the \texttt{find\_line\_action\_server} to locate the start of the user-drawn path.
+    \item \textbf{FindLine:} The robot executes a spiral search pattern using the \texttt{find\_line\_action\_server} and Nav2 stack to locate the start of the user-drawn path.
     \item \textbf{AlignToLine:} Once the line is detected, the robot transitions to the \texttt{AlignToLine} action. The robot rotates in place (zero linear velocity) until the angular error returned by the perception node is minimized, ensuring the robot is parallel to the path before moving.
-    \item \textbf{FollowLine:} The robot engages a custom Proportional-Integral-Derivative (PID) controller implemented in \texttt{follow\_line\_action\_server.py}. This controller calculates velocity commands (\texttt{cmd\_vel}) directly from the perception error values. By bypassing the global path planning and costmap layers of ~\cite{NAV2Ref}, this direct control loop achieves the low latency required to react to sudden changes in the user-drawn line. If the line is erased or ends, the state machine transitions back to \texttt{FindLine} to search for a new path.
+    \item \textbf{FollowLine:} The robot engages a PID controller implemented in \texttt{follow\_line\_action\_server.py}. This controller calculates velocity commands (\texttt{cmd\_vel}) directly from the perception error values. By bypassing the global path planning and costmap layers of ~\cite{NAV2Ref}, this direct control loop achieves the low latency required to react to sudden changes in the user-drawn line. If the line is erased or ends, the state machine transitions back to \texttt{FindLine} to search for a new path.
 \end{enumerate}
 
-\begin{figure}[ht]
+\begin{figure}[H]
     \centering
     %\includegraphics[width=0.6\textwidth]{figures/line_follower_fsm} 
     \caption{The Line Follower State Machine. The logic ensures the robot first locates and aligns with the path before entering the high-speed PID following loop.}

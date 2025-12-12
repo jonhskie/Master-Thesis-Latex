@@ -37,8 +37,8 @@
 \contentsline {section}{\numberline {4.4}Environmental Simulation Capabilities}{37}{section.4.4}%
 \contentsline {subsection}{\numberline {4.4.1}Physics-Based Interaction}{37}{subsection.4.4.1}%
 \contentsline {subsection}{\numberline {4.4.2}Surface Modification}{38}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {4.4.3}Sensor Simulation}{38}{subsection.4.4.3}%
-\contentsline {subsection}{\numberline {4.4.4}Scenario and Object Management}{39}{subsection.4.4.4}%
+\contentsline {subsection}{\numberline {4.4.3}Sensor Simulation}{39}{subsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.4.4}Scenario and Object Management}{40}{subsection.4.4.4}%
 \contentsline {section}{\numberline {4.5}Mixed Reality and User Interaction}{41}{section.4.5}%
 \contentsline {subsection}{\numberline {4.5.1}Augmented Telemetry and Diagnosis}{41}{subsection.4.5.1}%
 \contentsline {subsection}{\numberline {4.5.2}Sensor Data Projection}{41}{subsection.4.5.2}%
