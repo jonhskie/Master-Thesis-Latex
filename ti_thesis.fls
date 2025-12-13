@@ -675,6 +675,11 @@ INPUT ./chapters/concept_implementation.tex
 INPUT ./chapters/concept_implementation.tex
 INPUT chapters/concept_implementation.tex
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/mathdesign/mdbch/mdbchri8t.tfm
+INPUT ./images/hardware_topology.png
+INPUT ./images/hardware_topology.png
+INPUT ./images/hardware_topology.png
+INPUT ./images/hardware_topology.png
+INPUT ./images/hardware_topology.png
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/mathdesign/mdbch/mdbchri8t.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/mathdesign/mdbch/md-chri8t.tfm
 INPUT ./chapters/evaluation.tex

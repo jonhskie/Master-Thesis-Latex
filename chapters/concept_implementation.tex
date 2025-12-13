@@ -4,7 +4,7 @@
 This chapter describes the development of the Mixed Reality Environment, a platform designed to support RitL testing by combining simulation with augmented reality projection. The resulting system bridges the gap between purely digital simulations and real-world experiments by creating a common workspace where physical robots and virtual objects coexist and interact.
 
 The central concept of this environment is the projection of a simulated world directly onto the laboratory floor. Rather than testing robots in completely physical setups or purely within software simulations, this system projects dynamic, physics-based elements into the real world. As can be seen from Figure \ref{fig:mr_environment_overview}, the physical robot moves across the real floor while sensing and acting upon virtual objects, such as a field, obstacles, or other entities. This projection has a dual purpose: it provides instant visual feedback to a human observer and enables the robot to receive synthetic sensor data that reflect the state of the virtual scene. This allows the robot to detect and respond to simulated entities as if they were physically present.
-
+\cite{ABBILDUNGFEHLT}
 \begin{figure}[H]
 \centering
 %\includegraphics[width=0.9\textwidth]{figures/mr_environment_overview} % Placeholder for your figure
@@ -73,35 +73,33 @@ Based on the comparative analysis, the Unity Engine was selected as the implemen
 \section{System Architecture}
 \label{sec:system_architecture}
 
-The realization of the Mixed Reality Environment requires a distributed software architecture that connects the advanced rendering capabilities of the Unity engine with real-time robotic control. The system is designed to satisfy the requirement for \textbf{Middleware Integration} (\hyperref[req:FR-04]{FR-04}) by establishing a one unified communication layer between the simulation host and the autonomous agents.
+The realization of the Mixed Reality Environment requires a distributed software architecture that connects the advanced rendering capabilities of the Unity engine with real-time robotic control. The system is designed to satisfy the requirement for \textbf{Middleware Integration} (\hyperref[req:FR-04]{FR-04}) by establishing a unified communication layer between the simulation host and the autonomous agents.
 
 \subsection{Hardware and Network Topology}
 \label{subsec:hardware_topology}
 
-To ensure high performance and support for specific hardware peripherals, the system topology is consolidated into a single high-performance workstation and the mobile robot. As shown in Figure \ref{fig:hardware_topology},  the architecture is divided into three clear computational domains:
+To ensure high performance and support for specific hardware peripherals, the system topology is consolidated into a single high-performance workstation acting as the central server, supported by distributed wireless clients. As shown in Figure \ref{fig:hardware_topology}, the architecture is divided into four distinct computational domains:
 
 \begin{enumerate}
-    \item \textbf{Simulation Host (Windows 11):} The Unity engine runs natively on Windows. This operating system was chosen due to currently missing support of VR interfaces in the Unity Editor under Linux. This layer manages the physics engine (PhysX), renders the digital twin, and communicates with the VR headset. Additionally, a projector is connected to this host to visualize the environment on the physical floor \cite{PLACEHOLDER_HARDWARE_SETUP}.
+    \item \textbf{Workstation (Windows 11 Host):} The primary host runs Windows 11 to support the Unity Engine and the \textbf{ALVR (Air Light VR) Server}~\cite{ALVR_Github} natively. This layer manages the physics engine (PhysX) and renders the digital twin. It physically interfaces with the visual peripherals: a ceiling-mounted \textbf{Projector} via HDMI for floor projection and an \textbf{Overhead Tracking Camera} via USB to provide localization data.
     
-    \item \textbf{Control Environment (WSL/Ubuntu):} ROS~2~Jazzy runs within the Windows Subsystem for Linux within Ubuntu 24.04. This environment hosts the computationally intensive software, such as the autonomous navigation stack Nav2~\cite{NAV2Ref} and the mission logic agents. Running these components directly on the robot causes performance issues or system crashes due to limited onboard resources, so they are offloaded to the workstation to ensure stable and responsive operation.
+    \item \textbf{Control Environment (WSL 2):} The computationally intensive robotic software runs within the Windows Subsystem for Linux (Ubuntu 24.04) on the same workstation. This isolation allows the \textit{Nav2 Stack}, \textit{Agent Mission Logic}, and the \textit{ArUco Tracking System} to run in a native Linux environment while communicating with the Windows host via a low-latency \textbf{Localhost} connection.
     
-    \item \textbf{Physical Robot (Hardware Layer):} The EMAROs~\cite{EMAROs_Ref} robot operates as an independent node in the network. It uses Ubuntu 24.04 and runs ROS~2~Jazzy on an onboard Raspberry Pi to handle hardware drivers, such as motor controllers and IMU sensors. It connects to the workstation via Wi-Fi.
+    \item \textbf{Physical Robot (EMAROs):} The mobile robot operates as an independent node running Ubuntu 24.04 and ROS~2~Jazzy Jalisco. The onboard software is orchestrated by the \texttt{emaros\_launch} package, which manages hardware drivers for motor controllers and sensors. It connects to the system wirelessly via Wi-Fi.
+
+    \item \textbf{VR Interface (Meta Quest Pro):} The VR headset functions as a standalone thin client running \textbf{Meta Horizon OS}. It executes the \textbf{ALVR Client}~\cite{ALVR_Github} application, which is responsible for decoding the incoming video stream and handling spatial input.
 \end{enumerate}
 
 \begin{figure}[H]
     \centering
-    % TODO: Create a diagram showing:
-    % 1. PC Box (split into Windows and WSL sections).
-    % 2. Windows connected to Projector (HDMI) and VR Headset (Wi-Fi).
-    % 3. WSL connected to the internal network (localhost).
-    % 4. Robot connected via Wi-Fi to the Router.
-    %\includegraphics[width=1.0\textwidth]{figures/hardware_topology} 
-    \caption{Hardware and Network Topology. The workstation handles both the Unity simulation (Windows) and the heavy control logic (Ubuntu/WSL) to preserve the robot's onboard resources. The robot, VR headset, and projector connect as peripherals to this central core.}
+    \includegraphics[width=1.0\textwidth]{images/hardware_topology.png}
+    \caption{Hardware and Network Topology. The workstation acts as the central computation unit, hosting the Unity simulation on Windows and the autonomous navigation stack within WSL. The physical robot and VR headset communicate via Wi-Fi through a central router, while visual peripherals interface directly with the Windows host.}
     \label{fig:hardware_topology}
 \end{figure}
 
-For the VR interface (\hyperref[req:FR-16]{FR-16}), the visual output from Unity is streamed via Wi-Fi to the Meta Quest Pro headset using ALVR~\cite{ALVR_Github}, an open-source streaming solution. This setup allows the user to move freely without a cable tether.
+The VR integration (\hyperref[req:FR-16]{FR-16}) relies on ALVR, an open-source remote rendering solution that splits the computational workload. The \textbf{ALVR Server}, running on the high-performance Windows workstation, captures the rendered frames from Unity and encodes them into a high-bitrate video stream. This stream is transmitted via Wi-Fi to the \textbf{ALVR Client} on the Meta Quest Pro. The headset decodes and displays this video feed while simultaneously capturing 6-DoF (Six Degrees of Freedom) head-tracking data and controller inputs, which are transmitted back to the server in real-time.~\cite{ALVR_Github}
 
+The network infrastructure is centered around a dedicated \textbf{Router}. The workstation is connected via \textbf{Ethernet} to ensure a stable high-bandwidth connection for the simulation server, while the EMAROs robot and Meta Quest Pro connect via \textbf{Wi-Fi}. This topology ensures that latency-sensitive traffic, such as the ALVR video stream and ROS~2 control commands, faces minimal interference.
 \subsection{Software Component Architecture}
 \label{subsec:software_components}
 

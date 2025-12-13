@@ -12,6 +12,7 @@
 \contentsline {figure}{\numberline {2.11}{\ignorespaces Original VERA visualization via Pygame, showing a projection of the robot's path and virtual obstacles onto the floor.~\blx@tocontentsinit {0}\cite {Geh24}}}{17}{figure.2.11}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Hardware and Network Topology. The workstation acts as the central computation unit, hosting the Unity simulation on Windows and the autonomous navigation stack within WSL. The physical robot and VR headset communicate via Wi-Fi through a central router, while visual peripherals interface directly with the Windows host.}}{31}{figure.4.2}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

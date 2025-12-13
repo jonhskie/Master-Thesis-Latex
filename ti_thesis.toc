@@ -26,28 +26,28 @@
 \contentsline {subsection}{\numberline {4.1.1}Selection Rationale}{29}{subsection.4.1.1}%
 \contentsline {section}{\numberline {4.2}System Architecture}{30}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}Hardware and Network Topology}{30}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Software Component Architecture}{31}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Time Synchronization}{32}{subsection.4.2.3}%
-\contentsline {section}{\numberline {4.3}Robot Representation and Control}{32}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}The Purely Virtual Robot}{33}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}The Digital Twin Implementation}{33}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Safety and Failsafe Mechanisms}{34}{subsection.4.3.3}%
-\contentsline {section}{\numberline {4.4}Environmental Simulation Capabilities}{34}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Physics-Based Interaction}{35}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Surface Modification}{36}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {4.4.3}Sensor Simulation}{36}{subsection.4.4.3}%
-\contentsline {subsection}{\numberline {4.4.4}Scenario and Object Management}{37}{subsection.4.4.4}%
-\contentsline {section}{\numberline {4.5}Mixed Reality and User Interaction}{38}{section.4.5}%
-\contentsline {subsection}{\numberline {4.5.1}Environment Projection}{38}{subsection.4.5.1}%
-\contentsline {subsection}{\numberline {4.5.2}Augmented Telemetry and Diagnosis}{39}{subsection.4.5.2}%
-\contentsline {subsection}{\numberline {4.5.3}Sensor Data Projection}{39}{subsection.4.5.3}%
-\contentsline {subsection}{\numberline {4.5.4}Interactive Control Interfaces}{40}{subsection.4.5.4}%
-\contentsline {section}{\numberline {4.6}Implementation of Autonomous Agents}{41}{section.4.6}%
-\contentsline {subsection}{\numberline {4.6.1}Navigation and Control Stack}{41}{subsection.4.6.1}%
-\contentsline {subsection}{\numberline {4.6.2}Modular Perception Stack}{42}{subsection.4.6.2}%
-\contentsline {subsection}{\numberline {4.6.3}Agent 1: Smart Farming}{42}{subsection.4.6.3}%
-\contentsline {subsection}{\numberline {4.6.4}Agent 2: Logistics}{44}{subsection.4.6.4}%
-\contentsline {subsection}{\numberline {4.6.5}Agent 3: Line Follower}{46}{subsection.4.6.5}%
+\contentsline {subsection}{\numberline {4.2.2}Software Component Architecture}{32}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Time Synchronization}{33}{subsection.4.2.3}%
+\contentsline {section}{\numberline {4.3}Robot Representation and Control}{34}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}The Purely Virtual Robot}{34}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}The Digital Twin Implementation}{35}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Safety and Failsafe Mechanisms}{35}{subsection.4.3.3}%
+\contentsline {section}{\numberline {4.4}Environmental Simulation Capabilities}{36}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Physics-Based Interaction}{36}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Surface Modification}{37}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Sensor Simulation}{37}{subsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.4.4}Scenario and Object Management}{38}{subsection.4.4.4}%
+\contentsline {section}{\numberline {4.5}Mixed Reality and User Interaction}{39}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Environment Projection}{39}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Augmented Telemetry and Diagnosis}{40}{subsection.4.5.2}%
+\contentsline {subsection}{\numberline {4.5.3}Sensor Data Projection}{40}{subsection.4.5.3}%
+\contentsline {subsection}{\numberline {4.5.4}Interactive Control Interfaces}{41}{subsection.4.5.4}%
+\contentsline {section}{\numberline {4.6}Implementation of Autonomous Agents}{42}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Navigation and Control Stack}{42}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.2}Modular Perception Stack}{43}{subsection.4.6.2}%
+\contentsline {subsection}{\numberline {4.6.3}Agent 1: Smart Farming}{44}{subsection.4.6.3}%
+\contentsline {subsection}{\numberline {4.6.4}Agent 2: Logistics}{45}{subsection.4.6.4}%
+\contentsline {subsection}{\numberline {4.6.5}Agent 3: Line Follower}{47}{subsection.4.6.5}%
 \contentsline {chapter}{\numberline {5}Evaluation}{49}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Methodology}{50}{section.5.1}%
 \contentsline {subsection}{\numberline {5.1.1}Hardware Setup}{50}{subsection.5.1.1}%
