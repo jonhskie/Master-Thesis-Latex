@@ -44,7 +44,7 @@ The simulation engines that were considered as candidates to implement the Mixed
         \midrule
         \textbf{Primary Use} & Control \& Navigation & AI \& Photorealism & Photorealism & HRI \& MR (VR/AR) \\ 
         \textbf{Visual Fidelity} & Moderate & Very High & Very High & High \\ 
-        \textbf{Physics Engine} & ODE / Bullet & PhysX 5 (GPU) & Chaos / PhysX & PhysX \\ 
+        \textbf{Physics Engine} & ODE / Bullet & PhysX 5 & Chaos / PhysX & PhysX \\ 
         \textbf{Learning Curve} & Steep & Advanced & Steep (C++) & Moderate (C\#) \\ 
         \textbf{Community} & High (ROS) & Moderate & High (Gaming) & Very High (MR) \\ 
         \textbf{ROS~2 Integ.} & Native & Bridge & Bridge & Plugin (Native) \\ 
@@ -336,7 +336,7 @@ This agent operates in a simulated farm with an agricultural field. The goal is 
 \textbf{Perception Modes}
 The agent utilizes four distinct perception processors depending on the active state:
 \begin{enumerate}
-    \item \textbf{FieldDetection (\texttt{FieldDetectionProcessor}):} Determines if the robot is currently on arable land by calculating the ratio of field-colored pixels in the image using HSV thresholding.
+    \item \textbf{FieldDetection (\texttt{FieldDetectionProcessor}):} Determines if the robot is currently on arable land by calculating the ratio of field-colored pixels in the image using Hue Saturation Value (HSV) thresholding.
     \item \textbf{EdgeDetection (\texttt{EdgeDetectionProcessor}):} Used during the approach phase. It creates binary masks for both field and its surrounding outer textures. By applying morphological dilation to the field mask and computing the bitwise AND with the outer mask, it identifies the boundary line where the two textures meet.
     \item \textbf{EdgeAdjustment \& EdgeFollowing:} Implemented via two processors (\texttt{Edge\-Adjustment\-Processor} and \texttt{EdgeFollowingProcessor}), these modules are used for precise alignment and tracking. They utilize the Probabilistic Hough Transform (\texttt{cv2.HoughLinesP}) to find line segments along the detected boundary, calculating the robot's \textit{lateral error} (distance from the line centroid to image center) and \textit{angular error} (deviation from vertical).
     \item \textbf{EquipmentDetection (\texttt{EquipmentDetectionProcessor}):} Active during tool search. It isolates specific tool colors (e.g., yellow for harvester) using HSV masking and calculates the object's centroid to guide the docking approach.
@@ -359,7 +359,7 @@ The mission is governed by a hierarchical YASMIN state machine \cite{YASMIN} (Fi
     \item \textbf{CheckOnField:} The robot searches the field using a spiral search pattern until it verifies it is inside the field boundaries.
     \item \textbf{DriveToEdge:} The robot drives forward until the \texttt{EdgeDetectionProcessor} identifies a field boundary. It then executes a forward drive for a calibrated distance (e.g., 20cm) to account for the camera's blind spot, ensuring the robot's center of rotation is aligned with the edge.
     \item \textbf{AdjustToEdge:} The robot rotates in place until the \texttt{EdgeAdjustmentProcessor} confirms that the edge line is vertical (angular error near zero) and centered.
-    \item \textbf{FollowEdge (Mapping):} The robot circumnavigates the field by tracing its boundary. A PID controller using the lateral error computes the required velocity commands and steers the robot. Crucially, this action detects field corners by monitoring the robot's odometry. A sharp change in yaw (approx. 90 degrees) triggers the recording of the robot's current pose. Once four corners are recorded, the field boundary is defined.
+    \item \textbf{FollowEdge (Mapping):} The robot circumnavigates the field by tracing its boundary. A Proportional Integral Derivative (PID) controller using the lateral error computes the required velocity commands and steers the robot. Crucially, this action detects field corners by monitoring the robot's odometry. A sharp change in yaw (approx. 90 degrees) triggers the recording of the robot's current pose. Once four corners are recorded, the field boundary is defined.
 \end{enumerate}
 
 \textbf{Phase 2: Equipment Cycle}
