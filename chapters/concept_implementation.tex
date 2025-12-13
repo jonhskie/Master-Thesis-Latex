@@ -61,9 +61,9 @@ Based on the comparative analysis, the Unity Engine was selected as the implemen
     
     \item \textbf{Visual Fidelity \& Physics} (\hyperref[req:FR-01]{FR-01}, \hyperref[req:FR-02]{FR-02}): Unity provides high-fidelity visualization alongside PhysX integration. This offers an optimal balance between performance and visual quality, avoiding the restrictive hardware requirements associated with NVIDIA Isaac Sim~\cite{Gonzalez2025}.
     
-    \item \textbf{Development Efficiency:} The use of C\# scripting, combined with documentation and community support, makes Unity more accessible for rapid prototyping than the C++ environment of Unreal Engine~\cite{Coronado2023}.
+    \item \textbf{Development Efficiency}: The use of C\# scripting, combined with documentation and community support, makes Unity more accessible for rapid prototyping than the C++ environment of Unreal Engine~\cite{Coronado2023}.
 
-    \item \textbf{ROS~2 Integration} (\hyperref[req:FR-04]{FR-04}): The availability of the \texttt{ros2-for-unity} ~\cite{Rob24} asset enables the simulation to function as a first-party participant in the ROS~2 network. This means it supports the low-latency communication requirement by avoiding external bridge applications.
+    \item \textbf{ROS~2 Integration} (\hyperref[req:FR-04]{FR-04}): The availability of the \texttt{Ros2ForUnity}~\cite{Rob24} asset enables the simulation to function as a first-party participant in the ROS~2 network. This means it supports the low-latency communication requirement by avoiding external bridge applications.
 \end{itemize}
 
 
@@ -109,7 +109,7 @@ The software architecture follows a modular publisher-subscriber pattern. To int
 
 To facilitate modularity, the implementation relies on Unity's component-based architecture. In this framework, entities within the simulation, such as the robot or the environment, are represented as \texttt{GameObjects}. These objects function as containers that hold various functional modules known as \textit{components}. By inheriting from Unity's base class \texttt{MonoBehaviour}, C\# scripts become components that can be attached to these \texttt{GameObjects} to define their behavior.
 
-The core of the network integration is the ROS2UnityComponent~\cite{ROS2ForUnityDocs} class. This component acts as a wrapper around the standard ROS~2 middleware. Inheriting from \texttt{MonoBehaviour}, it must be attached to a \texttt{GameObject} in the scene to function. Upon startup, this component initializes the ROS~2 context, makes sure that a valid connection is established, and handles the lifecycle of the ROS~2 nodes running within the simulation. It allows other scripts to access the ROS~2 network by referencing this central component to create publishers, subscribers, and service clients.
+The core of the network integration is the \texttt{ROS2UnityComponent}~\cite{ROS2ForUnityDocs} class. This component acts as a wrapper around the standard ROS~2 middleware. Inheriting from \texttt{MonoBehaviour}, it must be attached to a \texttt{GameObject} in the scene to function. Upon startup, this component initializes the ROS~2 context, makes sure that a valid connection is established, and handles the lifecycle of the ROS~2 nodes running within the simulation. It allows other scripts to access the ROS~2 network by referencing this central component to create publishers, subscribers, and service clients.
 
 The functionality of the digital twin is driven by such scripts that interact with the engine's internal state machine. To ensure that physical simulation remains deterministic while visualization remains smooth, the architecture uses specific phases of the Unity execution loop~\cite{UnityDocumentation}:
 
@@ -250,7 +250,7 @@ This fresh start approach ensures that Unity components specific to one scenario
 
 Beyond static geometry, the environment must support the lifecycle management of transient entities, such as the delivery boxes in the Logistics scenario. This is handled by the \texttt{DynamicObjectManager}, which acts as a bridge between the ROS~2 data stream and the Unity instantiation engine (\hyperref[req:FR-13]{FR-13}).
 
-The manager subscribes to the \texttt{/vera/virtual\_objects} topic, processing a custom message structure that defines an object's ID, type, and pose. Internally, the system maintains a dictionary mapping string identifiers (e.g., "box\_red", "obstacle\_A") to Unity Prefabs.
+The manager subscribes to the \texttt{/vera/virtual\_objects} topic, processing a custom message structure that defines an object's ID, type, and pose. Internally, the system maintains a dictionary mapping string identifiers to Unity Prefabs.
 When an \texttt{ADD} or \texttt{MODIFY} command is received, the system checks if the object already exists. If it is new, the corresponding prefab is instantiated into the scene. If it exists, its transform is updated. Crucially, this component handles the coordinate conversion between the two systems, mapping the right-handed ROS position and orientation to the left-handed Unity world space. This allows external scripts or test runners to populate the scene with obstacles dynamically.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%FETIG ABER AI%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Mixed Reality and User Interaction}
@@ -260,11 +260,11 @@ A primary objective of the framework is to enhance the transparency of the robot
 \subsection{Environment Projection}
 \label{subsec:environment_projection}
 
-To fulfill the requirement for a 1:1 Augmented Reality projection (\hyperref[req:FR-15]{FR-15}), the system utilizes a dedicated Unity camera component configured in orthographic projection mode \cite{UnityDocumentation}. Unlike perspective cameras, the orthographic view preserves parallel lines and consistent object scales regardless of their distance from the camera\cite{UnityDocumentation}. This property is essential for projecting a map that aligns physically with the flat laboratory floor.
+To fulfill the requirement for a 1:1 Augmented Reality projection (\hyperref[req:FR-15]{FR-15}), the system utilizes a dedicated Unity camera component configured to \texttt{orthographic}~\cite{UnityDocumentation}. Unlike perspective cameras, the orthographic view preserves parallel lines and consistent object scales regardless of their distance from the camera\cite{UnityDocumentation}. This property is essential for projecting a map that aligns physically with the flat laboratory floor.
 
-The camera is positioned at a fixed height looking downward. The alignment with the physical floor is achieved by calculating the exact \textit{Orthographic Size} parameter, which determines the vertical half-extent of the camera's viewing volume in world units \cite{UnityDocumentation}. By mapping the pixel resolution of the projector to the metric dimensions of the projection area, the system ensures that one unit in the simulation corresponds exactly to one meter on the physical floor.
+The camera is positioned at a fixed height looking downward. The alignment with the physical floor is achieved by calculating the exact \texttt{orthographicSize} parameter, which determines the vertical half-extent of the camera's viewing volume in world units \cite{UnityDocumentation}. By mapping the pixel resolution of the projector to the metric dimensions of the projection area, the system ensures that one unit in the simulation corresponds exactly to one meter on the physical floor.
 
-To display this view on the physical floor, the ceiling-mounted projector acts as a secondary monitor for the workstation. During operation, the Game View window within the Unity Editor is undocked, moved to the projector's screen space, and maximized to fill the projection area.
+To display this view on the physical floor, the ceiling-mounted projector acts as a secondary monitor for the workstation. During operation, the \textit{Game View} window within the Unity Editor is undocked, moved to the projector's screen space, and maximized to fill the projection area.
 
 \subsection{Augmented Telemetry and Diagnosis}
 
@@ -311,11 +311,11 @@ The high-level decision-making for all agents is orchestrated using YASMIN (Yet 
 \subsection{Navigation and Control Stack}
 \label{subsec:nav_stack}
 
-The fundamental capability of movement is provided by the \textit{Navigation2 (Nav2)} stack~\cite{NAV2Ref} (\hyperref[req:FR-17]{FR-17}). To address the varying physical characteristics of the simulated versus the physical robot, the architecture employs a dual-configuration strategy. Two distinct parameter sets—\texttt{nav2\_params\_virtual.yaml} and \texttt{nav2\_params\_robot.yaml}—are maintained. While they share the same behavioral tree structure, they utilize different tuning for inflation radii and cost scaling to account for the physical robot's safety margins and sensor noise. The appropriate parameter set is selected automatically at launch time based on the active system mode (Simulation vs. Robot-in-the-Loop), ensuring the navigation stack is always tuned to the current constraints.
+The fundamental capability of movement is provided by the Nav2 stack~\cite{NAV2Ref} (\hyperref[req:FR-17]{FR-17}). To address the varying physical characteristics of the simulated versus the physical robot, the architecture employs a dual-configuration strategy. Two distinct parameter sets—\texttt{nav2\_params\_virtual.yaml} and \texttt{nav2\_params\_robot.yaml}—are maintained. While they share the same behavioral tree structure, they utilize different tuning for inflation radii and cost scaling to account for the physical robot's safety margins and sensor noise. The appropriate parameter set is selected automatically at launch time based on the active system mode (Simulation vs. Robot-in-the-Loop), ensuring the navigation stack is always tuned to the current constraints.
 
-A critical design choice in the controller configuration is the use of the \texttt{RotationShimController} wrapping the \texttt{DWB Local Planner}. Standard differential drive controllers often attempt to execute arc turns. In the confined space of the projection area, these arcs would cause the robot's footprint to collide with the costmap. The Rotation Shim intercepts navigation commands and forces the robot to rotate in place to align with the path heading before attempting to move forward. This ensures that the robot can maneuver in confined spaces where the available turning radius is smaller than the robot's kinematic limits.
+A critical design choice in the controller configuration is the use of the \texttt{RotationShimController} wrapping the \texttt{DWBLocalPlanner}. Standard differential drive controllers often attempt to execute arc turns. In the confined space of the projection area, these arcs would cause the robot's footprint to collide with the costmap. The \texttt{RotationShimController} intercepts navigation commands and forces the robot to rotate in place to align with the path heading before attempting to move forward. This ensures that the robot can maneuver in confined spaces where the available turning radius is smaller than the robot's kinematic limits.
 
-To ensure that the robot does not collide with virtual object during autonomous operation, a \texttt{Collision Monitor} node runs in parallel with the navigation stack. Configured with a defined polygon representing the robot's footprint plus a safety margin, this node monitors the virtual LiDAR stream of the robot directly. If an obstacle breaches the safety polygon, the monitor overrides the navigation stack and publishes a zero-velocity command to the motor controller, acting as a software-level emergency stop.
+To ensure that the robot does not collide with virtual object during autonomous operation, a \textit{Collision Monitor} node runs in parallel with the navigation stack. Configured with a defined polygon representing the robot's footprint plus a safety margin, this node monitors the virtual LiDAR stream of the robot directly. If an obstacle breaches the safety polygon, the monitor overrides the navigation stack and publishes a zero-velocity command to the motor controller, acting as a software-level emergency stop.
 
 \subsection{Modular Perception Stack}
 \label{subsec:perception_architecture}
@@ -336,10 +336,10 @@ This agent operates in a simulated farm with an agricultural field. The goal is 
 \textbf{Perception Modes}
 The agent utilizes four distinct perception processors depending on the active state:
 \begin{enumerate}
-    \item \textbf{Field Detection (\texttt{FieldDetectionProcessor}):} Determines if the robot is currently on arable land by calculating the ratio of field-colored pixels in the image using HSV thresholding.
-    \item \textbf{Edge Detection (\texttt{EdgeDetectionProcessor}):} Used during the approach phase. It creates binary masks for both field and its surrounding outer textures. By applying morphological dilation to the field mask and computing the bitwise AND with the outer mask, it identifies the boundary line where the two textures meet.
-    \item \textbf{Edge Adjustment \& Following:} Implemented via two processors (\texttt{EdgeAdjustmentProcessor} and \texttt{EdgeFollowingProcessor}), these modules are used for precise alignment and tracking. They utilize the Probabilistic Hough Transform (\texttt{cv2.HoughLinesP}) to find line segments along the detected boundary, calculating the robot's \textit{lateral error} (distance from the line centroid to image center) and angular error (deviation from vertical).
-    \item \textbf{Equipment Detection (\texttt{EquipmentDetectionProcessor}):} Active during tool search. It isolates specific tool colors (e.g., yellow for harvester) using HSV masking and calculates the object's centroid to guide the docking approach.
+    \item \textbf{FieldDetection (\texttt{FieldDetectionProcessor}):} Determines if the robot is currently on arable land by calculating the ratio of field-colored pixels in the image using HSV thresholding.
+    \item \textbf{EdgeDetection (\texttt{EdgeDetectionProcessor}):} Used during the approach phase. It creates binary masks for both field and its surrounding outer textures. By applying morphological dilation to the field mask and computing the bitwise AND with the outer mask, it identifies the boundary line where the two textures meet.
+    \item \textbf{EdgeAdjustment \& EdgeFollowing:} Implemented via two processors (\texttt{EdgeAdjustmentProcessor} and \texttt{EdgeFollowingProcessor}), these modules are used for precise alignment and tracking. They utilize the Probabilistic Hough Transform (\texttt{cv2.HoughLinesP}) to find line segments along the detected boundary, calculating the robot's \textit{lateral error} (distance from the line centroid to image center) and \textit{angular error} (deviation from vertical).
+    \item \textbf{EquipmentDetection (\texttt{EquipmentDetectionProcessor}):} Active during tool search. It isolates specific tool colors (e.g., yellow for harvester) using HSV masking and calculates the object's centroid to guide the docking approach.
 \end{enumerate}
 
 The real-time debug stream (Figure \ref{fig:farm_debug}) visualizes these detections, overlaying the regression line (green) or the equipment bounding box (blue) onto the camera feed.
@@ -401,21 +401,21 @@ To assist in debugging, the perception node publishes an annotated video stream 
 \end{figure}
 
 \textbf{State Machine Logic}
-The mission logic is defined in \texttt{mission\_state\_machine.py} (Logistics variant) and implements a "Search-Retrieve-Deliver" loop. A key feature of this agent is the utilization of the YASMIN \textbf{Blackboard} \cite{YASMIN} to implement spatial memory, allowing the robot to learn the environment structure over time.
+The mission logic is defined in \texttt{mission\_state\_machine.py} (Logistics variant) and implements a "Search-Retrieve-Deliver" loop. A key feature of this agent is the utilization of the YASMIN blackboard \cite{YASMIN} to implement spatial memory, allowing the robot to learn the environment structure over time.
 
 \begin{enumerate}
     \item \textbf{FindBox:} The robot executes the \texttt{find\_box\_action\_server}. This generates a spiral pattern of waypoints using the Nav2 stack~\cite{NAV2Ref} to efficiently cover the floor plan. The robot navigates these waypoints until the \texttt{BoxDetectionProcessor} identifies a valid target in the camera's Region of Interest.
     \item \textbf{AttachBox:} Upon reaching the target, the robot performs a predefined approach. The \texttt{AttachBox} action sends a string command via the \texttt{/robot\_command} topic to the Unity \texttt{AttachmentCommandManager}, which kinematically locks the virtual box to the robot's chassis for transport.
-    \item \textbf{Spatial Memory Query:} Before searching for the destination, the agent queries the Blackboard. If the location of the matching delivery zone (e.g., \texttt{Red Zone}) was discovered and cached during a previous traversal or was given by the user, the search phase is skipped.
+    \item \textbf{Spatial Memory Query:} Before searching for the destination, the agent queries the blackboard. If the location of the matching colored delivery zone was discovered and cached during a previous traversal or was given by the user, the search phase is skipped.
     \item \textbf{FindDeliveryZone / NavigateToZone:} If the location is unknown, the robot triggers \texttt{FindDeliveryZone} to execute a new spiral search. If the location is known, it uses \texttt{NavigateToZone} to drive directly to the stored coordinates.
-    \item \textbf{VerifyZoneColor (Recovery):} Upon arriving at the target, the robot executes the \texttt{VerifyZoneColor} action. This serves as a critical reliability check. If the camera view is obstructed (e.g., by the carried box) or odometry drift has occurred, the robot performs a "Spin Recovery" maneuver. It rotates 90 degrees left and right to re-acquire the visual target before confirming the drop.
+    \item \textbf{VerifyZoneColor (Recovery):} Upon arriving at the target, the robot executes the \texttt{VerifyZoneColor} action. This serves as a critical reliability check. If the camera view is obstructed (e.g., by the carried box) or odometry drift has occurred, the robot performs a spin recovery maneuver. It rotates 90 degrees left and right to re-acquire the visual target before confirming the drop.
     \item \textbf{DropBox:} Finally, the robot drives forward into the zone and triggers the detach command via the \texttt{/robot\_command}, releasing the object into the sorting area.
 \end{enumerate}
 
 \begin{figure}[H]
     \centering
     %\includegraphics[width=0.8\textwidth]{figures/logistics_agent_fsm} 
-    \caption{The Logistics Agent State Machine. The logic flows from searching for boxes to delivering them, utilizing the Blackboard to store and recall zone locations to optimize efficiency over time.}
+    \caption{The Logistics Agent State Machine. The logic flows from searching for boxes to delivering them, utilizing the blackboard to store and recall zone locations to optimize efficiency over time.}
     \label{fig:logistics_state_machine}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%fertig aber ai%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -442,7 +442,7 @@ The debug view (Figure \ref{fig:line_debug}) visualizes the binary mask and over
 \end{figure}
 
 \textbf{State Machine Logic}
-While the previous agents relied on the Nav2 stack~\cite{NAV2Ref} for motion planning, this agent implements a custom \textbf{Visual Servoing} control loop. The \texttt{mission\_state\_machine.py} orchestrates a three-stage sequence:
+While the previous agents relied on the \Nav2 stack~\cite{NAV2Ref} for motion planning, this agent implements a custom \textbf{Visual Servoing} control loop. The \texttt{mission\_state\_machine.py} orchestrates a three-stage sequence:
 
 \begin{enumerate}
     \item \textbf{FindLine:} The robot executes a spiral search pattern using the \texttt{find\_line\_action\_server} and Nav2 stack to locate the start of the user-drawn path.

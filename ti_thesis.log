@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.20)  13 DEC 2025 01:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.20)  13 DEC 2025 02:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1278,11 +1278,7 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'english'.
- (./ti_thesis.aux (./chapters/deckblatt.aux) (./chapters/abstract.aux) (./chapters/introduction.aux) (./chapters/foundations_related_work.aux
-
-LaTeX Warning: Label `sec:DT' multiply defined.
-
-) (./chapters/requirements.aux) (./chapters/concept_implementation.aux) (./chapters/evaluation.aux) (./chapters/conclusion_outlook.aux))
+ (./ti_thesis.aux)
 \openout1 = `ti_thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
@@ -1467,7 +1463,6 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\\' on input line 31.
 
 Package hyperref Info: Link coloring ON on input line 31.
-(./ti_thesis.out) (./ti_thesis.out)
 \@outlinefile=\write5
 \openout5 = `ti_thesis.out'.
 
@@ -1479,7 +1474,7 @@ Class scrbook Info: loading recommended package `bookmark'.
 (scrbook)           you can avoid this message adding:
 (scrbook)             \usepackage{bookmark}
 (scrbook)           before \begin{document} on input line 31.
- (/usr/share/texlive/texmf-dist/tex/latex/bookmark/bookmark.sty
+(/usr/share/texlive/texmf-dist/tex/latex/bookmark/bookmark.sty
 Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
  (/usr/share/texlive/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
 File: bkm-pdftex.def 2023-12-10 v1.31 bookmark driver for pdfTeX and luaTeX (HO)
@@ -1526,82 +1521,12 @@ LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 
 ]
 Package tocbasic Info: character protrusion at toc deactivated on input line 36.
- (./ti_thesis.toc
-LaTeX Font Info:    Trying to load font information for OT1+mdbch on input line 4.
- (/usr/share/texlive/texmf-dist/tex/latex/mathdesign/mdbch/ot1mdbch.fd
-File: ot1mdbch.fd 2013/08/29 Fontinst v1.933 font definitions for OT1/mdbch.
-)
-LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
-(Font)              scaled to size 11.52008pt on input line 4.
-LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 4.
-LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 4.
-LaTeX Font Info:    Trying to load font information for OML+mdbch on input line 4.
- (/usr/share/texlive/texmf-dist/tex/latex/mathdesign/mdbch/omlmdbch.fd
-File: omlmdbch.fd 2013/08/29 Fontinst v1.933 font definitions for OML/mdbch.
-)
-LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
-(Font)              scaled to size 11.52008pt on input line 4.
-LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
-(Font)              scaled to size 7.68005pt on input line 4.
-LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
-(Font)              scaled to size 5.76004pt on input line 4.
-LaTeX Font Info:    Trying to load font information for OMS+mdbch on input line 4.
- (/usr/share/texlive/texmf-dist/tex/latex/mathdesign/mdbch/omsmdbch.fd
-File: omsmdbch.fd 2013/08/29 Fontinst v1.933 font definitions for OMS/mdbch.
-)
-LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
-(Font)              scaled to size 11.52008pt on input line 4.
-LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 4.
-LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 4.
-LaTeX Font Info:    Trying to load font information for OMX+mdbch on input line 4.
- (/usr/share/texlive/texmf-dist/tex/latex/mathdesign/mdbch/omxmdbch.fd
-File: omxmdbch.fd 2013/08/29 Fontinst v1.933 font definitions for OMX/mdbch.
-)
-LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 11.52008pt on input line 4.
-LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 4.
-LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 4.
-LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
-(Font)              scaled to size 11.52008pt on input line 4.
-LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 4.
-LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 4.
-LaTeX Font Info:    Trying to load font information for MDA+mdbch on input line 4.
- (/usr/share/texlive/texmf-dist/tex/latex/mathdesign/mdbch/mdamdbch.fd
-File: mdamdbch.fd 2013/08/29 Fontinst v1.933 font definitions for MDA/mdbch.
-)
-LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
-(Font)              scaled to size 11.52008pt on input line 4.
-LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 4.
-LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 4.
-LaTeX Font Info:    Trying to load font information for MDB+mdbch on input line 4.
- (/usr/share/texlive/texmf-dist/tex/latex/mathdesign/mdbch/mdbmdbch.fd
-File: mdbmdbch.fd 2013/08/29 Fontinst v1.933 font definitions for MDB/mdbch.
-)
-LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
-(Font)              scaled to size 11.52008pt on input line 4.
-LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 4.
-LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 4.
- [5]
-LaTeX Font Info:    Font shape `T1/mdbch/m/sl' will be
-(Font)              scaled to size 11.52008pt on input line 68.
- [6
-design size mismatch in local font md-chro8t in virtual font mdbchro8t.vf ignored.])
+
+No file ti_thesis.toc.
 \tf@toc=\write6
 \openout6 = `ti_thesis.toc'.
 
- [7] [8
+[5] [6
 
 
 ]
@@ -1616,7 +1541,10 @@ chapter 1.
 ]
 LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
 (Font)              scaled to size 11.52008pt on input line 13.
- [2]
+LaTeX Font Info:    Font shape `T1/mdbch/m/sl' will be
+(Font)              scaled to size 11.52008pt on input line 16.
+ [2
+design size mismatch in local font md-chro8t in virtual font mdbchro8t.vf ignored.]
 
 LaTeX Warning: Citation 'NOT FINAL' on page 3 undefined on input line 17.
 
@@ -1666,7 +1594,10 @@ Underfull \hbox (badness 2205) in paragraph at lines 15--15
 [][][]\T1/mdbch/m/n/12 (+20) [[]]The real robot's ac-tions af-fect its vir-tual coun-ter-part,
  []
 
-<images/vehicle_in_the_loop_dsr+22.jpg, id=279, 248.3679pt x 204.2832pt>
+
+LaTeX Warning: Reference `fig:vitl_setup' on page 6 undefined on input line 21.
+
+<images/vehicle_in_the_loop_dsr+22.jpg, id=137, 248.3679pt x 204.2832pt>
 File: images/vehicle_in_the_loop_dsr+22.jpg Graphic file (type jpg)
 <use images/vehicle_in_the_loop_dsr+22.jpg>
 Package pdftex.def Info: images/vehicle_in_the_loop_dsr+22.jpg  used on input line 25.
@@ -1675,7 +1606,10 @@ Package pdftex.def Info: images/vehicle_in_the_loop_dsr+22.jpg  used on input li
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [6] [7 <./images/vehicle_in_the_loop_dsr+22.jpg>]
-<images/info_mirror_model_Grieves15.png, id=318, 813.0375pt x 434.8245pt>
+
+LaTeX Warning: Reference `fig:dt_concept' on page 8 undefined on input line 40.
+
+<images/info_mirror_model_Grieves15.png, id=177, 813.0375pt x 434.8245pt>
 File: images/info_mirror_model_Grieves15.png Graphic file (type png)
 <use images/info_mirror_model_Grieves15.png>
 Package pdftex.def Info: images/info_mirror_model_Grieves15.png  used on input line 44.
@@ -1700,7 +1634,10 @@ LaTeX Warning: Citation 'NOT FINAL' on page 10 undefined on input line 56.
 
 LaTeX Warning: Citation 'NOT FINAL' on page 10 undefined on input line 56.
 
-<images/reality_virtuality_continuum_wpc+23.png, id=370, 1520.079pt x 410.13225pt>
+
+LaTeX Warning: Reference `fig:rv_continuum' on page 10 undefined on input line 66.
+
+<images/reality_virtuality_continuum_wpc+23.png, id=228, 1520.079pt x 410.13225pt>
 File: images/reality_virtuality_continuum_wpc+23.png Graphic file (type png)
 <use images/reality_virtuality_continuum_wpc+23.png>
 Package pdftex.def Info: images/reality_virtuality_continuum_wpc+23.png  used on input line 70.
@@ -1708,28 +1645,40 @@ Package pdftex.def Info: images/reality_virtuality_continuum_wpc+23.png  used on
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [10] [11 <./images/reality_virtuality_continuum_wpc+23.png>]
+ [10]
+
+LaTeX Warning: Reference `fig:ros2_comm_concept' on page 11 undefined on input line 80.
+
+[11 <./images/reality_virtuality_continuum_wpc+23.png>]
 LaTeX Font Info:    Font shape `T1/cmtt/m/n' will be
 (Font)              scaled to size 12.86407pt on input line 87.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
+
+
+LaTeX Warning: Reference `fig:tf_tree_concept' on page 12 undefined on input line 100.
+
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 9.6688pt on input line 110.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [12{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}] [13]
-<images/vera_setup.jpg, id=438, 2055.68pt x 1818.795pt>
+<images/vera_setup.jpg, id=298, 2055.68pt x 1818.795pt>
 File: images/vera_setup.jpg Graphic file (type jpg)
 <use images/vera_setup.jpg>
 Package pdftex.def Info: images/vera_setup.jpg  used on input line 132.
 (pdftex.def)             Requested size: 341.43442pt x 302.08641pt.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 12.71512pt on input line 137.
- [14 <./images/vera_setup.jpg>]
-<images/EMAROs_robot.png, id=451, 263.3037pt x 276.0714pt>
+
+
+LaTeX Warning: Reference `fig:EMAROs_robot' on page 14 undefined on input line 139.
+
+[14 <./images/vera_setup.jpg>]
+<images/EMAROs_robot.png, id=310, 263.3037pt x 276.0714pt>
 File: images/EMAROs_robot.png Graphic file (type png)
 <use images/EMAROs_robot.png>
 Package pdftex.def Info: images/EMAROs_robot.png  used on input line 144.
@@ -1751,11 +1700,77 @@ LaTeX Warning: Citation 'JuliaBA' on page 15 undefined on input line 155.
 LaTeX Warning: Citation 'JuliaBA' on page 15 undefined on input line 155.
 
 [15 <./images/EMAROs_robot.png>]
-<images/point_cloud.png, id=468, 1998.86775pt x 1135.8435pt>
+<images/point_cloud.png, id=328, 1998.86775pt x 1135.8435pt>
 File: images/point_cloud.png Graphic file (type png)
 <use images/point_cloud.png>
 Package pdftex.def Info: images/point_cloud.png  used on input line 163.
 (pdftex.def)             Requested size: 209.13013pt x 118.82513pt.
+LaTeX Font Info:    Trying to load font information for OT1+mdbch on input line 164.
+ (/usr/share/texlive/texmf-dist/tex/latex/mathdesign/mdbch/ot1mdbch.fd
+File: ot1mdbch.fd 2013/08/29 Fontinst v1.933 font definitions for OT1/mdbch.
+)
+LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
+(Font)              scaled to size 11.52008pt on input line 164.
+LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
+(Font)              scaled to size 7.68005pt on input line 164.
+LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
+(Font)              scaled to size 5.76004pt on input line 164.
+LaTeX Font Info:    Trying to load font information for OML+mdbch on input line 164.
+ (/usr/share/texlive/texmf-dist/tex/latex/mathdesign/mdbch/omlmdbch.fd
+File: omlmdbch.fd 2013/08/29 Fontinst v1.933 font definitions for OML/mdbch.
+)
+LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
+(Font)              scaled to size 11.52008pt on input line 164.
+LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
+(Font)              scaled to size 7.68005pt on input line 164.
+LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
+(Font)              scaled to size 5.76004pt on input line 164.
+LaTeX Font Info:    Trying to load font information for OMS+mdbch on input line 164.
+ (/usr/share/texlive/texmf-dist/tex/latex/mathdesign/mdbch/omsmdbch.fd
+File: omsmdbch.fd 2013/08/29 Fontinst v1.933 font definitions for OMS/mdbch.
+)
+LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
+(Font)              scaled to size 11.52008pt on input line 164.
+LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
+(Font)              scaled to size 7.68005pt on input line 164.
+LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
+(Font)              scaled to size 5.76004pt on input line 164.
+LaTeX Font Info:    Trying to load font information for OMX+mdbch on input line 164.
+ (/usr/share/texlive/texmf-dist/tex/latex/mathdesign/mdbch/omxmdbch.fd
+File: omxmdbch.fd 2013/08/29 Fontinst v1.933 font definitions for OMX/mdbch.
+)
+LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
+(Font)              scaled to size 11.52008pt on input line 164.
+LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
+(Font)              scaled to size 7.68005pt on input line 164.
+LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
+(Font)              scaled to size 5.76004pt on input line 164.
+LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
+(Font)              scaled to size 11.52008pt on input line 164.
+LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
+(Font)              scaled to size 7.68005pt on input line 164.
+LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
+(Font)              scaled to size 5.76004pt on input line 164.
+LaTeX Font Info:    Trying to load font information for MDA+mdbch on input line 164.
+ (/usr/share/texlive/texmf-dist/tex/latex/mathdesign/mdbch/mdamdbch.fd
+File: mdamdbch.fd 2013/08/29 Fontinst v1.933 font definitions for MDA/mdbch.
+)
+LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
+(Font)              scaled to size 11.52008pt on input line 164.
+LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
+(Font)              scaled to size 7.68005pt on input line 164.
+LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
+(Font)              scaled to size 5.76004pt on input line 164.
+LaTeX Font Info:    Trying to load font information for MDB+mdbch on input line 164.
+ (/usr/share/texlive/texmf-dist/tex/latex/mathdesign/mdbch/mdbmdbch.fd
+File: mdbmdbch.fd 2013/08/29 Fontinst v1.933 font definitions for MDB/mdbch.
+)
+LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
+(Font)              scaled to size 11.52008pt on input line 164.
+LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
+(Font)              scaled to size 7.68005pt on input line 164.
+LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
+(Font)              scaled to size 5.76004pt on input line 164.
 File: images/point_cloud.png Graphic file (type png)
 <use images/point_cloud.png>
 Package pdftex.def Info: images/point_cloud.png  used on input line 169.
@@ -1767,8 +1782,11 @@ LaTeX Warning: Citation 'JuliaBA' on page 16 undefined on input line 171.
 
 LaTeX Warning: Citation 'JuliaBA' on page 16 undefined on input line 171.
 
+
+LaTeX Warning: Reference `fig:pygame_vis' on page 16 undefined on input line 178.
+
 [16 <./images/point_cloud.png>]
-<images/pygame_visualizer.png, id=491, 807.61725pt x 701.62125pt>
+<images/pygame_visualizer.png, id=350, 807.61725pt x 701.62125pt>
 File: images/pygame_visualizer.png Graphic file (type png)
 <use images/pygame_visualizer.png>
 Package pdftex.def Info: images/pygame_visualizer.png  used on input line 182.
@@ -1836,11 +1854,31 @@ LaTeX Warning: Citation 'MFG22a' on page 27 undefined on input line 19.
 
 
 ]
+
+LaTeX Warning: Reference `tab:sim_comparison' on page 28 undefined on input line 35.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 53--53
 []|\T1/phv/m/n/12 (+20) HRI & MR
  []
 
 [28]
+
+LaTeX Warning: Hyper reference `req:FR-03' on page 29 undefined on input line 60.
+
+
+LaTeX Warning: Hyper reference `req:FR-01' on page 29 undefined on input line 62.
+
+
+LaTeX Warning: Hyper reference `req:FR-02' on page 29 undefined on input line 62.
+
+
+LaTeX Warning: Hyper reference `req:FR-04' on page 29 undefined on input line 66.
+
+
+LaTeX Warning: Hyper reference `req:FR-04' on page 29 undefined on input line 76.
+
+
 Underfull \vbox (badness 2635) has occurred while \output is active []
 
  [29]
@@ -1857,9 +1895,15 @@ LaTeX Warning: Citation 'NAV2Ref' on page 30 undefined on input line 86.
 LaTeX Warning: Citation 'EMAROs_Ref' on page 30 undefined on input line 88.
 
 
+LaTeX Warning: Hyper reference `req:FR-16' on page 30 undefined on input line 103.
+
+
 LaTeX Warning: Citation 'ALVR_Github' on page 30 undefined on input line 103.
 
 [30]
+
+LaTeX Warning: Hyper reference `req:FR-04' on page 31 undefined on input line 108.
+
 
 LaTeX Warning: Citation 'ROS2ForUnityDocs' on page 31 undefined on input line 108.
 
@@ -1867,6 +1911,11 @@ LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
 (Font)              scaled to size 11.52008pt on input line 110.
 
 LaTeX Warning: Citation 'ROS2ForUnityDocs' on page 31 undefined on input line 112.
+
+
+Overfull \hbox (4.53801pt too wide) in paragraph at lines 112--113
+[]\T1/mdbch/m/n/12 (-20) The core of the net-work in-te-gra-tion is the \T1/cmtt/m/n/12 ROS2UnityComponent \T1/mdbch/m/n/12 (-20) [[]]
+ []
 
 
 LaTeX Warning: Citation 'UnityDocumentation' on page 31 undefined on input line 114.
@@ -1885,12 +1934,22 @@ LaTeX Warning: Citation 'ROS2ForUnityDocs' on page 31 undefined on input line 11
 LaTeX Warning: Reference `fig:software_architecture' on page 32 undefined on input line 124.
 
 
+LaTeX Warning: Hyper reference `req:FR-05' on page 32 undefined on input line 140.
+
+
 LaTeX Warning: Citation 'EMAROs_Ref' on page 32 undefined on input line 151.
 
 [32]
+
+LaTeX Warning: Hyper reference `req:FR-09' on page 33 undefined on input line 154.
+
+
 Overfull \hbox (31.54472pt too wide) in paragraph at lines 154--155
 \T1/mdbch/m/n/12 (-20) In the stan-dalone sim-u-la-tion mode, the robot is con-trolled by the \T1/cmtt/m/n/12 VirtualRobotController
  []
+
+
+LaTeX Warning: Hyper reference `req:FR-10' on page 33 undefined on input line 160.
 
 
 LaTeX Warning: Citation 'MFG+22' on page 33 undefined on input line 160.
@@ -1898,24 +1957,88 @@ LaTeX Warning: Citation 'MFG+22' on page 33 undefined on input line 160.
 
 LaTeX Warning: Citation 'EMAROs_Ref' on page 33 undefined on input line 163.
 
-[33] [34]
+
+LaTeX Warning: Hyper reference `req:FR-07' on page 33 undefined on input line 163.
+
+
+LaTeX Warning: Hyper reference `req:FR-10' on page 33 undefined on input line 165.
+
+[33]
+
+LaTeX Warning: Hyper reference `req:FR-08' on page 34 undefined on input line 179.
+
+
+LaTeX Warning: Hyper reference `req:FR-11' on page 34 undefined on input line 187.
+
+
+LaTeX Warning: Hyper reference `req:FR-13' on page 34 undefined on input line 187.
+
+
+LaTeX Warning: Hyper reference `req:FR-12' on page 34 undefined on input line 187.
+
+[34]
+
+LaTeX Warning: Hyper reference `req:FR-12' on page 35 undefined on input line 193.
+
+
+LaTeX Warning: Hyper reference `req:FR-13' on page 35 undefined on input line 195.
+
+
+LaTeX Warning: Hyper reference `req:FR-13' on page 35 undefined on input line 207.
+
+
 Underfull \vbox (badness 6141) has occurred while \output is active []
 
- [35] [36]
+ [35]
+
+LaTeX Warning: Hyper reference `req:FR-11' on page 36 undefined on input line 220.
+
+[36]
+
+LaTeX Warning: Hyper reference `req:FR-06' on page 37 undefined on input line 240.
+
 
 LaTeX Warning: Citation 'ROS2ForUnityDocs' on page 37 undefined on input line 246.
 
+
+LaTeX Warning: Hyper reference `req:FR-13' on page 37 undefined on input line 251.
+
 [37]
 
+LaTeX Warning: Hyper reference `req:FR-15' on page 38 undefined on input line 263.
+
+
 LaTeX Warning: Citation 'UnityDocumentation' on page 38 undefined on input line 263.
 
 
 LaTeX Warning: Citation 'UnityDocumentation' on page 38 undefined on input line 263.
+
+
+Overfull \hbox (48.76056pt too wide) in paragraph at lines 263--264
+\T1/mdbch/m/n/12 (-20) lizes a ded-i-cated Unity cam-era com-po-nent con-fig-ured to \T1/cmtt/m/n/12 orthographic \T1/mdbch/m/n/12 (-20) [[]].
+ []
 
 
 LaTeX Warning: Citation 'UnityDocumentation' on page 38 undefined on input line 265.
 
-[38] [39] [40]
+[38]
+
+LaTeX Warning: Hyper reference `req:FR-14' on page 39 undefined on input line 271.
+
+[39]
+
+LaTeX Warning: Hyper reference `req:FR-13' on page 40 undefined on input line 292.
+
+
+LaTeX Warning: Hyper reference `req:FR-17' on page 40 undefined on input line 292.
+
+
+LaTeX Warning: Hyper reference `req:FR-18' on page 40 undefined on input line 300.
+
+[40]
+
+LaTeX Warning: Hyper reference `req:FR-19' on page 41 undefined on input line 307.
+
 
 LaTeX Warning: Citation 'YASMIN' on page 41 undefined on input line 309.
 
@@ -1923,23 +2046,20 @@ LaTeX Warning: Citation 'YASMIN' on page 41 undefined on input line 309.
 LaTeX Warning: Citation 'NAV2Ref' on page 41 undefined on input line 314.
 
 
-Overfull \hbox (70.63348pt too wide) in paragraph at lines 314--315
-\T1/mdbch/m/n/12 (-20) Two dis-tinct pa-ram-e-ter sets^^V\T1/cmtt/m/n/12 nav2_params_virtual.yaml \T1/mdbch/m/n/12 (-20) and \T1/cmtt/m/n/12 nav2_params_robot.yaml\T1/mdbch/m/n/12 (-20) ^^Vare
- []
+LaTeX Warning: Hyper reference `req:FR-17' on page 41 undefined on input line 314.
 
 
 Overfull \hbox (54.06891pt too wide) in paragraph at lines 316--317
 []\T1/mdbch/m/n/12 (-20) A crit-i-cal de-sign choice in the con-troller con-fig-u-ra-tion is the use of the \T1/cmtt/m/n/12 RotationShimController
  []
 
-[41] [42]
-Overfull \hbox (2.13475pt too wide) in paragraph at lines 340--341
-[]\T1/mdbch/b/n/12 (-20) Edge De-tec-tion (\T1/cmtt/m/n/12 EdgeDetectionProcessor\T1/mdbch/b/n/12 (-20) ): \T1/mdbch/m/n/12 (-20) Used dur-ing the ap-proach phase.
- []
+[41]
 
+LaTeX Warning: Hyper reference `req:FR-19' on page 42 undefined on input line 323.
 
-Overfull \hbox (76.81993pt too wide) in paragraph at lines 341--342
-[]\T1/mdbch/b/n/12 (-20) Edge Ad-just-ment & Fol-low-ing: \T1/mdbch/m/n/12 (-20) Im-ple-mented via two pro-ces-sors (\T1/cmtt/m/n/12 EdgeAdjustmentProcessor
+[42]
+Overfull \hbox (100.15564pt too wide) in paragraph at lines 341--342
+[]\T1/mdbch/b/n/12 (-20) EdgeAdjustment & Edge-Fol-low-ing: \T1/mdbch/m/n/12 (-20) Im-ple-mented via two pro-ces-sors (\T1/cmtt/m/n/12 EdgeAdjustmentProcessor
  []
 
 
@@ -1979,14 +2099,24 @@ LaTeX Warning: Citation 'NAV2Ref' on page 45 undefined on input line 407.
 
 LaTeX Warning: Reference `fig:line_debug' on page 46 undefined on input line 435.
 
+./chapters/concept_implementation.tex:445: Undefined control sequence.
+l.445 While the previous agents relied on the \Nav
+                                                  2 stack~\cite{NAV2Ref} for...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 
 LaTeX Warning: Citation 'NAV2Ref' on page 46 undefined on input line 445.
 
-[46]
+
 Overfull \hbox (56.00894pt too wide) in paragraph at lines 448--449
 []\T1/mdbch/b/n/12 (-20) FindLine: \T1/mdbch/m/n/12 (-20) The robot ex-e-cutes a spi-ral search pat-tern us-ing the \T1/cmtt/m/n/12 find_line_action_server
  []
 
+[46]
 
 LaTeX Warning: Citation 'NAV2Ref' on page 47 undefined on input line 450.
 
@@ -2027,11 +2157,12 @@ chapter 6.
 
 ]
 Package tocbasic Info: character protrusion at lof deactivated on input line 50.
- (./ti_thesis.lof)
+
+No file ti_thesis.lof.
 \tf@lof=\write7
 \openout7 = `ti_thesis.lof'.
 
- [53] [54
+[53] [54
 
 
 ]
@@ -2085,27 +2216,38 @@ L3 programming layer <2020/03/25>
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package rerunfilecheck Info: File `ti_thesis.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+
+Package rerunfilecheck Warning: File `ti_thesis.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `ti_thesis.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                ti_thesis
+(biblatex)                and rerun LaTeX afterwards.
+
 Package logreq Info: Writing requests to 'ti_thesis.run.xml'.
 \openout1 = `ti_thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 60609 strings out of 474222
- 1374194 string characters out of 5748732
- 2632603 words of memory out of 5000000
- 81299 multiletter control sequences out of 15000+600000
- 636682 words of font info for 451 fonts, out of 8000000 for 9000
+ 60568 strings out of 474222
+ 1373177 string characters out of 5748732
+ 2601741 words of memory out of 5000000
+ 81280 multiletter control sequences out of 15000+600000
+ 637078 words of font info for 454 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 108i,12n,131p,10936b,3335s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 108i,12n,131p,10936b,1894s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchri8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chb8t.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr8t.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chri7m.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chri8t.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8ac.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on ti_thesis.pdf (71 pages, 8424835 bytes).
+Output written on ti_thesis.pdf (69 pages, 8414632 bytes).
 PDF statistics:
- 1277 PDF objects out of 1440 (max. 8388607)
- 1143 compressed objects within 12 object streams
- 246 named destinations out of 1000 (max. 500000)
+ 1130 PDF objects out of 1200 (max. 8388607)
+ 1000 compressed objects within 10 object streams
+ 244 named destinations out of 1000 (max. 500000)
  76872 words of extra memory for PDF output out of 89155 (max. 10000000)
 
