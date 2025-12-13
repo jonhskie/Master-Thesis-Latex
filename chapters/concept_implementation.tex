@@ -14,7 +14,7 @@ The central concept of this environment is the projection of a simulated world d
 
 To enable these applications, the system integrates several key functions into an architecture. First, it maintains a dynamic twin of the robot. This digital twin is synchronized with the movement of the physical hardware but can interact with the simulation's physics engine. This allows for complex actions, such as pushing virtual boxes or colliding with moving objects. This ensures the simulation responds realistically to the robot's physical presence rather than serving as a static background.
 
-In addition to maintaining a dynamic digital twin, the system also simulates sensors for the robot. It generates virtual LiDAR scans and camera images from the robot's perspective, allowing autonomous agents to receive virtual sensordata. This enables thorough testing of navigation and vision algorithms within the mixed reality environment.
+In addition to maintaining a dynamic digital twin, the system also simulates sensors for the robot. It generates virtual LiDAR scans and camera images from the robot's perspective, allowing autonomous agents to receive virtual sensor data. This enables thorough testing of navigation and vision algorithms within the mixed reality environment.
 
 The architecture uses ROS~2~\cite{MFG22a} as the primary communication backbone. By integrating ROS~2 nodes directly into the simulation engine, the virtual environment acts as a first-party participant in the robot's network. It manages time synchronization to prevent timing related errors, handles the loading of different scenarios and provides two-way exchange of status data and control commands.
 
@@ -27,7 +27,7 @@ To demonstrate the flexibility and reliability of this architecture, three diffe
 \item A Line Following Agent that uses visual tracking to follow paths drawn by a human user in real-time.
 \end{itemize}
 
-The platform provides an adaptable and scalable testing solution by integrating physics, sensor simulation, and autonomous control logic into a synchronised mixed reality environment. The only factor limiting the test environment's complexity is software, not its physical design. The technological decisions, system architecture, and particular implementation of these elements will be covered in detail in the sections that follow.
+The platform provides an adaptable and scalable testing solution by integrating physics, sensor simulation, and autonomous control logic into a synchronized mixed reality environment. The only factor limiting the test environment's complexity is software, not its physical design. The technological decisions, system architecture, and particular implementation of these elements will be covered in detail in the sections that follow.
 %%%%%%%%%%%%%%%%%%%%%FERTIG%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -107,9 +107,11 @@ For the VR interface (\hyperref[req:FR-16]{FR-16}), the visual output from Unity
 
 The software architecture follows a modular publisher-subscriber pattern. To integrate the Unity game engine with the robotic network, the system utilizes the \textit{ROS2ForUnity} library (\hyperref[req:FR-04]{FR-04}) \cite{ROS2ForUnityDocs}.
 
-The core of this integration is the \texttt{ROS2UnityComponent}~\cite{ROS2ForUnityDocs} class. This component acts as a wrapper around the standard ROS~2 middleware. Inheriting from Unity's \texttt{MonoBehaviour} class, it must be attached to a \texttt{GameObject} in the scene to function. Upon startup, this component initializes the ROS~2 context, makes sure that a valid connection is established, and handles the lifecycle of the ROS~2 nodes running within the simulation. It allows other scripts to access the ROS~2 network by referencing this central component to create publishers, subscribers, and service clients.
+To facilitate modularity, the implementation relies on Unity's component-based architecture. In this framework, entities within the simulation, such as the robot or the environment, are represented as \texttt{GameObjects}. These objects function as containers that hold various functional modules known as \textit{components}. By inheriting from Unity's base class \texttt{MonoBehaviour}, C\# scripts become components that can be attached to these \texttt{GameObjects} to define their behavior.
 
-The functionality of the digital twin is driven by C\# scripts that interact with the engine's internal state machine. To ensure that physical simulation remains deterministic while visualization remains smooth, the architecture uses specific phases of the Unity execution loop~\cite{UnityDocumentation}:
+The core of the network integration is the \texttt{ROS2UnityComponent}~\cite{ROS2ForUnityDocs} class. This component acts as a wrapper around the standard ROS~2 middleware. Inheriting from \texttt{MonoBehaviour}, it must be attached to a \texttt{GameObject} in the scene to function. Upon startup, this component initializes the ROS~2 context, makes sure that a valid connection is established, and handles the lifecycle of the ROS~2 nodes running within the simulation. It allows other scripts to access the ROS~2 network by referencing this central component to create publishers, subscribers, and service clients.
+
+The functionality of the digital twin is driven by such scripts that interact with the engine's internal state machine. To ensure that physical simulation remains deterministic while visualization remains smooth, the architecture uses specific phases of the Unity execution loop~\cite{UnityDocumentation}:
 
 \begin{itemize}
     \item \textbf{Initialization (\texttt{Start}):} This method is called once when the script is first enabled, before any frames are updated. In this architecture, it is used to retrieve the reference to the \texttt{ROS2UnityComponent}~\cite{ROS2ForUnityDocs}, initialize the specific ROS nodes, and set up the necessary publishers and subscribers.
@@ -130,14 +132,14 @@ Figure \ref{fig:software_architecture} provides an overview of how these Unity s
     %\includegraphics[width=1.0\textwidth]{figures/software_architecture} 
     \caption{Software Component Architecture. Unity scripts act as ROS nodes, publishing sensor data and subscribing to control commands using ROS~2 topics. The external control stack, running in WSL, processes this data to make autonomous decisions.}
     \label{fig:software_architecture}
-\end{figure} 
+\end{figure}
 
 \subsection{Time Synchronization}
 \label{subsec:time_sync}
 
 A critical challenge in Robot-in-the-Loop testing is how to synchronize time between the simulation and the robot's software. If the simulation runs slower or faster than real-time, the navigation algorithms of the robot may calculate velocities that are incorrect. To fulfill the requirement for Time Synchronization (\hyperref[req:FR-05]{FR-05}), the system decouples the ROS network from the computer's system time.
 
-The \texttt{ClockPublisher.cs} script in Unity acts as the master clock. It publishes the current simulation time to the \texttt{/clock} topic. The ROS~2 nodes running on the workstation such as the navigation stack are configured with \texttt{use\_sim\_time = true}, forcing them to synchronize their logic with the Unity engine.
+The \texttt{ClockPublisher.cs} script in Unity acts as the master clock. It calculates the time since the start of the simulation and publishes it to the \texttt{/clock} topic. The ROS~2 nodes running on the workstation such as the navigation stack are configured with \texttt{use\_sim\_time = true}, forcing them to synchronize their logic with the Unity engine.
 
 To ensure consistency, a \texttt{RosTimeHelper.cs} utility is used by all simulated sensors. This script ensures that sensor data leaving Unity is stamped with the exact simulation time of the frame it was rendered in to prevent data drift.
 
@@ -217,7 +219,7 @@ The modification logic relies on physics raycasting to identify the coordinates 
 \subsection{Sensor Simulation}
 To validate the perception algorithms of the autonomous agents, the system provides simulated sensors capable of generating synthetic data, including video feeds and ranging data (\hyperref[req:FR-11]{FR-11}).
 
-The \texttt{LidarSensor} component simulates a 2D planar laser scanner which can be attached to the virtual model of the robot. Unlike GPU-based depth buffers often used in visual rendering, this implementation utilizes the Unity physics engine's raycasting API to query the scene geometry directly. In every simulation step, the component executes a loop corresponding to the configured number of beams (e.g., 360). For each beam, the system calculates a direction vector based on the scan angle. Since Unity utilizes a Left-Handed coordinate system (Y-up) and ROS uses a Right-Handed system (Z-up), the script employs a custom extension method to transform the desired scan angle into the correct Unity world-space vector.
+The \texttt{LidarSensor} component simulates a 2D planar laser scanner which can be attached to the virtual model of the robot. Unlike GPU-based depth buffers often used in visual rendering, this implementation utilizes the Unity physics engine's raycasting API to query the scene geometry directly. In every simulation step, the component executes a loop corresponding to the configured number of beams (e.g., 360). For each beam, the system calculates a direction vector based on the scan angle.
 
 For each beam a \texttt{Physics.Raycast} is cast along the computed direction. If the ray intersects a collider on the configured collision layer, its hit distance is recorded; otherwise the beam is reported as an infinite range. The collected distances are packaged into a standard \texttt{sensor\_msgs/LaserScan} message. Immediately after the raycast loop finishes, the message header is stamped with the current simulation time from the \texttt{ClockPublisher}. This exact timestamping preserves temporal alignment with the navigation stack and prevents the ROS~2 transform (TF) system from rejecting the scan due to extrapolation errors caused by unsynchronized timestamps.
 \begin{figure}[H]
@@ -249,7 +251,7 @@ This fresh start approach ensures that Unity components specific to one scenario
 Beyond static geometry, the environment must support the lifecycle management of transient entities, such as the delivery boxes in the Logistics scenario. This is handled by the \texttt{DynamicObjectManager}, which acts as a bridge between the ROS~2 data stream and the Unity instantiation engine (\hyperref[req:FR-13]{FR-13}).
 
 The manager subscribes to the \texttt{/vera/virtual\_objects} topic, processing a custom message structure that defines an object's ID, type, and pose. Internally, the system maintains a dictionary mapping string identifiers (e.g., "box\_red", "obstacle\_A") to Unity Prefabs.
-When an "ADD" or "MODIFY" command is received, the system checks if the object already exists. If it is new, the corresponding prefab is instantiated into the scene. If it exists, its transform is updated. Crucially, this component handles the coordinate conversion between the two systems, mapping the right-handed ROS position ($x, y, z$) and orientation ($x, y, z, w$) to the left-handed Unity world space. This allows external scripts or test runners to populate the scene with obstacles dynamically, validating the robot's ability to navigate changing environments.
+When an "ADD" or "MODIFY" command is received, the system checks if the object already exists. If it is new, the corresponding prefab is instantiated into the scene. If it exists, its transform is updated. Crucially, this component handles the coordinate conversion between the two systems, mapping the right-handed ROS position and orientation to the left-handed Unity world space. This allows external scripts or test runners to populate the scene with obstacles dynamically.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%FETIG ABER AI%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Mixed Reality and User Interaction}
 \label{sec:mixed_reality_and_user_interaction}
