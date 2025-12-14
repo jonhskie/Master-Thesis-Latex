@@ -13,6 +13,7 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.2}{\ignorespaces The Hardware and Software Topology of the Mixed Reality Environment.}}{31}{figure.4.2}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Software Component Architecture. Unity scripts act as ROS~2 nodes, publishing sensor data and subscribing to control commands using ROS~2 topics.}}{33}{figure.4.3}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
