@@ -68,6 +68,7 @@ Based on the comparative analysis, the Unity Engine was selected as the implemen
 
 
 
+
 \section{System Architecture}
 \label{sec:system_architecture}
 
@@ -99,7 +100,6 @@ The VR integration (\hyperref[req:FR-16]{FR-16}) relies on ALVR, an open-source 
 
 The network infrastructure is centered around a dedicated \textbf{Router}. The workstation is connected via \textbf{Ethernet}, while the EMAROs robot and Meta Quest Pro connect via \textbf{Wi-Fi}. This topology ensures that latency-sensitive traffic, such as the ALVR video stream and ROS~2 control commands, faces minimal interference.
 
-%%%%%%%%%%%%%%%%%%%%%FERTIG%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Software Component Architecture}
 \label{subsec:software_components}
@@ -140,7 +140,7 @@ A critical challenge in Robot-in-the-Loop testing is how to synchronize time bet
 
 The \texttt{ClockPublisher.cs} script in Unity acts as the master clock. It calculates the time since the start of the simulation and publishes it to the \texttt{/clock} topic. The ROS~2 nodes running on the workstation such as the navigation stack are configured with \texttt{use\_sim\_time = true}, forcing them to synchronize their logic with the Unity engine.
 
-To ensure consistency, a \texttt{RosTimeHelper.cs} utility is used by all simulated sensors. This script ensures that sensor data leaving Unity is stamped with the exact simulation time of the frame it was rendered in to prevent data drift.
+To ensure consistency, a \texttt{RosTimeHelper.cs} utility is used by all ROS~2 publishers in the Unity scripts. This script ensures that data leaving Unity is stamped with the exact simulation time of the frame it was created in to prevent data drift.
 
 %%%%%%%%%%%%%%%%%%%%%FERTIG%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -156,12 +156,12 @@ The controller acts as a ROS~2 node that accepts velocity commands (\texttt{cmd\
 
 The script does not directly change the position of the robot. Instead, it modifies the velocity of the physics body. By applying limits to acceleration, the system simulates mass and inertia for the robot. The robot can push lightweight virtual objects, but heavy obstacles or walls will stop its movement. This provides realistic feedback to the navigation system.
 
-Simultaneously, the controller provides ground truth data. It tracks the movement of the robot in Unity, converts the coordinates to the ROS standard, and publishes a timestamped odometry and tf messages (\hyperref[req:FR-10]{FR-10}). This closes the control loop for the external navigation logic~\cite{MFG+22}.
+Simultaneously, the controller provides ground truth data. It tracks the movement of the robot in Unity, converts the coordinates to the ROS~2 standard~\cite{MFG22}, and publishes a timestamped odometry and tf messages (\hyperref[req:FR-10]{FR-10}). This closes the control loop for the external navigation logic.
 
 \subsection{The Digital Twin Implementation}
 When operating in RitL mode, the \texttt{PoseRobotController.cs} takes control. In this configuration, the virtual robot stops acting as a dynamic entity and instead becomes a Digital Twin of the real EMAROs~\cite{EMAROs_Ref} robot (\hyperref[req:FR-07]{FR-07}).
 
-The controller listens to a pose topic given by the external ArUco tracking to move the digital twin. The incoming pose is provided in pixel coordinates from the tracking camera. It must be mapped onto the defined virtual area. On every new incoming pose, the script converts the pixel coordinates into Unity world space. To ensure alignment, an offset parameter enables the operator to perform a calibration of the digital twin so that its center is aligned with the physical mounting position of the tracking marker. The script republishes the synchronized pose as odometry and tf messages (\hyperref[req:FR-10]{FR-10}).
+The controller listens to a pose topic given by the external ArUco tracking \cite{JuliaBA} to move the digital twin. The incoming pose is provided in pixel coordinates from the tracking camera. It must be mapped onto the defined virtual area. On every new incoming pose, the script converts the pixel coordinates into Unity world space. To ensure alignment, an offset parameter enables the operator to perform a calibration of the digital twin so that its center is aligned with the physical mounting position of the tracking marker. The script republishes the synchronized pose as odometry and tf messages (\hyperref[req:FR-10]{FR-10}).
 
 Unlike the purely virtual robot, the digital twin overrides the physics engine. It is set to a kinematic state, meaning it is immune to virtual forces. If the physical robot moves, the digital twin moves with it, ignoring virtual barriers. This allows the physical robot to push virtual objects with absolute force. This way, the state of the virtual world always reflects physical reality.
 
@@ -170,7 +170,7 @@ A major challenge in mixed reality testing is signal latency or loss. If the phy
 
 To prevent this, the \texttt{PoseRobotController.cs} implements a safety watchdog  (\hyperref[req:FR-08]{FR-08}). The system continuously checks how long it has been since receiving the last pose update. If this delay exceeds a given safety limit, the system assumes tracking has been lost.
 
-When this occurs, the controller marks the tracking state as invalid. Although the digital twin stops moving in the simulation, the system is designed to send a stop command to the motors of the physical robot. This ensures the robot does not perform actions without simulation guidance. Once the tracking system re-acquires the robot, the watchdog resets and the digital twin resumes synchronization immediately.
+When this occurs, the controller marks the tracking state as invalid. Although the digital twin will stop moving in the simulation, the physical Robot might continue moving. For this reason, the system is designed to send a stop command to the motors of the physical robot. This ensures the robot does not perform actions without simulation guidance. Once the tracking system re-acquires the robot, the watchdog resets and the digital twin resumes synchronization immediately.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%FERTIG%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Environmental Simulation Capabilities}
@@ -248,7 +248,7 @@ When an \texttt{ADD} or \texttt{MODIFY} command is received, the system checks i
 \section{Mixed Reality and User Interaction}
 \label{sec:mixed_reality_and_user_interaction}
 
-A primary objective of the framework is to enhance the transparency of the robotic system by providing intuitive, real-time feedback to human operators. This is achieved through a Mixed Reality (MR) interface that visualizes internal robot states and allows for direct environmental manipulation. This section details the implementation of augmented telemetry, sensor projection, and the interactive control systems designed for both desktop and Virtual Reality (VR) contexts.
+A primary objective of the framework is to enhance the transparency of the robotic system by providing intuitive, real-time feedback to human operators. This is achieved through a MR interface that visualizes internal robot states and allows for direct environmental manipulation. This section details the implementation of augmented telemetry, sensor projection, and the interactive control systems designed for both desktop and VR contexts.
 \subsection{Environment Projection}
 \label{subsec:environment_projection}
 
