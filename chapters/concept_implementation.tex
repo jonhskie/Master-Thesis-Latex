@@ -164,13 +164,6 @@ When operating in RitL mode, the \texttt{PoseRobotController.cs} takes control. 
 The controller listens to a pose topic given by the external ArUco tracking to move the digital twin. The incoming pose is provided in pixel coordinates from the tracking camera. It must be mapped onto the defined virtual area. On every new incoming pose, the script converts the pixel coordinates into Unity world space. To ensure alignment, an offset parameter enables the operator to perform a calibration of the digital twin so that its center is aligned with the physical mounting position of the tracking marker. The script republishes the synchronized pose as odometry and tf messages (\hyperref[req:FR-10]{FR-10}).
 
 Unlike the purely virtual robot, the digital twin overrides the physics engine. It is set to a kinematic state, meaning it is immune to virtual forces. If the physical robot moves, the digital twin moves with it, ignoring virtual barriers. This allows the physical robot to push virtual objects with absolute force. This way, the state of the virtual world always reflects physical reality.
-\begin{figure}[H]
-    \centering
-    % \includegraphics[width=0.8\textwidth]{figures/control_architecture.png}
-    % use here the real virtaul image of the robots, maybe make them in diffrent color. add pfeile to show data flow
-    \caption{Data flow comparison between the Purely Virtual Robot and the digital twin. The Purely Virtual Robot (left) is driven by internal physics and ROS commands, while the digital twin (right) is driven directly by external tracking data.}
-    \label{fig:control_architecture}
-\end{figure}
 
 \subsection{Safety and Failsafe Mechanisms}
 A major challenge in mixed reality testing is signal latency or loss. If the physical robot leaves the tracking area or if the ArUco marker is blocked, position updates will stop. Without a failsafe, the digital twin would freeze while the physical robot continues to move blindly, causing a mismatch between reality and simulation.
