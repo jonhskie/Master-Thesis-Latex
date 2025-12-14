@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.20)  14 DEC 2025 00:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.20)  14 DEC 2025 03:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1273,7 +1273,13 @@ File: pgflibraryshapes.multipart.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfnodepartfivebox=\box99
 ))) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfit.code.tex
 File: tikzlibraryfit.code.tex 2023-01-15 v3.1.10 (3.1.10)
-)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshadows.code.tex
+File: tikzlibraryshadows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfadings.code.tex
+File: tikzlibraryfadings.code.tex 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryfadings.code.tex
+File: pgflibraryfadings.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)))
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
@@ -1285,59 +1291,59 @@ LaTeX Warning: Label `sec:DT' multiply defined.
 ) (./chapters/requirements.aux) (./chapters/concept_implementation.aux) (./chapters/evaluation.aux) (./chapters/conclusion_outlook.aux))
 \openout1 = `ti_thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for MDA/cmr/m/n on input line 31.
-LaTeX Font Info:    Trying to load font information for MDA+cmr on input line 31.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for MDA/cmr/m/n on input line 33.
+LaTeX Font Info:    Trying to load font information for MDA+cmr on input line 33.
  (/usr/share/texlive/texmf-dist/tex/latex/mathdesign/mdacmr.fd
 File: mdacmr.fd 
 )
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for MDB/cmr/m/n on input line 31.
-LaTeX Font Info:    Trying to load font information for MDB+cmr on input line 31.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for MDB/cmr/m/n on input line 33.
+LaTeX Font Info:    Trying to load font information for MDB+cmr on input line 33.
  (/usr/share/texlive/texmf-dist/tex/latex/mathdesign/mdbcmr.fd
 File: mdbcmr.fd 
 )
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-Package scrbase Info: activating english \partname on input line 31.
-Package scrbase Info: activating english \chaptername on input line 31.
-Package scrbase Info: activating english \appendixname on input line 31.
-Package scrbase Info: activating english \figurename on input line 31.
-Package scrbase Info: activating english \tablename on input line 31.
-Package scrbase Info: activating english \contentsname on input line 31.
-Package scrbase Info: activating english \listfigurename on input line 31.
-Package scrbase Info: activating english \listtablename on input line 31.
-Package scrbase Info: activating english \bibname on input line 31.
-Package scrbase Info: activating english \indexname on input line 31.
-LaTeX Info: Redefining \microtypecontext on input line 31.
-Package microtype Info: Applying patch `item' on input line 31.
-Package microtype Info: Applying patch `toc' on input line 31.
-Package microtype Info: Applying patch `eqnum' on input line 31.
-Package microtype Info: Applying patch `footnote' on input line 31.
-Package microtype Info: Applying patch `verbatim' on input line 31.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+Package scrbase Info: activating english \partname on input line 33.
+Package scrbase Info: activating english \chaptername on input line 33.
+Package scrbase Info: activating english \appendixname on input line 33.
+Package scrbase Info: activating english \figurename on input line 33.
+Package scrbase Info: activating english \tablename on input line 33.
+Package scrbase Info: activating english \contentsname on input line 33.
+Package scrbase Info: activating english \listfigurename on input line 33.
+Package scrbase Info: activating english \listtablename on input line 33.
+Package scrbase Info: activating english \bibname on input line 33.
+Package scrbase Info: activating english \indexname on input line 33.
+LaTeX Info: Redefining \microtypecontext on input line 33.
+Package microtype Info: Applying patch `item' on input line 33.
+Package microtype Info: Applying patch `toc' on input line 33.
+Package microtype Info: Applying patch `eqnum' on input line 33.
+Package microtype Info: Applying patch `footnote' on input line 33.
+Package microtype Info: Applying patch `verbatim' on input line 33.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 31.
+LaTeX Info: Redefining \showhyphens on input line 33.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -1375,6 +1381,20 @@ Package biblatex Warning: The following entry could not be found
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
 (biblatex)                EMAROs_Ref
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                Gazebo
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                IsaacSim
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
 
@@ -1423,7 +1443,21 @@ Package biblatex Warning: The following entry could not be found
 
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
+(biblatex)                Unity
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
 (biblatex)                UnityDocumentation
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                Unreal
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
 
@@ -1435,8 +1469,8 @@ Package biblatex Warning: The following entry could not be found
 (biblatex)                LaTeX afterwards.
 
 )
-Package biblatex Info: Reference section=0 on input line 31.
-Package biblatex Info: Reference segment=0 on input line 31.
+Package biblatex Info: Reference section=0 on input line 33.
+Package biblatex Info: Reference segment=0 on input line 33.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count494
@@ -1459,14 +1493,14 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count500
-Package scrhack Info: undefining \float@addtolists on input line 31.
-Package hyperref Info: Option `colorlinks' set `true' on input line 31.
+Package scrhack Info: undefining \float@addtolists on input line 33.
+Package hyperref Info: Option `colorlinks' set `true' on input line 33.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 31.
+(hyperref)                removing `\\' on input line 33.
 
-Package hyperref Info: Link coloring ON on input line 31.
+Package hyperref Info: Link coloring ON on input line 33.
 (./ti_thesis.out) (./ti_thesis.out)
 \@outlinefile=\write5
 \openout5 = `ti_thesis.out'.
@@ -1478,7 +1512,7 @@ Class scrbook Info: loading recommended package `bookmark'.
 (scrbook)           `bookmarkpackage=false' before \begin{document} and
 (scrbook)           you can avoid this message adding:
 (scrbook)             \usepackage{bookmark}
-(scrbook)           before \begin{document} on input line 31.
+(scrbook)           before \begin{document} on input line 33.
  (/usr/share/texlive/texmf-dist/tex/latex/bookmark/bookmark.sty
 Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
  (/usr/share/texlive/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
@@ -1525,7 +1559,7 @@ LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 
 
 ]
-Package tocbasic Info: character protrusion at toc deactivated on input line 36.
+Package tocbasic Info: character protrusion at toc deactivated on input line 38.
  (./ti_thesis.toc
 LaTeX Font Info:    Trying to load font information for OT1+mdbch on input line 4.
  (/usr/share/texlive/texmf-dist/tex/latex/mathdesign/mdbch/ot1mdbch.fd
@@ -1666,7 +1700,7 @@ Underfull \hbox (badness 2205) in paragraph at lines 15--15
 [][][]\T1/mdbch/m/n/12 (+20) [[]]The real robot's ac-tions af-fect its vir-tual coun-ter-part,
  []
 
-<images/vehicle_in_the_loop_dsr+22.jpg, id=279, 248.3679pt x 204.2832pt>
+<images/vehicle_in_the_loop_dsr+22.jpg, id=303, 248.3679pt x 204.2832pt>
 File: images/vehicle_in_the_loop_dsr+22.jpg Graphic file (type jpg)
 <use images/vehicle_in_the_loop_dsr+22.jpg>
 Package pdftex.def Info: images/vehicle_in_the_loop_dsr+22.jpg  used on input line 25.
@@ -1675,7 +1709,7 @@ Package pdftex.def Info: images/vehicle_in_the_loop_dsr+22.jpg  used on input li
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [6] [7 <./images/vehicle_in_the_loop_dsr+22.jpg>]
-<images/info_mirror_model_Grieves15.png, id=318, 813.0375pt x 434.8245pt>
+<images/info_mirror_model_Grieves15.png, id=342, 813.0375pt x 434.8245pt>
 File: images/info_mirror_model_Grieves15.png Graphic file (type png)
 <use images/info_mirror_model_Grieves15.png>
 Package pdftex.def Info: images/info_mirror_model_Grieves15.png  used on input line 44.
@@ -1700,7 +1734,7 @@ LaTeX Warning: Citation 'NOT FINAL' on page 10 undefined on input line 56.
 
 LaTeX Warning: Citation 'NOT FINAL' on page 10 undefined on input line 56.
 
-<images/reality_virtuality_continuum_wpc+23.png, id=370, 1520.079pt x 410.13225pt>
+<images/reality_virtuality_continuum_wpc+23.png, id=394, 1520.079pt x 410.13225pt>
 File: images/reality_virtuality_continuum_wpc+23.png Graphic file (type png)
 <use images/reality_virtuality_continuum_wpc+23.png>
 Package pdftex.def Info: images/reality_virtuality_continuum_wpc+23.png  used on input line 70.
@@ -1721,7 +1755,7 @@ LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [12{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}] [13]
-<images/vera_setup.jpg, id=438, 2055.68pt x 1818.795pt>
+<images/vera_setup.jpg, id=462, 2055.68pt x 1818.795pt>
 File: images/vera_setup.jpg Graphic file (type jpg)
 <use images/vera_setup.jpg>
 Package pdftex.def Info: images/vera_setup.jpg  used on input line 132.
@@ -1729,7 +1763,7 @@ Package pdftex.def Info: images/vera_setup.jpg  used on input line 132.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 12.71512pt on input line 137.
  [14 <./images/vera_setup.jpg>]
-<images/EMAROs_robot.png, id=451, 263.3037pt x 276.0714pt>
+<images/EMAROs_robot.png, id=476, 263.3037pt x 276.0714pt>
 File: images/EMAROs_robot.png Graphic file (type png)
 <use images/EMAROs_robot.png>
 Package pdftex.def Info: images/EMAROs_robot.png  used on input line 144.
@@ -1751,7 +1785,7 @@ LaTeX Warning: Citation 'JuliaBA' on page 15 undefined on input line 155.
 LaTeX Warning: Citation 'JuliaBA' on page 15 undefined on input line 155.
 
 [15 <./images/EMAROs_robot.png>]
-<images/point_cloud.png, id=468, 1998.86775pt x 1135.8435pt>
+<images/point_cloud.png, id=492, 1998.86775pt x 1135.8435pt>
 File: images/point_cloud.png Graphic file (type png)
 <use images/point_cloud.png>
 Package pdftex.def Info: images/point_cloud.png  used on input line 163.
@@ -1768,7 +1802,7 @@ LaTeX Warning: Citation 'JuliaBA' on page 16 undefined on input line 171.
 LaTeX Warning: Citation 'JuliaBA' on page 16 undefined on input line 171.
 
 [16 <./images/point_cloud.png>]
-<images/pygame_visualizer.png, id=491, 807.61725pt x 701.62125pt>
+<images/pygame_visualizer.png, id=515, 807.61725pt x 701.62125pt>
 File: images/pygame_visualizer.png Graphic file (type png)
 <use images/pygame_visualizer.png>
 Package pdftex.def Info: images/pygame_visualizer.png  used on input line 182.
@@ -1839,7 +1873,20 @@ LaTeX Warning: Citation 'MFG22a' on page 27 undefined on input line 19.
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 53--53
+
+LaTeX Warning: Citation 'Gazebo' on page 28 undefined on input line 34.
+
+
+LaTeX Warning: Citation 'IsaacSim' on page 28 undefined on input line 34.
+
+
+LaTeX Warning: Citation 'Unreal' on page 28 undefined on input line 34.
+
+
+LaTeX Warning: Citation 'Unity' on page 28 undefined on input line 34.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--52
 []|\T1/phv/m/n/12 (+20) HRI & MR
  []
 
@@ -1848,212 +1895,232 @@ Underfull \vbox (badness 2635) has occurred while \output is active []
 
  [29]
 
-LaTeX Warning: Citation 'ALVR_Github' on page 30 undefined on input line 84.
+LaTeX Warning: Citation 'ALVR_Github' on page 30 undefined on input line 82.
 
 LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
-(Font)              scaled to size 11.52008pt on input line 86.
+(Font)              scaled to size 11.52008pt on input line 84.
 
-LaTeX Warning: Citation 'ALVR_Github' on page 30 undefined on input line 90.
+LaTeX Warning: Citation 'ALVR_Github' on page 30 undefined on input line 88.
 
-<images/hardware_topology.png, id=632, 1003.95074pt x 1003.95074pt>
+<images/hardware_topology.png, id=656, 1003.95074pt x 1003.95074pt>
 File: images/hardware_topology.png Graphic file (type png)
 <use images/hardware_topology.png>
-Package pdftex.def Info: images/hardware_topology.png  used on input line 95.
+Package pdftex.def Info: images/hardware_topology.png  used on input line 93.
 (pdftex.def)             Requested size: 426.7914pt x 426.78831pt.
 
 Underfull \vbox (badness 1184) has occurred while \output is active []
 
  [30]
 
-LaTeX Warning: Citation 'ALVR_Github' on page 31 undefined on input line 100.
-
-[31 <./images/hardware_topology.png>]
-
-LaTeX Warning: Citation 'ROS2ForUnityDocs' on page 32 undefined on input line 106.
+LaTeX Warning: Citation 'ALVR_Github' on page 31 undefined on input line 98.
 
 
-LaTeX Warning: Citation 'ROS2ForUnityDocs' on page 32 undefined on input line 110.
+Underfull \vbox (badness 6758) has occurred while \output is active []
+
+ [31 <./images/hardware_topology.png>]
+
+LaTeX Warning: Citation 'ROS2ForUnityDocs' on page 32 undefined on input line 107.
 
 
-Overfull \hbox (4.53801pt too wide) in paragraph at lines 110--111
+LaTeX Warning: Citation 'ROS2ForUnityDocs' on page 32 undefined on input line 111.
+
+
+Overfull \hbox (4.53801pt too wide) in paragraph at lines 111--112
 []\T1/mdbch/m/n/12 (-20) The core of the net-work in-te-gra-tion is the \T1/cmtt/m/n/12 ROS2UnityComponent \T1/mdbch/m/n/12 (-20) [[]]
  []
 
 
-LaTeX Warning: Citation 'UnityDocumentation' on page 32 undefined on input line 112.
+LaTeX Warning: Citation 'UnityDocumentation' on page 32 undefined on input line 113.
 
 LaTeX Font Info:    Font shape `T1/cmtt/b/n' in size <12> not available
-(Font)              Font shape `T1/cmtt/bx/n' tried instead on input line 115.
+(Font)              Font shape `T1/cmtt/bx/n' tried instead on input line 116.
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <12> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 115.
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 116.
 LaTeX Font Info:    Font shape `T1/cmtt/m/n' will be
-(Font)              scaled to size 12.86407pt on input line 115.
+(Font)              scaled to size 12.86407pt on input line 116.
 
-LaTeX Warning: Citation 'ROS2ForUnityDocs' on page 32 undefined on input line 115.
+LaTeX Warning: Citation 'ROS2ForUnityDocs' on page 32 undefined on input line 116.
 
 [32]
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 8.82996pt on input line 144.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 7.06396pt on input line 165.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <8> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 165.
+LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
+(Font)              scaled to size 7.06396pt on input line 165.
+LaTeX Font Info:    Font shape `T1/cmtt/m/n' will be
+(Font)              scaled to size 8.57605pt on input line 175.
 
-LaTeX Warning: Reference `fig:software_architecture' on page 33 undefined on input line 122.
-
-
-LaTeX Warning: Citation 'EMAROs_Ref' on page 33 undefined on input line 149.
-
-[33]
-
-LaTeX Warning: Citation 'MFG+22' on page 34 undefined on input line 158.
-
-
-LaTeX Warning: Citation 'EMAROs_Ref' on page 34 undefined on input line 161.
-
-
-Underfull \vbox (badness 3503) has occurred while \output is active []
-
- [34] [35] [36] [37]
-
-LaTeX Warning: Citation 'ROS2ForUnityDocs' on page 38 undefined on input line 244.
-
-[38]
-
-LaTeX Warning: Citation 'UnityDocumentation' on page 39 undefined on input line 261.
+Overfull \hbox (124.82892pt too wide) in paragraph at lines 203--204
+ [][] 
+ []
 
 
-LaTeX Warning: Citation 'UnityDocumentation' on page 39 undefined on input line 261.
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [33]
+Underfull \vbox (badness 3271) has occurred while \output is active []
+
+ [34]
+
+LaTeX Warning: Citation 'EMAROs_Ref' on page 35 undefined on input line 222.
+
+[35]
+
+LaTeX Warning: Citation 'MFG+22' on page 36 undefined on input line 231.
 
 
-Overfull \hbox (48.76056pt too wide) in paragraph at lines 261--262
+LaTeX Warning: Citation 'EMAROs_Ref' on page 36 undefined on input line 234.
+
+[36] [37] [38]
+Underfull \vbox (badness 2351) has occurred while \output is active []
+
+ [39]
+
+LaTeX Warning: Citation 'ROS2ForUnityDocs' on page 40 undefined on input line 317.
+
+[40]
+
+LaTeX Warning: Citation 'UnityDocumentation' on page 41 undefined on input line 334.
+
+
+LaTeX Warning: Citation 'UnityDocumentation' on page 41 undefined on input line 334.
+
+
+Overfull \hbox (48.76056pt too wide) in paragraph at lines 334--335
 \T1/mdbch/m/n/12 (-20) lizes a ded-i-cated Unity cam-era com-po-nent con-fig-ured to \T1/cmtt/m/n/12 orthographic \T1/mdbch/m/n/12 (-20) [[]].
  []
 
 
-LaTeX Warning: Citation 'UnityDocumentation' on page 39 undefined on input line 263.
+LaTeX Warning: Citation 'UnityDocumentation' on page 41 undefined on input line 336.
 
-[39] [40] [41]
+[41] [42]
 
-LaTeX Warning: Citation 'YASMIN' on page 42 undefined on input line 307.
+LaTeX Warning: Citation 'YASMIN' on page 43 undefined on input line 380.
 
+[43]
 
-LaTeX Warning: Citation 'NAV2Ref' on page 42 undefined on input line 312.
-
-[42]
-Underfull \vbox (badness 8056) has occurred while \output is active []
-
- [43]
-
-LaTeX Warning: Reference `fig:farm_debug' on page 44 undefined on input line 343.
-
-
-LaTeX Warning: Citation 'YASMIN' on page 44 undefined on input line 353.
-
-
-LaTeX Warning: Reference `fig:farm_state_machine' on page 44 undefined on input line 353.
+LaTeX Warning: Citation 'NAV2Ref' on page 44 undefined on input line 385.
 
 [44]
-Overfull \hbox (0.46489pt too wide) in paragraph at lines 359--360
+
+LaTeX Warning: Reference `fig:farm_debug' on page 45 undefined on input line 416.
+
+[45]
+
+LaTeX Warning: Citation 'YASMIN' on page 46 undefined on input line 426.
+
+
+LaTeX Warning: Reference `fig:farm_state_machine' on page 46 undefined on input line 426.
+
+
+Overfull \hbox (0.46489pt too wide) in paragraph at lines 432--433
 []\T1/mdbch/b/n/12 (-20) AdjustToEdge: \T1/mdbch/m/n/12 (-20) The robot ro-tates in place un-til the \T1/cmtt/m/n/12 EdgeAdjustmentProcessor
  []
 
 
-LaTeX Warning: Citation 'NAV2Ref' on page 45 undefined on input line 365.
-
-[45]
-
-LaTeX Warning: Reference `fig:logistics_debug' on page 46 undefined on input line 392.
-
-
-LaTeX Warning: Citation 'YASMIN' on page 46 undefined on input line 402.
-
-
-LaTeX Warning: Citation 'NAV2Ref' on page 46 undefined on input line 405.
+LaTeX Warning: Citation 'NAV2Ref' on page 46 undefined on input line 438.
 
 [46]
 
-LaTeX Warning: Reference `fig:line_debug' on page 47 undefined on input line 433.
-
-[47]
-
-LaTeX Warning: Citation 'NAV2Ref' on page 48 undefined on input line 443.
+LaTeX Warning: Reference `fig:logistics_debug' on page 47 undefined on input line 465.
 
 
-LaTeX Warning: Citation 'NAV2Ref' on page 48 undefined on input line 448.
+LaTeX Warning: Citation 'YASMIN' on page 47 undefined on input line 475.
 
-) [48]
+
+LaTeX Warning: Citation 'NAV2Ref' on page 47 undefined on input line 478.
+
+[47] [48]
+
+LaTeX Warning: Reference `fig:line_debug' on page 49 undefined on input line 506.
+
+
+LaTeX Warning: Citation 'NAV2Ref' on page 49 undefined on input line 516.
+
+
+LaTeX Warning: Citation 'NAV2Ref' on page 49 undefined on input line 521.
+
+) [49]
 \openout2 = `chapters/evaluation.aux'.
 
- (./chapters/evaluation.tex
+ (./chapters/evaluation.tex [50
+
+
+
+
+
+]
 chapter 5.
 )
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [49
-
-
-
-
-
-] [50]
+ [51] [52]
 \openout2 = `chapters/conclusion_outlook.aux'.
 
  (./chapters/conclusion_outlook.tex
 chapter 6.
-) [51
+) [53
 
 
 
 
 
-] [52
+] [54
 
 
 
 
 ]
-Package tocbasic Info: character protrusion at lof deactivated on input line 50.
+Package tocbasic Info: character protrusion at lof deactivated on input line 52.
  (./ti_thesis.lof)
 \tf@lof=\write7
 \openout7 = `ti_thesis.lof'.
-
- [53] [54
-
-
-]
-Package tocbasic Info: character protrusion at lol deactivated on input line 51.
- (./ti_thesis.lol)
-\tf@lol=\write8
-\openout8 = `ti_thesis.lol'.
 
  [55] [56
 
 
 ]
+Package tocbasic Info: character protrusion at lol deactivated on input line 53.
+ (./ti_thesis.lol)
+\tf@lol=\write8
+\openout8 = `ti_thesis.lol'.
+
+ [57] [58
+
+
+]
 chapter without number
 LaTeX Font Info:    Font shape `T1/mdbch/m/fsc' will be
-(Font)              scaled to size 11.52008pt on input line 57.
+(Font)              scaled to size 11.52008pt on input line 59.
 
-Overfull \hbox (5.31084pt too wide) in paragraph at lines 58--58
+Overfull \hbox (5.31084pt too wide) in paragraph at lines 60--60
 []\T1/mdbch/m/n/12 (-20) Mordechai Ben-Ari and Francesco Mon-dada. \T1/mdbch/m/it/12 (-20) El-e-ments of Robotics\T1/mdbch/m/n/12 (-20) . Springer
  []
 
 
-Overfull \hbox (9.06294pt too wide) in paragraph at lines 58--58
+Overfull \hbox (9.06294pt too wide) in paragraph at lines 60--60
 []\T1/mdbch/m/n/12 (-20) Rajmeet Bhourji, Lak-mal Senevi-ratne, and Ir-fan Hus-sain. ^^P  A Deep Learning-
  []
 
-[57] [58]
-Overfull \hbox (12.89154pt too wide) in paragraph at lines 58--58
+[59] [60]
+Overfull \hbox (12.89154pt too wide) in paragraph at lines 60--60
 []\T1/mdbch/m/n/12 (-20) Seyed Mo-hamad Kar-gar, Borislav Yor-danov, Carlo Har-vey, and Ali Asadipour.
  []
 
-[59] [60]
-Overfull \hbox (43.16673pt too wide) in paragraph at lines 58--58
+[61] [62]
+Overfull \hbox (43.16673pt too wide) in paragraph at lines 60--60
 \T1/mdbch/m/n/12 (-20) A Re-view^^Q. In: \T1/mdbch/m/it/12 (-20) Robotics \T1/mdbch/m/n/12 (-20) 9.2 (Apr. 2020), p. 21. \T1/mdbch/m/fsc/12 (-20) doi\T1/mdbch/m/n/12 (-20) : [][]$\T1/cmtt/m/n/12 10 . 3390 / robotics9020021$[][]\T1/mdbch/m/n/12 (-20) .
  []
 
 
-Overfull \hbox (14.49641pt too wide) in paragraph at lines 58--58
+Overfull \hbox (14.49641pt too wide) in paragraph at lines 60--60
 \T1/cmtt/m/n/12 3390 / app10103633$[][]\T1/mdbch/m/n/12 (-20) . \T1/mdbch/m/fsc/12 (-20) url\T1/mdbch/m/n/12 (-20) : [][]$\T1/cmtt/m/n/12 https : / / doi . org / 10 . 3390 / app10103633$[][]\T1/mdbch/m/n/12 (-20) . 
  []
 
-[61] [62] [63
+[63] [64] [65
 
 
 ] (./ti_thesis.aux (./chapters/deckblatt.aux) (./chapters/abstract.aux) (./chapters/introduction.aux) (./chapters/foundations_related_work.aux) (./chapters/requirements.aux) (./chapters/concept_implementation.aux) (./chapters/evaluation.aux) (./chapters/conclusion_outlook.aux))
@@ -2075,18 +2142,18 @@ Package logreq Info: Writing requests to 'ti_thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 60633 strings out of 474222
- 1374625 string characters out of 5748732
- 2632930 words of memory out of 5000000
- 81306 multiletter control sequences out of 15000+600000
- 637798 words of font info for 463 fonts, out of 8000000 for 9000
+ 60943 strings out of 474222
+ 1381839 string characters out of 5748732
+ 2644817 words of memory out of 5000000
+ 81581 multiletter control sequences out of 15000+600000
+ 646629 words of font info for 479 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  108i,12n,131p,10936b,3335s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchri8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chb8t.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr8t.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chri7m.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chri8t.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8ac.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on ti_thesis.pdf (71 pages, 8588622 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchri8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chb8t.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr8t.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chri7m.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chri8t.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8ac.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on ti_thesis.pdf (73 pages, 8633019 bytes).
 PDF statistics:
- 1288 PDF objects out of 1440 (max. 8388607)
- 1152 compressed objects within 12 object streams
- 247 named destinations out of 1000 (max. 500000)
- 76877 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 1334 PDF objects out of 1440 (max. 8388607)
+ 1176 compressed objects within 12 object streams
+ 249 named destinations out of 1000 (max. 500000)
+ 87725 words of extra memory for PDF output out of 89155 (max. 10000000)
 

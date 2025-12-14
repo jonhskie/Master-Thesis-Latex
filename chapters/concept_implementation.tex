@@ -1,9 +1,9 @@
 \chapter{Implementation}
 \label{ch:concept_and_implementation}
 
-This chapter describes the development of the Mixed Reality Environment, a platform designed to support RitL testing by combining simulation with augmented reality projection. The resulting system bridges the gap between purely digital simulations and real-world experiments by creating a common workspace where physical robots and virtual objects coexist and interact.
+This chapter describes the development of the Mixed Reality Environment, a platform designed to support RitL testing by combining simulation with augmented reality projection and VR. The resulting system bridges the gap between purely digital simulations and real-world experiments by creating a common workspace where physical robots and virtual objects coexist and interact.
 
-The central concept of this environment is the projection of a simulated world directly onto the laboratory floor. Rather than testing robots in completely physical setups or purely within software simulations, this system projects dynamic, physics-based elements into the real world. As can be seen from Figure \ref{fig:mr_environment_overview}, the physical robot moves across the real floor while sensing and acting upon virtual objects, such as a field, obstacles, or other entities. This projection has a dual purpose: it provides instant visual feedback to a human observer and enables the robot to receive synthetic sensor data that reflect the state of the virtual scene. This allows the robot to detect and respond to simulated entities as if they were physically present.
+The central concept of this environment is the projection of a simulated world directly onto the laboratory floor. Rather than testing robots in completely physical setups or purely within software simulations, this system projects dynamic, physics-based elements into the real world. As can be seen from Figure \ref{fig:mr_environment_overview}, the physical robot moves across the real floor while sensing and acting upon virtual objects. This projection has a dual purpose: it provides instant visual feedback to a human observer and enables the robot to receive synthetic sensor data that reflect the state of the virtual scene. This allows the robot to detect and respond to simulated entities as if they were physically present.
 \cite{ABBILDUNGFEHLT}
 \begin{figure}[H]
 \centering
@@ -12,13 +12,13 @@ The central concept of this environment is the projection of a simulated world d
 \label{fig:mr_environment_overview}
 \end{figure}
 
-To enable these applications, the system integrates several key functions into an architecture. First, it maintains a dynamic twin of the robot. This digital twin is synchronized with the movement of the physical hardware but can interact with the simulation's physics engine. This allows for complex actions, such as pushing virtual boxes or colliding with moving objects. This ensures the simulation responds realistically to the robot's physical presence rather than serving as a static background.
+To enable these applications, the system integrates several key functions into an architecture. First, it maintains a digital twin of the robot. This digital twin is synchronized with the movement of the physical hardware but can interact with the simulation's physics engine. This allows for complex actions, such as pushing virtual boxes or colliding with moving objects. This ensures the simulation responds realistically to the robot's physical presence rather than serving as a static background.
 
-In addition to maintaining a dynamic Digital Twin, the system also simulates sensors for the robot. It generates virtual LiDAR scans and camera images from the robot's perspective, allowing autonomous agents to receive virtual sensor data. This enables thorough testing of navigation and vision algorithms within the mixed reality environment.
+In addition to maintaining a Digital Twin, the system also simulates sensors for the robot. It generates virtual LiDAR scans and camera images from the robot's perspective, allowing autonomous agents to receive virtual sensor data. This enables thorough testing of navigation and vision algorithms within the mixed reality environment.
 
 The architecture uses ROS~2~\cite{MFG22a} as the primary communication backbone. By integrating ROS~2 nodes directly into the simulation engine, the virtual environment acts as a first-party participant in the robot's network. It manages time synchronization to prevent timing related errors, handles the loading of different scenarios and provides two-way exchange of status data and control commands.
 
-Besides sensor simulation, the environment also supports real-time diagnostic feedback. The system functions as a monitoring tool by projecting the robot's internal operating data back onto the physical workspace and the VR interface. Performance metrics, such as temperature, RAM usage, and location coordinates, are shown on information panels attached to the digital twin in the 3D environment. Moreover, the system shows the robot's live camera feed within the virtual scene. This allows operators to observe the robot's physical behavior alongside its internal status and visual perception in real-time.
+Besides sensor simulation, the environment also supports real-time diagnostic feedback. The system functions as a monitoring tool by projecting the robot's internal operating data back onto the physical workspace and the VR interface. Performance metrics, such as temperature, (random-access memory) RAM usage and location coordinates, are shown on information panels attached to the digital twin in the 3D environment. Moreover, the system shows the robot's live camera feed within the virtual scene. This allows operators to observe the robot's physical behavior alongside its internal status and visual perception in real-time.
 
 To demonstrate the flexibility and reliability of this architecture, three different autonomous agents were implemented:
 \begin{itemize}
@@ -28,11 +28,10 @@ To demonstrate the flexibility and reliability of this architecture, three diffe
 \end{itemize}
 
 The platform provides an adaptable and scalable testing solution by integrating physics, sensor simulation, and autonomous control logic into a synchronized mixed reality environment. The only factor limiting the test environment's complexity is software, not its physical design. The technological decisions, system architecture, and particular implementation of these elements will be covered in detail in the sections that follow.
-%%%%%%%%%%%%%%%%%%%%%FERTIG%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \section{Comparative Analysis}
-The simulation engines that were considered as candidates to implement the Mixed Reality Environment are: Gazebo, Isaac Sim, Unreal Engine, and Unity. All were evaluated based on five critical criteria: visual fidelity, physics capabilities, learning curve, community support, and native integration with VR, AR and ROS~2. Table \ref{tab:sim_comparison} summarizes the results of this evaluation.
+The simulation engines that were considered as candidates to implement the Mixed Reality Environment are: Gazebo~\cite{Gazebo}, Isaac Sim~\cite{IsaacSim}, Unreal Engine~\cite{Unreal}, and Unity~\cite{Unity}. All were evaluated based on five critical criteria: visual fidelity, physics capabilities, learning curve, community support, and native integration with VR, AR and ROS~2. Table \ref{tab:sim_comparison} summarizes the results of this evaluation.
 
 \begin{table}[H]
     \centering
@@ -67,56 +66,58 @@ Based on the comparative analysis, the Unity Engine was selected as the implemen
 \end{itemize}
 
 
-%%%%%%%%%%%%%%%%%%%%%FERTIG%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \section{System Architecture}
 \label{sec:system_architecture}
 
-The realization of the Mixed Reality Environment requires a distributed software architecture that connects the advanced rendering capabilities of the Unity engine with real-time robotic control. The system is designed to satisfy the requirement for \textbf{Middleware Integration} (\hyperref[req:FR-04]{FR-04}) by establishing a unified communication layer between the simulation host and the autonomous agents.
+The realization of the Mixed Reality Environment requires a distributed software architecture that connects the rendering capabilities of the Unity engine with real-time robotic control. The system is designed to satisfy the requirement for \textbf{Middleware Integration} (\hyperref[req:FR-04]{FR-04}) by establishing a unified communication layer between the simulation host and the autonomous agents using ROS~2.
 
-\subsection{Hardware and Network Topology}
+\subsection{Hardware and Software Topology}
 \label{subsec:hardware_topology}
 
-To ensure high performance and support for specific hardware peripherals, the system topology is consolidated into a single high-performance workstation acting as the central server, supported by distributed wireless clients. As shown in Figure \ref{fig:hardware_topology}, the architecture is divided into four distinct computational domains:
+To ensure high performance and support for specific hardware peripherals, the system topology is consolidated into a single workstation acting as the central server, supported by distributed wireless clients. As shown in Figure \ref{fig:hardware_topology}, the architecture is divided into four distinct computational domains:
 
 \begin{enumerate}
-    \item \textbf{Workstation (Windows 11 Host):} The primary host runs Windows 11 to support the Unity Engine and the \textbf{ALVR (Air Light VR) Server}~\cite{ALVR_Github} natively. This layer manages the physics engine (PhysX) and renders the digital twin. It physically interfaces with the visual peripherals: a ceiling-mounted \textbf{Projector} via HDMI for floor projection and an \textbf{Overhead Tracking Camera} via USB to provide localization data.
+    \item \textbf{Workstation (Windows 11 Host):} The primary host runs Windows 11 to support the Unity Engine and the \textbf{ALVR (Air Light VR) Server}~\cite{ALVR_Github} natively. This layer manages the physics engine and renders the digital twin and its virtual environment. It physically interfaces with the visual peripherals: a ceiling-mounted \textbf{Projector} via HDMI for floor projection and an \textbf{Overhead Tracking Camera} via USB to provide localization data.
     
-    \item \textbf{Control Environment (WSL 2):} The computationally intensive robotic software runs within the Windows Subsystem for Linux (Ubuntu 24.04) on the same workstation. This isolation allows the \textit{Nav2 Stack}, \textit{Agent Mission Logic}, and the \textit{ArUco Tracking System} to run in a native Linux environment while communicating with the Windows host via a low-latency \textbf{Localhost} connection.
+    \item \textbf{Control Environment (WSL 2):} The computationally intensive robotic software runs on Ubuntu 24.04 within the Windows Subsystem for Linux (WSL) on the same workstation. This isolation allows the \textit{Nav2 Stack}, \textit{Agent Mission Logic}, and the \textit{ArUco Tracking System} to run in a native Linux environment while communicating with the Windows host via a low-latency \textbf{Localhost} connection.
     
     \item \textbf{Physical Robot (EMAROs):} The mobile robot operates as an independent node running Ubuntu 24.04 and ROS~2~Jazzy Jalisco. The onboard software is orchestrated by the \texttt{emaros\_launch} package, which manages hardware drivers for motor controllers and sensors. It connects to the system wirelessly via Wi-Fi.
 
-    \item \textbf{VR Interface (Meta Quest Pro):} The VR headset functions as a standalone thin client running \textbf{Meta Horizon OS}. It executes the \textbf{ALVR Client}~\cite{ALVR_Github} application, which is responsible for decoding the incoming video stream and handling spatial input.
+    \item \textbf{VR Interface (Meta Quest Pro):} The VR headset functions as a standalone client running \textbf{Meta Horizon OS}. It executes the \textbf{ALVR Client}~\cite{ALVR_Github} application, which is responsible for decoding the incoming video stream and handling spatial input.
 \end{enumerate}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1.0\textwidth]{images/hardware_topology.png}
-    \caption{Hardware and Network Topology. The workstation acts as the central computation unit, hosting the Unity simulation on Windows and the autonomous navigation stack within WSL. The physical robot and VR headset communicate via Wi-Fi through a central router, while visual peripherals interface directly with the Windows host.}
+    \caption{The Hardware and Software Topology of the Mixed Reality Environment.}
     \label{fig:hardware_topology}
 \end{figure}
 
-The VR integration (\hyperref[req:FR-16]{FR-16}) relies on ALVR, an open-source remote rendering solution that splits the computational workload. The \textbf{ALVR Server}, running on the high-performance Windows workstation, captures the rendered frames from Unity and encodes them into a high-bitrate video stream. This stream is transmitted via Wi-Fi to the \textbf{ALVR Client} on the Meta Quest Pro. The headset decodes and displays this video feed while simultaneously capturing 6-DoF (Six Degrees of Freedom) head-tracking data and controller inputs, which are transmitted back to the server in real-time.~\cite{ALVR_Github}
+The VR integration (\hyperref[req:FR-16]{FR-16}) relies on ALVR, an open-source remote rendering solution that splits the computational workload. The \textbf{ALVR Server}, running on the workstation, captures the rendered frames from Unity and encodes them into a high-bitrate video stream. This stream is transmitted via Wi-Fi to the \textbf{ALVR Client} on the Meta Quest Pro. The headset decodes and displays this video feed while simultaneously capturing head-tracking data and controller inputs, which are transmitted back to the server.~\cite{ALVR_Github}
 
-The network infrastructure is centered around a dedicated \textbf{Router}. The workstation is connected via \textbf{Ethernet} to ensure a stable high-bandwidth connection for the simulation server, while the EMAROs robot and Meta Quest Pro connect via \textbf{Wi-Fi}. This topology ensures that latency-sensitive traffic, such as the ALVR video stream and ROS~2 control commands, faces minimal interference.
+The network infrastructure is centered around a dedicated \textbf{Router}. The workstation is connected via \textbf{Ethernet}, while the EMAROs robot and Meta Quest Pro connect via \textbf{Wi-Fi}. This topology ensures that latency-sensitive traffic, such as the ALVR video stream and ROS~2 control commands, faces minimal interference.
+
+%%%%%%%%%%%%%%%%%%%%%FERTIG%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \subsection{Software Component Architecture}
 \label{subsec:software_components}
 
-The software architecture follows a modular publisher-subscriber pattern. To integrate the Unity game engine with the robotic network, the system utilizes the \texttt{ROS2ForUnity} library (\hyperref[req:FR-04]{FR-04}) \cite{ROS2ForUnityDocs}.
+The software architecture follows a modular publisher-subscriber pattern. To integrate the Unity game engine with the robotic network, the system utilizes the \texttt{ROS2ForUnity}~\cite{ROS2ForUnityDocs} library (\hyperref[req:FR-04]{FR-04}).
 
-To facilitate modularity, the implementation relies on Unity's component-based architecture. In this framework, entities within the simulation, such as the robot or the environment, are represented as \texttt{GameObjects}. These objects function as containers that hold various functional modules known as \textit{components}. By inheriting from Unity's base class \texttt{MonoBehaviour}, C\# scripts become components that can be attached to these \texttt{GameObjects} to define their behavior.
+To facilitate modularity~(\hyperref[req:NFR-03]{NFR-03}), the implementation relies on Unity's component-based architecture. In this framework, entities within the simulation, such as the robot or the environment, are represented as \texttt{GameObjects}. These objects function as containers that hold various functional modules known as \textit{components}. By inheriting from Unity's base class \texttt{MonoBehaviour}, C\# scripts become components that can be attached to these \texttt{GameObjects} to define their behavior.
 
 The core of the network integration is the \texttt{ROS2UnityComponent}~\cite{ROS2ForUnityDocs} class. This component acts as a wrapper around the standard ROS~2 middleware. Inheriting from \texttt{MonoBehaviour}, it must be attached to a \texttt{GameObject} in the scene to function. Upon startup, this component initializes the ROS~2 context, makes sure that a valid connection is established, and handles the lifecycle of the ROS~2 nodes running within the simulation. It allows other scripts to access the ROS~2 network by referencing this central component to create publishers, subscribers, and service clients.
 
-The functionality of the digital twin is driven by such scripts that interact with the engine's internal state machine. To ensure that physical simulation remains deterministic while visualization remains smooth, the architecture uses specific phases of the Unity execution loop~\cite{UnityDocumentation}:
+The functionality of the digital twin is driven by such scripts that interact with the engine's internal state machine. To guarantee that the physical simulation remains deterministic while visualization remains smooth, the architecture uses specific phases of the Unity execution loop~\cite{UnityDocumentation}:
 
 \begin{itemize}
-    \item \textbf{Initialization (\texttt{Start}):} This method is called once when the script is first enabled, before any frames are updated. In this architecture, it is used to retrieve the reference to the \texttt{ROS2UnityComponent}~\cite{ROS2ForUnityDocs}, initialize the specific ROS nodes, and set up the necessary publishers and subscribers.
+    \item \textbf{Initialization (\texttt{Start}):} This method is called once when the script is first enabled, before any frames are updated. In this architecture, it is used to retrieve the reference to the \texttt{ROS2UnityComponent}~\cite{ROS2ForUnityDocs}, initialize the specific ROS~2 nodes, and set up the necessary publishers and subscribers.
     
     \item \textbf{Physics Loop (\texttt{FixedUpdate}):} This method executes at a constant, user-defined time step, independent of the visual frame rate. All physics-based calculations, such as updating the robot's position based on received velocity commands or handling collision detection, occur in this loop. This ensures that the robot's physical behavior is consistent regardless of graphical performance.
     
-    \item \textbf{Rendering Loop (\texttt{Update}):} This method runs once every frame. It is utilized for logic that is not physics-related, such as updating UI elements, rendering diagnostic lines, or capturing camera frames for visualization. This separation ensures that high-frequency visual updates do not interfere with the stability of the physics engine.
+    \item \textbf{Rendering Loop (\texttt{Update}):} This method runs once every frame. It is utilized for logic that is not physics-related, like updating UI elements, rendering diagnostic lines, or capturing camera frames for visualization. This separation ensures that high-frequency visual updates do not interfere with the stability of the physics engine.
 \end{itemize}
 
 Figure \ref{fig:software_architecture} provides an overview of how these Unity scripts interact with the external ROS~2 nodes via topics. Detailed descriptions of these components follow in Sections 4.2 and 4.3.
@@ -128,7 +129,7 @@ Figure \ref{fig:software_architecture} provides an overview of how these Unity s
     % Middle: Arrows representing ROS Topics (/scan, /camera/image, /cmd_vel).
     % Right side: ROS Nodes (Nav2 Stack, Perception Node, Mission State Machine).
     %\includegraphics[width=1.0\textwidth]{figures/software_architecture} 
-    \caption{Software Component Architecture. Unity scripts act as ROS nodes, publishing sensor data and subscribing to control commands using ROS~2 topics. The external control stack, running in WSL, processes this data to make autonomous decisions.}
+    \caption{Software Component Architecture. Unity scripts act as ROS nodes, publishing sensor data and subscribing to control commands using ROS~2 topics.}
     \label{fig:software_architecture}
 \end{figure}
 

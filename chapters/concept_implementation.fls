@@ -1,0 +1,13 @@
+PWD /home/jonas/Master-Thesis-Latex/chapters
+INPUT /etc/texmf/web2c/texmf.cnf
+INPUT /usr/share/texmf/web2c/texmf.cnf
+INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
+INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
+INPUT /home/jonas/Master-Thesis-Latex/chapters/concept_implementation.tex
+OUTPUT concept_implementation.log
+INPUT /usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
+OUTPUT concept_implementation.pdf
+INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
