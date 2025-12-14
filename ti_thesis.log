@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.20)  14 DEC 2025 19:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.20)  14 DEC 2025 22:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1942,92 +1942,111 @@ Package pdftex.def Info: images/software_architecture.png  used on input line 13
 (pdftex.def)             Requested size: 426.7914pt x 355.55304pt.
  [33 <./images/software_architecture.png>]
 
-LaTeX Warning: Citation 'EMAROs_Ref' on page 34 undefined on input line 150.
+LaTeX Warning: Citation 'EMAROs_Ref' on page 34 undefined on input line 149.
 
 [34]
 
-LaTeX Warning: Citation 'EMAROs_Ref' on page 35 undefined on input line 162.
+LaTeX Warning: Citation 'EMAROs_Ref' on page 35 undefined on input line 161.
 
 
-LaTeX Warning: Citation 'JuliaBA' on page 35 undefined on input line 164.
+LaTeX Warning: Citation 'JuliaBA' on page 35 undefined on input line 163.
 
 
 Underfull \vbox (badness 3590) has occurred while \output is active []
 
- [35] [36] [37] [38]
+ [35] [36]
+<images/Detached.png, id=715, 794.97pt x 993.7125pt>
+File: images/Detached.png Graphic file (type png)
+<use images/Detached.png>
+Package pdftex.def Info: images/Detached.png  used on input line 193.
+(pdftex.def)             Requested size: 209.13013pt x 261.40688pt.
+<images/Attached.png, id=716, 799.48688pt x 998.9822pt>
+File: images/Attached.png Graphic file (type png)
+<use images/Attached.png>
+Package pdftex.def Info: images/Attached.png  used on input line 201.
+(pdftex.def)             Requested size: 209.13013pt x 261.2993pt.
+Class scrbook Info: Workaround for not recommended usage of \\ or
+(scrbook)           \newlinein caption text  on input line 205.
 
-LaTeX Warning: Citation 'ROS2ForUnityDocs' on page 39 undefined on input line 238.
+Underfull \vbox (badness 1132) has occurred while \output is active []
 
+ [37 <./images/Detached.png> <./images/Attached.png>]
+<images/texture_painting.png, id=725, 2168.1pt x 1355.0625pt>
+File: images/texture_painting.png Graphic file (type png)
+<use images/texture_painting.png>
+Package pdftex.def Info: images/texture_painting.png  used on input line 216.
+(pdftex.def)             Requested size: 341.43442pt x 213.38211pt.
 
-Underfull \vbox (badness 1577) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [38 <./images/texture_painting.png>]
+Underfull \vbox (badness 2351) has occurred while \output is active []
 
  [39]
 
-LaTeX Warning: Citation 'UnityDocumentation' on page 40 undefined on input line 255.
+LaTeX Warning: Citation 'ROS2ForUnityDocs' on page 40 undefined on input line 249.
+
+[40]
+
+LaTeX Warning: Citation 'UnityDocumentation' on page 41 undefined on input line 266.
 
 
-LaTeX Warning: Citation 'UnityDocumentation' on page 40 undefined on input line 255.
+LaTeX Warning: Citation 'UnityDocumentation' on page 41 undefined on input line 266.
 
 
-Overfull \hbox (48.76056pt too wide) in paragraph at lines 255--256
+Overfull \hbox (48.76056pt too wide) in paragraph at lines 266--267
 \T1/mdbch/m/n/12 (-20) lizes a ded-i-cated Unity cam-era com-po-nent con-fig-ured to \T1/cmtt/m/n/12 orthographic \T1/mdbch/m/n/12 (-20) [[]].
  []
 
 
-LaTeX Warning: Citation 'UnityDocumentation' on page 40 undefined on input line 257.
+LaTeX Warning: Citation 'UnityDocumentation' on page 41 undefined on input line 268.
 
-[40]
-Underfull \vbox (badness 6141) has occurred while \output is active []
+[41] [42]
 
- [41]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+LaTeX Warning: Citation 'YASMIN' on page 43 undefined on input line 312.
 
- [42]
+[43]
 
-LaTeX Warning: Citation 'YASMIN' on page 43 undefined on input line 301.
+LaTeX Warning: Citation 'NAV2Ref' on page 44 undefined on input line 317.
 
+[44]
 
-LaTeX Warning: Citation 'NAV2Ref' on page 43 undefined on input line 306.
+LaTeX Warning: Reference `fig:farm_debug' on page 45 undefined on input line 348.
 
-[43] [44]
+[45]
 
-LaTeX Warning: Reference `fig:farm_debug' on page 45 undefined on input line 337.
-
-
-LaTeX Warning: Citation 'YASMIN' on page 45 undefined on input line 347.
+LaTeX Warning: Citation 'YASMIN' on page 46 undefined on input line 358.
 
 
-LaTeX Warning: Reference `fig:farm_state_machine' on page 45 undefined on input line 347.
+LaTeX Warning: Reference `fig:farm_state_machine' on page 46 undefined on input line 358.
 
 
-Overfull \hbox (0.46489pt too wide) in paragraph at lines 353--354
+Overfull \hbox (0.46489pt too wide) in paragraph at lines 364--365
 []\T1/mdbch/b/n/12 (-20) AdjustToEdge: \T1/mdbch/m/n/12 (-20) The robot ro-tates in place un-til the \T1/cmtt/m/n/12 EdgeAdjustmentProcessor
  []
 
 
-LaTeX Warning: Citation 'NAV2Ref' on page 45 undefined on input line 359.
-
-[45]
-
-LaTeX Warning: Reference `fig:logistics_debug' on page 46 undefined on input line 386.
+LaTeX Warning: Citation 'NAV2Ref' on page 46 undefined on input line 370.
 
 [46]
 
-LaTeX Warning: Citation 'YASMIN' on page 47 undefined on input line 396.
+LaTeX Warning: Reference `fig:logistics_debug' on page 47 undefined on input line 397.
 
 
-LaTeX Warning: Citation 'NAV2Ref' on page 47 undefined on input line 399.
-
-[47]
-
-LaTeX Warning: Reference `fig:line_debug' on page 48 undefined on input line 427.
+LaTeX Warning: Citation 'YASMIN' on page 47 undefined on input line 407.
 
 
-LaTeX Warning: Citation 'NAV2Ref' on page 48 undefined on input line 437.
+LaTeX Warning: Citation 'NAV2Ref' on page 47 undefined on input line 410.
 
-[48]
+[47] [48]
 
-LaTeX Warning: Citation 'NAV2Ref' on page 49 undefined on input line 442.
+LaTeX Warning: Reference `fig:line_debug' on page 49 undefined on input line 438.
+
+
+LaTeX Warning: Citation 'NAV2Ref' on page 49 undefined on input line 448.
+
+
+LaTeX Warning: Citation 'NAV2Ref' on page 49 undefined on input line 453.
 
 ) [49]
 \openout2 = `chapters/evaluation.aux'.
@@ -2065,16 +2084,16 @@ Package tocbasic Info: character protrusion at lof deactivated on input line 52.
 \tf@lof=\write7
 \openout7 = `ti_thesis.lof'.
 
- [55] [56
-
-
-]
+ [55] [56]
 Package tocbasic Info: character protrusion at lol deactivated on input line 53.
  (./ti_thesis.lol)
 \tf@lol=\write8
 \openout8 = `ti_thesis.lol'.
 
- [57] [58
+ [57
+
+
+] [58
 
 
 ]
@@ -2128,18 +2147,18 @@ Package logreq Info: Writing requests to 'ti_thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 60742 strings out of 474222
- 1378430 string characters out of 5748732
- 2636675 words of memory out of 5000000
- 81405 multiletter control sequences out of 15000+600000
+ 60765 strings out of 474222
+ 1379073 string characters out of 5748732
+ 2637056 words of memory out of 5000000
+ 81428 multiletter control sequences out of 15000+600000
  637798 words of font info for 463 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  108i,12n,131p,10936b,3335s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchri8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chb8t.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr8t.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chri7m.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chri8t.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8ac.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on ti_thesis.pdf (73 pages, 8807698 bytes).
+Output written on ti_thesis.pdf (73 pages, 11720808 bytes).
 PDF statistics:
- 1325 PDF objects out of 1440 (max. 8388607)
- 1169 compressed objects within 12 object streams
+ 1337 PDF objects out of 1440 (max. 8388607)
+ 1175 compressed objects within 12 object streams
  248 named destinations out of 1000 (max. 500000)
- 76978 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 76993 words of extra memory for PDF output out of 89155 (max. 10000000)
 

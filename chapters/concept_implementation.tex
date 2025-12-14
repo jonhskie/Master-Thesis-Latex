@@ -142,9 +142,8 @@ The \texttt{ClockPublisher.cs} script in Unity acts as the master clock. It calc
 
 To ensure consistency, a \texttt{RosTimeHelper.cs} utility is used by all ROS~2 publishers in the Unity scripts. This script ensures that data leaving Unity is stamped with the exact simulation time of the frame it was created in to prevent data drift.
 
-%%%%%%%%%%%%%%%%%%%%%FERTIG%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \section{Robot Representation and Control}
 \label{sec:robot_representation_and_control}
 The robot in the Mixed Reality Environment runs in one of two modes: either as a completely simulated virtual robot or as a synchronized Digital Twin of the physical EMAROs~\cite{EMAROs_Ref} platform. To ensure consistency, both of these modes use the same visual and geometric model. This model is a simple cylinder that approximates the physical size of the robot for collision detection while keeping computational costs low. The behavior of this cylinder depends on the active control script, allowing the system to switch between physics-based simulation and position-based synchronization based on the requirements of the test. To select the desired mode, the user can enable in the Unity Editor either the model of the digital twin or the purely virtual robot.
@@ -170,44 +169,56 @@ A major challenge in mixed reality testing is signal latency or loss. If the phy
 
 To prevent this, the \texttt{PoseRobotController.cs} implements a safety watchdog  (\hyperref[req:FR-08]{FR-08}). The system continuously checks how long it has been since receiving the last pose update. If this delay exceeds a given safety limit, the system assumes tracking has been lost.
 
-When this occurs, the controller marks the tracking state as invalid. Although the digital twin will stop moving in the simulation, the physical Robot might continue moving. For this reason, the system is designed to send a stop command to the motors of the physical robot. This ensures the robot does not perform actions without simulation guidance. Once the tracking system re-acquires the robot, the watchdog resets and the digital twin resumes synchronization immediately.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%FERTIG%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+When this occurs, the controller marks the tracking state as invalid. Although the digital twin will stop moving in the simulation, the physical Robot might continue moving. For this reason, the system is designed to send a stop command over the \texttt{cmd\_vel} topic to the motors of the physical robot. This ensures the robot does not perform actions without simulation guidance. Once the tracking system re-acquires the robot, the watchdog resets and the digital twin resumes synchronization immediately.
 
 \section{Environmental Simulation Capabilities}
 \label{sec:environmental_simulation_capabilities}
 
-To serve as an effective testbed for autonomous agents, the virtual environment must offer more than just static scenery. It requires the capability to manipulate objects physically, generate realistic synthetic sensor data, and modify the state of the environment persistently. This section describes the implementation of these features, fulfilling the requirements for Sensor Simulation (\hyperref[req:FR-11]{FR-11}), Dynamic Environment Interaction (\hyperref[req:FR-13]{FR-13}), and the Command Interface (\hyperref[req:FR-12]{FR-12}).
-
+To serve as an effective testbed for autonomous agents, the virtual environment provides a dynamic and interactive simulation context. It incorporates the capability to manipulate objects physically, generate realistic synthetic sensor data and modify the state of the environment persistently. This section describes the implementation of these features, fulfilling the requirements for Sensor Simulation (\hyperref[req:FR-11]{FR-11}), Dynamic Environment Interaction (\hyperref[req:FR-13]{FR-13}), and the Command Interface (\hyperref[req:FR-12]{FR-12}).
 \subsection{Physics-Based Interaction}
-A key feature of the system is the robot's ability to physically connect with environmental objects. To achieve a rigid and predictable connection between the robot and manipulated items, the architecture uses a kinematic attachment method managed by the \texttt{AttachmentCommandManager} and the \texttt{RobotAttachmentController.cs}.
 
+A key feature of the system is the robot's ability to physically connect with environmental objects. To achieve a rigid and predictable connection between the robot and manipulated items, the architecture uses a kinematic attachment method managed by the \texttt{AttachmentCommandManager.cs} and the \texttt{RobotAttachmentController.cs}.
 
-ROS~2 command and control (\hyperref[req:FR-12]{FR-12}) is provided via the \texttt{/robot\_command} topic. Commands are sent as simple string messages (e.g., \texttt{"attach,plow"} or \texttt{"detach"}), offering a single, consistent interface for the high-level agents to request simulation state changes. The Command Manager runs on the Unity main thread and processes incoming entries from a thread-safe queue. On receiving an attach request, it searches for valid targets within a configurable radius using \texttt{Physics.OverlapSphere}.
+ROS~2 command and control (\hyperref[req:FR-12]{FR-12}) is provided via the \texttt{/robot\_command} topic. Commands are sent as simple string messages (e.g., \texttt{"attach,plow"} or \texttt{"detach"}). It offers a single, consistent interface for the high-level agents to request simulation state changes. The Command Manager runs on the Unity main thread and processes incoming entries from a thread-safe queue. On receiving an attach request, it searches for valid targets within a configurable radius using \texttt{Physics.OverlapSphere}.
 
-When a valid target is identified, the system attaches it to the robot. In Unity, the object is attached as a child of the robot's transform hierarchy at a specific mount point. Crucially, the system modifies the physics state of the attached object (\hyperref[req:FR-13]{FR-13}). Upon attachment, the script sets the object's \texttt{Rigidbody.isKinematic} property to true. This removes the object from the physics engine's dynamic calculations. This state change grants the robot's transform absolute authority over the object's position, eliminating any relative motion, jitter, or drift between the robot and the load during transport.
+When a valid target is identified, the system attaches it to the robotthe system attaches it to the robot, as illustrated in Figure \ref{fig:attachment_logic}. In Unity, the object is attached as a child of the robot's transform hierarchy at a specific mount point. Crucially, the system modifies the physics state of the attached object (\hyperref[req:FR-13]{FR-13}). Upon attachment, the script sets the object's \texttt{Rigidbody.isKinematic} property to true. This removes the object from the physics engine's dynamic calculations. This state change grants the robot's transform absolute authority over the object's position, eliminating any relative motion, jitter, or drift between the robot and the load during transport.
 
-At the same time, the controller disables collisions between the robot and the tool using \texttt{Physics.IgnoreCollision}. Without this step, snapping the tool to the robot would cause their geometries to overlap. The physics engine would attempt to separate them forcibly, potentially causing the equipment to be ejected erratically.
+At the same time, the controller disables collisions between the robot and the tool using \texttt{Physics.IgnoreCollision}. Without this step, snapping the object to the robot would cause their geometries to overlap. The physics engine would attempt to separate them forcibly, potentially causing the equipment to be ejected unpredictably.
 
 \begin{figure}[H]
     \centering
-    % \includegraphics[width=0.8\textwidth]{figures/attachment.png}
-    \caption{The robot model with an attached object. The kinematic coupling ensures the object moves rigidly with the robot chassis during transport. }
+    % Left Image (Detached)
+    \begin{minipage}{0.49\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{images/Detached.png} % Make sure extension is .png or .jpg
+        \par\vspace{5pt} % Small gap between image and text
+        (a) Detached State
+    \end{minipage}%
+    \hfill % Spacer
+    % Right Image (Attached)
+    \begin{minipage}{0.49\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{images/Attached.png} % Make sure extension is .png or .jpg
+        \par\vspace{5pt}
+        (b) Attached State
+    \end{minipage}
+    \caption{The robot attachment logic. (a) The robot approaches the target object.\\ (b) The object is kinematically coupled to the robot chassis.}
     \label{fig:attachment_logic}
 \end{figure}
 
 \subsection{ Surface Modification}
-To fulfill the requirement for dynamic environment interaction regarding surface textures (\hyperref[req:FR-13]{FR-13}), the system implements a continuous modification mechanism. 
+To fulfill the requirement for dynamic environment interaction regarding surface textures (\hyperref[req:FR-13]{FR-13}), the system implements a modification mechanism. 
 
-The modification logic relies on physics raycasting to identify the coordinates of the surface at the point of contact. When a valid hit is detected on the target surface, the \texttt{TrackPainter} which is attached to the robot model calculates the pixel coordinates on the texture map. It then modifies the pixel buffer directly using \texttt{SetPixels32}, changing the color to a configured color and thickness. Crucially, these changes are committed to the GPU using the \texttt{Apply} method. In complex scenarios, multiple agents (e.g., the robot, a VR controller, or a mouse interface) may attempt to modify the terrain simultaneously. To manage this, the \texttt{SharedPaintTextureRegistry.cs} functions as a singleton manager. It maintains a dictionary of active textures and ensures that all painters operate on a single, shared instance of the \texttt{Texture2D}. This prevents race conditions where one agent overwrites the work of another and ensures data consistency across the simulation.
+The modification logic relies on physics raycasting to identify the coordinates of the surface at the point of contact. When a valid hit is detected on the target surface, the \texttt{TrackPainter.cs} which is attached to the robot model calculates the pixel coordinates on the texture map. It then modifies the pixel buffer directly using \texttt{SetPixels32}, changing the color to a configured color and thickness. These changes are committed to the GPU using the \texttt{Apply} method. In complex scenarios, multiple agents (e.g., the robot, a VR controller, or a mouse interface) may attempt to modify the terrain simultaneously. To manage this, the \texttt{SharedPaintTextureRegistry.cs} functions as a singleton manager. It maintains a dictionary of active textures and guarantees that all painters operate on a single, shared instance of the \texttt{Texture2D}. This prevents race conditions where one agent overwrites the work of another and guarantees data consistency across the simulation.
 
 \begin{figure}[H]
     \centering
-    % \includegraphics[width=0.8\textwidth]{figures/texture_painting.png}
-    \caption{The dynamic terrain modification system. A raycast determines the UV coordinate of the tool's contact point (left), which is used to update the shared texture registry (right), permanently altering the ground appearance.}
+    \includegraphics[width=0.8\textwidth]{images/texture_painting.png}
+    \caption{Demonstration of dynamic surface modification. The robot uses the \texttt{TrackPainter.cs} component to modify the floor texture in real-time based on its trajectory, creating a persistent black trail.}
     \label{fig:texture_painting}
 \end{figure}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%fertig aber AI%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%fertig%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Sensor Simulation}
 To validate the perception algorithms of the autonomous agents, the system provides simulated sensors capable of generating synthetic data, including video feeds and ranging data (\hyperref[req:FR-11]{FR-11}).
 
