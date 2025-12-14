@@ -218,17 +218,16 @@ The modification logic relies on physics raycasting to identify the coordinates 
     \label{fig:texture_painting}
 \end{figure}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%fertig%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Sensor Simulation}
 To validate the perception algorithms of the autonomous agents, the system provides simulated sensors capable of generating synthetic data, including video feeds and ranging data (\hyperref[req:FR-11]{FR-11}).
 
-The \texttt{LidarSensor.cs} component simulates a 2D planar laser scanner which can be attached to the virtual model of the robot. Unlike GPU-based depth buffers often used in visual rendering, this implementation utilizes the Unity physics engine's raycasting API to query the scene geometry directly. In every simulation step, the component executes a loop corresponding to the configured number of beams (e.g., 360). For each beam, the system calculates a direction vector based on the scan angle.
+The \texttt{LidarSensor.cs} component simulates a 2D planar laser scanner, which can be attached to the virtual model of the robot. This implementation utilizes the Unity physics engine's raycasting API to query the scene geometry. In every simulation step, the component executes a loop corresponding to the configured number of beams. For each beam, the system calculates a direction vector based on the scan angle.
 
-For each beam a \texttt{Physics.Raycast} is cast along the computed direction. If the ray intersects a collider on the configured collision layer, its hit distance is recorded; otherwise the beam is reported as an infinite range. The collected distances are packaged into a standard \texttt{sensor\_msgs/LaserScan} message. Immediately after the raycast loop finishes, the message header is stamped with the current simulation time from the \texttt{ClockPublisher.cs}. This exact timestamping preserves temporal alignment with the navigation stack and prevents the ROS~2 transform (TF) system from rejecting the scan due to extrapolation errors caused by unsynchronized timestamps.
+For each beam a \texttt{Physics.Raycast} is cast along the computed direction. If the ray intersects a collider on the configured collision layer, its hit distance is recorded. Otherwise the beam is reported as an infinite range. The collected distances are packaged into a standard \texttt{sensor\_msgs/LaserScan} message. Immediately after the raycast loop finishes, the message is stamped with the current simulation time from the \texttt{ClockPublisher.cs} and published. This exact timestamping preserves temporal alignment with the navigation stack and prevents the ROS~2 transform (TF) system from rejecting the scan due to extrapolation errors caused by unsynchronized timestamps.
 \begin{figure}[H]
     \centering
-    % \includegraphics[width=0.8\textwidth]{figures/lidar_raycasting.png}
-    \caption{Visualization of the LiDAR simulation in the editor. Red lines indicate raycasts that did not hit an obstacle within range, while yellow lines indicate valid hits registered by the physics engine.}
+    \includegraphics[width=0.8\textwidth]{images/lidar_raycast.png}
+    \caption{Visualization of the LiDAR simulation in the editor. Red debug lines indicate raycasts that did not hit an obstacle within range, while yellow debug lines indicate valid hits registered by the physics engine.}
     \label{fig:lidar_raycasting}
 \end{figure}
 
@@ -237,8 +236,6 @@ Visual perception is handled by the \texttt{CameraSensor.cs} component. This scr
 The data extraction pipeline transfers the raw pixel data from the Graphics Processing Unit (GPU) memory to the Central Processing Unit (CPU) memory. Once on the CPU, the data is encoded into the appropriate format (e.g., raw RGB8 or JPEG) and published as a \texttt{sensor\_msgs/Image} or \texttt{CompressedImage}. To initialize the sensor, the \texttt{RobotCameraManager} instantiates the camera prefab at runtime and attaches it to the defined mount point in the robot hierarchy.
 
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%FERTIG ABER AI%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Scenario and Object Management}
 To support the requirement for \textbf{Scenario Management} (\hyperref[req:FR-06]{FR-06}), the architecture allows the system to switch between different test environments without restarting the entire application.
 
@@ -254,7 +251,7 @@ This fresh start approach ensures that Unity components specific to one scenario
 Beyond static geometry, the environment must support the lifecycle management of transient entities, such as the delivery boxes in the Logistics scenario. This is handled by the \texttt{DynamicObjectManager.cs}, which acts as a bridge between the ROS~2 data stream and the Unity instantiation engine (\hyperref[req:FR-13]{FR-13}).
 
 The manager subscribes to the \texttt{/vera/virtual\_objects} topic, processing a custom message structure that defines an object's ID, type, and pose. Internally, the system maintains a dictionary mapping string identifiers to Unity Prefabs.
-When an \texttt{ADD} or \texttt{MODIFY} command is received, the system checks if the object already exists. If it is new, the corresponding prefab is instantiated into the scene. If it exists, its transform is updated. Crucially, this component handles the coordinate conversion between the two systems, mapping the right-handed ROS position and orientation to the left-handed Unity world space. This allows external scripts or test runners to populate the scene with obstacles dynamically.
+When an \texttt{ADD} or \texttt{MODIFY} command is received, the system checks if the object already exists. If it is new, the corresponding prefab is instantiated into the scene. If it exists, its transform is updated. This component handles the coordinate conversion between the two systems, mapping the right-handed ROS~2 position and orientation to the left-handed Unity world space. This allows external scripts or test runners to populate the scene with obstacles dynamically.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%FETIG ABER AI%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Mixed Reality and User Interaction}
 \label{sec:mixed_reality_and_user_interaction}
