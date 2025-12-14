@@ -1,0 +1,196 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\@writefile{toc}{\contentsline {chapter}{\numberline {2}Background and Related Work}{5}{chapter.2}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{lol}{\addvspace {10\p@ }}
+\newlabel{chap:background}{{2}{5}{Background and Related Work}{chapter.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.1}Robot-in-the-Loop-Testing}{5}{section.2.1}\protected@file@percent }
+\newlabel{sec:RitL}{{2.1}{5}{Robot-in-the-Loop-Testing}{section.2.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces An example of a Vehicle-in-the-Loop (VitL) setup. A real car on a test track connected to a high-fidelity simulator like CARLA that generates virtual traffic and sensor data.~\blx@tocontentsinit {0}\cite {DSR22}}}{7}{figure.2.2}\protected@file@percent }
+\newlabel{fig:vitl_setup}{{2.2}{7}{An example of a Vehicle-in-the-Loop (VitL) setup. A real car on a test track connected to a high-fidelity simulator like CARLA that generates virtual traffic and sensor data.~\cite {DSR22}}{figure.2.2}{}}
+\newlabel{sec:DT}{{2.1}{8}{Robot-in-the-Loop-Testing}{figure.2.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.2}Digital Twins}{8}{section.2.2}\protected@file@percent }
+\newlabel{sec:DT}{{2.2}{8}{Digital Twins}{section.2.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces The foundational concept of a Digital Twin, illustrating the three core components: the physical entity, the virtual model, and the bi-directional data connection that links them~\blx@tocontentsinit {0}\cite {Grieves2017, Leng2021}.~\blx@tocontentsinit {0}\cite {Grieves15}}}{9}{figure.2.3}\protected@file@percent }
+\newlabel{fig:dt_concept}{{2.3}{9}{The foundational concept of a Digital Twin, illustrating the three core components: the physical entity, the virtual model, and the bi-directional data connection that links them~\cite {Grieves2017, Leng2021}.~\cite {Grieves15}}{figure.2.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.3}Mixed Reality (MR)}{10}{section.2.3}\protected@file@percent }
+\newlabel{sec:MR}{{2.3}{10}{Mixed Reality (MR)}{section.2.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.5}{\ignorespaces The Reality-Virtuality Continuum, illustrating the spectrum from a real environment to a completely virtual one.~\blx@tocontentsinit {0}\cite {Walker2023}}}{11}{figure.2.5}\protected@file@percent }
+\newlabel{fig:rv_continuum}{{2.5}{11}{The Reality-Virtuality Continuum, illustrating the spectrum from a real environment to a completely virtual one.~\cite {Walker2023}}{figure.2.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.4}Robot Operating System 2 (ROS~2)}{11}{section.2.4}\protected@file@percent }
+\newlabel{sec:ros2}{{2.4}{11}{Robot Operating System 2 (ROS~2)}{section.2.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.6}{\ignorespaces The ROS~2 publish-subscribe model. Node A publishes messages onto a central topic, and any number of subscriber nodes (B and C) may receive that data without direct knowledge of the publisher.}}{12}{figure.2.6}\protected@file@percent }
+\newlabel{fig:ros2_comm_concept}{{2.6}{12}{The ROS~2 publish-subscribe model. Node A publishes messages onto a central topic, and any number of subscriber nodes (B and C) may receive that data without direct knowledge of the publisher}{figure.2.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.7}{\ignorespaces A simplified example of a ROS~2 transform tree (tf tree). The library maintains the hierarchical relationships so that a program can easily determine the transform from the \texttt  {camera\_link} to the \texttt  {world} frame, for instance.}}{13}{figure.2.7}\protected@file@percent }
+\newlabel{fig:tf_tree_concept}{{2.7}{13}{A simplified example of a ROS~2 transform tree (tf tree). The library maintains the hierarchical relationships so that a program can easily determine the transform from the \texttt {camera\_link} to the \texttt {world} frame, for instance}{figure.2.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.5}The VERA Framework}{13}{section.2.5}\protected@file@percent }
+\newlabel{sec:vera}{{2.5}{13}{The VERA Framework}{section.2.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.8}{\ignorespaces The physical setup of the VERA platform: A projector and tracking system are mounted on a frame above the test area.~\blx@tocontentsinit {0}\cite {Geh24}}}{14}{figure.2.8}\protected@file@percent }
+\newlabel{fig:vera_setup}{{2.8}{14}{The physical setup of the VERA platform: A projector and tracking system are mounted on a frame above the test area.~\cite {Geh24}}{figure.2.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.5.1}EMAROs Test Platform}{14}{subsection.2.5.1}\protected@file@percent }
+\newlabel{sec:EMAROs_platform}{{2.5.1}{14}{EMAROs Test Platform}{subsection.2.5.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.9}{\ignorespaces The EMAROs robot is the robotic platform used in the testbed, equipped with a modular sensor suite and running ROS~2.~\blx@tocontentsinit {0}\cite {Geh24}}}{15}{figure.2.9}\protected@file@percent }
+\newlabel{fig:EMAROs_robot}{{2.9}{15}{The EMAROs robot is the robotic platform used in the testbed, equipped with a modular sensor suite and running ROS~2.~\cite {Geh24}}{figure.2.9}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.5.2}Original VERA System Architecture}{15}{subsection.2.5.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2.10}{\ignorespaces The original VERA used point clouds~\blx@tocontentsinit {0}\cite {Geh24}, while the current iteration uses ArUco markers for pose estimation~\blx@tocontentsinit {0}\cite {JuliaBA}.}}{16}{figure.2.10}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2.11}{\ignorespaces Original VERA visualization via Pygame, showing a projection of the robot's path and virtual obstacles onto the floor.~\blx@tocontentsinit {0}\cite {Geh24}}}{17}{figure.2.11}\protected@file@percent }
+\newlabel{fig:pygame_vis}{{2.11}{17}{Original VERA visualization via Pygame, showing a projection of the robot's path and virtual obstacles onto the floor.~\cite {Geh24}}{figure.2.11}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.5.3}Identified Limitations}{18}{subsection.2.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2.6}Simulation Engines for Robotics}{18}{section.2.6}\protected@file@percent }
+\newlabel{sec:sim_engines}{{2.6}{18}{Simulation Engines for Robotics}{section.2.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.6.1}Robotics Simulators}{19}{subsection.2.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.6.2}Physics-Based Simulators}{19}{subsection.2.6.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.6.3}High-Visual-Fidelity and Game-Based Engines}{20}{subsection.2.6.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2.7}Synthesis? Discussion?}{20}{section.2.7}\protected@file@percent }
+\newlabel{sec:synthesis_objectives}{{2.7}{20}{Synthesis? Discussion?}{section.2.7}{}}
+\@setckpt{chapters/foundations_related_work}{
+\setcounter{page}{22}
+\setcounter{equation}{0}
+\setcounter{enumi}{0}
+\setcounter{enumii}{0}
+\setcounter{enumiii}{0}
+\setcounter{enumiv}{0}
+\setcounter{footnote}{0}
+\setcounter{mpfootnote}{0}
+\setcounter{part}{0}
+\setcounter{chapter}{2}
+\setcounter{section}{7}
+\setcounter{subsection}{0}
+\setcounter{subsubsection}{0}
+\setcounter{paragraph}{0}
+\setcounter{subparagraph}{0}
+\setcounter{figure}{11}
+\setcounter{table}{0}
+\setcounter{tabx@nest}{0}
+\setcounter{listtotal}{0}
+\setcounter{listcount}{0}
+\setcounter{liststart}{0}
+\setcounter{liststop}{0}
+\setcounter{citecount}{0}
+\setcounter{citetotal}{0}
+\setcounter{multicitecount}{0}
+\setcounter{multicitetotal}{0}
+\setcounter{instcount}{221}
+\setcounter{maxnames}{4}
+\setcounter{minnames}{3}
+\setcounter{maxitems}{3}
+\setcounter{minitems}{1}
+\setcounter{citecounter}{0}
+\setcounter{maxcitecounter}{0}
+\setcounter{savedcitecounter}{0}
+\setcounter{uniquelist}{0}
+\setcounter{uniquename}{0}
+\setcounter{refsection}{0}
+\setcounter{refsegment}{0}
+\setcounter{maxextratitle}{0}
+\setcounter{maxextratitleyear}{0}
+\setcounter{maxextraname}{2}
+\setcounter{maxextradate}{0}
+\setcounter{maxextraalpha}{0}
+\setcounter{abbrvpenalty}{50}
+\setcounter{highnamepenalty}{50}
+\setcounter{lownamepenalty}{25}
+\setcounter{maxparens}{3}
+\setcounter{parenlevel}{0}
+\setcounter{blx@maxsection}{0}
+\setcounter{mincomprange}{10}
+\setcounter{maxcomprange}{100000}
+\setcounter{mincompwidth}{1}
+\setcounter{afterword}{0}
+\setcounter{savedafterword}{0}
+\setcounter{annotator}{0}
+\setcounter{savedannotator}{0}
+\setcounter{author}{0}
+\setcounter{savedauthor}{0}
+\setcounter{bookauthor}{0}
+\setcounter{savedbookauthor}{0}
+\setcounter{commentator}{0}
+\setcounter{savedcommentator}{0}
+\setcounter{editor}{0}
+\setcounter{savededitor}{0}
+\setcounter{editora}{0}
+\setcounter{savededitora}{0}
+\setcounter{editorb}{0}
+\setcounter{savededitorb}{0}
+\setcounter{editorc}{0}
+\setcounter{savededitorc}{0}
+\setcounter{foreword}{0}
+\setcounter{savedforeword}{0}
+\setcounter{holder}{0}
+\setcounter{savedholder}{0}
+\setcounter{introduction}{0}
+\setcounter{savedintroduction}{0}
+\setcounter{namea}{0}
+\setcounter{savednamea}{0}
+\setcounter{nameb}{0}
+\setcounter{savednameb}{0}
+\setcounter{namec}{0}
+\setcounter{savednamec}{0}
+\setcounter{translator}{0}
+\setcounter{savedtranslator}{0}
+\setcounter{shortauthor}{0}
+\setcounter{savedshortauthor}{0}
+\setcounter{shorteditor}{0}
+\setcounter{savedshorteditor}{0}
+\setcounter{labelname}{0}
+\setcounter{savedlabelname}{0}
+\setcounter{institution}{0}
+\setcounter{savedinstitution}{0}
+\setcounter{lista}{0}
+\setcounter{savedlista}{0}
+\setcounter{listb}{0}
+\setcounter{savedlistb}{0}
+\setcounter{listc}{0}
+\setcounter{savedlistc}{0}
+\setcounter{listd}{0}
+\setcounter{savedlistd}{0}
+\setcounter{liste}{0}
+\setcounter{savedliste}{0}
+\setcounter{listf}{0}
+\setcounter{savedlistf}{0}
+\setcounter{location}{0}
+\setcounter{savedlocation}{0}
+\setcounter{organization}{0}
+\setcounter{savedorganization}{0}
+\setcounter{origlocation}{0}
+\setcounter{savedoriglocation}{0}
+\setcounter{origpublisher}{0}
+\setcounter{savedorigpublisher}{0}
+\setcounter{publisher}{0}
+\setcounter{savedpublisher}{0}
+\setcounter{language}{0}
+\setcounter{savedlanguage}{0}
+\setcounter{origlanguage}{0}
+\setcounter{savedoriglanguage}{0}
+\setcounter{pageref}{0}
+\setcounter{savedpageref}{0}
+\setcounter{textcitecount}{0}
+\setcounter{textcitetotal}{0}
+\setcounter{textcitemaxnames}{0}
+\setcounter{biburlbigbreakpenalty}{100}
+\setcounter{biburlbreakpenalty}{200}
+\setcounter{biburlnumpenalty}{0}
+\setcounter{biburlucpenalty}{0}
+\setcounter{biburllcpenalty}{0}
+\setcounter{smartand}{1}
+\setcounter{bbx:relatedcount}{0}
+\setcounter{bbx:relatedtotal}{0}
+\setcounter{tikztiming@nrows}{0}
+\setcounter{tikztimingrows}{0}
+\setcounter{tikztimingtrans}{0}
+\setcounter{tikztimingtranspos}{0}
+\setcounter{parentequation}{0}
+\setcounter{float@type}{8}
+\setcounter{FBl@b}{0}
+\setcounter{FRobj}{0}
+\setcounter{FRsobj}{0}
+\setcounter{FBcnt}{0}
+\setcounter{r@tfl@t}{0}
+\setcounter{lstnumber}{1}
+\setcounter{section@level}{1}
+\setcounter{Item}{0}
+\setcounter{Hfootnote}{0}
+\setcounter{bookmark@seq@number}{0}
+\setcounter{lstlisting}{0}
+}

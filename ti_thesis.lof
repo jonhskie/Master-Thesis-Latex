@@ -13,7 +13,6 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.2}{\ignorespaces The Hardware and Software Topology of the Mixed Reality Environment.}}{31}{figure.4.2}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Software Component Architecture. Components are marked [V] if active only for the Virtual Robot, and [T] if active only for the Digital Twin. Unmarked topics are shared by both configurations. The \texttt {LogisticsManager} shares the status topic to report game logic events.}}{34}{figure.4.3}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
