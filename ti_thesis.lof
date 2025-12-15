@@ -18,6 +18,9 @@
 \contentsline {figure}{\numberline {4.5}{\ignorespaces Demonstration of dynamic surface modification. The robot uses the \texttt {TrackPainter.cs} component to modify the floor texture in real-time based on its trajectory, creating a persistent black trail.}}{38}{figure.4.5}%
 \contentsline {figure}{\numberline {4.6}{\ignorespaces Visualization of the LiDAR simulation in the editor. Red debug lines indicate raycasts that did not hit an obstacle within range, while yellow debug lines indicate valid hits registered by the physics engine.}}{39}{figure.4.6}%
 \contentsline {figure}{\numberline {4.7}{\ignorespaces The Augmented Telemetry interface. A billboard displays system stats, while the \texttt {RosImageToMaterial.cs} component projects the live OpenCV debug feed onto a plane attached to the robot, visualizing the internal state of the perception stack.}}{43}{figure.4.7}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Debug view of the Smart Farming agent during edge following. The processor identifies the boundary between the field (left) and the path (right). The green line represents the detected edge used for navigation, while the red dot indicates the centroid used to compute the lateral and angular errors displayed in the overlay.}}{47}{figure.4.8}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Debug view of the Logistics agent. The processor identifies a red transport box in its ROI (green) and calculates the centroid (red dot).}}{49}{figure.4.9}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Debug view of the Line Follower. The system isolates the user-drawn path and fits a vector (blue line) to calculate lateral and angular errors for the PID controller.}}{51}{figure.4.10}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
