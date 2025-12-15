@@ -538,12 +538,16 @@ INPUT ./chapters/abstract.tex
 INPUT chapters/abstract.tex
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/helvetic/phvb8t.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/helvetic/phvb8t.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/mathdesign/mdbch/mdbchb8t.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/helvetic/phvb8t.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/helvetic/phvb8r.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/mathdesign/mdbch/mdbchr8t.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/mathdesign/mdbch/md-chr8y.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/mathdesign/mdbch/md-chr8t.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/ly1/texnansi.enc
+INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/mathdesign/mdbch/mdbchb8t.vf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/mathdesign/mdbch/md-chb8y.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/mathdesign/mdbch/md-chb8t.tfm
 INPUT ./ti_thesis.toc
 INPUT ./ti_thesis.toc
 INPUT ti_thesis.toc
@@ -599,10 +603,6 @@ OUTPUT chapters/introduction.aux
 INPUT ./chapters/introduction.tex
 INPUT ./chapters/introduction.tex
 INPUT chapters/introduction.tex
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/mathdesign/mdbch/mdbchb8t.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/mathdesign/mdbch/mdbchb8t.vf
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/mathdesign/mdbch/md-chb8y.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/mathdesign/mdbch/md-chb8t.tfm
 INPUT ./chapters/foundations_related_work.tex
 INPUT ./chapters/foundations_related_work.tex
 OUTPUT chapters/foundations_related_work.aux
