@@ -418,7 +418,7 @@ The debug view (Figure \ref{fig:line_debug}) visualizes these metrics in real-ti
     \label{fig:line_debug}
 \end{figure}
 
-The mission logic is defined in \texttt{mission\_state\_machine.py}. Similar to the Smart Farming implementation, this agent utilizes a hybrid control approach. It utilizes the Nav2 stack~\cite{NAV2Ref} for global exploration but switches to a custom PID control loop for the primary task to ensure low-latency reactivity. The sequence proceeds as follows:
+The mission logic is defined in \texttt{mission\_state\_machine.py}. Similar to the Smart Farming implementation, this agent utilizes a hybrid control approach. It utilizes the Nav2 stack~\cite{NAV2Ref} for global exploration but switches to a PID control loop for the primary task to ensure low-latency reactivity. The sequence proceeds as follows:
 \begin{enumerate}
     \item \textbf{FindLine:} The robot executes a spiral search pattern using the\\ \texttt{find\_line\_action\_server} and Nav2 stack to locate the drawn path.
     \item \textbf{AlignToLine:} Once the line is detected, the robot transitions to the \texttt{AlignToLine} action. The robot rotates in place until the angular error returned by the perception node is minimized, ensuring the robot is parallel to the path before moving.
