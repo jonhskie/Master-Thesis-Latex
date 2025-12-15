@@ -164,6 +164,28 @@
       \field{pages}{70\bibrangedash 84}
       \range{pages}{15}
     \endentry
+    \entry{ALVR_Github}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=f71bd65d93a8210fa05d407d78b15eed}{%
+           family={{ALVR Team}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{f71bd65d93a8210fa05d407d78b15eed}
+      \strng{fullhash}{f71bd65d93a8210fa05d407d78b15eed}
+      \strng{bibnamehash}{f71bd65d93a8210fa05d407d78b15eed}
+      \strng{authorbibnamehash}{f71bd65d93a8210fa05d407d78b15eed}
+      \strng{authornamehash}{f71bd65d93a8210fa05d407d78b15eed}
+      \strng{authorfullhash}{f71bd65d93a8210fa05d407d78b15eed}
+      \field{labelalpha}{ALV25}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://github.com/alvr-org/ALVR}}
+      \field{note}{GitHub repository. Accessed: 2025-12-15}
+      \field{title}{{ALVR}: Air Light VR -- Open Source Remote Rendering for VR}
+      \field{year}{2025}
+    \endentry
     \entry{AMV23}{article}{}
       \name{author}{3}{}{%
         {{hash=232b0d6930c9ed000a95bd1f597efd1b}{%
@@ -242,6 +264,30 @@
       \verb{doi}
       \verb 10.1007/978-3-319-62533-1
       \endverb
+    \endentry
+    \entry{OpenCV}{article}{}
+      \name{author}{1}{}{%
+        {{hash=7cb92723a011baf2e0abeeb403d03960}{%
+           family={Bradski},
+           familyi={B\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{7cb92723a011baf2e0abeeb403d03960}
+      \strng{fullhash}{7cb92723a011baf2e0abeeb403d03960}
+      \strng{bibnamehash}{7cb92723a011baf2e0abeeb403d03960}
+      \strng{authorbibnamehash}{7cb92723a011baf2e0abeeb403d03960}
+      \strng{authornamehash}{7cb92723a011baf2e0abeeb403d03960}
+      \strng{authorfullhash}{7cb92723a011baf2e0abeeb403d03960}
+      \field{labelalpha}{Bra00}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Dr. Dobb's Journal of Software Tools}
+      \field{title}{{The OpenCV Library}}
+      \field{year}{2000}
+      \keyw{bibtex-import}
     \endentry
     \entry{Singh2024a}{article}{}
       \name{author}{3}{}{%
@@ -823,6 +869,36 @@
       \verb 10.7551/mitpress/11708.001.0001
       \endverb
     \endentry
+    \entry{unrealengine}{software}{}
+      \name{author}{1}{}{%
+        {{hash=f74dc6a40e6ed3e07e99f3e972a5394a}{%
+           family={{Epic Games}},
+           familyi={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{f74dc6a40e6ed3e07e99f3e972a5394a}
+      \strng{fullhash}{f74dc6a40e6ed3e07e99f3e972a5394a}
+      \strng{bibnamehash}{f74dc6a40e6ed3e07e99f3e972a5394a}
+      \strng{authorbibnamehash}{f74dc6a40e6ed3e07e99f3e972a5394a}
+      \strng{authornamehash}{f74dc6a40e6ed3e07e99f3e972a5394a}
+      \strng{authorfullhash}{f74dc6a40e6ed3e07e99f3e972a5394a}
+      \field{labelalpha}{Epi19}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{25}
+      \field{month}{4}
+      \field{title}{Unreal Engine}
+      \field{version}{4.22.1}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://www.unrealengine.com
+      \endverb
+      \verb{url}
+      \verb https://www.unrealengine.com
+      \endverb
+    \endentry
     \entry{Gonzalez2025}{article}{}
       \name{author}{3}{}{%
         {{hash=2188e0c955a5936415fc40e932b6e2ad}{%
@@ -909,7 +985,10 @@
            giveni={P\bibinitperiod}}}%
       }
       \list{institution}{1}{%
-        {Universität Osnabrück}%
+        {Osnabrueck University}%
+      }
+      \list{location}{1}{%
+        {Universität Osnabrück Neuer Graben/Schloss 49074 Osnabrück}%
       }
       \strng{namehash}{2780568b03b12772eb1bbe1cd58b87fd}
       \strng{fullhash}{2780568b03b12772eb1bbe1cd58b87fd}
@@ -922,8 +1001,9 @@
       \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{note}{Computer Engineering working group -- Computer Science.}
       \field{title}{Virtual Environment for mobile Robotic Applications}
-      \field{type}{mathesis}
+      \field{type}{Bachelor's thesis}
       \field{year}{2024}
     \endentry
     \entry{Grieves15}{article}{}
@@ -948,6 +1028,100 @@
       \field{month}{03}
       \field{title}{Digital Twin: Manufacturing Excellence through Virtual Factory Replication}
       \field{year}{2015}
+    \endentry
+    \entry{YASMIN}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=750f20fb3af260ec3d4761f670ed2e6b}{%
+           family={González-Santamarta},
+           familyi={G\bibinithyphendelim S\bibinitperiod},
+           given={Miguel\bibnamedelima Á},
+           giveni={M\bibinitperiod\bibinitdelim Á\bibinitperiod}}}%
+        {{hash=a21b2bccf7f94df40f292fafd4cfdaa9}{%
+           family={Rodríguez-Lera},
+           familyi={R\bibinithyphendelim L\bibinitperiod},
+           given={Francisco\bibnamedelima J},
+           giveni={F\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=3b95c0ebcb78ee4309455b93de5a2100}{%
+           family={Matellán-Olivera},
+           familyi={M\bibinithyphendelim O\bibinitperiod},
+           given={Vicente},
+           giveni={V\bibinitperiod}}}%
+        {{hash=10fbda1c2f930d07686969128bbe0537}{%
+           family={Fernández-Llamas},
+           familyi={F\bibinithyphendelim L\bibinitperiod},
+           given={Camino},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{cd0719b18a38947028fd358416c84076}
+      \strng{fullhash}{cd0719b18a38947028fd358416c84076}
+      \strng{bibnamehash}{cd0719b18a38947028fd358416c84076}
+      \strng{authorbibnamehash}{cd0719b18a38947028fd358416c84076}
+      \strng{authornamehash}{cd0719b18a38947028fd358416c84076}
+      \strng{authorfullhash}{cd0719b18a38947028fd358416c84076}
+      \field{labelalpha}{GRM+22}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Iberian Robotics conference}
+      \field{title}{Yasmin: Yet another state machine}
+      \field{year}{2022}
+      \field{pages}{528\bibrangedash 539}
+      \range{pages}{12}
+    \endentry
+    \entry{EMAROs_Ref}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=2780568b03b12772eb1bbe1cd58b87fd}{%
+           family={Gehricke},
+           familyi={G\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+        {{hash=4fb9c2c2a869ba69c3a74b3ae9da01a2}{%
+           family={Tassemeier},
+           familyi={T\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=0f59aecaf1d30ac5f0b513abe8402254}{%
+           family={Porrmann},
+           familyi={P\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Thessaloniki, Greece}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{199abfd6eb6fed666f3831fdbacab5d8}
+      \strng{fullhash}{199abfd6eb6fed666f3831fdbacab5d8}
+      \strng{bibnamehash}{199abfd6eb6fed666f3831fdbacab5d8}
+      \strng{authorbibnamehash}{199abfd6eb6fed666f3831fdbacab5d8}
+      \strng{authornamehash}{199abfd6eb6fed666f3831fdbacab5d8}
+      \strng{authorfullhash}{199abfd6eb6fed666f3831fdbacab5d8}
+      \field{labelalpha}{GTP25}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Robotics in Education (RiE 2025)}
+      \field{month}{4}
+      \field{title}{{EMAROs}: A Modular Autonomous Robot-Platform for Research and Education}
+      \field{year}{2025}
+      \field{pages}{533\bibrangedash 544}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1007/978-3-031-98762-5_45
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/978-3-031-98762-5_45
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/978-3-031-98762-5_45
+      \endverb
     \endentry
     \entry{Grieves2017}{inbook}{}
       \name{author}{2}{}{%
@@ -1062,6 +1236,40 @@
       \verb https://doi.org/10.1109/ICAR.2005.1507456
       \endverb
     \endentry
+    \entry{Gazebo}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=b36ad28302103ee23f9d095ae271054f}{%
+           family={Koenig},
+           familyi={K\bibinitperiod},
+           given={Nathan},
+           giveni={N\bibinitperiod}}}%
+        {{hash=315c4166fc1f7cb66324a7f0d82827cd}{%
+           family={Howard},
+           familyi={H\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Sendai, Japan}%
+      }
+      \strng{namehash}{956b19be78deabb0cea6aa73f05590c0}
+      \strng{fullhash}{956b19be78deabb0cea6aa73f05590c0}
+      \strng{bibnamehash}{956b19be78deabb0cea6aa73f05590c0}
+      \strng{authorbibnamehash}{956b19be78deabb0cea6aa73f05590c0}
+      \strng{authornamehash}{956b19be78deabb0cea6aa73f05590c0}
+      \strng{authorfullhash}{956b19be78deabb0cea6aa73f05590c0}
+      \field{labelalpha}{KH04}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{IEEE/RSJ International Conference on Intelligent Robots and Systems}
+      \field{month}{9}
+      \field{title}{Design and Use Paradigms for Gazebo, An Open-Source Multi-Robot Simulator}
+      \field{year}{2004}
+      \field{pages}{2149\bibrangedash 2154}
+      \range{pages}{6}
+    \endentry
     \entry{Kargar2024}{article}{}
       \name{author}{4}{}{%
         {{hash=19511abeac34e5990738e8b38539bc5d}{%
@@ -1161,6 +1369,59 @@
       \verb{url}
       \verb https://doi.org/10.1109/ACCESS.2025.3569332
       \endverb
+    \endentry
+    \entry{IsaacSim}{inproceedings}{}
+      \name{author}{6}{}{%
+        {{hash=689c1f7ab1959d67e7801f3e62a09609}{%
+           family={Liang},
+           familyi={L\bibinitperiod},
+           given={Jacky},
+           giveni={J\bibinitperiod}}}%
+        {{hash=b2920c1e5c13f9f9448bc7ad484b44ed}{%
+           family={Makoviychuk},
+           familyi={M\bibinitperiod},
+           given={Viktor},
+           giveni={V\bibinitperiod}}}%
+        {{hash=91f71111407c735a209311b2c093f258}{%
+           family={Handa},
+           familyi={H\bibinitperiod},
+           given={Ankur},
+           giveni={A\bibinitperiod}}}%
+        {{hash=d47ede25f528b578ea7d00270e9c2106}{%
+           family={Chentanez},
+           familyi={C\bibinitperiod},
+           given={Nuttapong},
+           giveni={N\bibinitperiod}}}%
+        {{hash=fb9fad16d2ae65ef730edb579c4636cf}{%
+           family={Macklin},
+           familyi={M\bibinitperiod},
+           given={Miles},
+           giveni={M\bibinitperiod}}}%
+        {{hash=93b0c4a7857a82a8f94e256475887c74}{%
+           family={Fox},
+           familyi={F\bibinitperiod},
+           given={Dieter},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {PMLR}%
+      }
+      \strng{namehash}{8e13ccb85f7bca6dd7513dafc50f1631}
+      \strng{fullhash}{c6173be233f52adde29bce1b33b2d787}
+      \strng{bibnamehash}{8e13ccb85f7bca6dd7513dafc50f1631}
+      \strng{authorbibnamehash}{8e13ccb85f7bca6dd7513dafc50f1631}
+      \strng{authornamehash}{8e13ccb85f7bca6dd7513dafc50f1631}
+      \strng{authorfullhash}{c6173be233f52adde29bce1b33b2d787}
+      \field{labelalpha}{LMH+18}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Conference on Robot Learning}
+      \field{title}{Gpu-accelerated robotic simulation for distributed reinforcement learning}
+      \field{year}{2018}
+      \field{pages}{270\bibrangedash 282}
+      \range{pages}{13}
     \endentry
     \entry{Leng2021}{article}{}
       \name{author}{6}{}{%
@@ -1463,6 +1724,7 @@
       \field{labelalpha}{MMW+20}
       \field{sortinit}{M}
       \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extraalpha}{1}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{2020 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)}
@@ -1474,6 +1736,60 @@
       \verb 10.1109/IROS45743.2020.9341207
       \endverb
       \keyw{Navigation; Service robots; Heuristic algorithms; Sensors; Safety; Task analysis; Testing}
+    \endentry
+    \entry{MSM20}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=7b84d10a03303cd00f198fefb38a5da3}{%
+           family={Macenski},
+           familyi={M\bibinitperiod},
+           given={Steven},
+           giveni={S\bibinitperiod}}}%
+        {{hash=95227903951d354452203b21c6b973f9}{%
+           family={Martín},
+           familyi={M\bibinitperiod},
+           given={Francisco},
+           giveni={F\bibinitperiod}}}%
+        {{hash=8e3530875bb75f3e6564d0fe162ed981}{%
+           family={White},
+           familyi={W\bibinitperiod},
+           given={Ruffin},
+           giveni={R\bibinitperiod}}}%
+        {{hash=99c037730b474f3de9e59b2466f2377a}{%
+           family={Ginés\bibnamedelima Clavero},
+           familyi={G\bibinitperiod\bibinitdelim C\bibinitperiod},
+           given={Jonatan},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{b428d27f39861edf6f626401b262bfa0}
+      \strng{fullhash}{b428d27f39861edf6f626401b262bfa0}
+      \strng{bibnamehash}{b428d27f39861edf6f626401b262bfa0}
+      \strng{authorbibnamehash}{b428d27f39861edf6f626401b262bfa0}
+      \strng{authornamehash}{b428d27f39861edf6f626401b262bfa0}
+      \strng{authorfullhash}{b428d27f39861edf6f626401b262bfa0}
+      \field{labelalpha}{MMW+20}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extraalpha}{2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2020 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)}
+      \field{month}{10}
+      \field{title}{The Marathon 2: A Navigation System}
+      \field{year}{2020}
+      \field{pages}{2718\bibrangedash 2725}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/IROS45743.2020.9341207
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1109/IROS45743.2020.9341207
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1109/IROS45743.2020.9341207
+      \endverb
     \endentry
     \entry{Marques2024}{article}{}
       \name{author}{3}{}{%
@@ -1719,6 +2035,7 @@
       \strng{authorbibnamehash}{e3993bcf8680f241f7dee81ea4ff96b7}
       \strng{authornamehash}{e3993bcf8680f241f7dee81ea4ff96b7}
       \strng{authorfullhash}{e3993bcf8680f241f7dee81ea4ff96b7}
+      \field{extraname}{1}
       \field{labelalpha}{Rob21}
       \field{sortinit}{R}
       \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
@@ -1733,6 +2050,29 @@
       \verb{url}
       \verb https://github.com/RobotecAI/ros2-for-unity
       \endverb
+    \endentry
+    \entry{RFU24}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=e3993bcf8680f241f7dee81ea4ff96b7}{%
+           family={{Robotec.AI}},
+           familyi={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{e3993bcf8680f241f7dee81ea4ff96b7}
+      \strng{fullhash}{e3993bcf8680f241f7dee81ea4ff96b7}
+      \strng{bibnamehash}{e3993bcf8680f241f7dee81ea4ff96b7}
+      \strng{authorbibnamehash}{e3993bcf8680f241f7dee81ea4ff96b7}
+      \strng{authornamehash}{e3993bcf8680f241f7dee81ea4ff96b7}
+      \strng{authorfullhash}{e3993bcf8680f241f7dee81ea4ff96b7}
+      \field{extraname}{2}
+      \field{labelalpha}{Rob24}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://github.com/RobotecAI/ros2-for-unity}}
+      \field{note}{Accessed on May 26, 2025.}
+      \field{title}{{ROS2 For Unity}}
+      \field{year}{2024}
     \endentry
     \entry{singh2024unity}{article}{}
       \name{author}{7}{}{%
@@ -1919,6 +2259,36 @@
       \verb https://doi.org/10.3390/s21237830
       \endverb
     \endentry
+    \entry{JuliaBA}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=1c1949e656fa842cf2b32cbdd874c15d}{%
+           family={Spradau},
+           familyi={S\bibinitperiod},
+           given={Julia},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Osnabrueck University}%
+      }
+      \list{location}{1}{%
+        {Universität Osnabrück Neuer Graben/Schloss 49074 Osnabrück}%
+      }
+      \strng{namehash}{1c1949e656fa842cf2b32cbdd874c15d}
+      \strng{fullhash}{1c1949e656fa842cf2b32cbdd874c15d}
+      \strng{bibnamehash}{1c1949e656fa842cf2b32cbdd874c15d}
+      \strng{authorbibnamehash}{1c1949e656fa842cf2b32cbdd874c15d}
+      \strng{authornamehash}{1c1949e656fa842cf2b32cbdd874c15d}
+      \strng{authorfullhash}{1c1949e656fa842cf2b32cbdd874c15d}
+      \field{labelalpha}{Spr25}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Computer Engineering working group -- Computer Science.}
+      \field{title}{Echtzeitfähige Bildverarbeitung für das Tracking mobiler Roboter}
+      \field{type}{Bachelor's thesis}
+      \field{year}{2025}
+    \endentry
     \entry{Skarbez2021}{article}{}
       \name{author}{3}{}{%
         {{hash=c372091ed873e3c0552139c34162a736}{%
@@ -1975,6 +2345,7 @@
       \strng{authorbibnamehash}{3f56ad8f8e05fcad24de3fcf878fb50b}
       \strng{authornamehash}{3f56ad8f8e05fcad24de3fcf878fb50b}
       \strng{authorfullhash}{3f56ad8f8e05fcad24de3fcf878fb50b}
+      \field{extraname}{1}
       \field{labelalpha}{Uni23}
       \field{sortinit}{U}
       \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
@@ -1990,6 +2361,29 @@
       \verb{url}
       \verb https://unity.com/
       \endverb
+    \endentry
+    \entry{UnityDocumentation}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=3f56ad8f8e05fcad24de3fcf878fb50b}{%
+           family={{Unity Technologies}},
+           familyi={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{3f56ad8f8e05fcad24de3fcf878fb50b}
+      \strng{fullhash}{3f56ad8f8e05fcad24de3fcf878fb50b}
+      \strng{bibnamehash}{3f56ad8f8e05fcad24de3fcf878fb50b}
+      \strng{authorbibnamehash}{3f56ad8f8e05fcad24de3fcf878fb50b}
+      \strng{authornamehash}{3f56ad8f8e05fcad24de3fcf878fb50b}
+      \strng{authorfullhash}{3f56ad8f8e05fcad24de3fcf878fb50b}
+      \field{extraname}{2}
+      \field{labelalpha}{Uni25}
+      \field{sortinit}{U}
+      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://docs.unity.com/en-us}}
+      \field{note}{Accessed: 2025-12-15}
+      \field{title}{Unity Documentation}
+      \field{year}{2025}
     \endentry
     \entry{Varga2021}{article}{}
       \name{author}{3}{}{%
@@ -2130,20 +2524,7 @@
     \endentry
   \enddatalist
   \missing{ABBILDUNGFEHLT}
-  \missing{ALVR_Github}
-  \missing{EMAROs_Ref}
-  \missing{Gazebo}
-  \missing{IsaacSim}
-  \missing{JuliaBA}
-  \missing{MFG22a}
-  \missing{NAV2Ref}
   \missing{NOT FINAL}
-  \missing{OpenCV}
-  \missing{ROS2ForUnityDocs}
-  \missing{Unity}
-  \missing{UnityDocumentation}
-  \missing{Unreal}
-  \missing{YASMIN}
 \endrefsection
 \endinput
 

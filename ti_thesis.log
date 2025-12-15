@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.20)  15 DEC 2025 04:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.20)  15 DEC 2025 04:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1284,11 +1284,7 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'english'.
- (./ti_thesis.aux (./chapters/deckblatt.aux) (./chapters/abstract.aux) (./chapters/introduction.aux) (./chapters/foundations_related_work.aux
-
-LaTeX Warning: Label `sec:DT' multiply defined.
-
-) (./chapters/requirements.aux) (./chapters/concept_implementation.aux) (./chapters/evaluation.aux) (./chapters/conclusion_outlook.aux))
+ (./ti_thesis.aux (./chapters/deckblatt.aux) (./chapters/abstract.aux) (./chapters/introduction.aux) (./chapters/foundations_related_work.aux) (./chapters/requirements.aux) (./chapters/concept_implementation.aux) (./chapters/evaluation.aux) (./chapters/conclusion_outlook.aux))
 \openout1 = `ti_thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
@@ -1373,98 +1369,7 @@ Package biblatex Warning: The following entry could not be found
 
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
-(biblatex)                ALVR_Github
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                EMAROs_Ref
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                Gazebo
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                IsaacSim
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                JuliaBA
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                MFG22a
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                NAV2Ref
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
 (biblatex)                NOT FINAL
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                OpenCV
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                ROS2ForUnityDocs
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                Unity
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                UnityDocumentation
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                Unreal
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                YASMIN
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
 
@@ -1696,11 +1601,11 @@ LaTeX Warning: Citation 'NOT FINAL' on page 6 undefined on input line 15.
 LaTeX Warning: Citation 'NOT FINAL' on page 6 undefined on input line 15.
 
 
-Underfull \hbox (badness 2205) in paragraph at lines 15--15
-[][][]\T1/mdbch/m/n/12 (+20) [[]]The real robot's ac-tions af-fect its vir-tual coun-ter-part,
+Underfull \hbox (badness 2608) in paragraph at lines 15--15
+[][][]\T1/mdbch/m/n/12 (+20) [[]]The real robot's ac-tions af-fect its vir-tual coun-ter-part
  []
 
-<images/vehicle_in_the_loop_dsr+22.jpg, id=303, 248.3679pt x 204.2832pt>
+<images/vehicle_in_the_loop_dsr+22.jpg, id=304, 248.3679pt x 204.2832pt>
 File: images/vehicle_in_the_loop_dsr+22.jpg Graphic file (type jpg)
 <use images/vehicle_in_the_loop_dsr+22.jpg>
 Package pdftex.def Info: images/vehicle_in_the_loop_dsr+22.jpg  used on input line 25.
@@ -1709,7 +1614,7 @@ Package pdftex.def Info: images/vehicle_in_the_loop_dsr+22.jpg  used on input li
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [6] [7 <./images/vehicle_in_the_loop_dsr+22.jpg>]
-<images/info_mirror_model_Grieves15.png, id=342, 813.0375pt x 434.8245pt>
+<images/info_mirror_model_Grieves15.png, id=343, 813.0375pt x 434.8245pt>
 File: images/info_mirror_model_Grieves15.png Graphic file (type png)
 <use images/info_mirror_model_Grieves15.png>
 Package pdftex.def Info: images/info_mirror_model_Grieves15.png  used on input line 44.
@@ -1734,7 +1639,7 @@ LaTeX Warning: Citation 'NOT FINAL' on page 10 undefined on input line 56.
 
 LaTeX Warning: Citation 'NOT FINAL' on page 10 undefined on input line 56.
 
-<images/reality_virtuality_continuum_wpc+23.png, id=394, 1520.079pt x 410.13225pt>
+<images/reality_virtuality_continuum_wpc+23.png, id=395, 1520.079pt x 410.13225pt>
 File: images/reality_virtuality_continuum_wpc+23.png Graphic file (type png)
 <use images/reality_virtuality_continuum_wpc+23.png>
 Package pdftex.def Info: images/reality_virtuality_continuum_wpc+23.png  used on input line 70.
@@ -1755,7 +1660,7 @@ LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [12{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}] [13]
-<images/vera_setup.jpg, id=462, 2055.68pt x 1818.795pt>
+<images/vera_setup.jpg, id=463, 2055.68pt x 1818.795pt>
 File: images/vera_setup.jpg Graphic file (type jpg)
 <use images/vera_setup.jpg>
 Package pdftex.def Info: images/vera_setup.jpg  used on input line 132.
@@ -1763,29 +1668,17 @@ Package pdftex.def Info: images/vera_setup.jpg  used on input line 132.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 12.71512pt on input line 137.
  [14 <./images/vera_setup.jpg>]
-<images/EMAROs_robot.png, id=476, 263.3037pt x 276.0714pt>
+<images/EMAROs_robot.png, id=477, 263.3037pt x 276.0714pt>
 File: images/EMAROs_robot.png Graphic file (type png)
 <use images/EMAROs_robot.png>
 Package pdftex.def Info: images/EMAROs_robot.png  used on input line 144.
 (pdftex.def)             Requested size: 213.39569pt x 223.74718pt.
 
 
-LaTeX Warning: Citation 'JuliaBA' on page 15 undefined on input line 155.
-
-
 LaTeX Warning: Reference `fig:veps_comparison' on page 15 undefined on input line 155.
 
-
-LaTeX Warning: Citation 'JuliaBA' on page 15 undefined on input line 155.
-
-
-LaTeX Warning: Citation 'JuliaBA' on page 15 undefined on input line 155.
-
-
-LaTeX Warning: Citation 'JuliaBA' on page 15 undefined on input line 155.
-
 [15 <./images/EMAROs_robot.png>]
-<images/point_cloud.png, id=492, 1998.86775pt x 1135.8435pt>
+<images/point_cloud.png, id=497, 1998.86775pt x 1135.8435pt>
 File: images/point_cloud.png Graphic file (type png)
 <use images/point_cloud.png>
 Package pdftex.def Info: images/point_cloud.png  used on input line 163.
@@ -1794,15 +1687,8 @@ File: images/point_cloud.png Graphic file (type png)
 <use images/point_cloud.png>
 Package pdftex.def Info: images/point_cloud.png  used on input line 169.
 (pdftex.def)             Requested size: 209.13013pt x 118.82513pt.
-
-
-LaTeX Warning: Citation 'JuliaBA' on page 16 undefined on input line 171.
-
-
-LaTeX Warning: Citation 'JuliaBA' on page 16 undefined on input line 171.
-
-[16 <./images/point_cloud.png>]
-<images/pygame_visualizer.png, id=515, 807.61725pt x 701.62125pt>
+ [16 <./images/point_cloud.png>]
+<images/pygame_visualizer.png, id=523, 807.61725pt x 701.62125pt>
 File: images/pygame_visualizer.png Graphic file (type png)
 <use images/pygame_visualizer.png>
 Package pdftex.def Info: images/pygame_visualizer.png  used on input line 182.
@@ -1863,9 +1749,6 @@ LaTeX Warning: Reference `fig:mr_environment_overview' on page 27 undefined on i
 
 LaTeX Warning: Citation 'ABBILDUNGFEHLT' on page 27 undefined on input line 7.
 
-
-LaTeX Warning: Citation 'MFG22a' on page 27 undefined on input line 19.
-
 [27
 
 
@@ -1873,19 +1756,6 @@ LaTeX Warning: Citation 'MFG22a' on page 27 undefined on input line 19.
 
 
 ]
-
-LaTeX Warning: Citation 'Gazebo' on page 28 undefined on input line 34.
-
-
-LaTeX Warning: Citation 'IsaacSim' on page 28 undefined on input line 34.
-
-
-LaTeX Warning: Citation 'Unreal' on page 28 undefined on input line 34.
-
-
-LaTeX Warning: Citation 'Unity' on page 28 undefined on input line 34.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 52--52
 []|\T1/phv/m/n/12 (+20) HRI & MR
  []
@@ -1894,80 +1764,39 @@ Underfull \hbox (badness 10000) in paragraph at lines 52--52
 Underfull \vbox (badness 2635) has occurred while \output is active []
 
  [29]
-
-LaTeX Warning: Citation 'ALVR_Github' on page 30 undefined on input line 83.
-
 LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
 (Font)              scaled to size 11.52008pt on input line 85.
-
-LaTeX Warning: Citation 'ALVR_Github' on page 30 undefined on input line 89.
-
-<images/hardware_topology.png, id=656, 1003.95074pt x 1003.95074pt>
+<images/hardware_topology.png, id=675, 1003.95074pt x 1003.95074pt>
 File: images/hardware_topology.png Graphic file (type png)
 <use images/hardware_topology.png>
 Package pdftex.def Info: images/hardware_topology.png  used on input line 94.
 (pdftex.def)             Requested size: 426.7914pt x 426.78831pt.
-
-Underfull \vbox (badness 1184) has occurred while \output is active []
-
- [30]
-
-LaTeX Warning: Citation 'ALVR_Github' on page 31 undefined on input line 99.
-
-
-Underfull \vbox (badness 6758) has occurred while \output is active []
-
- [31 <./images/hardware_topology.png>]
-
-LaTeX Warning: Citation 'ROS2ForUnityDocs' on page 32 undefined on input line 107.
-
-
-LaTeX Warning: Citation 'ROS2ForUnityDocs' on page 32 undefined on input line 111.
-
-
-Overfull \hbox (4.53801pt too wide) in paragraph at lines 111--112
-[]\T1/mdbch/m/n/12 (-20) The core of the net-work in-te-gra-tion is the \T1/cmtt/m/n/12 ROS2UnityComponent \T1/mdbch/m/n/12 (-20) [[]]
- []
-
-
-LaTeX Warning: Citation 'UnityDocumentation' on page 32 undefined on input line 113.
-
+ [30] [31 <./images/hardware_topology.png>]
 LaTeX Font Info:    Font shape `T1/cmtt/b/n' in size <12> not available
 (Font)              Font shape `T1/cmtt/bx/n' tried instead on input line 116.
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <12> not available
 (Font)              Font shape `T1/cmtt/m/n' tried instead on input line 116.
 LaTeX Font Info:    Font shape `T1/cmtt/m/n' will be
 (Font)              scaled to size 12.86407pt on input line 116.
-
-LaTeX Warning: Citation 'ROS2ForUnityDocs' on page 32 undefined on input line 116.
-
-[32]
-<images/software_architecture.png, id=680, 1241.23724pt x 1034.06325pt>
+ [32]
+<images/software_architecture.png, id=708, 1241.23724pt x 1034.06325pt>
 File: images/software_architecture.png Graphic file (type png)
 <use images/software_architecture.png>
 Package pdftex.def Info: images/software_architecture.png  used on input line 131.
 (pdftex.def)             Requested size: 426.7914pt x 355.55304pt.
- [33 <./images/software_architecture.png>]
 
-LaTeX Warning: Citation 'EMAROs_Ref' on page 34 undefined on input line 149.
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[34]
-
-LaTeX Warning: Citation 'EMAROs_Ref' on page 35 undefined on input line 161.
-
-
-LaTeX Warning: Citation 'JuliaBA' on page 35 undefined on input line 163.
-
-
+ [33 <./images/software_architecture.png>] [34]
 Underfull \vbox (badness 3590) has occurred while \output is active []
 
  [35] [36]
-<images/Detached.png, id=715, 794.97pt x 993.7125pt>
+<images/Detached.png, id=745, 794.97pt x 993.7125pt>
 File: images/Detached.png Graphic file (type png)
 <use images/Detached.png>
 Package pdftex.def Info: images/Detached.png  used on input line 193.
 (pdftex.def)             Requested size: 209.13013pt x 261.40688pt.
-<images/Attached.png, id=716, 799.48688pt x 998.9822pt>
+<images/Attached.png, id=746, 799.48688pt x 998.9822pt>
 File: images/Attached.png Graphic file (type png)
 <use images/Attached.png>
 Package pdftex.def Info: images/Attached.png  used on input line 201.
@@ -1978,7 +1807,7 @@ Class scrbook Info: Workaround for not recommended usage of \\ or
 Underfull \vbox (badness 1132) has occurred while \output is active []
 
  [37 <./images/Detached.png> <./images/Attached.png>]
-<images/texture_painting.png, id=725, 2168.1pt x 1355.0625pt>
+<images/texture_painting.png, id=755, 2168.1pt x 1355.0625pt>
 File: images/texture_painting.png Graphic file (type png)
 <use images/texture_painting.png>
 Package pdftex.def Info: images/texture_painting.png  used on input line 216.
@@ -1987,7 +1816,7 @@ Package pdftex.def Info: images/texture_painting.png  used on input line 216.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [38 <./images/texture_painting.png>]
-<images/lidar_raycast.png, id=733, 2048.40282pt x 1182.66844pt>
+<images/lidar_raycast.png, id=763, 2048.40282pt x 1182.66844pt>
 File: images/lidar_raycast.png Graphic file (type png)
 <use images/lidar_raycast.png>
 Package pdftex.def Info: images/lidar_raycast.png  used on input line 229.
@@ -1995,62 +1824,20 @@ Package pdftex.def Info: images/lidar_raycast.png  used on input line 229.
 
 Underfull \vbox (badness 1838) has occurred while \output is active []
 
- [39 <./images/lidar_raycast.png>]
-
-LaTeX Warning: Citation 'ROS2ForUnityDocs' on page 40 undefined on input line 246.
-
-[40]
-
-LaTeX Warning: Citation 'UnityDocumentation' on page 41 undefined on input line 264.
-
-
-LaTeX Warning: Citation 'UnityDocumentation' on page 41 undefined on input line 264.
-
-
-Overfull \hbox (48.76056pt too wide) in paragraph at lines 264--265
-\T1/mdbch/m/n/12 (-20) lizes a ded-i-cated Unity cam-era com-po-nent con-fig-ured to \T1/cmtt/m/n/12 orthographic \T1/mdbch/m/n/12 (-20) [[]].
- []
-
-
-LaTeX Warning: Citation 'UnityDocumentation' on page 41 undefined on input line 266.
-
-
-Underfull \vbox (badness 1859) has occurred while \output is active []
-
- [41]
-<images/BillBoard_Camera_Projection.png, id=757, 1101.36469pt x 823.57687pt>
+ [39 <./images/lidar_raycast.png>] [40] [41]
+<images/BillBoard_Camera_Projection.png, id=791, 1101.36469pt x 823.57687pt>
 File: images/BillBoard_Camera_Projection.png Graphic file (type png)
 <use images/BillBoard_Camera_Projection.png>
 Package pdftex.def Info: images/BillBoard_Camera_Projection.png  used on input line 287.
 (pdftex.def)             Requested size: 341.43442pt x 255.31876pt.
 
-Underfull \vbox (badness 2529) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [42] [43 <./images/BillBoard_Camera_Projection.png>]
-
-LaTeX Warning: Citation 'YASMIN' on page 44 undefined on input line 309.
-
-
-LaTeX Warning: Citation 'YASMIN' on page 44 undefined on input line 309.
-
-
-LaTeX Warning: Citation 'NAV2Ref' on page 44 undefined on input line 313.
-
-[44]
-
-LaTeX Warning: Citation 'OpenCV' on page 45 undefined on input line 325.
-
-
+ [42] [43 <./images/BillBoard_Camera_Projection.png>] [44]
 Underfull \vbox (badness 2503) has occurred while \output is active []
 
  [45]
-
-LaTeX Warning: Citation 'OpenCV' on page 46 undefined on input line 336.
-
-
-LaTeX Warning: Citation 'OpenCV' on page 46 undefined on input line 337.
-
-<images/debug_view_edge_following.png, id=781, 1557.56906pt x 1170.62344pt>
+<images/debug_view_edge_following.png, id=825, 1557.56906pt x 1170.62344pt>
 File: images/debug_view_edge_following.png Graphic file (type png)
 <use images/debug_view_edge_following.png>
 Package pdftex.def Info: images/debug_view_edge_following.png  used on input line 344.
@@ -2059,58 +1846,23 @@ Package pdftex.def Info: images/debug_view_edge_following.png  used on input lin
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [46]
-
-LaTeX Warning: Citation 'YASMIN' on page 47 undefined on input line 348.
-
-
-LaTeX Warning: Reference `fig:farm_state_machine' on page 47 undefined on input line 348.
-
-
-LaTeX Warning: Citation 'NAV2Ref' on page 47 undefined on input line 352.
-
-
 Overfull \hbox (0.46489pt too wide) in paragraph at lines 354--355
 []\T1/mdbch/b/n/12 (-20) AdjustToEdge: \T1/mdbch/m/n/12 (-20) The robot ro-tates in place un-til the \T1/cmtt/m/n/12 EdgeAdjustmentProcessor
  []
 
-[47 <./images/debug_view_edge_following.png>]
-
-LaTeX Warning: Citation 'NAV2Ref' on page 48 undefined on input line 360.
-
-
-LaTeX Warning: Citation 'OpenCV' on page 48 undefined on input line 375.
-
-[48]
-<images/logistics_debug.png, id=814, 1097.60063pt x 823.57687pt>
+[47 <./images/debug_view_edge_following.png>] [48]
+<images/logistics_debug.png, id=861, 1097.60063pt x 823.57687pt>
 File: images/logistics_debug.png Graphic file (type png)
 <use images/logistics_debug.png>
-Package pdftex.def Info: images/logistics_debug.png  used on input line 383.
+Package pdftex.def Info: images/logistics_debug.png  used on input line 382.
 (pdftex.def)             Requested size: 341.43442pt x 256.18587pt.
-
-
-LaTeX Warning: Citation 'YASMIN' on page 49 undefined on input line 388.
-
-
-LaTeX Warning: Citation 'YASMIN' on page 49 undefined on input line 388.
-
-
-LaTeX Warning: Citation 'NAV2Ref' on page 49 undefined on input line 391.
-
-[49 <./images/logistics_debug.png>]
-Overfull \hbox (76.94148pt too wide) in paragraph at lines 405--406
-[]\T1/mdbch/m/n/12 (-20) Unlike the other agents, this im-ple-men-ta-tion uti-lizes the ded-i-cated node \T1/cmtt/m/n/12 line_perception_node.py\T1/mdbch/m/n/12 (-20) : 
- []
-
-<images/line_follower_debug.png, id=824, 1509.38907pt x 1132.98282pt>
+ [49 <./images/logistics_debug.png>]
+<images/line_follower_debug.png, id=874, 1509.38907pt x 1132.98282pt>
 File: images/line_follower_debug.png Graphic file (type png)
 <use images/line_follower_debug.png>
-Package pdftex.def Info: images/line_follower_debug.png  used on input line 416.
+Package pdftex.def Info: images/line_follower_debug.png  used on input line 414.
 (pdftex.def)             Requested size: 256.07744pt x 192.20691pt.
-[50]
-
-LaTeX Warning: Citation 'NAV2Ref' on page 51 undefined on input line 421.
-
-) [51 <./images/line_follower_debug.png>]
+ [50]) [51 <./images/line_follower_debug.png>]
 \openout2 = `chapters/evaluation.aux'.
 
  (./chapters/evaluation.tex [52
@@ -2168,34 +1920,24 @@ chapter without number
 LaTeX Font Info:    Font shape `T1/mdbch/m/fsc' will be
 (Font)              scaled to size 11.52008pt on input line 59.
 
-Overfull \hbox (5.31084pt too wide) in paragraph at lines 60--60
+Overfull \hbox (11.52014pt too wide) in paragraph at lines 60--60
 []\T1/mdbch/m/n/12 (-20) Mordechai Ben-Ari and Francesco Mon-dada. \T1/mdbch/m/it/12 (-20) El-e-ments of Robotics\T1/mdbch/m/n/12 (-20) . Springer
  []
 
-
-Overfull \hbox (9.06294pt too wide) in paragraph at lines 60--60
-[]\T1/mdbch/m/n/12 (-20) Rajmeet Bhourji, Lak-mal Senevi-ratne, and Ir-fan Hus-sain. ^^P  A Deep Learning-
+[61] [62] [63] [64]
+Overfull \hbox (6.64026pt too wide) in paragraph at lines 60--60
+\T1/mdbch/m/n/12 (-20) Oct. 2020, pp. 2718^^U2725. \T1/mdbch/m/fsc/12 (-20) doi\T1/mdbch/m/n/12 (-20) : [][]$\T1/cmtt/m/n/12 10 . 1109 / IROS45743 . 2020 . 9341207$[][]\T1/mdbch/m/n/12 (-20) .
  []
 
-[61] [62]
-Overfull \hbox (12.89154pt too wide) in paragraph at lines 60--60
-[]\T1/mdbch/m/n/12 (-20) Seyed Mo-hamad Kar-gar, Borislav Yor-danov, Carlo Har-vey, and Ali Asadipour.
- []
 
-[63] [64]
-Overfull \hbox (43.16673pt too wide) in paragraph at lines 60--60
+Overfull \hbox (49.37604pt too wide) in paragraph at lines 60--60
 \T1/mdbch/m/n/12 (-20) A Re-view^^Q. In: \T1/mdbch/m/it/12 (-20) Robotics \T1/mdbch/m/n/12 (-20) 9.2 (Apr. 2020), p. 21. \T1/mdbch/m/fsc/12 (-20) doi\T1/mdbch/m/n/12 (-20) : [][]$\T1/cmtt/m/n/12 10 . 3390 / robotics9020021$[][]\T1/mdbch/m/n/12 (-20) .
  []
 
-
-Overfull \hbox (14.49641pt too wide) in paragraph at lines 60--60
-\T1/cmtt/m/n/12 3390 / app10103633$[][]\T1/mdbch/m/n/12 (-20) . \T1/mdbch/m/fsc/12 (-20) url\T1/mdbch/m/n/12 (-20) : [][]$\T1/cmtt/m/n/12 https : / / doi . org / 10 . 3390 / app10103633$[][]\T1/mdbch/m/n/12 (-20) . 
- []
-
-[65] [66] [67
+[65] [66] [67] [68
 
 
-] (./ti_thesis.aux (./chapters/deckblatt.aux) (./chapters/abstract.aux) (./chapters/introduction.aux) (./chapters/foundations_related_work.aux) (./chapters/requirements.aux) (./chapters/concept_implementation.aux) (./chapters/evaluation.aux) (./chapters/conclusion_outlook.aux))
+] [69] (./ti_thesis.aux (./chapters/deckblatt.aux) (./chapters/abstract.aux) (./chapters/introduction.aux) (./chapters/foundations_related_work.aux) (./chapters/requirements.aux) (./chapters/concept_implementation.aux) (./chapters/evaluation.aux) (./chapters/conclusion_outlook.aux))
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
@@ -2204,9 +1946,6 @@ L3 programming layer <2020/03/25>
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package rerunfilecheck Info: File `ti_thesis.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package logreq Info: Writing requests to 'ti_thesis.run.xml'.
@@ -2214,18 +1953,18 @@ Package logreq Info: Writing requests to 'ti_thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 60785 strings out of 474222
- 1380247 string characters out of 5748732
- 2639278 words of memory out of 5000000
- 81465 multiletter control sequences out of 15000+600000
- 636760 words of font info for 451 fonts, out of 8000000 for 9000
+ 60859 strings out of 474222
+ 1382122 string characters out of 5748732
+ 2638492 words of memory out of 5000000
+ 81500 multiletter control sequences out of 15000+600000
+ 638511 words of font info for 473 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  108i,12n,131p,10936b,3335s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchri8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chb8t.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr8t.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chri7m.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chri8t.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8ac.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on ti_thesis.pdf (75 pages, 20546684 bytes).
+Output written on ti_thesis.pdf (77 pages, 20551979 bytes).
 PDF statistics:
- 1371 PDF objects out of 1440 (max. 8388607)
- 1197 compressed objects within 12 object streams
- 247 named destinations out of 1000 (max. 500000)
+ 1445 PDF objects out of 1728 (max. 8388607)
+ 1267 compressed objects within 13 object streams
+ 260 named destinations out of 1000 (max. 500000)
  77018 words of extra memory for PDF output out of 89155 (max. 10000000)
 

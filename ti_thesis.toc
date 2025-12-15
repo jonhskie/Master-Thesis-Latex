@@ -13,7 +13,7 @@
 \contentsline {subsection}{\numberline {2.6.1}Robotics Simulators}{19}{subsection.2.6.1}%
 \contentsline {subsection}{\numberline {2.6.2}Physics-Based Simulators}{19}{subsection.2.6.2}%
 \contentsline {subsection}{\numberline {2.6.3}High-Visual-Fidelity and Game-Based Engines}{20}{subsection.2.6.3}%
-\contentsline {section}{\numberline {2.7}Synthesis? Discussion?}{20}{section.2.7}%
+\contentsline {section}{\numberline {2.7}Synthesis}{20}{section.2.7}%
 \contentsline {chapter}{\numberline {3}Requirements}{23}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Simulation Engine Capabilities}{23}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Digital Twin Interfaces}{24}{section.3.2}%
@@ -39,7 +39,7 @@
 \contentsline {subsection}{\numberline {4.4.4}Scenario and Object Management}{40}{subsection.4.4.4}%
 \contentsline {section}{\numberline {4.5}Mixed Reality and User Interaction}{41}{section.4.5}%
 \contentsline {subsection}{\numberline {4.5.1}Environment Projection}{41}{subsection.4.5.1}%
-\contentsline {subsection}{\numberline {4.5.2}Augmented Telemetry and Diagnosis}{42}{subsection.4.5.2}%
+\contentsline {subsection}{\numberline {4.5.2}Augmented Telemetry and Diagnosis}{41}{subsection.4.5.2}%
 \contentsline {subsection}{\numberline {4.5.3}Sensor Data Projection}{42}{subsection.4.5.3}%
 \contentsline {subsection}{\numberline {4.5.4}Interactive Control Interfaces}{43}{subsection.4.5.4}%
 \contentsline {section}{\numberline {4.6}Implementation of Autonomous Agents}{44}{section.4.6}%
