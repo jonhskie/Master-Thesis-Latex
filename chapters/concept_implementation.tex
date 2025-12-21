@@ -84,8 +84,8 @@ To ensure high performance and support for specific hardware peripherals, the sy
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.7\textwidth]{images/hardware_topology.png}
-    \caption{The Hardware and Software Topology of the Mixed Reality Environment.}
+    \includegraphics[width=0.65\textwidth]{images/hardware_topology.png}
+    \caption{The Hardware and Software Topology of the Mixed Reality Environment. \cite{ABBILDUNG Andern}}
     \label{fig:hardware_topology}
 \end{figure}
 
@@ -295,7 +295,7 @@ The implementation utilizes a device-independent architecture, where the core lo
 
 The \texttt{NavigationGoalController.cs} facilitates high-level control of the robot. In the desktop configuration, it casts a ray from the camera through the mouse cursor coordinates. When the ray intersects with the ground layer, the script calculates the target point and orientation based on the user's drag gesture. This data is serialized into a \texttt{geometry\_msgs/PoseStamped} message and published to the \texttt{/goal\_pose} topic, triggering the ROS~2 navigation stack. For Virtual Reality, this logic utilizes the \texttt{XR Ray Interactor}, enabling the operator to point at the virtual floor and dispatch the robot using the controller's trigger.
 
-To support dynamic scenarios like Line Following, the user must be able to alter the environment at runtime. The \texttt{MouseSurfacePainter.cs} component enables users to draw directly onto the terrain texture using a continuous raycast using a mouse or VR controller. When the user holds down the primary input, the script casts a ray from the camera or controller into the scene. If it hits the ground layer, it calculates the texture coordinates at the hit point and modifies the pixel buffer of the terrain texture, similar to the robot's \texttt{TrackPainter.cs}.
+To support dynamic scenarios like Line Following, the user must be able to alter the environment at runtime. The \texttt{MouseSurfacePainter.cs} component enables users to draw directly onto the terrain texture using a continuous raycast using a mouse or VR controller. When the user holds down the primary input, the script casts a ray from the camera or controller into the scene. If it hits the ground layer, it calculates the texture coordinates at the point of intersection and modifies the pixel buffer of the terrain texture, similar to the robot's \texttt{TrackPainter.cs}.
 
 Beyond painting, the VR interface leverages the physics engine to allow direct object manipulation. Users can grab and move interactive objects using the VR controller's grip function. This allows for the manual reset of test scenarios or the introduction of dynamic obstacles (e.g., dropping a box in the robot's path) to validate the system's reactive planning capabilities.
 
@@ -312,7 +312,7 @@ To validate the capabilities of the Mixed Reality Environment, the system hosts 
 \item A \textbf{Smart Farming Application} that autonomously explores a virtual field, identifies its boundaries and operates simulated tools to perform fieldwork tasks.
 \end{itemize}
 
-The high-level decision-making for all applications is orchestrated using YASMIN (Yet Another State MachINe)~\cite{YASMIN}, a ROS~2-native library that facilitates the creation of hierarchical, interruptible mission behaviors. This library organizes the logic of the robot into a graph of distinct states. This improves the readability of the control flow and simplifies the debugging process, as the active state of the robot can be monitored and visualized in real-time using the YASMIN Viewer~\cite{YASMIN}. This structure ensures that the system can maintain control loops while transitioning between operational modes.
+The high-level decision-making for all applications is managed using YASMIN (Yet Another State MachINe)~\cite{YASMIN}, a ROS~2-native library that facilitates the creation of hierarchical, interruptible mission behaviors. This library organizes the logic of the robot into a graph of distinct states. This improves the readability of the control flow and simplifies the debugging process, as the active state of the robot can be monitored and visualized in real-time using the YASMIN Viewer~\cite{YASMIN}. This structure ensures that the system can maintain control loops while transitioning between operational modes.
 
 \subsection{Navigation and Control Stack}
 \label{subsec:nav_stack}
@@ -338,7 +338,7 @@ All processors inherit from a base class \texttt{base\_processor.py} that standa
 
 \subsection{Application 1: Line Follower}
 \label{subsec:app_line}
-
+\cite{Fuer jede Phase ein debug bild einbauen}
 The Line Follower application operates in an interactive playground where a user, using the robot, a mouse, or VR controllers, can draw paths on the virtual ground in real-time. The robot must identify and track this line immediately.
 
 This implementation utilizes the dedicated node \texttt{line\_per\-ception\_node.py}:
@@ -441,5 +441,4 @@ The development process described in this chapter has established the technical 
 The architecture comprises several functional layers. The core layer handles the synchronization of the digital twin and the generation of virtual LiDAR and camera streams. Above this, the environmental layer manages dynamic elements, including manipulable objects and modifiable surface textures. These automated features are complemented by the mixed reality interfaces, which provide visualization via floor projection and Virtual Reality control.
 
 Three specific robotic applications: Line Following, Logistics, and Smart Farming were implemented to utilize this infrastructure. These applications serve as consumers of the data and interaction mechanisms provided by the environment.
-
-With the software architecture defined and the functional modules integrated, the system is prepared for quantitative analysis. The following chapter addresses the measurement of technical performance metrics, including system latency, synchronization accuracy and resource utilization, to determine the operational limits of the platform.
+\cite{NOT FINAL}With the software architecture defined and the functional modules integrated, the system is prepared for quantitative analysis. The following chapter addresses the measurement of technical performance metrics, including system latency, synchronization accuracy and resource utilization, to determine the operational limits of the platform.
