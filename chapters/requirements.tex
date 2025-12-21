@@ -72,15 +72,15 @@ These requirements outline how human operators visualize and interact with the s
     \item \textbf{FR-18: Visualization Control:}\label{req:FR-18} The user interface shall allow runtime modification of the visual environment by toggling the visibility or active state of various system components, such as the robot virtual body, lighting, or telemetry displays.
 \end{itemize}
 
-\section{Autonomous Agent Requirements}
+\section{Robotic Application Requirements}
 \label{sec:agent_reqs}
 
-These requirements are for the autonomous agents developed to interact with the environment. These will help in demonstrating the capabilities of the system and testing the robot's response to dynamic scenarios.
+These requirements are for the robotic applications developed to interact with the environment. These will help in demonstrating the capabilities of the system and testing the robot's response to dynamic scenarios.
 
 \begin{itemize}
-    \item \textbf{FR-19: Sensor Dependence:}\label{req:FR-19} The autonomous agents shall make decisions based only on the environmental data available via the simulated sensors. They shall not directly use any knowledge from the internal state of the simulation engine.
+    \item \textbf{FR-19: Sensor Dependence:}\label{req:FR-19} The robotic applications shall make decisions based only on the environmental data available via the simulated sensors. They shall not directly use any knowledge from the internal state of the simulation engine.
               
-    \item \textbf{FR-20: Standardized Communication:}\label{req:FR-20} The agents shall utilize standard robotic communication patterns to send action commands and monitor feedback topics to confirm task completion.
+    \item \textbf{FR-20: Standardized Communication:}\label{req:FR-20} The robotic applications shall utilize standard robotic communication patterns to send action commands and monitor feedback topics to confirm task completion.
     
 \end{itemize}
 

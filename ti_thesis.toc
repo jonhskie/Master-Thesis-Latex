@@ -4,7 +4,7 @@
 \contentsline {section}{\numberline {2.1}Robot-in-the-Loop-Testing}{5}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Digital Twins}{8}{section.2.2}%
 \contentsline {section}{\numberline {2.3}Mixed Reality}{10}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Robot Operating System 2 (ROS~2)}{11}{section.2.4}%
+\contentsline {section}{\numberline {2.4}Robot Operating System 2}{11}{section.2.4}%
 \contentsline {section}{\numberline {2.5}The VERA Framework}{13}{section.2.5}%
 \contentsline {subsection}{\numberline {2.5.1}EMAROs Test Platform}{14}{subsection.2.5.1}%
 \contentsline {subsection}{\numberline {2.5.2}Original VERA System Architecture}{15}{subsection.2.5.2}%
@@ -19,51 +19,52 @@
 \contentsline {section}{\numberline {3.2}Digital Twin Interfaces}{24}{section.3.2}%
 \contentsline {section}{\numberline {3.3}Environment Capabilities}{25}{section.3.3}%
 \contentsline {section}{\numberline {3.4}User Interface \& Mixed Reality}{25}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Autonomous Agent Requirements}{26}{section.3.5}%
+\contentsline {section}{\numberline {3.5}Robotic Application Requirements}{26}{section.3.5}%
 \contentsline {section}{\numberline {3.6}Non-Functional Requirements}{26}{section.3.6}%
 \contentsline {chapter}{\numberline {4}Implementation}{27}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Comparative Analysis}{28}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}Selection Rationale}{29}{subsection.4.1.1}%
 \contentsline {section}{\numberline {4.2}System Architecture}{30}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}Hardware and Software Topology}{30}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Software Component Architecture}{32}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Time Synchronization}{34}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.2}Software Component Architecture}{31}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Time Synchronization}{33}{subsection.4.2.3}%
 \contentsline {section}{\numberline {4.3}Robot Representation and Control}{34}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}The Purely Virtual Robot}{34}{subsection.4.3.1}%
 \contentsline {subsection}{\numberline {4.3.2}The Digital Twin Implementation}{35}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Safety and Failsafe Mechanisms}{36}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.3}Safety and Failsafe Mechanisms}{35}{subsection.4.3.3}%
 \contentsline {section}{\numberline {4.4}Environmental Simulation Capabilities}{36}{section.4.4}%
 \contentsline {subsection}{\numberline {4.4.1}Physics-Based Interaction}{36}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Surface Modification}{38}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {4.4.3}Sensor Simulation}{39}{subsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.4.2}Surface Modification}{37}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Sensor Simulation}{38}{subsection.4.4.3}%
 \contentsline {subsection}{\numberline {4.4.4}Scenario and Object Management}{40}{subsection.4.4.4}%
-\contentsline {section}{\numberline {4.5}Mixed Reality and User Interaction}{41}{section.4.5}%
+\contentsline {section}{\numberline {4.5}Mixed Reality and User Interaction}{40}{section.4.5}%
 \contentsline {subsection}{\numberline {4.5.1}Environment Projection}{41}{subsection.4.5.1}%
-\contentsline {subsection}{\numberline {4.5.2}Augmented Telemetry and Diagnosis}{41}{subsection.4.5.2}%
+\contentsline {subsection}{\numberline {4.5.2}Augmented Telemetry and Diagnosis}{42}{subsection.4.5.2}%
 \contentsline {subsection}{\numberline {4.5.3}Sensor Data Projection}{42}{subsection.4.5.3}%
 \contentsline {subsection}{\numberline {4.5.4}Interactive Control Interfaces}{43}{subsection.4.5.4}%
-\contentsline {section}{\numberline {4.6}Implementation of Autonomous Agents}{44}{section.4.6}%
-\contentsline {subsection}{\numberline {4.6.1}Navigation and Control Stack}{44}{subsection.4.6.1}%
-\contentsline {subsection}{\numberline {4.6.2}Modular Perception Stack}{45}{subsection.4.6.2}%
-\contentsline {subsection}{\numberline {4.6.3}Agent 1: Smart Farming}{46}{subsection.4.6.3}%
-\contentsline {subsection}{\numberline {4.6.4}Agent 2: Logistics}{48}{subsection.4.6.4}%
-\contentsline {subsection}{\numberline {4.6.5}Agent 3: Line Follower}{50}{subsection.4.6.5}%
-\contentsline {chapter}{\numberline {5}Evaluation}{53}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Methodology}{54}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Hardware Setup}{54}{subsection.5.1.1}%
-\contentsline {subsection}{\numberline {5.1.2}Measurement Metrics}{54}{subsection.5.1.2}%
-\contentsline {section}{\numberline {5.2}System Performance Analysis}{54}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Rendering Performance and Scalability}{54}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}End-to-End Latency}{54}{subsection.5.2.2}%
-\contentsline {section}{\numberline {5.3}Validation of the Virtual Environment}{54}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Smart Farming Scenario}{54}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Logistics Scenario}{54}{subsection.5.3.2}%
-\contentsline {subsection}{\numberline {5.3.3}Adaptive Streets Scenario}{54}{subsection.5.3.3}%
-\contentsline {subsection}{\numberline {5.3.4}Competitive Game Scenario (Pong)}{54}{subsection.5.3.4}%
-\contentsline {section}{\numberline {5.4}Mixed Reality Validation}{54}{section.5.4}%
-\contentsline {subsection}{\numberline {5.4.1}AR Projection Alignment Accuracy}{54}{subsection.5.4.1}%
-\contentsline {subsection}{\numberline {5.4.2}VR Interface Usability}{54}{subsection.5.4.2}%
-\contentsline {section}{\numberline {5.5}Discussion}{54}{section.5.5}%
-\contentsline {chapter}{\numberline {6}Conclusion}{55}{chapter.6}%
-\contentsline {chapter}{\nonumberline Bibliography}{61}{chapter*.5}%
+\contentsline {section}{\numberline {4.6}Implementation of Robotic Applications}{44}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Navigation and Control Stack}{45}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.2}Modular Perception Stack}{46}{subsection.4.6.2}%
+\contentsline {subsection}{\numberline {4.6.3}Application 1: Line Follower}{46}{subsection.4.6.3}%
+\contentsline {subsection}{\numberline {4.6.4}Application 2: Logistics}{48}{subsection.4.6.4}%
+\contentsline {subsection}{\numberline {4.6.5}Application 3: Smart Farming}{50}{subsection.4.6.5}%
+\contentsline {section}{\numberline {4.7}Implementation Synthesis}{52}{section.4.7}%
+\contentsline {chapter}{\numberline {5}Evaluation}{55}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Methodology}{56}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Hardware Setup}{56}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Measurement Metrics}{56}{subsection.5.1.2}%
+\contentsline {section}{\numberline {5.2}System Performance Analysis}{56}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Rendering Performance and Scalability}{56}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}End-to-End Latency}{56}{subsection.5.2.2}%
+\contentsline {section}{\numberline {5.3}Validation of the Virtual Environment}{56}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Smart Farming Scenario}{56}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Logistics Scenario}{56}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}Adaptive Streets Scenario}{56}{subsection.5.3.3}%
+\contentsline {subsection}{\numberline {5.3.4}Competitive Game Scenario (Pong)}{56}{subsection.5.3.4}%
+\contentsline {section}{\numberline {5.4}Mixed Reality Validation}{56}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}AR Projection Alignment Accuracy}{56}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}VR Interface Usability}{56}{subsection.5.4.2}%
+\contentsline {section}{\numberline {5.5}Discussion}{56}{section.5.5}%
+\contentsline {chapter}{\numberline {6}Conclusion}{57}{chapter.6}%
+\contentsline {chapter}{\nonumberline Bibliography}{63}{chapter*.5}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

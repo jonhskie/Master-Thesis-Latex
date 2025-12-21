@@ -899,6 +899,48 @@
       \verb https://www.unrealengine.com
       \endverb
     \endentry
+    \entry{Fox1997}{article}{}
+      \name{author}{3}{}{%
+        {{hash=5a041f7d87b5414dffcb3cffd218f4cc}{%
+           family={Fox},
+           familyi={F\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=bce2faa6685176847af3844f1c3dfef2}{%
+           family={Burgard},
+           familyi={B\bibinitperiod},
+           given={W.},
+           giveni={W\bibinitperiod}}}%
+        {{hash=9aae21f53f8024b5be43d6281ed55dce}{%
+           family={Thrun},
+           familyi={T\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{22ec697a72039d9ff3c599302797cc3b}
+      \strng{fullhash}{22ec697a72039d9ff3c599302797cc3b}
+      \strng{bibnamehash}{22ec697a72039d9ff3c599302797cc3b}
+      \strng{authorbibnamehash}{22ec697a72039d9ff3c599302797cc3b}
+      \strng{authornamehash}{22ec697a72039d9ff3c599302797cc3b}
+      \strng{authorfullhash}{22ec697a72039d9ff3c599302797cc3b}
+      \field{labelalpha}{FBT97}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Robotics \& Automation Magazine}
+      \field{month}{3}
+      \field{number}{1}
+      \field{title}{The dynamic window approach to collision avoidance}
+      \field{volume}{4}
+      \field{year}{1997}
+      \field{pages}{23\bibrangedash 33}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1109/100.580977
+      \endverb
+      \keyw{Collision avoidance;Mobile robots;Robot sensing systems;Orbital robotics;Robotics and automation;Motion control;Humans;Robot control;Motion planning;Acceleration}
+    \endentry
     \entry{Gonzalez2025}{article}{}
       \name{author}{3}{}{%
         {{hash=2188e0c955a5936415fc40e932b6e2ad}{%
@@ -2523,7 +2565,9 @@
       \endverb
     \endentry
   \enddatalist
+  \missing{ABBILDUNG AENDERN ZU LEGENDE used in DT MODE ONLY ETC. vlt farbe der SW TEile anener}
   \missing{ABBILDUNGFEHLT}
+  \missing{FALSCHEBOXBILD}
   \missing{NOT FINAL}
   \missing{NOTFINAL}
 \endrefsection
