@@ -429,7 +429,7 @@ The mission is governed by a YASMIN state machine~\cite{YASMIN} which executes t
     \item \textbf{FindEquipment:} The robot executes a spiral search pattern using the Nav2 stack~\cite{MSM20} to locate a specific tool.
     \item \textbf{EquipTool:} Upon detection, the robot approaches the tool. The action triggers the Unity \texttt{AttachmentCommandManager.cs} via the \texttt{/robot\_command} topic to kinematically lock the tool to the robot.
     \item \textbf{GenerateCoveragePath:} Using the four corners identified in Phase 1, this action calculates a path that covers the entire field area.
-    \item \textbf{ExecuteCoverage:} The robot drives the generated path. During this phase, the tool that the robot equipted, modifies the ground texture using raycasts.
+    \item \textbf{ExecuteCoverage:} The robot drives the generated path. During this phase, the tool that the robot equipped, modifies the ground texture using raycasts.
     \item \textbf{Return \& Unequip:} The robot returns the tool to its origin and detaches it using the \texttt{/robot\_command}. The state machine then loops back to search for the next tool in the sequence until all tools are used.
 \end{enumerate}
 
@@ -440,5 +440,5 @@ The development process described in this chapter has established the technical 
 
 The architecture comprises several functional layers. The core layer handles the synchronization of the digital twin and the generation of virtual LiDAR and camera streams. Above this, the environmental layer manages dynamic elements, including manipulable objects and modifiable surface textures. These automated features are complemented by the mixed reality interfaces, which provide visualization via floor projection and Virtual Reality control.
 
-Three specific robotic applications: Line Following, Logistics, and Smart Farming were implemented to utilize this infrastructure. These applications serve as consumers of the data and interaction mechanisms provided by the environment.
+Three specific robotic applications were implemented: Line Following, Logistics, and Smart Farming. These applications serve as consumers of the data and interaction mechanisms provided by the environment.
 \cite{NOT FINAL}With the software architecture defined and the functional modules integrated, the system is prepared for quantitative analysis. The following chapter addresses the measurement of technical performance metrics, including system latency, synchronization accuracy and resource utilization, to determine the operational limits of the platform.

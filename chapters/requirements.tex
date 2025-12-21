@@ -11,7 +11,7 @@ These requirements define the technical capabilities of the underlying simulatio
 \begin{itemize}
     \item \textbf{FR-01: Visual Fidelity:}\label{req:FR-01} The simulation engine shall be able to support rendering pipelines capable of producing image data representative of real-world lighting and material properties. This is required to provide realistic input for the computer vision algorithms of the robot.
 
-    \item \textbf{FR-02: Physics Simulation:}\label{req:FR-02} Overcoming the limitations in the previous VERA framework, the engine shall provide a physics system that will be able to resolve mass, friction, collision, and drag to simulate physical interactions of such sort as a robot pushing obstacles.
+    \item \textbf{FR-02: Physics Simulation:}\label{req:FR-02} Overcoming the limitations in the previous VERA framework, the engine shall provide a physics system that will be able to resolve mass, friction, collision, and drag to simulate physical interactions such as a robot pushing obstacles.
 
     \item \textbf{FR-03: VR \& AR Support:}\label{req:FR-03} The simulation engine shall support both VR and AR modes. It shall enable integration with VR and AR input and output devices, allowing users to interact with and visualize the environment seamlessly in either mode.
 \end{itemize}
@@ -46,11 +46,11 @@ The system shall provide a digital representation of the robotic platform that m
 These requirements detail capabilities related to the virtual environment itself, such as generation of sensor data and mechanisms for dynamic interaction and visualization.
 \begin{itemize}
 
-    \item \textbf{FR-11: Sensor Simulation:}\label{req:FR-11} The system shall provide simulated sensors able to generating data, including video feeds and ranging data. The sensors shall be capable of detecting both static environment structures and dynamic obstacles.
+    \item \textbf{FR-11: Sensor Simulation:}\label{req:FR-11} The system shall provide simulated sensors able to generate data, including video feeds and ranging data. The sensors shall be capable of detecting both static environment structures and dynamic obstacles.
     
     \item \textbf{FR-12: Command Interface:}\label{req:FR-12} The system shall provide a generic network interface to receive commands and return status feedback so as to enable the robot to trigger simulation events.
     
-    \item \textbf{FR-13: Dynamic Environment Interaction:}\label{req:FR-13} The system shall allow dynamic manipulation of the environment, including physical pushing, pushing and attaching of objects, modification of the state of objects, and changes in surface textures at runtime.
+    \item \textbf{FR-13: Dynamic Environment Interaction:}\label{req:FR-13} The system shall allow dynamic manipulation of the environment, including physical pushing and attaching of objects, modification of the state of objects, and changes in surface textures at runtime.
     
     \item \textbf{FR-14: Telemetry Display:}\label{req:FR-14} The system shall display real-time robot status data as floating UI elements attached to the Digital Twin within the 3D environment.
 
