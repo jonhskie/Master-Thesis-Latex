@@ -2,7 +2,7 @@
 \label{ch:concept_and_implementation}
 
 
-This chapter describes the development of the Mixed Reality Environment, a platform designed to support RitL testing by combining simulation with augmented reality projection and VR. The resulting system bridges the gap between purely digital simulations and real-world experiments by creating a common workspace where physical robots and virtual objects coexist and interact.
+This chapter describes the development of the Mixed Reality Environment, a platform designed to support RitL testing by combining simulation with AR projection and VR. The resulting system bridges the gap between purely digital simulations and real-world experiments by creating a common workspace where physical robots and virtual objects coexist and interact.
 
 The central concept of this environment is the projection of a simulated world directly onto the laboratory floor. Rather than testing robots in completely physical setups or purely within software simulations, this system projects dynamic, physics-based elements into the real world. As can be seen from Figure \ref{fig:mr_environment_overview}, the physical robot moves across the real floor while sensing and acting upon virtual objects. This projection has a dual purpose: it provides instant visual feedback to a human observer and enables the robot to receive sensor data that reflect the state of the virtual scene. This allows the robot to detect and respond to simulated entities as if they were physically present.
 \cite{ABBILDUNGFEHLT}
@@ -15,16 +15,16 @@ The central concept of this environment is the projection of a simulated world d
 
 To enable these applications, the system integrates several key functions into an architecture to realize the Mixed Reality Environment. First, it maintains a digital twin of the robot. This digital twin is synchronized with the movement of the physical hardware but can interact with the simulation's physics engine. This allows for complex actions, such as pushing virtual boxes or colliding with moving objects. This ensures that the simulation responds realistically to the robot's physical presence rather than serving as a static background.
 
-In addition to maintaining a Digital Twin, the system also simulates sensors for the robot. It generates virtual LiDAR scans and camera images from the robot's perspective, allowing robotic applications to receive virtual sensor data. This enables thorough testing of navigation and vision algorithms within the mixed reality environment.
+In addition to maintaining a digital twin, the system also simulates sensors for the robot. It generates virtual LiDAR scans and camera images from the robot's perspective, allowing robotic applications to receive virtual sensor data. This enables thorough testing of navigation and vision algorithms within the mixed reality environment.
 
-The architecture uses ROS~2~\cite{MFG22} as the primary communication backbone. By integrating ROS~2 nodes directly into the simulation engine, the virtual environment acts as a first-party participant in the robot's network. It manages time synchronization to prevent timing related errors, handles the loading of different scenarios and provides two-way exchange of status data and control commands.
+The architecture uses ROS~2~\cite{MFG22} as the primary communication backbone. By integrating ROS~2 nodes directly into the simulation engine, the virtual environment acts as a first-party participant in the robot's network. It manages time synchronization to prevent timing-related errors, handles the loading of different scenarios and provides two-way exchange of status data and control commands.
 
-Besides sensor simulation, the environment also supports real-time diagnostic feedback. The system functions as a monitoring tool by projecting the robot's internal operating data back onto the physical workspace and the VR interface. Performance metrics, such as temperature, random-access memory (RAM) usage and location coordinates, are shown on information panels attached to the digital twin in the 3D environment. Moreover, the system shows the robot's live camera feed within the virtual scene. This allows operators to observe the robot's physical behavior alongside its internal status and visual perception in real-time.
+Besides sensor simulation, the environment also supports real-time diagnostic feedback. The system functions as a monitoring tool by projecting the robot's internal operating data back onto the physical workspace and the VR interface. Performance metrics, such as temperature, Random Access Memory (RAM) usage and location coordinates, are shown on information panels attached to the digital twin in the 3D environment. Moreover, the system shows the robot's live camera feed within the virtual scene. This allows operators to observe the robot's physical behavior alongside its internal status and visual perception in real-time.
 
 The platform provides an adaptable and scalable testing solution by integrating physics, sensor simulation and autonomous control logic into a synchronized mixed reality environment. The only factor limiting the test environment's complexity is software, not its physical design. The technological decisions, system architecture and particular implementation of these elements will be covered in detail in the sections that follow.
 
 \section{Comparative Analysis}
-The simulation engines that were considered as candidates to implement the Mixed Reality Environment are: Gazebo~\cite{Gazebo}, Isaac Sim~\cite{IsaacSim}, Unreal Engine~\cite{unrealengine} and Unity~\cite{Uni23}. All were evaluated based on five critical criteria: visual fidelity, physics capabilities, learning curve, community support and native integration with VR, AR and ROS~2. Table \ref{tab:sim_comparison} summarizes the results of this evaluation.
+The simulation engines that were considered as candidates to implement the Mixed Reality Environment are: Gazebo~\cite{Gazebo}, Isaac Sim~\cite{IsaacSim}, Unreal Engine~\cite{unrealengine}, and Unity~\cite{Uni23}. All were evaluated based on five critical criteria: visual fidelity, physics capabilities, learning curve, community support and native integration with VR, AR and ROS~2. Table \ref{tab:sim_comparison} summarizes the results of this evaluation.
 
 \begin{table}[H]
     \centering
@@ -101,7 +101,7 @@ The software architecture follows a modular publisher-subscriber pattern. To int
 
 To facilitate modularity~(\hyperref[req:NFR-03]{NFR-03}), the implementation relies on Unity's component-based architecture. In this framework, entities within the simulation, such as the robot or the environment, are represented as \texttt{GameObjects}. These objects function as containers that hold various functional modules known as \textit{components}. By inheriting from Unity's base class \texttt{MonoBehaviour}, C\# scripts gain access to the engine's event lifecycle. This allows them to be attached to \texttt{GameObjects} and execute logic in response to specific engine events, such as frame updates or physics steps.
 
-The core of the network integration is the \texttt{ROS2UnityComponent}~\cite{RFU24} class. This component acts as a wrapper around the standard ROS~2 middleware. Inheriting from \texttt{MonoBehaviour}, it must be attached to a \texttt{GameObject} in the scene to function. Upon startup, this component initializes the ROS~2 context, makes sure that a valid connection is established and handles the lifecycle of the ROS~2 nodes running within the simulation. It allows other scripts to access the ROS~2 network by referencing this central component to create publishers, subscribers and service clients.
+The core of the network integration is the \texttt{ROS2UnityComponent}~\cite{RFU24} class. This component acts as a wrapper around the standard ROS~2 middleware. Inheriting from \texttt{MonoBehaviour}, it must be attached to a \texttt{GameObject} in the scene to function. Upon startup, this component initializes the ROS~2 context, ensures that a valid connection is established and handles the lifecycle of the ROS~2 nodes running within the simulation. It allows other scripts to access the ROS~2 network by referencing this central component to create publishers, subscribers and service clients.
 
 The functionality of the digital twin is driven by such scripts that interact with the engine's internal state machine. To guarantee that the physical simulation remains deterministic while visualization remains smooth, the architecture uses specific phases of the Unity execution loop~\cite{UnityDocumentation}:
 
@@ -124,14 +124,14 @@ Figure \ref{fig:software_architecture} provides an overview of how these Unity s
     \includegraphics[width=1.0\textwidth]{images/software_architecture.png} 
     \caption{Software Component Architecture. Unity scripts act as ROS~2 nodes, publishing sensor data and subscribing to control commands using ROS~2 topics.}
     \label{fig:software_architecture}
-\end{figure} \cite{ABBILDUNG AENDERN ZU LEGENDE used in DT MODE ONLY ETC. vlt farbe der SW TEile anener }
+\end{figure} % \cite{ABBILDUNG AENDERN ZU LEGENDE used in DT MODE ONLY ETC. vlt farbe der SW TEile anener }
 
 \subsection{Time Synchronization}
 \label{subsec:time_sync}
 
 A critical challenge in Robot-in-the-Loop testing is how to synchronize time between the simulation and the robot's software. If the simulation runs slower or faster than real-time, the navigation algorithms of the robot may calculate velocities that are incorrect. To fulfill the requirement for Time Synchronization (\hyperref[req:FR-05]{FR-05}), the system decouples the ROS network from the computer's system time.
 
-The \texttt{ClockPublisher.cs} script in Unity acts as the master clock. It calculates the time since the start of the simulation and publishes it to the \texttt{/clock} topic. The ROS~2 nodes running on the workstation such as the navigation stack are configured with \texttt{use\_sim\_time = true}, forcing them to synchronize their logic with the Unity engine.
+The \texttt{ClockPublisher.cs} script in Unity acts as the master clock. It calculates the time since the start of the simulation and publishes it to the \texttt{/clock} topic. The ROS~2 nodes running on the workstation, such as the navigation stack, are configured with \texttt{use\_sim\_time = true}, forcing them to synchronize their logic with the Unity engine.
 
 To ensure consistency, a \texttt{RosTimeHelper.cs} utility is used by all ROS~2 publishers in the Unity scripts. This script ensures that data leaving Unity is stamped with the exact simulation time of the frame it was created in to prevent data drift.
 
@@ -139,7 +139,7 @@ To ensure consistency, a \texttt{RosTimeHelper.cs} utility is used by all ROS~2 
 
 \section{Robot Representation and Control}
 \label{sec:robot_representation_and_control}
-The robot in the Mixed Reality Environment runs in one of two modes: either as a completely simulated virtual robot or as a synchronized Digital Twin of the physical EMAROs~\cite{EMAROs_Ref} platform. To ensure consistency, both of these modes use the same visual and geometric model. This model is a simple cylinder that approximates the physical size of the robot for collision detection while keeping computational costs low. The behavior of this cylinder depends on the active control script, allowing the system to switch between physics-based simulation and position-based synchronization based on the requirements of the test. To select the desired mode, the user can enable in the Unity Editor either the model of the digital twin or the purely virtual robot.
+The robot in the Mixed Reality Environment runs in one of two modes: either as a completely simulated virtual robot or as a synchronized digital twin of the physical EMAROs~\cite{EMAROs_Ref} platform. To ensure consistency, both of these modes use the same visual and geometric model. This model is a simple cylinder that approximates the physical size of the robot for collision detection while keeping computational costs low. The behavior of this cylinder depends on the active control script, allowing the system to switch between physics-based simulation and position-based synchronization based on the requirements of the test. To select the desired mode, the user can enable in the Unity Editor either the model of the digital twin or the purely virtual robot.
 
 \subsection{The Purely Virtual Robot}
 In the standalone simulation mode, the robot is controlled by the \texttt{Virtual\-Robot\-Controller.cs} (\hyperref[req:FR-09]{FR-09}). This component allows for the validation of high-level control logic in a safe environment before it is deployed on real hardware. Unlike simulations that teleport a robot to a target point, this implementation uses the Unity physics engine PhysX to simulate realistic movement.
@@ -151,7 +151,7 @@ The script does not directly change the position of the robot. Instead, it modif
 Simultaneously, the controller provides ground truth data. It tracks the movement of the robot in Unity, converts the coordinates to the ROS~2 standard~\cite{MFG22} and publishes a timestamped odometry and tf messages (\hyperref[req:FR-10]{FR-10}). This closes the control loop for the external navigation logic.
 
 \subsection{The Digital Twin Implementation}
-When operating in RitL mode, the \texttt{PoseRobotController.cs} takes control. In this configuration, the virtual robot stops acting as a dynamic entity and instead becomes a Digital Twin of the real EMAROs~\cite{EMAROs_Ref} robot (\hyperref[req:FR-07]{FR-07}).
+When operating in RitL mode, the \texttt{PoseRobotController.cs} takes control. In this configuration, the virtual robot stops acting as a dynamic entity and instead becomes a digital twin of the real EMAROs~\cite{EMAROs_Ref} robot (\hyperref[req:FR-07]{FR-07}).
 
 The controller listens to a pose topic given by the external ArUco tracking \cite{JuliaBA} to move the digital twin. The incoming pose is provided in pixel coordinates from the tracking camera. It must be mapped onto the defined virtual area. On every new incoming pose, the script converts the pixel coordinates into Unity world space. To ensure alignment, an offset parameter enables the operator to perform a calibration of the digital twin so that its center is aligned with the physical mounting position of the tracking marker. The script republishes the synchronized pose as odometry and tf messages (\hyperref[req:FR-10]{FR-10}).
 
@@ -199,10 +199,10 @@ At the same time, the controller disables collisions between the robot and the t
     \label{fig:attachment_logic}
 \end{figure}
 
-\subsection{ Surface Modification}
+\subsection{Surface Modification}
 To fulfill the requirement for dynamic environment interaction regarding surface textures (\hyperref[req:FR-13]{FR-13}), the system implements a modification mechanism. 
 
-The modification logic relies on physics raycasting to identify the coordinates of the surface at the point of contact. When a valid hit is detected on the target surface, the \texttt{TrackPainter.cs} which is attached to the robot model calculates the pixel coordinates on the texture map. It then modifies the pixel buffer directly using \texttt{SetPixels32}, changing the color to a configured color and thickness. These changes are committed to the GPU using the \texttt{Apply} method. In complex scenarios, multiple robotic applications (e.g., the robot, a VR controller, or a mouse interface) may attempt to modify the terrain simultaneously. To manage this, the \texttt{SharedPaintTextureRegistry.cs} functions as a singleton manager. It maintains a dictionary of active textures and guarantees that all painters operate on a single, shared instance of the \texttt{Texture2D}. This prevents race conditions where one application or user overwrites the work of another and guarantees data consistency across the simulation.
+The modification logic relies on physics raycasting to identify the coordinates of the surface at the point of contact. When a valid hit is detected on the target surface, the \texttt{TrackPainter.cs}, which is attached to the robot model, calculates the pixel coordinates on the texture map. It then modifies the pixel buffer directly using \texttt{SetPixels32}, changing the color to a configured color and thickness. These changes are committed to the GPU using the \texttt{Apply} method. In complex scenarios, multiple robotic applications (e.g., the robot, a VR controller, or a mouse interface) may attempt to modify the terrain simultaneously. To manage this, the \texttt{SharedPaintTextureRegistry.cs} functions as a singleton manager. It maintains a dictionary of active textures and guarantees that all painters operate on a single, shared instance of the \texttt{Texture2D}. This prevents race conditions where one application or user overwrites the work of another and guarantees data consistency across the simulation.
 
 \begin{figure}[H]
     \centering
@@ -216,7 +216,7 @@ To validate the perception algorithms of the robotic applications, the system pr
 
 The \texttt{LidarSensor.cs} component simulates a 2D planar laser scanner, which can be attached to the virtual model of the robot. This implementation utilizes the Unity physics engine's raycasting API to query the scene geometry. In every simulation step, the component executes a loop corresponding to the configured number of beams. For each beam, the system calculates a direction vector based on the scan angle.
 
-For each beam a \texttt{Physics.Raycast} is cast along the computed direction. If the ray intersects a collider on the configured collision layer, its hit distance is recorded. Otherwise the beam is reported as an infinite range. The collected distances are packaged into a standard \texttt{sensor\_msgs/LaserScan} message. Immediately after the raycast loop finishes, the message is stamped with the current simulation time from the \texttt{ClockPublisher.cs} and published. This exact timestamping preserves temporal alignment with the navigation stack and prevents the ROS~2 transform (TF) system from rejecting the scan due to extrapolation errors caused by unsynchronized timestamps.
+For each beam a \texttt{Physics.Raycast} is cast along the computed direction. If the ray intersects a collider on the configured collision layer, its hit distance is recorded. Otherwise, the beam is reported as an infinite range. The collected distances are packaged into a standard \texttt{sensor\_msgs/LaserScan} message. Immediately after the raycast loop finishes, the message is stamped with the current simulation time from the \texttt{ClockPublisher.cs} and published. This exact timestamping preserves temporal alignment with the navigation stack and prevents the ROS~2 transform (TF) system from rejecting the scan due to extrapolation errors caused by unsynchronized timestamps.
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{images/lidar_raycast.png}
@@ -299,7 +299,7 @@ To support dynamic scenarios like Line Following, the user must be able to alter
 
 Beyond painting, the VR interface leverages the physics engine to allow direct object manipulation. Users can grab and move interactive objects using the VR controller's grip function. This allows for the manual reset of test scenarios or the introduction of dynamic obstacles (e.g., dropping a box in the robot's path) to validate the system's reactive planning capabilities.
 
-In complex mixed reality scenarios, the density of visual information can become overwhelming. To manage this, the \texttt{VisibilityToggleManager.cs} (\hyperref[req:FR-18]{FR-18}) allows users to selectively hide or reveal specific visualization aids attached to the robot. This component maps input actions to the rendering state  of objects such as the \texttt{RobotInfoBillboard.cs}, the projected camera plane, light source or the robot's visual cylinder body. This feature allows operators to declutter the view when necessary.
+In complex mixed reality scenarios, the density of visual information can become overwhelming. To manage this, the \texttt{VisibilityToggleManager.cs} (\hyperref[req:FR-18]{FR-18}) allows users to selectively hide or reveal specific visualization aids attached to the robot. This component maps input actions to the rendering state of objects such as the \texttt{RobotInfoBillboard.cs}, the projected camera plane, light source or the robot's visual cylinder body. This feature allows operators to declutter the view when necessary.
 
 \section{Implementation of Robotic Applications}
 \label{sec:robotic_applications}
@@ -323,9 +323,9 @@ A critical design choice in the controller configuration is the use of the \text
 
 However, this reliance on arcs creates a limitation in the confined projection environment. The turning radius required to execute these continuous arcs often causes the robot's footprint to sweep into obstacles or cross the boundaries of the projection area.
 
-To resolve this, the \texttt{RotationShimController} intercepts navigation requests before they reach the DWB planner~\cite{MSM20}. It continuously checks the angular deviation between the robot's heading and the path. If this deviation exceeds a threshold, the shim overrides the local planner and forces an in-place rotation~\cite{MSM20}. This enforced behavior of rotation before driving ensures the robot is safely aligned with its path before attempting forward motion, avoiding the collision risks associated with the arcs of the standard DWA.
+To resolve this, the \texttt{RotationShimController} intercepts navigation requests before they reach the DWB planner~\cite{MSM20}. It continuously checks the angular deviation between the robot's heading and the path. If this deviation exceeds a threshold, the shim overrides the local planner and forces an in-place rotation~\cite{MSM20}. This enforced rotation before driving ensures the robot is safely aligned with its path before attempting forward motion, avoiding the collision risks associated with the arcs of the standard DWA.
 
-To guarantee that the robot does not collide with virtual object during autonomous operation, a \textit{Collision Monitor} node runs in parallel with the navigation stack. Configured with a defined polygon representing the robot's footprint plus a safety margin, this node monitors the virtual LiDAR stream of the robot directly. If an obstacle breaches the safety polygon of the robot, the monitor overrides the navigation stack and publishes a zero-velocity command to the motor controller, acting as a software-level emergency stop.
+To guarantee that the robot does not collide with virtual objects during autonomous operation, a \textit{Collision Monitor} node runs in parallel with the navigation stack. Configured with a defined polygon representing the robot's footprint plus a safety margin, this node monitors the virtual LiDAR stream of the robot directly. If an obstacle breaches the safety polygon of the robot, the monitor overrides the navigation stack and publishes a zero-velocity command to the motor controller, acting as a software-level emergency stop.
 
 \subsection{Modular Perception Stack}
 \label{subsec:perception_architecture}
@@ -397,12 +397,12 @@ The mission logic is defined in \texttt{mission\_state\_machine.py} as a YASMIN 
 \subsection{Application 3: Smart Farming}
 \label{subsec:app_farming}
 
-This application represents the most complex use case, operating in a simulated farm with an agricultural field. The goal is to identify the field boundaries and position and sequentially apply three tools a plow, seeder and  harvester to the field.
+This application represents the most complex use case, operating in a simulated farm with an agricultural field. The goal is to identify the field boundaries and position and sequentially apply three tools: a plow, seeder and  harvester to the field.
 
 The application utilizes four distinct perception processors depending on the active state:
 \begin{enumerate}
     \item \textbf{FieldDetection (\texttt{FieldDetectionProcessor}):} Determines if the robot is currently on arable land by calculating the ratio of field-colored pixels in the image using Hue Saturation Value thresholding.
-    \item \textbf{EdgeDetection (\texttt{EdgeDetectionProcessor}):} Used during the approach phase. It creates binary masks for both field and its surrounding outer textures. By applying morphological dilation~\cite{OpenCV} to the field mask and computing the bitwise AND with the outer mask, it identifies the boundary line where the two textures meet.
+    \item \textbf{EdgeDetection (\texttt{EdgeDetectionProcessor}):} Used during the approach phase. It creates binary masks for both the field and its surrounding outer textures. By applying morphological dilation~\cite{OpenCV} to the field mask and computing the bitwise AND with the outer mask, it identifies the boundary line where the two textures meet.
     \item \textbf{EdgeAdjustment \& EdgeFollowing:} Implemented via two processors (\texttt{Edge\-Adjustment\-Processor} and \texttt{EdgeFollowingProcessor}), these modules are used for precise alignment and tracking. They utilize the Probabilistic Hough Transform (\texttt{cv2.HoughLinesP}) ~\cite{OpenCV} to find line segments along the detected boundary, calculating the robot's \textit{lateral error} (distance from the line centroid to image center) and \textit{angular error} (deviation from vertical).
     \item \textbf{EquipmentDetection (\texttt{EquipmentDetectionProcessor}):} Active during tool search. It isolates specific tool colors using HSV masking and calculates the object's centroid to guide the docking approach.
 \end{enumerate}
@@ -421,7 +421,7 @@ The mission is governed by a YASMIN state machine~\cite{YASMIN} which executes t
     \item \textbf{CheckOnField:} The robot searches the field using a spiral search pattern using the Nav2 stack~\cite{MSM20} until it verifies it is inside the field boundaries.
     \item \textbf{DriveToEdge:} The robot drives forward until the \texttt{EdgeDetectionProcessor} identifies a field boundary. It then executes a forward drive for a calibrated distance to account for the camera's blind spot, ensuring the robot's center of rotation is aligned with the edge.
     \item \textbf{AdjustToEdge:} The robot rotates in place until the \texttt{EdgeAdjustmentProcessor} confirms that the edge line is vertical (angular error near zero) and centered.
-    \item \textbf{FollowEdge:} The robot circumnavigates the field by tracing its boundary. A Proportional Integral Derivative (PID) controller using the lateral error computes the required velocity commands and steers the robot. This action detects field corners by monitoring the robot's odometry. A sharp change in yaw (approx. 90 degrees) triggers the recording of the robot's current pose. If this pose is too close to a previously recorded corner, it is discarded. Once four corners are sucessfully recorded, the field boundary is defined.
+    \item \textbf{FollowEdge:} The robot circumnavigates the field by tracing its boundary. A Proportional Integral Derivative (PID) controller using the lateral error computes the required velocity commands and steers the robot. This action detects field corners by monitoring the robot's odometry. A sharp change in yaw (approx. 90 degrees) triggers the recording of the robot's current pose. If this pose is too close to a previously recorded corner, it is discarded. Once four corners are successfully recorded, the field boundary is defined.
 \end{enumerate}
 
 \textbf{Phase 2: Equipment Cycle}
@@ -429,7 +429,7 @@ The mission is governed by a YASMIN state machine~\cite{YASMIN} which executes t
     \item \textbf{FindEquipment:} The robot executes a spiral search pattern using the Nav2 stack~\cite{MSM20} to locate a specific tool.
     \item \textbf{EquipTool:} Upon detection, the robot approaches the tool. The action triggers the Unity \texttt{AttachmentCommandManager.cs} via the \texttt{/robot\_command} topic to kinematically lock the tool to the robot.
     \item \textbf{GenerateCoveragePath:} Using the four corners identified in Phase 1, this action calculates a path that covers the entire field area.
-    \item \textbf{ExecuteCoverage:} The robot drives the generated path. During this phase, the tool that the robot equipped, modifies the ground texture using raycasts.
+    \item \textbf{ExecuteCoverage:} The robot drives the generated path. During this phase, the tool equipped by the robot modifies the ground texture using raycasts.
     \item \textbf{Return \& Unequip:} The robot returns the tool to its origin and detaches it using the \texttt{/robot\_command}. The state machine then loops back to search for the next tool in the sequence until all tools are used.
 \end{enumerate}
 

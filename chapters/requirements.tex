@@ -1,7 +1,7 @@
 \chapter{Requirements}
 \label{ch:requirements}
 
-This chapter establishes the functional and non-functional requirements for the Mixed Reality Environment. Intended as a validation tool for Robot-in-the-Loop (RitL) testing, the system has to bridge the gap between virtual simulation and physical reality. The requirements follow a hierarchical structure, covering the simulation engine capabilities, system architecture, and digital twin interfaces. In addition, specific requirements regarding the autonomous agents acting within this environment to validate the system are designed.
+This chapter establishes the functional and non-functional requirements for the Mixed Reality Environment. Intended as a validation tool for Robot-in-the-Loop (RitL) testing, the system must bridge the gap between virtual simulation and physical reality. The requirements follow a hierarchical structure, covering the simulation engine capabilities, system architecture, and digital twin interfaces. In addition, specific requirements regarding the autonomous agents acting within this environment to validate the system are designed.
 
 \section{Simulation Engine Capabilities}
 \label{sec:platform_reqs}
@@ -11,14 +11,14 @@ These requirements define the technical capabilities of the underlying simulatio
 \begin{itemize}
     \item \textbf{FR-01: Visual Fidelity:}\label{req:FR-01} The simulation engine shall be able to support rendering pipelines capable of producing image data representative of real-world lighting and material properties. This is required to provide realistic input for the computer vision algorithms of the robot.
 
-    \item \textbf{FR-02: Physics Simulation:}\label{req:FR-02} Overcoming the limitations in the previous VERA framework, the engine shall provide a physics system that will be able to resolve mass, friction, collision, and drag to simulate physical interactions such as a robot pushing obstacles.
+    \item \textbf{FR-02: Physics Simulation:}\label{req:FR-02} Overcoming the limitations in the previous VERA framework, the engine shall provide a physics system that can resolve mass, friction, collision, and drag to simulate physical interactions such as a robot pushing obstacles.
 
     \item \textbf{FR-03: VR \& AR Support:}\label{req:FR-03} The simulation engine shall support both VR and AR modes. It shall enable integration with VR and AR input and output devices, allowing users to interact with and visualize the environment seamlessly in either mode.
 \end{itemize}
 The system architecture is defined by limitations of the hardware and the need for standardized robotic communication.
 
 \begin{itemize}
-    \item \textbf{FR-04: ROS 2 Integration:}\label{req:FR-04} The system shall use ROS~2 as sole middleware for all communication. It shall act as first-party in the network to minimize latency and shall make use of standard message definitions for all sensor streams, telemetry, and control commands to ensure interoperability with the physical robot.
+    \item \textbf{FR-04: ROS 2 Integration:}\label{req:FR-04} The system shall use ROS~2 as the sole middleware for all communication. It shall act as a first-party in the network to minimize latency and shall make use of standard message definitions for all sensor streams, telemetry, and control commands to ensure interoperability with the physical robot.
     
     \item \textbf{FR-05: Time Synchronization:}\label{req:FR-05} The system shall act as the simulation time source and publish the clock signal. To prevent data drift in control algorithms, all simulated sensors and publishers shall synchronize their timestamps to this source.
     
@@ -31,9 +31,9 @@ The system architecture is defined by limitations of the hardware and the need f
 The system shall provide a digital representation of the robotic platform that mirrors its physical counterpart. This involves synchronization with real-world tracking, kinematic simulation, and the publishing of coordinate transforms.
 
 \begin{itemize}
-    \item \textbf{FR-07: Pose Synchronization:}\label{req:FR-07} The system shall take real-time input from the external tracking system to synchronize the position and orientation of the Digital Twin with the physical robot.
+    \item \textbf{FR-07: Pose Synchronization:}\label{req:FR-07} The system shall take real-time input from the external tracking system to synchronize the position and orientation of the digital twin with the physical robot.
     
-    \item \textbf{FR-08: Tracking Failsafe:}\label{req:FR-08} The system shall provide a failsafe that halts the movement of the robot in case there is an interruption of the tracking data stream beyond a threshold that is defined, so that unwanted movements are avoided due to signal loss.
+    \item \textbf{FR-08: Tracking Failsafe:}\label{req:FR-08} The system shall provide a failsafe that halts the movement of the robot in case of an interruption of the tracking data stream beyond a defined threshold to avoid unwanted movements due to signal loss.
 
     \item \textbf{FR-09: Standalone Mode:}\label{req:FR-09} The system shall be able to simulate the behavior of the robot in the absence of physical hardware. It shall accept velocity commands and publish resulting odometry to test algorithms in a completely virtual environment.
     
@@ -48,11 +48,11 @@ These requirements detail capabilities related to the virtual environment itself
 
     \item \textbf{FR-11: Sensor Simulation:}\label{req:FR-11} The system shall provide simulated sensors able to generate data, including video feeds and ranging data. The sensors shall be capable of detecting both static environment structures and dynamic obstacles.
     
-    \item \textbf{FR-12: Command Interface:}\label{req:FR-12} The system shall provide a generic network interface to receive commands and return status feedback so as to enable the robot to trigger simulation events.
+    \item \textbf{FR-12: Command Interface:}\label{req:FR-12} The system shall provide a generic network interface to receive commands and return status feedback to enable the robot to trigger simulation events.
     
     \item \textbf{FR-13: Dynamic Environment Interaction:}\label{req:FR-13} The system shall allow dynamic manipulation of the environment, including physical pushing and attaching of objects, modification of the state of objects, and changes in surface textures at runtime.
     
-    \item \textbf{FR-14: Telemetry Display:}\label{req:FR-14} The system shall display real-time robot status data as floating UI elements attached to the Digital Twin within the 3D environment.
+    \item \textbf{FR-14: Telemetry Display:}\label{req:FR-14} The system shall display real-time robot status data as floating UI elements attached to the digital twin within the 3D environment.
 
 \end{itemize}
 
@@ -64,9 +64,9 @@ These requirements outline how human operators visualize and interact with the s
 \begin{itemize}
     \item \textbf{FR-15: AR Projection:}\label{req:FR-15} The system shall present a top-down, orthographic view of the scene. The projection parameters shall be configurable such that the virtual view can align 1:1 with the physical dimensions of the testbed floor.
     
-    \item \textbf{FR-16: VR Interface:}\label{req:FR-16} The system shall provide a Virtual Reality mode in which the user can view the Digital Twin in 3D space. Information interfaces shall automatically orient themselves to stay readable from the user's perspective.
+    \item \textbf{FR-16: VR Interface:}\label{req:FR-16} The system shall provide a Virtual Reality mode in which the user can view the digital twin in 3D space. Information interfaces shall automatically orient themselves to stay readable from the user's perspective.
         
-    \item \textbf{FR-17: Goal Setting:}\label{req:FR-17} The interface shall provide the user with the functionality to set navigation targets compatible with the Nav2 navigation stacks by pointing at the virtual ground using the mouse or the VR controller.
+    \item \textbf{FR-17: Goal Setting:}\label{req:FR-17} The interface shall provide the user with the functionality to set navigation targets compatible with the Nav2 navigation stack by pointing at the virtual ground using the mouse or the VR controller.
 
     \item \textbf{FR-18: Visualization Control:}\label{req:FR-18} The user interface shall allow runtime modification of the visual environment by toggling the visibility or active state of various system components, such as the robot virtual body, lighting, or telemetry displays.
 \end{itemize}
