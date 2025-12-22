@@ -1,22 +1,52 @@
 \chapter{Evaluation}
 \label{ch:evaluation}
 
+This chapter evaluates the technical performance, scalability, and efficiency of the developed Mixed Reality Environment. The assessment focuses on how the system handles increasing complexity and compares the results to the previous VERA framework.
 
-\section{Methodology}
-\label{sec:eval_methodology}
-\subsection{Hardware Setup}
-\subsection{Measurement Metrics}
+\section{Hardware and System Specifications}
+The performance of a real-time Mixed Reality simulation is heavily dependent on the underlying hardware, as it must simultaneously handle physics calculations, ROS 2 communication, and high-frequency stereoscopic rendering. The benchmarks for this thesis were conducted on a desktop workstation, while the reference measurements for the original VERA framework by Gehricke \cite{Geh24} were performed on a high-performance laptop. The respective hardware configurations are summarized in Table \ref{tab:hardware_specs}.
 
-\section{System Performance Analysis}
-\label{sec:performance_analysis}
-\subsection{Rendering Performance and Scalability}
-\subsection{End-to-End Latency}
+\begin{table}[H]
+    \centering
+    \caption{Comparison of hardware configurations used for evaluation.}
+    \label{tab:hardware_specs}
+    \begin{tabular}{lll}
+        \toprule
+        \textbf{Component} & \textbf{Proposed System (Host)} & \textbf{VERA (Gehricke \cite{Geh24})} \\ 
+        \midrule
+        Processor (CPU)    & Intel i7-8700K (up to 4.7 GHz) & Intel i9-14900HX \\
+        Graphics (GPU)     & NVIDIA RTX 2070 Super (8 GB)   & N/A (CPU-based rendering) \\
+        Memory (RAM)       & 16 GB DDR4                     & 32 GB RAM \\
+        OS                 & Windows 11 / WSL 2             & Ubuntu 24.04 (Native) \\
+        \bottomrule
+    \end{tabular}
+\end{table}
 
-\section{Validation of the Virtual Environment}
-\label{sec:scenario_verification}
-% The scenarios are presented here as comprehensive system tests.
-% Each scenario validates multiple functions (Sensors + Logic + Interaction) simultaneously.
+It is important to note that Gehricke's system relied entirely on the CPU for its 2D Pygame-based visualization. In contrast, the system presented here leverages a dedicated GPU for hardware-accelerated rendering and physics, which is essential for the stereoscopic demands of the Virtual Reality interface.
 
+\section{Performance and Scalability Analysis}
+The scalability of the system was evaluated by measuring the Main Thread CPU time while incrementally increasing the number of interactive objects in the scene. To ensure reproducible and statistically stable results, the data was collected through an automated process: objects were spawned in fixed batches, followed by a one-second settling phase. This pause is critical to allow the physics engine to resolve initial contacts and allow rigid bodies to enter a "sleep" state, ensuring that the measurements reflect a stable environment. After this settling period, performance samples were collected over a one-second window to filter out singular frame spikes, such as those caused by background OS tasks or garbage collection.
+
+
+
+The benchmarks were conducted across four configurations to isolate the costs of VR and dynamic physics. The resulting data is visualized in Figure \ref{fig:scalability_chart}, using a logarithmic scale to capture the wide variance in frame times.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth]{images/scalability_comparison.png}
+    \caption{Scalability evaluation illustrating CPU frame time vs. object count. The 60 FPS target (16.67 ms) serves as the threshold for visual stability in Mixed Reality.}
+    \label{fig:scalability_chart}
+\end{figure}
+
+The \textit{Non-VR Settled} mode serves as the baseline for the engine's rendering efficiency. In this mode, the system maintains a frame time between 3.12 ms and 3.68 ms for up to 9,000 objects. This is a slight improvement over the 3.75 ms reported by Gehricke \cite{Geh24} for a 2D system, demonstrating that the 3D engine handles static mesh batching with high efficiency.
+
+When activating Virtual Reality (\textit{VR Settled}), the frame time stabilizes at approximately 13.8 ms. This constant overhead is characteristic of the stereoscopic rendering pipeline and the synchronization required for the 72 Hz display of the Meta Quest Pro. In this static state, the system successfully maintains the required 60 FPS threshold for up to 30,000 objects, significantly exceeding the 11,250-object limit of the original VERA framework.
+
+However, the \textit{Active Physics} scenarios reveal a clear computational bottleneck. While rendering scales linearly, the cost of resolving thousands of simultaneous physical collisions increases exponentially. The system remains performant for up to 3,000 dynamic objects, but exceeds the 16.67 ms threshold beyond 5,000 objects due to the complexity of the collision solver.
+
+To further investigate the impact of specific system components, subsequent tests utilize deep profiling to analyze the granular execution time of internal scripts and communication overhead. This allows for a precise breakdown of the main thread performance during high-load scenarios.
+
+%Additional evaluations regarding latency and component-level profiling will follow.
 \subsection{Smart Farming Scenario}
 % Description: The robot navigates a grid of crops with changing states.
 % Validates: Visual Fidelity, Object State Logic, Sensor Simulation.
