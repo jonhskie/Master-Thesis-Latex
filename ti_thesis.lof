@@ -23,9 +23,9 @@
 \contentsline {figure}{\numberline {4.10}{\ignorespaces Debug view of the Logistics application. The processor identifies a red transport box in its ROI (green) and calculates the centroid (red dot).\blx@tocontentsinit {0}\cite {FALSCHEBOXBILD}}}{49}{figure.4.10}%
 \contentsline {figure}{\numberline {4.11}{\ignorespaces Debug view of the Smart Farming application during edge following. The processor identifies the boundary between the field (left) and the path (right). The green line represents the detected edge used for navigation, while the red dot indicates the centroid used to compute the lateral and angular errors displayed in the overlay.}}{51}{figure.4.11}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Component Breakdown Analysis illustrating the CPU execution time for Physics, Rendering, and Scripts across four scenarios in Digital Twin (DT) and Virtual modes.}}{56}{figure.5.1}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Scalability evaluation illustrating CPU frame time vs. object count. The 60 FPS target (16.67 ms) serves as the threshold for visual stability in Mixed Reality.}}{58}{figure.5.2}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Visualization latency measured across four application scenarios. The chart compares the delay between pose reception and frame completion in AR Projection mode versus Virtual Reality mode. Error bars indicate the jitter (min/max range).}}{60}{figure.5.3}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Performance breakdown illustrating the CPU execution time for Physics, Rendering, and Scripts across the four operational scenarios. The total active frame time remains well below the 16.67 ms threshold required for 60 FPS.}}{62}{figure.5.7}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Scalability stress test illustrating CPU frame time vs. object count. The 60 FPS target (16.67 ms) serves as the threshold for visual stability in Mixed Reality.}}{65}{figure.5.8}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Visualization latency measured across four application scenarios. The chart compares the delay between pose reception and frame completion in AR Projection mode versus Virtual Reality mode. Error bars indicate the jitter (min/max range).}}{67}{figure.5.9}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

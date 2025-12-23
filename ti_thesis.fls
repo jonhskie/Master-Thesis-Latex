@@ -751,13 +751,13 @@ INPUT ./images/compinente break down.png
 INPUT ./images/compinente break down.png
 INPUT ./images/compinente break down.png
 INPUT ./images/compinente break down.png
-INPUT ./images/scalability_comparison.png
-INPUT ./images/scalability_comparison.png
-INPUT ./images/scalability_comparison.png
-INPUT ./images/scalability_comparison.png
-INPUT ./images/scalability_comparison.png
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/public/mathdesign/mdbch/mdbchr7y.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/mathdesign/mdbch/md-chr7y.tfm
+INPUT ./images/scalability_comparison.png
+INPUT ./images/scalability_comparison.png
+INPUT ./images/scalability_comparison.png
+INPUT ./images/scalability_comparison.png
+INPUT ./images/scalability_comparison.png
 INPUT ./images/latency.png
 INPUT ./images/latency.png
 INPUT ./images/latency.png
