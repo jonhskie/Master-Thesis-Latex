@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.20)  24 DEC 2025 03:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.20)  24 DEC 2025 03:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1404,6 +1404,13 @@ Package biblatex Warning: The following entry could not be found
 
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
+(biblatex)                MUSS BESSER GENERIT ERDEN SCHAU BEI AI STUDIO
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
 (biblatex)                NOT FINAL
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
@@ -1560,213 +1567,4 @@ LaTeX Font Info:    Trying to load font information for MDA+mdbch on input line 
 File: mdamdbch.fd 2013/08/29 Fontinst v1.933 font definitions for MDA/mdbch.
 )
 LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
-(Font)              scaled to size 11.52008pt on input line 5.
-LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 5.
-LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 5.
-LaTeX Font Info:    Trying to load font information for MDB+mdbch on input line 5.
- (/usr/share/texlive/texmf-dist/tex/latex/mathdesign/mdbch/mdbmdbch.fd
-File: mdbmdbch.fd 2013/08/29 Fontinst v1.933 font definitions for MDB/mdbch.
-)
-LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
-(Font)              scaled to size 11.52008pt on input line 5.
-LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 5.
-LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 5.
- [5]
-LaTeX Font Info:    Font shape `T1/mdbch/m/sl' will be
-(Font)              scaled to size 11.52008pt on input line 66.
- [6
-design size mismatch in local font md-chro8t in virtual font mdbchro8t.vf ignored.])
-\tf@toc=\write6
-\openout6 = `ti_thesis.toc'.
-
- [7] [8
-
-
-]
-\openout2 = `chapters/introduction.aux'.
-
- (./chapters/introduction.tex
-chapter 1.
-[1
-
-
-
-] [2]
-
-LaTeX Warning: Citation 'NOT FINAL' on page 3 undefined on input line 17.
-
-
-LaTeX Warning: Citation 'NOT FINAL' on page 3 undefined on input line 17.
-
-) [3]
-\openout2 = `chapters/foundations_related_work.aux'.
-
- (./chapters/foundations_related_work.tex [4
-
-
-
-
-
-]
-chapter 2.
-
-LaTeX Warning: Citation 'NOT FINAL' on page 5 undefined on input line 3.
-
-LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 15.25815pt on input line 4.
-
-LaTeX Warning: Citation 'NOT FINAL' on page 5 undefined on input line 10.
-
-
-LaTeX Warning: Reference `fig:ritl_concept' on page 5 undefined on input line 10.
-
-
-LaTeX Warning: Citation 'NOT FINAL' on page 5 undefined on input line 10.
-
-[5]
-
-LaTeX Warning: Citation 'NOT FINAL' on page 6 undefined on input line 15.
-
-
-LaTeX Warning: Citation 'NOT FINAL' on page 6 undefined on input line 15.
-
-
-LaTeX Warning: Citation 'NOT FINAL' on page 6 undefined on input line 15.
-
-
-LaTeX Warning: Citation 'NOT FINAL' on page 6 undefined on input line 15.
-
-
-Underfull \hbox (badness 2608) in paragraph at lines 15--15
-[][][]\T1/mdbch/m/n/12 (+20) [[]]The real robot's ac-tions af-fect its vir-tual coun-ter-part
- []
-
-<images/vehicle_in_the_loop_dsr+22.jpg, id=304, 248.3679pt x 204.2832pt>
-File: images/vehicle_in_the_loop_dsr+22.jpg Graphic file (type jpg)
-<use images/vehicle_in_the_loop_dsr+22.jpg>
-Package pdftex.def Info: images/vehicle_in_the_loop_dsr+22.jpg  used on input line 25.
-(pdftex.def)             Requested size: 384.10965pt x 315.95924pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [6] [7 <./images/vehicle_in_the_loop_dsr+22.jpg>]
-<images/info_mirror_model_Grieves15.png, id=343, 813.0375pt x 434.8245pt>
-File: images/info_mirror_model_Grieves15.png Graphic file (type png)
-<use images/info_mirror_model_Grieves15.png>
-Package pdftex.def Info: images/info_mirror_model_Grieves15.png  used on input line 44.
-(pdftex.def)             Requested size: 341.43442pt x 182.5985pt.
-
-Underfull \vbox (badness 7273) has occurred while \output is active []
-
- [8]
-
-LaTeX Warning: Reference `fig:dt_environments' on page 9 undefined on input line 51.
-
-[9 <./images/info_mirror_model_Grieves15.png>]
-
-LaTeX Warning: Citation 'NOT FINAL' on page 10 undefined on input line 56.
-
-
-LaTeX Warning: Citation 'NOT FINAL' on page 10 undefined on input line 56.
-
-
-LaTeX Warning: Citation 'NOT FINAL' on page 10 undefined on input line 56.
-
-
-LaTeX Warning: Citation 'NOT FINAL' on page 10 undefined on input line 56.
-
-<images/reality_virtuality_continuum_wpc+23.png, id=395, 1520.079pt x 410.13225pt>
-File: images/reality_virtuality_continuum_wpc+23.png Graphic file (type png)
-<use images/reality_virtuality_continuum_wpc+23.png>
-Package pdftex.def Info: images/reality_virtuality_continuum_wpc+23.png  used on input line 70.
-(pdftex.def)             Requested size: 384.10965pt x 103.63423pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [10] [11 <./images/reality_virtuality_continuum_wpc+23.png>]
-LaTeX Font Info:    Font shape `T1/cmtt/m/n' will be
-(Font)              scaled to size 12.86407pt on input line 87.
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `cmtt' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 9.6688pt on input line 110.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [12{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}] [13]
-<images/vera_setup.jpg, id=463, 2055.68pt x 1818.795pt>
-File: images/vera_setup.jpg Graphic file (type jpg)
-<use images/vera_setup.jpg>
-Package pdftex.def Info: images/vera_setup.jpg  used on input line 132.
-(pdftex.def)             Requested size: 341.43442pt x 302.08641pt.
-LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 12.71512pt on input line 137.
- [14 <./images/vera_setup.jpg>]
-<images/EMAROs_robot.png, id=477, 263.3037pt x 276.0714pt>
-File: images/EMAROs_robot.png Graphic file (type png)
-<use images/EMAROs_robot.png>
-Package pdftex.def Info: images/EMAROs_robot.png  used on input line 144.
-(pdftex.def)             Requested size: 213.39569pt x 223.74718pt.
-
-
-LaTeX Warning: Reference `fig:veps_comparison' on page 15 undefined on input line 155.
-
-[15 <./images/EMAROs_robot.png>]
-<images/point_cloud.png, id=497, 1998.86775pt x 1135.8435pt>
-File: images/point_cloud.png Graphic file (type png)
-<use images/point_cloud.png>
-Package pdftex.def Info: images/point_cloud.png  used on input line 163.
-(pdftex.def)             Requested size: 209.13013pt x 118.82513pt.
-File: images/point_cloud.png Graphic file (type png)
-<use images/point_cloud.png>
-Package pdftex.def Info: images/point_cloud.png  used on input line 169.
-(pdftex.def)             Requested size: 209.13013pt x 118.82513pt.
-
-
-LaTeX Warning: Citation 'ARUCO TRACKER BILD EINBAUEM' on page 16 undefined on input line 173.
-
-[16 <./images/point_cloud.png>]
-<images/pygame_visualizer.png, id=523, 807.61725pt x 701.62125pt>
-File: images/pygame_visualizer.png Graphic file (type png)
-<use images/pygame_visualizer.png>
-Package pdftex.def Info: images/pygame_visualizer.png  used on input line 182.
-(pdftex.def)             Requested size: 341.43442pt x 296.62738pt.
-LaTeX Font Info:    Trying to load font information for TS1+mdbch on input line 190.
- (/usr/share/texlive/texmf-dist/tex/latex/mathdesign/mdbch/ts1mdbch.fd
-File: ts1mdbch.fd 2013/08/29 Fontinst v1.933 font definitions for TS1/mdbch.
-)
-LaTeX Font Info:    Font shape `TS1/mdbch/m/n' will be
-(Font)              scaled to size 11.52008pt on input line 190.
-Package microtype Info: Character `texttwelveudash ' is missing
-(microtype)             in font `TS1/mdbch/m/n/12'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textthreequartersemdash ' is missing
-(microtype)             in font `TS1/mdbch/m/n/12'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textasteriskcentered ' is missing
-(microtype)             in font `TS1/mdbch/m/n/12'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textlbrackdbl ' is missing
-(microtype)             in font `TS1/mdbch/m/n/12'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textrbrackdbl ' is missing
-(microtype)             in font `TS1/mdbch/m/n/12'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `texttildelow ' is missing
-(microtype)             in font `TS1/mdbch/m/n/12'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `textcelsius ' is missing
-(microtype)             in font `TS1/mdbch/m/n/12'.
-(microtype)             Ignoring protrusion settings for this character.
- [17 <./images/pygame_visualizer.png>] [18] [19]
-
-LaTeX Warning: Citation 'NOT FINAL' on page 20 undefined on input line 225.
-
-) [20] [21]
-\
+(Font)      
