@@ -104,7 +104,29 @@ The robotic application, driven by a YASMIN state machine, demonstrated robust a
 A key feature of this application is the utilization of spatial memory. During the initial runs, the robot had to search for delivery zones. However, once a zone was identified by the \texttt{ZoneDetectionProcessor}, its coordinates were successfully stored in the state machine's blackboard. In subsequent iterations, the \texttt{SpatialMemoryQuery} logic correctly retrieved these locations, allowing the robot to bypass the search phase and navigate directly to the destination using the \textbf{Goal Setting} interface (\hyperref[req:FR-17]{FR-17}).
 
 The scenario also stress-tested the interaction between the robot's autonomous navigation and user-driven environmental changes. While the robot executed its path planning using the virtual LiDAR stream, the VR operator could dynamically relocate obstacles, such as black walls, from the storage area into the robot's path. The robot's Nav2 stack successfully detected these dynamic occlusions and replanned trajectories in real-time. In cases where the user placed an obstacle too suddenly for avoidance, the physics engine correctly resolved the conflict: the virtual wall was physically pushed aside by the force of the robot's digital twin, demonstrating the bidirectional physical coupling of the simulation.
+\subsection{Application 4: Smart Farming}
+\label{subsec:eval_farming}
+\cite{MUSS BESSER GENERIT ERDEN SCHAU BEI AI STUDIO}
+The Smart Farming scenario serves as a comprehensive testbed for evaluating the system's ability to integrate complex environmental interactions with autonomous robotic behavior. This application validates requirements related to \textbf{Sensor Simulation} (\hyperref[req:FR-11]{FR-11}), \textbf{Dynamic Environment Interaction} (\hyperref[req:FR-13]{FR-13}), and \textbf{Goal Setting} (\hyperref[req:FR-17]{FR-17}). The environment is designed to simulate an agricultural field with distinct states, visualized through a textured ground material and dynamic state changes.
 
+The virtual field is rendered with a brown ground texture, where tiles change color based on their state: "Untouched" (brown), "Cultivated" (darker brown), "Seeded" (greenish-brown), "Growing" (green), and "ReadyToHarvest" (yellow). The `FieldTileSystem.cs` script manages these visual states. The robot is equipped with interchangeable tools—Plow, Seeder, and Harvester—each implementing the `FarmEquipmentBase` class. These scripts utilize a raycasting mechanism to detect the ground beneath the robot.
+
+The evaluation confirmed that the robot's perception system, utilizing the simulated camera feed, can accurately differentiate between the field and the white outer boundary using color thresholding, as described in the Implementation chapter. The robot's state machine manages the workflow:
+
+\begin{enumerate}
+    \item \textbf{Field Mapping:} The robot begins by searching for the field boundaries. It employs a spiral search pattern, and upon detecting the edge through color differences, it aligns itself and then follows the detected line. This path-following behavior relies on the `EdgeDetection` and `EdgeAdjustment` processors. Once four corners of the field are identified, the system stores these waypoints.
+    \item \textbf{Tool Identification and Navigation:} After mapping the field, the robot autonomously searches for the required equipment. Upon locating a tool, it navigates to it and uses the `AttachmentCommandManager` to kinematically attach the tool.
+    \item \textbf{Task Execution:} With the tool attached, the robot generates a coverage path for the entire field based on the previously mapped corners. It then executes this path, with the attached tool modifying the ground texture according to its function (e.g., the Seeder applies a green texture to "Seeded" tiles).
+\end{enumerate}
+
+\begin{figure}[H]
+    \centering
+    %\includegraphics[width=0.8\textwidth]{images/smart_farming_ar.png} % Placeholder
+    \caption{AR projection of the Smart Farming scenario. The physical EMAROs robot, equipped with the Seeder tool, navigates the virtual field, modifying the ground texture from "Cultivated" to "Seeded" as it progresses.}
+    \label{fig:smart_farming_ar}
+\end{figure}
+
+The integration of user interaction further enhances the evaluation. The VR user can manually manipulate certain environmental objects, such as placing new obstacles (rocks or bushes) in the field. The robot's navigation stack, leveraging the Nav2 system, effectively re-plans its path around these dynamic obstacles to reach its goals. If a goal becomes unreachable, the system handles it gracefully by skipping that part of the mission and continuing. This demonstrates the robustness of the navigation and task management in the face of unpredictable changes, fulfilling requirement \hyperref[req:FR-17]{FR-17} for goal setting and dynamic navigation. The visualization of the robot's actions through AR, including the ground texture changes and the status billboard (\hyperref[req:FR-14]{FR-14}), provides immediate feedback on the system's progress and state.
 
 
 \section{Hardware and System Specifications}
