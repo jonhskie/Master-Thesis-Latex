@@ -55,15 +55,15 @@
 \contentsline {subsection}{\numberline {5.1.1}Virtual Reality Interface}{55}{subsection.5.1.1}%
 \contentsline {subsection}{\numberline {5.1.2}Augmented Reality Projection}{56}{subsection.5.1.2}%
 \contentsline {section}{\numberline {5.2}Scenario Realization and Application Analysis}{57}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Application 1: Dynamic Surface Interaction (Paint)}{57}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.1}Application 1: Dynamic Surface Interaction (Paint)}{58}{subsection.5.2.1}%
 \contentsline {subsection}{\numberline {5.2.2}Application 2: Reactive Physics Interaction (Pong)}{58}{subsection.5.2.2}%
 \contentsline {subsection}{\numberline {5.2.3}Application 3: Autonomous Logistics}{59}{subsection.5.2.3}%
-\contentsline {subsection}{\numberline {5.2.4}Application 4: Smart Farming}{61}{subsection.5.2.4}%
-\contentsline {section}{\numberline {5.3}Hardware and System Specifications}{62}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Performance Analysis of Robotic Scenarios}{63}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Deep Profiling and Script Impact Analysis}{65}{section.5.5}%
-\contentsline {section}{\numberline {5.6}Scalability and Stress Testing}{66}{section.5.6}%
-\contentsline {section}{\numberline {5.7}Latency Analysis}{68}{section.5.7}%
-\contentsline {chapter}{\numberline {6}Conclusion and Outlook}{71}{chapter.6}%
-\contentsline {chapter}{\nonumberline Bibliography}{79}{chapter*.5}%
+\contentsline {subsection}{\numberline {5.2.4}Application 4: Smart Farming}{60}{subsection.5.2.4}%
+\contentsline {section}{\numberline {5.3}Hardware and System Specifications}{61}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Performance Analysis of Robotic Scenarios}{61}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Deep Profiling and Script Impact Analysis}{63}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Scalability and Stress Testing}{65}{section.5.6}%
+\contentsline {section}{\numberline {5.7}Latency Analysis}{66}{section.5.7}%
+\contentsline {chapter}{\numberline {6}Conclusion and Outlook}{69}{chapter.6}%
+\contentsline {chapter}{\nonumberline Bibliography}{77}{chapter*.5}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

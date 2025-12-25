@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.20)  24 DEC 2025 03:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.20)  25 DEC 2025 02:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1404,13 +1404,6 @@ Package biblatex Warning: The following entry could not be found
 
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
-(biblatex)                MUSS BESSER GENERIT ERDEN SCHAU BEI AI STUDIO
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
 (biblatex)                NOT FINAL
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
@@ -1945,77 +1938,65 @@ LaTeX Warning: Citation 'NOT FINAL' on page 53 undefined on input line 444.
 ]
 chapter 5.
 
-LaTeX Warning: Reference `fig:vr_interface_fpv' on page 55 undefined on input line 14.
+LaTeX Warning: Reference `fig:vr_interface_fpv' on page 55 undefined on input line 13.
 
 [55]
 
-LaTeX Warning: Reference `fig:vr_overview' on page 56 undefined on input line 34.
+LaTeX Warning: Reference `fig:vr_overview' on page 56 undefined on input line 33.
 
 [56]
 
-LaTeX Warning: Reference `fig:ar_projection' on page 57 undefined on input line 48.
+LaTeX Warning: Reference `fig:ar_projection' on page 57 undefined on input line 47.
 
 [57] [58] [59] [60]
 
-LaTeX Warning: Citation 'MUSS BESSER GENERIT ERDEN SCHAU BEI AI STUDIO' on page 61 undefined on input line 109.
+LaTeX Warning: Reference `sec:scenario_realization' on page 61 undefined on input line 141.
 
 [61]
-Underfull \vbox (badness 1082) has occurred while \output is active []
-
- [62]
-
-LaTeX Warning: Reference `sec:scenario_realization' on page 63 undefined on input line 154.
-
-<images/compinente break down.png, id=995, 903.375pt x 526.96875pt>
+<images/compinente break down.png, id=984, 903.375pt x 526.96875pt>
 File: images/compinente break down.png Graphic file (type png)
 <use images/compinente break down.png>
-Package pdftex.def Info: images/compinente break down.png  used on input line 160.
+Package pdftex.def Info: images/compinente break down.png  used on input line 147.
 (pdftex.def)             Requested size: 426.7914pt x 248.96188pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [63]
-Overfull \hbox (5.27571pt too wide) in paragraph at lines 173--190
+ [62 <./images/compinente break down.png>]
+Overfull \hbox (5.27571pt too wide) in paragraph at lines 160--177
  [][] 
  []
 
-[64 <./images/compinente break down.png>]
-Overfull \hbox (23.85687pt too wide) in paragraph at lines 205--216
+[63]
+Overfull \hbox (23.85687pt too wide) in paragraph at lines 192--203
  [][] 
  []
 
-
-Underfull \vbox (badness 2469) has occurred while \output is active []
-
- [65] [66]
-<images/scalability_comparison.png, id=1021, 1204.5pt x 702.625pt>
+[64]
+<images/scalability_comparison.png, id=1005, 1204.5pt x 702.625pt>
 File: images/scalability_comparison.png Graphic file (type png)
 <use images/scalability_comparison.png>
-Package pdftex.def Info: images/scalability_comparison.png  used on input line 233.
+Package pdftex.def Info: images/scalability_comparison.png  used on input line 220.
 (pdftex.def)             Requested size: 405.45052pt x 236.50923pt.
- [67 <./images/scalability_comparison.png>]
-<images/latency.png, id=1029, 752.8125pt x 425.33907pt>
+ [65 <./images/scalability_comparison.png>]
+<images/latency.png, id=1014, 752.8125pt x 425.33907pt>
 File: images/latency.png Graphic file (type png)
 <use images/latency.png>
-Package pdftex.def Info: images/latency.png  used on input line 253.
+Package pdftex.def Info: images/latency.png  used on input line 240.
 (pdftex.def)             Requested size: 405.45052pt x 229.08257pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [68]
-Overfull \hbox (19.76123pt too wide) in paragraph at lines 260--261
+ [66]
+Overfull \hbox (19.76123pt too wide) in paragraph at lines 247--248
 []\T1/mdbch/m/n/12 (-20) The pro-posed ar-chi-tec-ture elim-i-nates this bot-tle-neck. By uti-liz-ing the na-tive \T1/cmtt/m/n/12 Ros2ForUnity
  []
 
-) [69 <./images/latency.png>] [70]
+) [67 <./images/latency.png>] [68]
 \openout2 = `chapters/conclusion_outlook.aux'.
 
  (./chapters/conclusion_outlook.tex
 chapter 6.
 
-LaTeX Warning: Citation 'NOT FINAL' on page 71 undefined on input line 3.
+LaTeX Warning: Citation 'NOT FINAL' on page 69 undefined on input line 3.
 
-[71
+[69
 
 
 
@@ -2023,16 +2004,16 @@ LaTeX Warning: Citation 'NOT FINAL' on page 71 undefined on input line 3.
 
 ]
 
-LaTeX Warning: Citation 'NOT FINAL' on page 72 undefined on input line 19.
+LaTeX Warning: Citation 'NOT FINAL' on page 70 undefined on input line 19.
 
-) [72] [73] [74
+) [70] [71] [72
 
 
 
 
 ]
 Package tocbasic Info: character protrusion at lof deactivated on input line 52.
- (./ti_thesis.lof [75]
+ (./ti_thesis.lof [73]
 Overfull \hbox (10.31657pt too wide) in paragraph at lines 21--21
  \T1/mdbch/m/n/12 (-20) while the \T1/cmtt/m/n/12 RosImageToMaterial.cs \T1/mdbch/m/n/12 (-20) com-po-nent projects the live OpenCV 
  []
@@ -2041,16 +2022,16 @@ Overfull \hbox (10.31657pt too wide) in paragraph at lines 21--21
 \tf@lof=\write7
 \openout7 = `ti_thesis.lof'.
 
- [76]
+ [74]
 Package tocbasic Info: character protrusion at lol deactivated on input line 53.
  (./ti_thesis.lol)
 \tf@lol=\write8
 \openout8 = `ti_thesis.lol'.
 
- [77
+ [75
 
 
-] [78
+] [76
 
 
 ]
@@ -2062,7 +2043,7 @@ Overfull \hbox (11.52014pt too wide) in paragraph at lines 60--60
 []\T1/mdbch/m/n/12 (-20) Mordechai Ben-Ari and Francesco Mon-dada. \T1/mdbch/m/it/12 (-20) El-e-ments of Robotics\T1/mdbch/m/n/12 (-20) . Springer
  []
 
-[79] [80] [81] [82]
+[77] [78] [79] [80]
 Overfull \hbox (6.64026pt too wide) in paragraph at lines 60--60
 \T1/mdbch/m/n/12 (-20) Oct. 2020, pp. 2718^^U2725. \T1/mdbch/m/fsc/12 (-20) doi\T1/mdbch/m/n/12 (-20) : [][]$\T1/cmtt/m/n/12 10 . 1109 / IROS45743 . 2020 . 9341207$[][]\T1/mdbch/m/n/12 (-20) .
  []
@@ -2072,10 +2053,10 @@ Overfull \hbox (49.37604pt too wide) in paragraph at lines 60--60
 \T1/mdbch/m/n/12 (-20) A Re-view^^Q. In: \T1/mdbch/m/it/12 (-20) Robotics \T1/mdbch/m/n/12 (-20) 9.2 (Apr. 2020), p. 21. \T1/mdbch/m/fsc/12 (-20) doi\T1/mdbch/m/n/12 (-20) : [][]$\T1/cmtt/m/n/12 10 . 3390 / robotics9020021$[][]\T1/mdbch/m/n/12 (-20) .
  []
 
-[83] [84] [85] [86
+[81] [82] [83] [84
 
 
-] [87] (./ti_thesis.aux (./chapters/deckblatt.aux) (./chapters/abstract.aux) (./chapters/introduction.aux) (./chapters/foundations_related_work.aux) (./chapters/requirements.aux) (./chapters/concept_implementation.aux) (./chapters/evaluation.aux) (./chapters/conclusion_outlook.aux))
+] [85] (./ti_thesis.aux (./chapters/deckblatt.aux) (./chapters/abstract.aux) (./chapters/introduction.aux) (./chapters/foundations_related_work.aux) (./chapters/requirements.aux) (./chapters/concept_implementation.aux) (./chapters/evaluation.aux) (./chapters/conclusion_outlook.aux))
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
@@ -2096,18 +2077,18 @@ Package logreq Info: Writing requests to 'ti_thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 60991 strings out of 474222
- 1384576 string characters out of 5748732
- 2641995 words of memory out of 5000000
+ 60974 strings out of 474222
+ 1384417 string characters out of 5748732
+ 2641903 words of memory out of 5000000
  81551 multiletter control sequences out of 15000+600000
- 641805 words of font info for 507 fonts, out of 8000000 for 9000
+ 641085 words of font info for 498 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  108i,12n,131p,10936b,3335s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchri8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chb8t.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7t.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7y.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr8t.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chri7m.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chri8t.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8ac.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on ti_thesis.pdf (95 pages, 20602786 bytes).
+Output written on ti_thesis.pdf (93 pages, 20598321 bytes).
 PDF statistics:
- 1627 PDF objects out of 1728 (max. 8388607)
- 1418 compressed objects within 15 object streams
- 295 named destinations out of 1000 (max. 500000)
+ 1611 PDF objects out of 1728 (max. 8388607)
+ 1404 compressed objects within 15 object streams
+ 290 named destinations out of 1000 (max. 500000)
  79086 words of extra memory for PDF output out of 89155 (max. 10000000)
 
