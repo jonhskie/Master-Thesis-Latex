@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.20)  25 DEC 2025 02:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.20)  27 DEC 2025 02:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1362,34 +1362,6 @@ Package biblatex Info: ... file 'ti_thesis.bbl' found.
 
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
-(biblatex)                ABBILDUNG AENDERN ZU LEGENDE used in DT MODE ONLY ETC. vlt farbe der SW TEile anener
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                ABBILDUNG Andern
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                ABBILDUNGFEHLT
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                ARUCO TRACKER BILD EINBAUEM
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
 (biblatex)                FALSCHEBOXBILD
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
@@ -1595,14 +1567,7 @@ chapter 1.
 
 
 
-] [2]
-
-LaTeX Warning: Citation 'NOT FINAL' on page 3 undefined on input line 17.
-
-
-LaTeX Warning: Citation 'NOT FINAL' on page 3 undefined on input line 17.
-
-) [3]
+] [2]) [3]
 \openout2 = `chapters/foundations_related_work.aux'.
 
  (./chapters/foundations_related_work.tex [4
@@ -1613,136 +1578,89 @@ LaTeX Warning: Citation 'NOT FINAL' on page 3 undefined on input line 17.
 
 ]
 chapter 2.
-
-LaTeX Warning: Citation 'NOT FINAL' on page 5 undefined on input line 3.
-
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 15.25815pt on input line 4.
-
-LaTeX Warning: Citation 'NOT FINAL' on page 5 undefined on input line 10.
-
-
-LaTeX Warning: Reference `fig:ritl_concept' on page 5 undefined on input line 10.
-
-
-LaTeX Warning: Citation 'NOT FINAL' on page 5 undefined on input line 10.
-
 [5]
-
-LaTeX Warning: Citation 'NOT FINAL' on page 6 undefined on input line 15.
-
-
-LaTeX Warning: Citation 'NOT FINAL' on page 6 undefined on input line 15.
-
-
-LaTeX Warning: Citation 'NOT FINAL' on page 6 undefined on input line 15.
-
-
-LaTeX Warning: Citation 'NOT FINAL' on page 6 undefined on input line 15.
-
-
-Underfull \hbox (badness 2608) in paragraph at lines 15--15
-[][][]\T1/mdbch/m/n/12 (+20) [[]]The real robot's ac-tions af-fect its vir-tual coun-ter-part
- []
-
-<images/vehicle_in_the_loop_dsr+22.jpg, id=304, 248.3679pt x 204.2832pt>
+<images/vehicle_in_the_loop_dsr+22.jpg, id=316, 248.3679pt x 204.2832pt>
 File: images/vehicle_in_the_loop_dsr+22.jpg Graphic file (type jpg)
 <use images/vehicle_in_the_loop_dsr+22.jpg>
-Package pdftex.def Info: images/vehicle_in_the_loop_dsr+22.jpg  used on input line 25.
+Package pdftex.def Info: images/vehicle_in_the_loop_dsr+22.jpg  used on input line 20.
 (pdftex.def)             Requested size: 384.10965pt x 315.95924pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [6] [7 <./images/vehicle_in_the_loop_dsr+22.jpg>]
-<images/info_mirror_model_Grieves15.png, id=343, 813.0375pt x 434.8245pt>
+<images/info_mirror_model_Grieves15.png, id=355, 813.0375pt x 434.8245pt>
 File: images/info_mirror_model_Grieves15.png Graphic file (type png)
 <use images/info_mirror_model_Grieves15.png>
-Package pdftex.def Info: images/info_mirror_model_Grieves15.png  used on input line 44.
+Package pdftex.def Info: images/info_mirror_model_Grieves15.png  used on input line 39.
 (pdftex.def)             Requested size: 341.43442pt x 182.5985pt.
 
 Underfull \vbox (badness 7273) has occurred while \output is active []
 
- [8]
-
-LaTeX Warning: Reference `fig:dt_environments' on page 9 undefined on input line 51.
-
-[9 <./images/info_mirror_model_Grieves15.png>]
-
-LaTeX Warning: Citation 'NOT FINAL' on page 10 undefined on input line 56.
-
-
-LaTeX Warning: Citation 'NOT FINAL' on page 10 undefined on input line 56.
-
-
-LaTeX Warning: Citation 'NOT FINAL' on page 10 undefined on input line 56.
-
-
-LaTeX Warning: Citation 'NOT FINAL' on page 10 undefined on input line 56.
-
-<images/reality_virtuality_continuum_wpc+23.png, id=395, 1520.079pt x 410.13225pt>
+ [8] [9 <./images/info_mirror_model_Grieves15.png>]
+<images/reality_virtuality_continuum_wpc+23.png, id=406, 1520.079pt x 410.13225pt>
 File: images/reality_virtuality_continuum_wpc+23.png Graphic file (type png)
 <use images/reality_virtuality_continuum_wpc+23.png>
-Package pdftex.def Info: images/reality_virtuality_continuum_wpc+23.png  used on input line 70.
+Package pdftex.def Info: images/reality_virtuality_continuum_wpc+23.png  used on input line 58.
 (pdftex.def)             Requested size: 384.10965pt x 103.63423pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [10] [11 <./images/reality_virtuality_continuum_wpc+23.png>]
+ [10 <./images/reality_virtuality_continuum_wpc+23.png>]
 LaTeX Font Info:    Font shape `T1/cmtt/m/n' will be
-(Font)              scaled to size 12.86407pt on input line 87.
+(Font)              scaled to size 12.86407pt on input line 75.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
+ [11]
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 9.6688pt on input line 110.
+(Font)              scaled to size 9.6688pt on input line 98.
+ [12{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}]
+<images/vera_setup.jpg, id=469, 2055.68pt x 1818.795pt>
+File: images/vera_setup.jpg Graphic file (type jpg)
+<use images/vera_setup.jpg>
+Package pdftex.def Info: images/vera_setup.jpg  used on input line 120.
+(pdftex.def)             Requested size: 341.43442pt x 302.08641pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [12{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}] [13]
-<images/vera_setup.jpg, id=463, 2055.68pt x 1818.795pt>
-File: images/vera_setup.jpg Graphic file (type jpg)
-<use images/vera_setup.jpg>
-Package pdftex.def Info: images/vera_setup.jpg  used on input line 132.
-(pdftex.def)             Requested size: 341.43442pt x 302.08641pt.
+ [13]
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 12.71512pt on input line 137.
- [14 <./images/vera_setup.jpg>]
-<images/EMAROs_robot.png, id=477, 263.3037pt x 276.0714pt>
+(Font)              scaled to size 12.71512pt on input line 125.
+<images/EMAROs_robot.png, id=481, 263.3037pt x 276.0714pt>
 File: images/EMAROs_robot.png Graphic file (type png)
 <use images/EMAROs_robot.png>
-Package pdftex.def Info: images/EMAROs_robot.png  used on input line 144.
+Package pdftex.def Info: images/EMAROs_robot.png  used on input line 132.
 (pdftex.def)             Requested size: 213.39569pt x 223.74718pt.
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Warning: Reference `fig:veps_comparison' on page 15 undefined on input line 155.
+ [14 <./images/vera_setup.jpg>]
+
+LaTeX Warning: Reference `fig:veps_comparison' on page 15 undefined on input line 143.
 
 [15 <./images/EMAROs_robot.png>]
-<images/point_cloud.png, id=497, 1998.86775pt x 1135.8435pt>
+<images/point_cloud.png, id=507, 1998.86775pt x 1135.8435pt>
 File: images/point_cloud.png Graphic file (type png)
 <use images/point_cloud.png>
-Package pdftex.def Info: images/point_cloud.png  used on input line 163.
-(pdftex.def)             Requested size: 209.13013pt x 118.82513pt.
-File: images/point_cloud.png Graphic file (type png)
-<use images/point_cloud.png>
-Package pdftex.def Info: images/point_cloud.png  used on input line 169.
-(pdftex.def)             Requested size: 209.13013pt x 118.82513pt.
-
-
-LaTeX Warning: Citation 'ARUCO TRACKER BILD EINBAUEM' on page 16 undefined on input line 173.
-
-[16 <./images/point_cloud.png>]
-<images/pygame_visualizer.png, id=523, 807.61725pt x 701.62125pt>
+Package pdftex.def Info: images/point_cloud.png  used on input line 151.
+(pdftex.def)             Requested size: 273.14622pt x 155.20406pt.
+<images/arcuo.jpg, id=508, 1394.20876pt x 1428.08531pt>
+File: images/arcuo.jpg Graphic file (type jpg)
+<use images/arcuo.jpg>
+Package pdftex.def Info: images/arcuo.jpg  used on input line 157.
+(pdftex.def)             Requested size: 153.64516pt x 157.37315pt.
+ [16 <./images/point_cloud.png> <./images/arcuo.jpg>]
+<images/pygame_visualizer.png, id=534, 807.61725pt x 701.62125pt>
 File: images/pygame_visualizer.png Graphic file (type png)
 <use images/pygame_visualizer.png>
-Package pdftex.def Info: images/pygame_visualizer.png  used on input line 182.
+Package pdftex.def Info: images/pygame_visualizer.png  used on input line 169.
 (pdftex.def)             Requested size: 341.43442pt x 296.62738pt.
-LaTeX Font Info:    Trying to load font information for TS1+mdbch on input line 190.
+LaTeX Font Info:    Trying to load font information for TS1+mdbch on input line 178.
  (/usr/share/texlive/texmf-dist/tex/latex/mathdesign/mdbch/ts1mdbch.fd
 File: ts1mdbch.fd 2013/08/29 Fontinst v1.933 font definitions for TS1/mdbch.
 )
 LaTeX Font Info:    Font shape `TS1/mdbch/m/n' will be
-(Font)              scaled to size 11.52008pt on input line 190.
+(Font)              scaled to size 11.52008pt on input line 178.
 Package microtype Info: Character `texttwelveudash ' is missing
 (microtype)             in font `TS1/mdbch/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -1764,11 +1682,7 @@ Package microtype Info: Character `texttildelow ' is missing
 Package microtype Info: Character `textcelsius ' is missing
 (microtype)             in font `TS1/mdbch/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
- [17 <./images/pygame_visualizer.png>] [18] [19]
-
-LaTeX Warning: Citation 'NOT FINAL' on page 20 undefined on input line 225.
-
-) [20] [21]
+ [17 <./images/pygame_visualizer.png>] [18] [19]) [20] [21]
 \openout2 = `chapters/requirements.aux'.
 
  (./chapters/requirements.tex [22
@@ -1787,144 +1701,124 @@ Underfull \vbox (badness 2326) has occurred while \output is active []
 
  (./chapters/concept_implementation.tex
 chapter 4.
-
-LaTeX Warning: Reference `fig:mr_environment_overview' on page 27 undefined on input line 7.
-
-
-LaTeX Warning: Citation 'ABBILDUNGFEHLT' on page 27 undefined on input line 8.
-
+<images/implemantion_intro.jpg, id=643, 1926.19624pt x 888.31876pt>
+File: images/implemantion_intro.jpg Graphic file (type jpg)
+<use images/implemantion_intro.jpg>
+Package pdftex.def Info: images/implemantion_intro.jpg  used on input line 10.
+(pdftex.def)             Requested size: 384.10965pt x 177.13197pt.
 [27
 
 
 
 
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 45--45
+ <./images/implemantion_intro.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 44--44
 []|\T1/phv/m/n/12 (+20) HRI & MR
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [28]
-Underfull \vbox (badness 2635) has occurred while \output is active []
-
- [29]
-<images/hardware_topology.png, id=675, 1003.95074pt x 1003.95074pt>
+[28] [29]
+<images/hardware_topology.png, id=689, 1003.95074pt x 1003.95074pt>
 File: images/hardware_topology.png Graphic file (type png)
 <use images/hardware_topology.png>
-Package pdftex.def Info: images/hardware_topology.png  used on input line 87.
+Package pdftex.def Info: images/hardware_topology.png  used on input line 86.
 (pdftex.def)             Requested size: 277.41179pt x 277.4124pt.
-
-
-LaTeX Warning: Citation 'ABBILDUNG Andern' on page 30 undefined on input line 88.
-
-
-LaTeX Warning: Citation 'ABBILDUNG Andern' on page 30 undefined on input line 88.
-
 
 Underfull \vbox (badness 1184) has occurred while \output is active []
 
  [30] [31 <./images/hardware_topology.png>]
 LaTeX Font Info:    Font shape `T1/cmtt/b/n' in size <12> not available
-(Font)              Font shape `T1/cmtt/bx/n' tried instead on input line 109.
+(Font)              Font shape `T1/cmtt/bx/n' tried instead on input line 108.
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <12> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 109.
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 108.
 LaTeX Font Info:    Font shape `T1/cmtt/m/n' will be
-(Font)              scaled to size 12.86407pt on input line 109.
-<images/software_architecture.png, id=703, 1241.23724pt x 1034.06325pt>
+(Font)              scaled to size 12.86407pt on input line 108.
+<images/software_architecture.png, id=718, 1241.8395pt x 1037.0745pt>
 File: images/software_architecture.png Graphic file (type png)
 <use images/software_architecture.png>
-Package pdftex.def Info: images/software_architecture.png  used on input line 124.
-(pdftex.def)             Requested size: 426.7914pt x 355.55304pt.
- [32]
-
-LaTeX Warning: Citation 'ABBILDUNG AENDERN ZU LEGENDE used in DT MODE ONLY ETC. vlt farbe der SW TEile anener ' on page 33 undefined on input line 128.
-
-
-Overfull \hbox (99.74133pt too wide) in paragraph at lines 128--129
-[]\T1/mdbch/m/n/12 (-20) [[]] 
- []
-
-[33 <./images/software_architecture.png>] [34] [35] [36]
-<images/Detached.png, id=747, 794.97pt x 993.7125pt>
+Package pdftex.def Info: images/software_architecture.png  used on input line 123.
+(pdftex.def)             Requested size: 426.7914pt x 356.41435pt.
+ [32] [33 <./images/software_architecture.png>] [34] [35]
+<images/Detached.png, id=756, 794.97pt x 993.7125pt>
 File: images/Detached.png Graphic file (type png)
 <use images/Detached.png>
-Package pdftex.def Info: images/Detached.png  used on input line 186.
+Package pdftex.def Info: images/Detached.png  used on input line 185.
 (pdftex.def)             Requested size: 209.13013pt x 261.40688pt.
-<images/Attached.png, id=748, 799.48688pt x 998.9822pt>
+<images/Attached.png, id=757, 799.48688pt x 998.9822pt>
 File: images/Attached.png Graphic file (type png)
 <use images/Attached.png>
-Package pdftex.def Info: images/Attached.png  used on input line 194.
+Package pdftex.def Info: images/Attached.png  used on input line 193.
 (pdftex.def)             Requested size: 209.13013pt x 261.2993pt.
 Class scrbook Info: Workaround for not recommended usage of \\ or
-(scrbook)           \newlinein caption text  on input line 198.
- [37 <./images/Detached.png> <./images/Attached.png>]
-<images/texture_painting.png, id=756, 2049.15562pt x 1241.38782pt>
+(scrbook)           \newlinein caption text  on input line 197.
+ [36] [37 <./images/Detached.png> <./images/Attached.png>]
+<images/texture_painting.png, id=770, 2049.15562pt x 1241.38782pt>
 File: images/texture_painting.png Graphic file (type png)
 <use images/texture_painting.png>
-Package pdftex.def Info: images/texture_painting.png  used on input line 209.
+Package pdftex.def Info: images/texture_painting.png  used on input line 208.
 (pdftex.def)             Requested size: 341.43442pt x 206.828pt.
-<images/lidar_raycast.png, id=758, 2048.40282pt x 1182.66844pt>
+<images/lidar_raycast.png, id=772, 2048.40282pt x 1182.66844pt>
 File: images/lidar_raycast.png Graphic file (type png)
 <use images/lidar_raycast.png>
-Package pdftex.def Info: images/lidar_raycast.png  used on input line 222.
+Package pdftex.def Info: images/lidar_raycast.png  used on input line 221.
 (pdftex.def)             Requested size: 341.43442pt x 197.11694pt.
- [38 <./images/texture_painting.png>] [39 <./images/lidar_raycast.png>] [40]
-<images/projection_mapping.png, id=786, 1121.3895pt x 408.92775pt>
+ [38 <./images/texture_painting.png>] [39 <./images/lidar_raycast.png>]
+Underfull \vbox (badness 1502) has occurred while \output is active []
+
+ [40]
+<images/projection_mapping.png, id=800, 1121.3895pt x 408.92775pt>
 File: images/projection_mapping.png Graphic file (type png)
 <use images/projection_mapping.png>
-Package pdftex.def Info: images/projection_mapping.png  used on input line 264.
+Package pdftex.def Info: images/projection_mapping.png  used on input line 263.
 (pdftex.def)             Requested size: 384.10965pt x 140.06938pt.
  [41 <./images/projection_mapping.png>]
-<images/BillBoard_Camera_Projection.png, id=796, 1101.36469pt x 823.57687pt>
+<images/BillBoard_Camera_Projection.png, id=810, 1101.36469pt x 823.57687pt>
 File: images/BillBoard_Camera_Projection.png Graphic file (type png)
 <use images/BillBoard_Camera_Projection.png>
-Package pdftex.def Info: images/BillBoard_Camera_Projection.png  used on input line 287.
+Package pdftex.def Info: images/BillBoard_Camera_Projection.png  used on input line 286.
 (pdftex.def)             Requested size: 341.43442pt x 255.31876pt.
 
-Underfull \vbox (badness 2529) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [42] [43 <./images/BillBoard_Camera_Projection.png>] [44] [45]
 
-LaTeX Warning: Citation 'Fuer jede Phase ein debug bild einbauen' on page 46 undefined on input line 341.
+LaTeX Warning: Citation 'Fuer jede Phase ein debug bild einbauen' on page 46 undefined on input line 340.
 
-<images/line_follower_debug.png, id=837, 1509.38907pt x 1132.98282pt>
+<images/line_follower_debug.png, id=851, 1509.38907pt x 1132.98282pt>
 File: images/line_follower_debug.png Graphic file (type png)
 <use images/line_follower_debug.png>
-Package pdftex.def Info: images/line_follower_debug.png  used on input line 355.
+Package pdftex.def Info: images/line_follower_debug.png  used on input line 354.
 (pdftex.def)             Requested size: 256.07744pt x 192.20691pt.
 [46] [47 <./images/line_follower_debug.png>]
-<images/logistics_debug.png, id=857, 1097.60063pt x 823.57687pt>
+<images/logistics_debug.png, id=871, 1097.60063pt x 823.57687pt>
 File: images/logistics_debug.png Graphic file (type png)
 <use images/logistics_debug.png>
-Package pdftex.def Info: images/logistics_debug.png  used on input line 382.
+Package pdftex.def Info: images/logistics_debug.png  used on input line 381.
 (pdftex.def)             Requested size: 341.43442pt x 256.18587pt.
 
 
-LaTeX Warning: Citation 'FALSCHEBOXBILD' on page 48 undefined on input line 383.
+LaTeX Warning: Citation 'FALSCHEBOXBILD' on page 48 undefined on input line 382.
 
 
-LaTeX Warning: Citation 'FALSCHEBOXBILD' on page 48 undefined on input line 383.
+LaTeX Warning: Citation 'FALSCHEBOXBILD' on page 48 undefined on input line 382.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [48] [49 <./images/logistics_debug.png>]
-<images/debug_view_edge_following.png, id=879, 1557.56906pt x 1170.62344pt>
+<images/debug_view_edge_following.png, id=893, 1557.56906pt x 1170.62344pt>
 File: images/debug_view_edge_following.png Graphic file (type png)
 <use images/debug_view_edge_following.png>
-Package pdftex.def Info: images/debug_view_edge_following.png  used on input line 413.
+Package pdftex.def Info: images/debug_view_edge_following.png  used on input line 412.
 (pdftex.def)             Requested size: 341.43442pt x 256.60912pt.
  [50]
-Overfull \hbox (0.46489pt too wide) in paragraph at lines 423--424
+Overfull \hbox (0.46489pt too wide) in paragraph at lines 422--423
 []\T1/mdbch/b/n/12 (-20) AdjustToEdge: \T1/mdbch/m/n/12 (-20) The robot ro-tates in place un-til the \T1/cmtt/m/n/12 EdgeAdjustmentProcessor
  []
 
 [51 <./images/debug_view_edge_following.png>] [52]
 
-LaTeX Warning: Citation 'NOT FINAL' on page 53 undefined on input line 444.
+LaTeX Warning: Citation 'NOT FINAL' on page 53 undefined on input line 443.
 
 ) [53]
 \openout2 = `chapters/evaluation.aux'.
@@ -1945,37 +1839,77 @@ LaTeX Warning: Reference `fig:vr_interface_fpv' on page 55 undefined on input li
 LaTeX Warning: Reference `fig:vr_overview' on page 56 undefined on input line 33.
 
 [56]
+<images/ar_projection.jpg, id=949, 1218.80344pt x 725.71124pt>
+File: images/ar_projection.jpg Graphic file (type jpg)
+<use images/ar_projection.jpg>
+Package pdftex.def Info: images/ar_projection.jpg  used on input line 42.
+(pdftex.def)             Requested size: 384.10965pt x 228.71098pt.
 
-LaTeX Warning: Reference `fig:ar_projection' on page 57 undefined on input line 47.
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[57] [58] [59] [60]
+ [57 <./images/ar_projection.jpg>] [58]
+<images/paint_scenario_ar.jpg, id=969, 1926.19624pt x 1383.1675pt>
+File: images/paint_scenario_ar.jpg Graphic file (type jpg)
+<use images/paint_scenario_ar.jpg>
+Package pdftex.def Info: images/paint_scenario_ar.jpg  used on input line 66.
+(pdftex.def)             Requested size: 341.43442pt x 245.16043pt.
+ [59 <./images/paint_scenario_ar.jpg>]
+<images/pong_scenario.jpg, id=979, 1926.19624pt x 1144.275pt>
+File: images/pong_scenario.jpg Graphic file (type jpg)
+<use images/pong_scenario.jpg>
+Package pdftex.def Info: images/pong_scenario.jpg  used on input line 82.
+(pdftex.def)             Requested size: 341.43442pt x 202.81776pt.
 
-LaTeX Warning: Reference `sec:scenario_realization' on page 61 undefined on input line 141.
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[61]
-<images/compinente break down.png, id=984, 903.375pt x 526.96875pt>
+ [60 <./images/pong_scenario.jpg>]
+<images/logistics_ar.jpg, id=988, 1926.19624pt x 1439.3775pt>
+File: images/logistics_ar.jpg Graphic file (type jpg)
+<use images/logistics_ar.jpg>
+Package pdftex.def Info: images/logistics_ar.jpg  used on input line 98.
+(pdftex.def)             Requested size: 341.43442pt x 255.12341pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [61] [62 <./images/logistics_ar.jpg>]
+<images/smart_farming_ar.jpg, id=1000, 1926.19624pt x 982.67125pt>
+File: images/smart_farming_ar.jpg Graphic file (type jpg)
+<use images/smart_farming_ar.jpg>
+Package pdftex.def Info: images/smart_farming_ar.jpg  used on input line 114.
+(pdftex.def)             Requested size: 341.43442pt x 174.17421pt.
+ [63 <./images/smart_farming_ar.jpg>]
+
+LaTeX Warning: Reference `sec:scenario_realization' on page 64 undefined on input line 141.
+
+<images/compinente break down.png, id=1012, 903.375pt x 526.96875pt>
 File: images/compinente break down.png Graphic file (type png)
 <use images/compinente break down.png>
 Package pdftex.def Info: images/compinente break down.png  used on input line 147.
 (pdftex.def)             Requested size: 426.7914pt x 248.96188pt.
- [62 <./images/compinente break down.png>]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [64]
 Overfull \hbox (5.27571pt too wide) in paragraph at lines 160--177
  [][] 
  []
 
-[63]
+[65 <./images/compinente break down.png>]
 Overfull \hbox (23.85687pt too wide) in paragraph at lines 192--203
  [][] 
  []
 
-[64]
-<images/scalability_comparison.png, id=1005, 1204.5pt x 702.625pt>
+
+Underfull \vbox (badness 2469) has occurred while \output is active []
+
+ [66] [67]
+<images/scalability_comparison.png, id=1038, 1204.5pt x 702.625pt>
 File: images/scalability_comparison.png Graphic file (type png)
 <use images/scalability_comparison.png>
 Package pdftex.def Info: images/scalability_comparison.png  used on input line 220.
 (pdftex.def)             Requested size: 405.45052pt x 236.50923pt.
- [65 <./images/scalability_comparison.png>]
-<images/latency.png, id=1014, 752.8125pt x 425.33907pt>
+ [68 <./images/scalability_comparison.png>]
+<images/latency.png, id=1046, 752.8125pt x 425.33907pt>
 File: images/latency.png Graphic file (type png)
 <use images/latency.png>
 Package pdftex.def Info: images/latency.png  used on input line 240.
@@ -1983,55 +1917,63 @@ Package pdftex.def Info: images/latency.png  used on input line 240.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [66]
+ [69]
 Overfull \hbox (19.76123pt too wide) in paragraph at lines 247--248
 []\T1/mdbch/m/n/12 (-20) The pro-posed ar-chi-tec-ture elim-i-nates this bot-tle-neck. By uti-liz-ing the na-tive \T1/cmtt/m/n/12 Ros2ForUnity
  []
 
-) [67 <./images/latency.png>] [68]
+) [70 <./images/latency.png>] [71]
 \openout2 = `chapters/conclusion_outlook.aux'.
 
- (./chapters/conclusion_outlook.tex
-chapter 6.
-
-LaTeX Warning: Citation 'NOT FINAL' on page 69 undefined on input line 3.
-
-[69
+ (./chapters/conclusion_outlook.tex [72
 
 
 
 
 
 ]
+chapter 6.
 
-LaTeX Warning: Citation 'NOT FINAL' on page 70 undefined on input line 19.
+LaTeX Warning: Citation 'NOT FINAL' on page 73 undefined on input line 3.
 
-) [70] [71] [72
+[73]
+
+LaTeX Warning: Citation 'NOT FINAL' on page 74 undefined on input line 19.
+
+) [74] [75] [76
 
 
 
 
 ]
 Package tocbasic Info: character protrusion at lof deactivated on input line 52.
- (./ti_thesis.lof [73]
-Overfull \hbox (10.31657pt too wide) in paragraph at lines 21--21
+ (./ti_thesis.lof [77]
+Overfull \hbox (10.31657pt too wide) in paragraph at lines 22--22
  \T1/mdbch/m/n/12 (-20) while the \T1/cmtt/m/n/12 RosImageToMaterial.cs \T1/mdbch/m/n/12 (-20) com-po-nent projects the live OpenCV 
  []
 
-)
+
+Overfull \hbox (3.73447pt too wide) in paragraph at lines 28--28
+ [][] [][][]\T1/mdbch/m/n/12 (-20) Augmented Re-al-ity pro-jec-tion of the Paint sce-nario. The phys-i-cal EMAROs 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [78])
 \tf@lof=\write7
 \openout7 = `ti_thesis.lof'.
 
- [74]
+ [79] [80
+
+
+]
 Package tocbasic Info: character protrusion at lol deactivated on input line 53.
  (./ti_thesis.lol)
 \tf@lol=\write8
 \openout8 = `ti_thesis.lol'.
 
- [75
-
-
-] [76
+ [81] [82
 
 
 ]
@@ -2043,7 +1985,7 @@ Overfull \hbox (11.52014pt too wide) in paragraph at lines 60--60
 []\T1/mdbch/m/n/12 (-20) Mordechai Ben-Ari and Francesco Mon-dada. \T1/mdbch/m/it/12 (-20) El-e-ments of Robotics\T1/mdbch/m/n/12 (-20) . Springer
  []
 
-[77] [78] [79] [80]
+[83] [84] [85] [86]
 Overfull \hbox (6.64026pt too wide) in paragraph at lines 60--60
 \T1/mdbch/m/n/12 (-20) Oct. 2020, pp. 2718^^U2725. \T1/mdbch/m/fsc/12 (-20) doi\T1/mdbch/m/n/12 (-20) : [][]$\T1/cmtt/m/n/12 10 . 1109 / IROS45743 . 2020 . 9341207$[][]\T1/mdbch/m/n/12 (-20) .
  []
@@ -2053,10 +1995,10 @@ Overfull \hbox (49.37604pt too wide) in paragraph at lines 60--60
 \T1/mdbch/m/n/12 (-20) A Re-view^^Q. In: \T1/mdbch/m/it/12 (-20) Robotics \T1/mdbch/m/n/12 (-20) 9.2 (Apr. 2020), p. 21. \T1/mdbch/m/fsc/12 (-20) doi\T1/mdbch/m/n/12 (-20) : [][]$\T1/cmtt/m/n/12 10 . 3390 / robotics9020021$[][]\T1/mdbch/m/n/12 (-20) .
  []
 
-[81] [82] [83] [84
+[87] [88] [89] [90
 
 
-] [85] (./ti_thesis.aux (./chapters/deckblatt.aux) (./chapters/abstract.aux) (./chapters/introduction.aux) (./chapters/foundations_related_work.aux) (./chapters/requirements.aux) (./chapters/concept_implementation.aux) (./chapters/evaluation.aux) (./chapters/conclusion_outlook.aux))
+] [91] (./ti_thesis.aux (./chapters/deckblatt.aux) (./chapters/abstract.aux) (./chapters/introduction.aux) (./chapters/foundations_related_work.aux) (./chapters/requirements.aux) (./chapters/concept_implementation.aux) (./chapters/evaluation.aux) (./chapters/conclusion_outlook.aux))
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
@@ -2067,28 +2009,23 @@ LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `ti_thesis.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                ti_thesis
-(biblatex)                and rerun LaTeX afterwards.
-
 Package logreq Info: Writing requests to 'ti_thesis.run.xml'.
 \openout1 = `ti_thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 60974 strings out of 474222
- 1384417 string characters out of 5748732
- 2641903 words of memory out of 5000000
- 81551 multiletter control sequences out of 15000+600000
+ 61030 strings out of 474222
+ 1386026 string characters out of 5748732
+ 2644245 words of memory out of 5000000
+ 81603 multiletter control sequences out of 15000+600000
  641085 words of font info for 498 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  108i,12n,131p,10936b,3335s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchri8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chb8t.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7t.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7y.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr8t.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chri7m.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chri8t.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8ac.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on ti_thesis.pdf (93 pages, 20598321 bytes).
+Output written on ti_thesis.pdf (99 pages, 22614224 bytes).
 PDF statistics:
- 1611 PDF objects out of 1728 (max. 8388607)
- 1404 compressed objects within 15 object streams
- 290 named destinations out of 1000 (max. 500000)
- 79086 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 1678 PDF objects out of 1728 (max. 8388607)
+ 1458 compressed objects within 15 object streams
+ 294 named destinations out of 1000 (max. 500000)
+ 79121 words of extra memory for PDF output out of 89155 (max. 10000000)
 
