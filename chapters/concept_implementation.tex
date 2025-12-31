@@ -378,10 +378,25 @@ To assist in debugging, the perception node publishes an annotated video stream 
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{images/logistics_debug.png} 
-    \caption{Debug view of the Logistics application. The processor identifies a red transport box in its ROI (green) and calculates the centroid (red dot).\cite{FALSCHEBOXBILD}}
+    % Left Image (Detached)
+    \begin{minipage}{0.49\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{images/logistics_debug.png}  % Make sure extension is .png or .jpg
+        \par\vspace{5pt} % Small gap between image and text
+        (a) Detached State
+    \end{minipage}%
+    \hfill % Spacer
+    % Right Image (Attached)
+    \begin{minipage}{0.49\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{images/logistics_debug_1.png} % Make sure extension is .png or .jpg
+        \par\vspace{5pt}
+        (b) Attached State
+    \end{minipage}
+    \caption{Debug view of the Logistics application. The processor identifies a blue transport box in its ROI (green) and calculates the centroid (red dot).}
     \label{fig:logistics_debug}
 \end{figure}
+\cite{hieer die unterschrieft adnerd und erwähneung im text}
 
 The mission logic is defined in \texttt{mission\_state\_machine.py} as a YASMIN state machine~\cite{YASMIN} and implements a search, retrieve, and deliver loop. This application uses the YASMIN blackboard~\cite{YASMIN} to implement spatial memory to learn the positions of the delivery zones.
 \begin{enumerate}
@@ -407,11 +422,28 @@ The application utilizes four distinct perception processors depending on the ac
 \end{enumerate}
 
 A debug stream visualizes these detections on the \texttt{/perception/debug\_image} topic. For example in figure~\ref{fig:farm_debug}, it overlays the ROI and the regression line (green) onto the camera feed to visualize the tracking performance.
+
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{images/debug_view_edge_following.png} 
+    % Left Image (Detached)
+    \begin{minipage}{0.49\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{images/debug_view_edge_following.png}   % Make sure extension is .png or .jpg
+        \par\vspace{5pt} % Small gap between image and text
+        (a) Detached State
+    \end{minipage}%
+    \hfill % Spacer
+    % Right Image (Attached)
+    \begin{minipage}{0.49\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{images/debug_view_edge_following_1.png}  % Make sure extension is .png or .jpg
+        \par\vspace{5pt}
+        (b) Attached State
+    \end{minipage}
     \caption{Debug view of the Smart Farming application during edge following. The processor identifies the boundary between the field (left) and the path (right). The green line represents the detected edge used for navigation, while the red dot indicates the centroid used to compute the lateral and angular errors displayed in the overlay.}    \label{fig:farm_debug}
+    \label{fig:farm_debug}
 \end{figure}
+\cite{hieer die unterschrieft adnerd und erwwähnung im text}
 
 The mission is governed by a YASMIN state machine~\cite{YASMIN} which executes two distinct phases:
 

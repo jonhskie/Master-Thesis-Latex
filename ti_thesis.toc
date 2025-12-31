@@ -48,16 +48,16 @@
 \contentsline {subsection}{\numberline {4.6.2}Modular Perception Stack}{46}{subsection.4.6.2}%
 \contentsline {subsection}{\numberline {4.6.3}Application 1: Line Follower}{46}{subsection.4.6.3}%
 \contentsline {subsection}{\numberline {4.6.4}Application 2: Logistics}{48}{subsection.4.6.4}%
-\contentsline {subsection}{\numberline {4.6.5}Application 3: Smart Farming}{50}{subsection.4.6.5}%
+\contentsline {subsection}{\numberline {4.6.5}Application 3: Smart Farming}{49}{subsection.4.6.5}%
 \contentsline {section}{\numberline {4.7}Implementation Synthesis}{52}{section.4.7}%
 \contentsline {chapter}{\numberline {5}Evaluation}{55}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Mixed Reality Interface Validation}{55}{section.5.1}%
 \contentsline {subsection}{\numberline {5.1.1}Virtual Reality Interface}{55}{subsection.5.1.1}%
-\contentsline {subsection}{\numberline {5.1.2}Augmented Reality Projection}{58}{subsection.5.1.2}%
-\contentsline {section}{\numberline {5.2}Scenario Realization and Application Analysis}{59}{section.5.2}%
+\contentsline {subsection}{\numberline {5.1.2}Augmented Reality Projection}{57}{subsection.5.1.2}%
+\contentsline {section}{\numberline {5.2}Scenario Realization and Application Analysis}{58}{section.5.2}%
 \contentsline {subsection}{\numberline {5.2.1}Application 1: Dynamic Surface Interaction (Paint)}{59}{subsection.5.2.1}%
 \contentsline {subsection}{\numberline {5.2.2}Application 2: Reactive Physics Interaction (Pong)}{60}{subsection.5.2.2}%
-\contentsline {subsection}{\numberline {5.2.3}Application 3: Autonomous Logistics}{62}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.2.3}Application 3: Autonomous Logistics}{61}{subsection.5.2.3}%
 \contentsline {subsection}{\numberline {5.2.4}Application 4: Smart Farming}{63}{subsection.5.2.4}%
 \contentsline {section}{\numberline {5.3}Hardware and System Specifications}{64}{section.5.3}%
 \contentsline {section}{\numberline {5.4}Performance Analysis of Robotic Scenarios}{65}{section.5.4}%

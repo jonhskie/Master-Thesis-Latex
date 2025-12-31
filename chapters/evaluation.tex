@@ -23,15 +23,14 @@ Interaction with the environment is mediated through a ray-casting mechanism con
 
 To support dynamic scenario modification, a designated storage area is located adjacent to the robot's operating field. This area contains a finite set of manipulatable objects, such as boxes and wall-like blocks. The evaluation of the interaction mechanics showed that the "distance grab" feature—where pointing at an object and pressing the grip input snaps it to the user's hand—enables rapid prototyping of test scenarios. Users can retrieve these objects and place them into the active simulation area to introduce obstacles or targets. The physics engine ensures a robust interaction; placed objects do not clip through the robot but instead act as physical barriers that the robot must push or navigate around, validating the synchronization of the collision models.
 
+Data visualization in VR is handled through two primary elements, as depicted in Figure~\ref{fig:vr_overview}. First, a floating status billboard is attached to the robot's digital twin. This billboard is constrained to continuously face the user's camera view, ensuring that critical telemetry data remains readable from any angle. Second, a large virtual monitor is positioned on the wall behind the play area. This monitor subscribes to image topics from the ROS 2 network, such as the raw camera feed or the debug output from the perception stack. The ability to cycle through sources using controller inputs allows the operator to verify the robot's visual perception without removing the headset, bridging the gap between the operator's view and the robot's internal state.
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{images/vr_storage.png} % Placeholder filename
     \caption{Overview of the Virtual Reality environment. The storage area containing manipulatable objects is visible next to the robot's play area. A large virtual monitor on the back wall displays the live camera stream from the ROS 2 network.}
     \label{fig:vr_overview}
 \end{figure}
-
-Data visualization in VR is handled through two primary elements, as depicted in Figure~\ref{fig:vr_overview}. First, a floating status billboard is attached to the robot's digital twin. This billboard is constrained to continuously face the user's camera view, ensuring that critical telemetry data remains readable from any angle. Second, a large virtual monitor is positioned on the wall behind the play area. This monitor subscribes to image topics from the ROS 2 network, such as the raw camera feed or the debug output from the perception stack. The ability to cycle through sources using controller inputs allows the operator to verify the robot's visual perception without removing the headset, bridging the gap between the operator's view and the robot's internal state.
-
 \subsection{Augmented Reality Projection}
 \label{subsec:eval_ar}
 

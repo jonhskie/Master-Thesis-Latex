@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.20)  31 DEC 2025 14:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.20)  31 DEC 2025 15:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1284,7 +1284,11 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'english'.
- (./ti_thesis.aux (./chapters/deckblatt.aux) (./chapters/abstract.aux) (./chapters/introduction.aux) (./chapters/foundations_related_work.aux) (./chapters/requirements.aux) (./chapters/concept_implementation.aux) (./chapters/evaluation.aux) (./chapters/conclusion_outlook.aux))
+ (./ti_thesis.aux (./chapters/deckblatt.aux) (./chapters/abstract.aux) (./chapters/introduction.aux) (./chapters/foundations_related_work.aux) (./chapters/requirements.aux) (./chapters/concept_implementation.aux
+
+LaTeX Warning: Label `fig:farm_debug' multiply defined.
+
+) (./chapters/evaluation.aux) (./chapters/conclusion_outlook.aux))
 \openout1 = `ti_thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
@@ -1362,13 +1366,6 @@ Package biblatex Info: ... file 'ti_thesis.bbl' found.
 
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
-(biblatex)                FALSCHEBOXBILD
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
 (biblatex)                Fuer jede Phase ein debug bild einbauen
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
@@ -1377,6 +1374,20 @@ Package biblatex Warning: The following entry could not be found
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
 (biblatex)                NOT FINAL
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                hieer die unterschrieft adnerd und erwähneung im text
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                hieer die unterschrieft adnerd und erwwähnung im text
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
 
@@ -1794,37 +1805,48 @@ File: images/line_follower_debug.png Graphic file (type png)
 Package pdftex.def Info: images/line_follower_debug.png  used on input line 354.
 (pdftex.def)             Requested size: 256.07744pt x 192.20691pt.
 [46] [47 <./images/line_follower_debug.png>]
-<images/logistics_debug.png, id=873, 1097.60063pt x 823.57687pt>
+<images/logistics_debug.png, id=873, 1249.66875pt x 934.99312pt>
 File: images/logistics_debug.png Graphic file (type png)
 <use images/logistics_debug.png>
-Package pdftex.def Info: images/logistics_debug.png  used on input line 381.
-(pdftex.def)             Requested size: 341.43442pt x 256.18587pt.
+Package pdftex.def Info: images/logistics_debug.png  used on input line 384.
+(pdftex.def)             Requested size: 209.13013pt x 156.4643pt.
+<images/logistics_debug_1.png, id=874, 1250.42157pt x 937.25156pt>
+File: images/logistics_debug_1.png Graphic file (type png)
+<use images/logistics_debug_1.png>
+Package pdftex.def Info: images/logistics_debug_1.png  used on input line 392.
+(pdftex.def)             Requested size: 209.13013pt x 156.74211pt.
 
 
-LaTeX Warning: Citation 'FALSCHEBOXBILD' on page 48 undefined on input line 382.
+LaTeX Warning: Citation 'hieer die unterschrieft adnerd und erwähneung im text' on page 48 undefined on input line 399.
 
-
-LaTeX Warning: Citation 'FALSCHEBOXBILD' on page 48 undefined on input line 382.
-
+[48 <./images/logistics_debug.png> <./images/logistics_debug_1.png>] [49]
+<images/debug_view_edge_following.png, id=900, 1557.56906pt x 1170.62344pt>
+File: images/debug_view_edge_following.png Graphic file (type png)
+<use images/debug_view_edge_following.png>
+Package pdftex.def Info: images/debug_view_edge_following.png  used on input line 431.
+(pdftex.def)             Requested size: 209.13013pt x 157.16995pt.
+<images/debug_view_edge_following_1.png, id=901, 953.06062pt x 712.91344pt>
+File: images/debug_view_edge_following_1.png Graphic file (type png)
+<use images/debug_view_edge_following_1.png>
+Package pdftex.def Info: images/debug_view_edge_following_1.png  used on input line 439.
+(pdftex.def)             Requested size: 209.13013pt x 156.42807pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [48] [49 <./images/logistics_debug.png>]
-<images/debug_view_edge_following.png, id=895, 1557.56906pt x 1170.62344pt>
-File: images/debug_view_edge_following.png Graphic file (type png)
-<use images/debug_view_edge_following.png>
-Package pdftex.def Info: images/debug_view_edge_following.png  used on input line 412.
-(pdftex.def)             Requested size: 341.43442pt x 256.60912pt.
  [50]
-Overfull \hbox (0.46489pt too wide) in paragraph at lines 422--423
+
+LaTeX Warning: Citation 'hieer die unterschrieft adnerd und erwwähnung im text' on page 51 undefined on input line 446.
+
+
+Overfull \hbox (0.46489pt too wide) in paragraph at lines 454--455
 []\T1/mdbch/b/n/12 (-20) AdjustToEdge: \T1/mdbch/m/n/12 (-20) The robot ro-tates in place un-til the \T1/cmtt/m/n/12 EdgeAdjustmentProcessor
  []
 
-[51 <./images/debug_view_edge_following.png>] [52]
+[51 <./images/debug_view_edge_following.png> <./images/debug_view_edge_following_1.png>]
 
-LaTeX Warning: Citation 'NOT FINAL' on page 53 undefined on input line 443.
+LaTeX Warning: Citation 'NOT FINAL' on page 52 undefined on input line 475.
 
-) [53]
+) [52] [53]
 \openout2 = `chapters/evaluation.aux'.
 
  (./chapters/evaluation.tex [54
@@ -1835,78 +1857,68 @@ LaTeX Warning: Citation 'NOT FINAL' on page 53 undefined on input line 443.
 
 ]
 chapter 5.
-<images/vr_view.png, id=941, 1219.55624pt x 740.16525pt>
+<images/vr_view.png, id=945, 1219.55624pt x 740.16525pt>
 File: images/vr_view.png Graphic file (type png)
 <use images/vr_view.png>
 Package pdftex.def Info: images/vr_view.png  used on input line 19.
 (pdftex.def)             Requested size: 384.10965pt x 233.1194pt.
-[55]
-<images/vr_storage.png, id=947, 905.784pt x 756.426pt>
+[55] [56 <./images/vr_view.png>]
+<images/vr_storage.png, id=958, 870.25125pt x 706.43925pt>
 File: images/vr_storage.png Graphic file (type png)
 <use images/vr_storage.png>
-Package pdftex.def Info: images/vr_storage.png  used on input line 28.
-(pdftex.def)             Requested size: 384.10965pt x 320.76695pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [56 <./images/vr_view.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [57 <./images/vr_storage.png>]
-<images/ar_projection.jpg, id=961, 1218.80344pt x 725.71124pt>
+Package pdftex.def Info: images/vr_storage.png  used on input line 30.
+(pdftex.def)             Requested size: 384.10965pt x 311.81516pt.
+<images/ar_projection.jpg, id=960, 1218.80344pt x 725.71124pt>
 File: images/ar_projection.jpg Graphic file (type jpg)
 <use images/ar_projection.jpg>
-Package pdftex.def Info: images/ar_projection.jpg  used on input line 42.
+Package pdftex.def Info: images/ar_projection.jpg  used on input line 41.
 (pdftex.def)             Requested size: 384.10965pt x 228.71098pt.
- [58 <./images/ar_projection.jpg>] [59]
-<images/paint_scenario_ar.jpg, id=984, 1926.19624pt x 1383.1675pt>
+ [57 <./images/vr_storage.png>] [58 <./images/ar_projection.jpg>]
+<images/paint_scenario_ar.jpg, id=982, 1926.19624pt x 1383.1675pt>
 File: images/paint_scenario_ar.jpg Graphic file (type jpg)
 <use images/paint_scenario_ar.jpg>
-Package pdftex.def Info: images/paint_scenario_ar.jpg  used on input line 66.
+Package pdftex.def Info: images/paint_scenario_ar.jpg  used on input line 65.
 (pdftex.def)             Requested size: 341.43442pt x 245.16043pt.
- [60 <./images/paint_scenario_ar.jpg>]
-<images/pong_scenario.jpg, id=994, 1926.19624pt x 1144.275pt>
+ [59] [60 <./images/paint_scenario_ar.jpg>]
+<images/pong_scenario.jpg, id=998, 1926.19624pt x 1144.275pt>
 File: images/pong_scenario.jpg Graphic file (type jpg)
 <use images/pong_scenario.jpg>
-Package pdftex.def Info: images/pong_scenario.jpg  used on input line 82.
+Package pdftex.def Info: images/pong_scenario.jpg  used on input line 81.
 (pdftex.def)             Requested size: 341.43442pt x 202.81776pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
  [61 <./images/pong_scenario.jpg>]
-<images/logistics_ar.jpg, id=1003, 1926.19624pt x 1439.3775pt>
+<images/logistics_ar.jpg, id=1008, 1926.19624pt x 1439.3775pt>
 File: images/logistics_ar.jpg Graphic file (type jpg)
 <use images/logistics_ar.jpg>
-Package pdftex.def Info: images/logistics_ar.jpg  used on input line 98.
+Package pdftex.def Info: images/logistics_ar.jpg  used on input line 97.
 (pdftex.def)             Requested size: 341.43442pt x 255.12341pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [62] [63 <./images/logistics_ar.jpg>]
-<images/smart_farming_ar.jpg, id=1017, 1926.19624pt x 982.67125pt>
+<images/smart_farming_ar.jpg, id=1021, 1926.19624pt x 982.67125pt>
 File: images/smart_farming_ar.jpg Graphic file (type jpg)
 <use images/smart_farming_ar.jpg>
-Package pdftex.def Info: images/smart_farming_ar.jpg  used on input line 114.
+Package pdftex.def Info: images/smart_farming_ar.jpg  used on input line 113.
 (pdftex.def)             Requested size: 341.43442pt x 174.17421pt.
  [64 <./images/smart_farming_ar.jpg>]
 
-LaTeX Warning: Reference `sec:scenario_realization' on page 65 undefined on input line 141.
+LaTeX Warning: Reference `sec:scenario_realization' on page 65 undefined on input line 140.
 
-<images/compinente break down.png, id=1028, 903.375pt x 526.96875pt>
+<images/compinente break down.png, id=1032, 903.375pt x 526.96875pt>
 File: images/compinente break down.png Graphic file (type png)
 <use images/compinente break down.png>
-Package pdftex.def Info: images/compinente break down.png  used on input line 147.
+Package pdftex.def Info: images/compinente break down.png  used on input line 146.
 (pdftex.def)             Requested size: 426.7914pt x 248.96188pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [65]
-Overfull \hbox (5.27571pt too wide) in paragraph at lines 160--177
+Overfull \hbox (5.27571pt too wide) in paragraph at lines 159--176
  [][] 
  []
 
 [66 <./images/compinente break down.png>]
-Overfull \hbox (23.85687pt too wide) in paragraph at lines 192--203
+Overfull \hbox (23.85687pt too wide) in paragraph at lines 191--202
  [][] 
  []
 
@@ -1914,22 +1926,22 @@ Overfull \hbox (23.85687pt too wide) in paragraph at lines 192--203
 Underfull \vbox (badness 2469) has occurred while \output is active []
 
  [67] [68]
-<images/scalability_comparison.png, id=1055, 1204.5pt x 702.625pt>
+<images/scalability_comparison.png, id=1059, 1204.5pt x 702.625pt>
 File: images/scalability_comparison.png Graphic file (type png)
 <use images/scalability_comparison.png>
-Package pdftex.def Info: images/scalability_comparison.png  used on input line 220.
+Package pdftex.def Info: images/scalability_comparison.png  used on input line 219.
 (pdftex.def)             Requested size: 405.45052pt x 236.50923pt.
  [69 <./images/scalability_comparison.png>]
-<images/latency.png, id=1063, 752.8125pt x 425.33907pt>
+<images/latency.png, id=1067, 752.8125pt x 425.33907pt>
 File: images/latency.png Graphic file (type png)
 <use images/latency.png>
-Package pdftex.def Info: images/latency.png  used on input line 240.
+Package pdftex.def Info: images/latency.png  used on input line 239.
 (pdftex.def)             Requested size: 405.45052pt x 229.08257pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [70]
-Overfull \hbox (19.76123pt too wide) in paragraph at lines 247--248
+Overfull \hbox (19.76123pt too wide) in paragraph at lines 246--247
 []\T1/mdbch/m/n/12 (-20) The pro-posed ar-chi-tec-ture elim-i-nates this bot-tle-neck. By uti-liz-ing the na-tive \T1/cmtt/m/n/12 Ros2ForUnity
  []
 
@@ -1964,14 +1976,14 @@ Overfull \hbox (10.31657pt too wide) in paragraph at lines 22--22
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [78]
 Overfull \hbox (3.73447pt too wide) in paragraph at lines 30--30
  [][] [][][]\T1/mdbch/m/n/12 (-20) Augmented Re-al-ity pro-jec-tion of the Paint sce-nario. The phys-i-cal EMAROs 
  []
 
-)
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [78])
 \tf@lof=\write7
 \openout7 = `ti_thesis.lof'.
 
@@ -2018,6 +2030,9 @@ L3 programming layer <2020/03/25>
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `ti_thesis.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package logreq Info: Writing requests to 'ti_thesis.run.xml'.
@@ -2025,18 +2040,18 @@ Package logreq Info: Writing requests to 'ti_thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 61044 strings out of 474222
- 1386395 string characters out of 5748732
- 2644716 words of memory out of 5000000
- 81617 multiletter control sequences out of 15000+600000
+ 61058 strings out of 474222
+ 1386953 string characters out of 5748732
+ 2644928 words of memory out of 5000000
+ 81631 multiletter control sequences out of 15000+600000
  641007 words of font info for 498 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  108i,12n,131p,10936b,3335s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchri8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chb8t.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7t.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7y.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr8t.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chri7m.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chri8t.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8ac.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on ti_thesis.pdf (99 pages, 25517455 bytes).
+Output written on ti_thesis.pdf (99 pages, 25438475 bytes).
 PDF statistics:
- 1697 PDF objects out of 1728 (max. 8388607)
- 1473 compressed objects within 15 object streams
+ 1700 PDF objects out of 1728 (max. 8388607)
+ 1472 compressed objects within 15 object streams
  294 named destinations out of 1000 (max. 500000)
- 79131 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 79141 words of extra memory for PDF output out of 89155 (max. 10000000)
 
