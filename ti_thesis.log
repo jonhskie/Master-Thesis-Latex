@@ -1578,4 +1578,465 @@ chapter 1.
 
 ]
 chapter 2.
-LaTeX Font Info:    Font shape `T1/phv/b/n' will
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 15.25815pt on input line 4.
+[5]
+<images/vehicle_in_the_loop_dsr+22.jpg, id=316, 248.3679pt x 204.2832pt>
+File: images/vehicle_in_the_loop_dsr+22.jpg Graphic file (type jpg)
+<use images/vehicle_in_the_loop_dsr+22.jpg>
+Package pdftex.def Info: images/vehicle_in_the_loop_dsr+22.jpg  used on input line 20.
+(pdftex.def)             Requested size: 384.10965pt x 315.95924pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6] [7 <./images/vehicle_in_the_loop_dsr+22.jpg>]
+<images/info_mirror_model_Grieves15.png, id=355, 813.0375pt x 434.8245pt>
+File: images/info_mirror_model_Grieves15.png Graphic file (type png)
+<use images/info_mirror_model_Grieves15.png>
+Package pdftex.def Info: images/info_mirror_model_Grieves15.png  used on input line 39.
+(pdftex.def)             Requested size: 341.43442pt x 182.5985pt.
+
+Underfull \vbox (badness 7273) has occurred while \output is active []
+
+ [8] [9 <./images/info_mirror_model_Grieves15.png>]
+<images/reality_virtuality_continuum_wpc+23.png, id=406, 1520.079pt x 410.13225pt>
+File: images/reality_virtuality_continuum_wpc+23.png Graphic file (type png)
+<use images/reality_virtuality_continuum_wpc+23.png>
+Package pdftex.def Info: images/reality_virtuality_continuum_wpc+23.png  used on input line 58.
+(pdftex.def)             Requested size: 384.10965pt x 103.63423pt.
+ [10 <./images/reality_virtuality_continuum_wpc+23.png>]
+LaTeX Font Info:    Font shape `T1/cmtt/m/n' will be
+(Font)              scaled to size 12.86407pt on input line 75.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `cmtt' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+ [11]
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 9.6688pt on input line 98.
+ [12{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}]
+<images/vera_setup.jpg, id=469, 2055.68pt x 1818.795pt>
+File: images/vera_setup.jpg Graphic file (type jpg)
+<use images/vera_setup.jpg>
+Package pdftex.def Info: images/vera_setup.jpg  used on input line 120.
+(pdftex.def)             Requested size: 341.43442pt x 302.08641pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [13]
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 12.71512pt on input line 125.
+<images/EMAROs_robot.png, id=481, 263.3037pt x 276.0714pt>
+File: images/EMAROs_robot.png Graphic file (type png)
+<use images/EMAROs_robot.png>
+Package pdftex.def Info: images/EMAROs_robot.png  used on input line 132.
+(pdftex.def)             Requested size: 213.39569pt x 223.74718pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [14 <./images/vera_setup.jpg>]
+
+LaTeX Warning: Reference `fig:veps_comparison' on page 15 undefined on input line 143.
+
+[15 <./images/EMAROs_robot.png>]
+<images/point_cloud.png, id=507, 1998.86775pt x 1135.8435pt>
+File: images/point_cloud.png Graphic file (type png)
+<use images/point_cloud.png>
+Package pdftex.def Info: images/point_cloud.png  used on input line 151.
+(pdftex.def)             Requested size: 273.14622pt x 155.20406pt.
+<images/arcuo.jpg, id=508, 1394.20876pt x 1428.08531pt>
+File: images/arcuo.jpg Graphic file (type jpg)
+<use images/arcuo.jpg>
+Package pdftex.def Info: images/arcuo.jpg  used on input line 157.
+(pdftex.def)             Requested size: 153.64516pt x 157.37315pt.
+ [16 <./images/point_cloud.png> <./images/arcuo.jpg>]
+<images/pygame_visualizer.png, id=534, 807.61725pt x 701.62125pt>
+File: images/pygame_visualizer.png Graphic file (type png)
+<use images/pygame_visualizer.png>
+Package pdftex.def Info: images/pygame_visualizer.png  used on input line 169.
+(pdftex.def)             Requested size: 341.43442pt x 296.62738pt.
+LaTeX Font Info:    Trying to load font information for TS1+mdbch on input line 178.
+ (/usr/share/texlive/texmf-dist/tex/latex/mathdesign/mdbch/ts1mdbch.fd
+File: ts1mdbch.fd 2013/08/29 Fontinst v1.933 font definitions for TS1/mdbch.
+)
+LaTeX Font Info:    Font shape `TS1/mdbch/m/n' will be
+(Font)              scaled to size 11.52008pt on input line 178.
+Package microtype Info: Character `texttwelveudash ' is missing
+(microtype)             in font `TS1/mdbch/m/n/12'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textthreequartersemdash ' is missing
+(microtype)             in font `TS1/mdbch/m/n/12'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textasteriskcentered ' is missing
+(microtype)             in font `TS1/mdbch/m/n/12'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textlbrackdbl ' is missing
+(microtype)             in font `TS1/mdbch/m/n/12'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textrbrackdbl ' is missing
+(microtype)             in font `TS1/mdbch/m/n/12'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `texttildelow ' is missing
+(microtype)             in font `TS1/mdbch/m/n/12'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textcelsius ' is missing
+(microtype)             in font `TS1/mdbch/m/n/12'.
+(microtype)             Ignoring protrusion settings for this character.
+ [17 <./images/pygame_visualizer.png>] [18] [19]) [20] [21]
+\openout2 = `chapters/requirements.aux'.
+
+ (./chapters/requirements.tex [22
+
+
+
+
+
+]
+chapter 3.
+[23]
+Underfull \vbox (badness 2326) has occurred while \output is active []
+
+ [24] [25]) [26]
+\openout2 = `chapters/concept_implementation.aux'.
+
+ (./chapters/concept_implementation.tex
+chapter 4.
+<images/implemantion_intro.jpg, id=643, 1926.19624pt x 888.31876pt>
+File: images/implemantion_intro.jpg Graphic file (type jpg)
+<use images/implemantion_intro.jpg>
+Package pdftex.def Info: images/implemantion_intro.jpg  used on input line 10.
+(pdftex.def)             Requested size: 384.10965pt x 177.13197pt.
+[27
+
+
+
+
+
+ <./images/implemantion_intro.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 44--44
+[]|\T1/phv/m/n/12 (+20) HRI & MR
+ []
+
+[28] [29]
+<images/hardware_topology.png, id=689, 1003.95074pt x 1003.95074pt>
+File: images/hardware_topology.png Graphic file (type png)
+<use images/hardware_topology.png>
+Package pdftex.def Info: images/hardware_topology.png  used on input line 86.
+(pdftex.def)             Requested size: 277.41179pt x 277.4124pt.
+
+Underfull \vbox (badness 1184) has occurred while \output is active []
+
+ [30] [31 <./images/hardware_topology.png>]
+LaTeX Font Info:    Font shape `T1/cmtt/b/n' in size <12> not available
+(Font)              Font shape `T1/cmtt/bx/n' tried instead on input line 108.
+LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <12> not available
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 108.
+LaTeX Font Info:    Font shape `T1/cmtt/m/n' will be
+(Font)              scaled to size 12.86407pt on input line 108.
+<images/software_architecture.png, id=718, 1243.64626pt x 1037.0745pt>
+File: images/software_architecture.png Graphic file (type png)
+<use images/software_architecture.png>
+Package pdftex.def Info: images/software_architecture.png  used on input line 123.
+(pdftex.def)             Requested size: 426.7914pt x 355.89215pt.
+ [32] [33 <./images/software_architecture.png>] [34] [35]
+<images/Detached.png, id=756, 794.97pt x 993.7125pt>
+File: images/Detached.png Graphic file (type png)
+<use images/Detached.png>
+Package pdftex.def Info: images/Detached.png  used on input line 185.
+(pdftex.def)             Requested size: 209.13013pt x 261.40688pt.
+<images/Attached.png, id=757, 799.48688pt x 998.9822pt>
+File: images/Attached.png Graphic file (type png)
+<use images/Attached.png>
+Package pdftex.def Info: images/Attached.png  used on input line 193.
+(pdftex.def)             Requested size: 209.13013pt x 261.2993pt.
+Class scrbook Info: Workaround for not recommended usage of \\ or
+(scrbook)           \newlinein caption text  on input line 197.
+ [36] [37 <./images/Detached.png> <./images/Attached.png>]
+<images/texture_painting.png, id=772, 2049.15562pt x 1241.38782pt>
+File: images/texture_painting.png Graphic file (type png)
+<use images/texture_painting.png>
+Package pdftex.def Info: images/texture_painting.png  used on input line 208.
+(pdftex.def)             Requested size: 341.43442pt x 206.828pt.
+<images/lidar_raycast.png, id=775, 2048.40282pt x 1182.66844pt>
+File: images/lidar_raycast.png Graphic file (type png)
+<use images/lidar_raycast.png>
+Package pdftex.def Info: images/lidar_raycast.png  used on input line 221.
+(pdftex.def)             Requested size: 341.43442pt x 197.11694pt.
+ [38 <./images/texture_painting.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [39 <./images/lidar_raycast.png>] [40]
+<images/projection_mapping.png, id=802, 1121.3895pt x 408.92775pt>
+File: images/projection_mapping.png Graphic file (type png)
+<use images/projection_mapping.png>
+Package pdftex.def Info: images/projection_mapping.png  used on input line 263.
+(pdftex.def)             Requested size: 384.10965pt x 140.06938pt.
+ [41 <./images/projection_mapping.png>]
+Overfull \hbox (9.46991pt too wide) in paragraph at lines 273--274
+\T1/mdbch/m/n/12 (-20) the screen-space co-or-di-nates of the robot's an-chor us-ing \T1/cmtt/m/n/12 Camera.WorldToScreenPoint
+ []
+
+<images/BillBoard_Camera_Projection.png, id=812, 1101.36469pt x 823.57687pt>
+File: images/BillBoard_Camera_Projection.png Graphic file (type png)
+<use images/BillBoard_Camera_Projection.png>
+Package pdftex.def Info: images/BillBoard_Camera_Projection.png  used on input line 286.
+(pdftex.def)             Requested size: 341.43442pt x 255.31876pt.
+
+Underfull \vbox (badness 2529) has occurred while \output is active []
+
+ [42] [43 <./images/BillBoard_Camera_Projection.png>] [44] [45]
+
+LaTeX Warning: Citation 'Fuer jede Phase ein debug bild einbauen' on page 46 undefined on input line 340.
+
+<images/line_follower_debug.png, id=853, 1509.38907pt x 1132.98282pt>
+File: images/line_follower_debug.png Graphic file (type png)
+<use images/line_follower_debug.png>
+Package pdftex.def Info: images/line_follower_debug.png  used on input line 354.
+(pdftex.def)             Requested size: 256.07744pt x 192.20691pt.
+[46] [47 <./images/line_follower_debug.png>]
+<images/logistics_debug.png, id=873, 1097.60063pt x 823.57687pt>
+File: images/logistics_debug.png Graphic file (type png)
+<use images/logistics_debug.png>
+Package pdftex.def Info: images/logistics_debug.png  used on input line 381.
+(pdftex.def)             Requested size: 341.43442pt x 256.18587pt.
+
+
+LaTeX Warning: Citation 'FALSCHEBOXBILD' on page 48 undefined on input line 382.
+
+
+LaTeX Warning: Citation 'FALSCHEBOXBILD' on page 48 undefined on input line 382.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [48] [49 <./images/logistics_debug.png>]
+<images/debug_view_edge_following.png, id=895, 1557.56906pt x 1170.62344pt>
+File: images/debug_view_edge_following.png Graphic file (type png)
+<use images/debug_view_edge_following.png>
+Package pdftex.def Info: images/debug_view_edge_following.png  used on input line 412.
+(pdftex.def)             Requested size: 341.43442pt x 256.60912pt.
+ [50]
+Overfull \hbox (0.46489pt too wide) in paragraph at lines 422--423
+[]\T1/mdbch/b/n/12 (-20) AdjustToEdge: \T1/mdbch/m/n/12 (-20) The robot ro-tates in place un-til the \T1/cmtt/m/n/12 EdgeAdjustmentProcessor
+ []
+
+[51 <./images/debug_view_edge_following.png>] [52]
+
+LaTeX Warning: Citation 'NOT FINAL' on page 53 undefined on input line 443.
+
+) [53]
+\openout2 = `chapters/evaluation.aux'.
+
+ (./chapters/evaluation.tex [54
+
+
+
+
+
+]
+chapter 5.
+<images/vr_view.png, id=941, 1219.55624pt x 740.16525pt>
+File: images/vr_view.png Graphic file (type png)
+<use images/vr_view.png>
+Package pdftex.def Info: images/vr_view.png  used on input line 19.
+(pdftex.def)             Requested size: 384.10965pt x 233.1194pt.
+[55]
+<images/vr_storage.png, id=947, 905.784pt x 756.426pt>
+File: images/vr_storage.png Graphic file (type png)
+<use images/vr_storage.png>
+Package pdftex.def Info: images/vr_storage.png  used on input line 28.
+(pdftex.def)             Requested size: 384.10965pt x 320.76695pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [56 <./images/vr_view.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [57 <./images/vr_storage.png>]
+<images/ar_projection.jpg, id=961, 1218.80344pt x 725.71124pt>
+File: images/ar_projection.jpg Graphic file (type jpg)
+<use images/ar_projection.jpg>
+Package pdftex.def Info: images/ar_projection.jpg  used on input line 42.
+(pdftex.def)             Requested size: 384.10965pt x 228.71098pt.
+ [58 <./images/ar_projection.jpg>] [59]
+<images/paint_scenario_ar.jpg, id=984, 1926.19624pt x 1383.1675pt>
+File: images/paint_scenario_ar.jpg Graphic file (type jpg)
+<use images/paint_scenario_ar.jpg>
+Package pdftex.def Info: images/paint_scenario_ar.jpg  used on input line 66.
+(pdftex.def)             Requested size: 341.43442pt x 245.16043pt.
+ [60 <./images/paint_scenario_ar.jpg>]
+<images/pong_scenario.jpg, id=994, 1926.19624pt x 1144.275pt>
+File: images/pong_scenario.jpg Graphic file (type jpg)
+<use images/pong_scenario.jpg>
+Package pdftex.def Info: images/pong_scenario.jpg  used on input line 82.
+(pdftex.def)             Requested size: 341.43442pt x 202.81776pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [61 <./images/pong_scenario.jpg>]
+<images/logistics_ar.jpg, id=1003, 1926.19624pt x 1439.3775pt>
+File: images/logistics_ar.jpg Graphic file (type jpg)
+<use images/logistics_ar.jpg>
+Package pdftex.def Info: images/logistics_ar.jpg  used on input line 98.
+(pdftex.def)             Requested size: 341.43442pt x 255.12341pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [62] [63 <./images/logistics_ar.jpg>]
+<images/smart_farming_ar.jpg, id=1017, 1926.19624pt x 982.67125pt>
+File: images/smart_farming_ar.jpg Graphic file (type jpg)
+<use images/smart_farming_ar.jpg>
+Package pdftex.def Info: images/smart_farming_ar.jpg  used on input line 114.
+(pdftex.def)             Requested size: 341.43442pt x 174.17421pt.
+ [64 <./images/smart_farming_ar.jpg>]
+
+LaTeX Warning: Reference `sec:scenario_realization' on page 65 undefined on input line 141.
+
+<images/compinente break down.png, id=1028, 903.375pt x 526.96875pt>
+File: images/compinente break down.png Graphic file (type png)
+<use images/compinente break down.png>
+Package pdftex.def Info: images/compinente break down.png  used on input line 147.
+(pdftex.def)             Requested size: 426.7914pt x 248.96188pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [65]
+Overfull \hbox (5.27571pt too wide) in paragraph at lines 160--177
+ [][] 
+ []
+
+[66 <./images/compinente break down.png>]
+Overfull \hbox (23.85687pt too wide) in paragraph at lines 192--203
+ [][] 
+ []
+
+
+Underfull \vbox (badness 2469) has occurred while \output is active []
+
+ [67] [68]
+<images/scalability_comparison.png, id=1055, 1204.5pt x 702.625pt>
+File: images/scalability_comparison.png Graphic file (type png)
+<use images/scalability_comparison.png>
+Package pdftex.def Info: images/scalability_comparison.png  used on input line 220.
+(pdftex.def)             Requested size: 405.45052pt x 236.50923pt.
+ [69 <./images/scalability_comparison.png>]
+<images/latency.png, id=1063, 752.8125pt x 425.33907pt>
+File: images/latency.png Graphic file (type png)
+<use images/latency.png>
+Package pdftex.def Info: images/latency.png  used on input line 240.
+(pdftex.def)             Requested size: 405.45052pt x 229.08257pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [70]
+Overfull \hbox (19.76123pt too wide) in paragraph at lines 247--248
+[]\T1/mdbch/m/n/12 (-20) The pro-posed ar-chi-tec-ture elim-i-nates this bot-tle-neck. By uti-liz-ing the na-tive \T1/cmtt/m/n/12 Ros2ForUnity
+ []
+
+) [71 <./images/latency.png>] [72]
+\openout2 = `chapters/conclusion_outlook.aux'.
+
+ (./chapters/conclusion_outlook.tex
+chapter 6.
+
+LaTeX Warning: Citation 'NOT FINAL' on page 73 undefined on input line 3.
+
+[73
+
+
+
+
+
+]
+
+LaTeX Warning: Citation 'NOT FINAL' on page 74 undefined on input line 19.
+
+) [74] [75] [76
+
+
+
+
+]
+Package tocbasic Info: character protrusion at lof deactivated on input line 52.
+ (./ti_thesis.lof [77]
+Overfull \hbox (10.31657pt too wide) in paragraph at lines 22--22
+ \T1/mdbch/m/n/12 (-20) while the \T1/cmtt/m/n/12 RosImageToMaterial.cs \T1/mdbch/m/n/12 (-20) com-po-nent projects the live OpenCV 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [78]
+Overfull \hbox (3.73447pt too wide) in paragraph at lines 30--30
+ [][] [][][]\T1/mdbch/m/n/12 (-20) Augmented Re-al-ity pro-jec-tion of the Paint sce-nario. The phys-i-cal EMAROs 
+ []
+
+)
+\tf@lof=\write7
+\openout7 = `ti_thesis.lof'.
+
+ [79] [80
+
+
+]
+Package tocbasic Info: character protrusion at lol deactivated on input line 53.
+ (./ti_thesis.lol)
+\tf@lol=\write8
+\openout8 = `ti_thesis.lol'.
+
+ [81] [82
+
+
+]
+chapter without number
+LaTeX Font Info:    Font shape `T1/mdbch/m/fsc' will be
+(Font)              scaled to size 11.52008pt on input line 59.
+
+Overfull \hbox (11.52014pt too wide) in paragraph at lines 60--60
+[]\T1/mdbch/m/n/12 (-20) Mordechai Ben-Ari and Francesco Mon-dada. \T1/mdbch/m/it/12 (-20) El-e-ments of Robotics\T1/mdbch/m/n/12 (-20) . Springer
+ []
+
+[83] [84] [85] [86]
+Overfull \hbox (6.64026pt too wide) in paragraph at lines 60--60
+\T1/mdbch/m/n/12 (-20) Oct. 2020, pp. 2718^^U2725. \T1/mdbch/m/fsc/12 (-20) doi\T1/mdbch/m/n/12 (-20) : [][]$\T1/cmtt/m/n/12 10 . 1109 / IROS45743 . 2020 . 9341207$[][]\T1/mdbch/m/n/12 (-20) .
+ []
+
+
+Overfull \hbox (49.37604pt too wide) in paragraph at lines 60--60
+\T1/mdbch/m/n/12 (-20) A Re-view^^Q. In: \T1/mdbch/m/it/12 (-20) Robotics \T1/mdbch/m/n/12 (-20) 9.2 (Apr. 2020), p. 21. \T1/mdbch/m/fsc/12 (-20) doi\T1/mdbch/m/n/12 (-20) : [][]$\T1/cmtt/m/n/12 10 . 3390 / robotics9020021$[][]\T1/mdbch/m/n/12 (-20) .
+ []
+
+[87] [88] [89] [90
+
+
+] [91] (./ti_thesis.aux (./chapters/deckblatt.aux) (./chapters/abstract.aux) (./chapters/introduction.aux) (./chapters/foundations_related_work.aux) (./chapters/requirements.aux) (./chapters/concept_implementation.aux) (./chapters/evaluation.aux) (./chapters/conclusion_outlook.aux))
+ ***********
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2020/03/25>
+ ***********
+
+
+LaTeX Warning: There were undefined references.
+
+Package rerunfilecheck Info: File `ti_thesis.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+Package logreq Info: Writing requests to 'ti_thesis.run.xml'.
+\openout1 = `ti_thesis.run.xml'.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 61044 strings out of 474222
+ 1386395 string characters out of 5748732
+ 2644716 words of memory out of 5000000
+ 81617 multiletter control sequences out of 15000+600000
+ 641007 words of font info for 498 fonts, out of 8000000 for 9000
+ 1144 hyphenation exceptions out of 8191
+ 108i,12n,131p,10936b,3335s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchri8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chb8t.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7t.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7y.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr8t.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chri7m.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chri8t.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8ac.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
+Output written on ti_thesis.pdf (99 pages, 25517455 bytes).
+PDF statistics:
+ 1697 PDF objects out of 1728 (max. 8388607)
+ 1473 compressed objects within 15 object streams
+ 294 named destinations out of 1000 (max. 500000)
+ 79131 words of extra memory for PDF output out of 89155 (max. 10000000)
+

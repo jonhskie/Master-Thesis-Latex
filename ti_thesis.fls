@@ -752,6 +752,16 @@ OUTPUT chapters/evaluation.aux
 INPUT ./chapters/evaluation.tex
 INPUT ./chapters/evaluation.tex
 INPUT chapters/evaluation.tex
+INPUT ./images/vr_view.png
+INPUT ./images/vr_view.png
+INPUT ./images/vr_view.png
+INPUT ./images/vr_view.png
+INPUT ./images/vr_view.png
+INPUT ./images/vr_storage.png
+INPUT ./images/vr_storage.png
+INPUT ./images/vr_storage.png
+INPUT ./images/vr_storage.png
+INPUT ./images/vr_storage.png
 INPUT ./images/ar_projection.jpg
 INPUT ./images/ar_projection.jpg
 INPUT ./images/ar_projection.jpg
