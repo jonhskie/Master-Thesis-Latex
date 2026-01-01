@@ -1412,6 +1412,38 @@
       \verb https://doi.org/10.1109/ACCESS.2025.3569332
       \endverb
     \endentry
+    \entry{lavalle2023virtual}{book}{}
+      \name{author}{1}{}{%
+        {{hash=10b09a560dbab6229987301f9a193d77}{%
+           family={LaValle},
+           familyi={L\bibinitperiod},
+           given={Steven\bibnamedelima M.},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{10b09a560dbab6229987301f9a193d77}
+      \strng{fullhash}{10b09a560dbab6229987301f9a193d77}
+      \strng{bibnamehash}{10b09a560dbab6229987301f9a193d77}
+      \strng{authorbibnamehash}{10b09a560dbab6229987301f9a193d77}
+      \strng{authornamehash}{10b09a560dbab6229987301f9a193d77}
+      \strng{authorfullhash}{10b09a560dbab6229987301f9a193d77}
+      \field{labelalpha}{LaV23}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{See Chapter 7: Visual Rendering}
+      \field{title}{Virtual Reality}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb http://lavalle.pl/vr/
+      \endverb
+      \verb{url}
+      \verb http://lavalle.pl/vr/
+      \endverb
+    \endentry
     \entry{IsaacSim}{inproceedings}{}
       \name{author}{6}{}{%
         {{hash=689c1f7ab1959d67e7801f3e62a09609}{%
@@ -2565,9 +2597,11 @@
       \endverb
     \endentry
   \enddatalist
+  \missing{Check ob ide werete correct in ghreicje}
   \missing{Fuer jede Phase ein debug bild einbauen}
   \missing{NOT FINAL}
   \missing{check if correcte hw und cpu based rendering}
+  \missing{chekc ob values pasen}
   \missing{hieer die unterschrieft adnerd und erwähneung im text}
   \missing{hieer die unterschrieft adnerd und erwwähnung im text}
 \endrefsection

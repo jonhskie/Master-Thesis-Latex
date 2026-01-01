@@ -211,6 +211,7 @@ The modification logic relies on physics raycasting to identify the coordinates 
 \end{figure}
 
 \subsection{Sensor Simulation}
+\label{subsec:sensor_simulation}
 To validate the perception algorithms of the robotic applications, the system provides simulated sensors capable of generating video feed and ranging data (\hyperref[req:FR-11]{FR-11}).
 
 The \texttt{LidarSensor.cs} component simulates a 2D planar laser scanner, as illustrated in Figure~\ref{fig:lidar_raycasting}, which can be attached to the virtual model of the robot. This implementation utilizes the Unity physics engine's raycasting API to query the scene geometry. In every simulation step, the component executes a loop corresponding to the configured number of beams. For each beam, the system calculates a direction vector based on the scan angle.
@@ -275,6 +276,7 @@ For visualization in standard desktop views and AR projections, the system emplo
 In contrast, screen-space rendering is unsuitable for Virtual Reality due to depth perception issues. To address this, the architecture supports a World Space Canvas for VR users. In this configuration, textual information is rendered onto a 3D plane floating physically above the digital twin. To ensure readability from any perspective, the canvas implements a constraint that continuously orients the UI to face the VR headset, allowing operators to inspect the robot's status naturally within the virtual environment.
 
 \subsection{Sensor Data Projection}
+\label{subsec:sensor_data_projection}
 To integrate the robot's visual perception directly into the mixed reality workspace, the system utilizes the \texttt{RosImageToMaterial.cs} component to project sensor streams into the environment.
 
 This component subscribes to ROS~2 camera topics. Upon receiving a frame, it decodes the data into a Unity \texttt{Texture2D} and applies it to a material on a planar mesh attached to the model of the robot.
@@ -289,6 +291,7 @@ For the AR setup, this plane is positioned horizontally above the robot, project
 \end{figure}
 
 \subsection{Interactive Control Interfaces}
+\label{subsec:interactive_control_interfaces}
 
 The implementation utilizes a device-independent architecture, where the core logic relies on 3D raycasting rather than specific hardware events. This design allows the system to support both standard mouse inputs and 3D VR controllers interchangeably.
 
