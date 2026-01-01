@@ -98,25 +98,25 @@ The robotic application operates through a state machine that coordinates a sequ
     \caption{Augmented Reality projection of the Logistics scenario. The robot navigates through the projected warehouse to transport a virtual box to the designated colored zone. The environment allows the VR user to dynamically place obstacles, forcing the robot to replan its path.}
     \label{fig:logistics_ar}
 \end{figure}
-%#############################################################fertig####################################################################
+
 \subsection{Application 4: Smart Farming}
 \label{subsec:eval_farming}
 
-The Smart Farming scenario, shown in Figure~\ref{fig:smart_farming_ar}, serves as a comprehensive integration test, combining navigation, complex state management, and tool-based environmental modification. The scenario features a \texttt{FieldTileSystem} that governs the visual state of an agricultural field, handling transitions between stages such as "Untouched", "Seeded", and "Growing". The robot operates interchangeable tools such as a Plow, a Seeder, and a Harvester to modify the field state. These tools utilize the \texttt{FarmEquipmentBase} script, which employs a mechanism with multiple raycasts to detect the specific tiles beneath the robot and modify their state only when the tool is physically attached and active (\hyperref[req:FR-13]{FR-13}).
+The Smart Farming scenario in Figure~\ref{fig:smart_farming_ar}, serves as the most comprehensive integration test. It combines navigation, complex state management, and tool-based environmental modification. The scenario has a \texttt{FieldTileSystem} that manages the visual state of an agricultural field. It handles transitions between stages like "Untouched", "Seeded", and "Growing". The robot operates interchangeable tools such as a Plow, a Seeder, and a Harvester to modify the field state. These tools operate with the \texttt{FarmEquipmentBase} script, which uses multiple raycasts to detect the specific tiles beneath the robot (\hyperref[req:FR-13]{FR-13}). The state of the tiles only changes when the tool is attached and active.
 
-The robotic application executes a sequential workflow consisting of field mapping, tool attachment, and coverage path planning. The robot must autonomously identify field boundaries via edge detection, swap tools, and drive precise rows to process the crop.
+The robotic application follows a sequential workflow. This includes field mapping, tool searching and attachment, and path planning. The robot must find field boundaries on its own using edge detection. It also needs to swap tools and drive precise rows to process the field
 
-The application demonstrated high reliability in field boundary detection. The perception system consistently distinguished the transition between the field texture and the outer floor, enabling the robot to trace the perimeter and accurately map the field's four corners. Based on this layout, the coverage path planner generated valid waypoints, and the navigation stack executed the trajectory with sufficient precision to ensure full coverage. The evaluation confirmed that the tools modified the field only when physically attached to the robot, correctly updating the terrain state as the robot progressed. Furthermore, the robot handled user interference effectively. When the VR operator placed obstacles in the field, the robot successfully navigated around them or skipped unreachable waypoints (\hyperref[req:FR-17]{FR-17}).
+The application demonstrated high reliability in field boundary detection. The perception system consistently distinguished the transition between the field texture and the outer floor, enabling the robot to trace the perimeter and accurately map the field's four corners. Based on this layout, the coverage path planner generated valid waypoints, and the navigation stack executed the trajectory with sufficient precision to ensure full coverage. Additionally, the robot independently executed the tool exchange sequence. It located the required implements, stored their coordinates, and returned each tool to its original position before retrieving the next one. The evaluation confirmed that the tools modified the field only when physically attached to the robot, correctly updating the terrain state as the robot progressed. Furthermore, the robot handled user interference effectively. When the VR operator placed obstacles in the field, the robot successfully navigated around them or skipped unreachable waypoints (\hyperref[req:FR-17]{FR-17}).
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{images/smart_farming_ar.jpg} % Placeholder
-    \caption{AR projection of the Smart Farming scenario. The EMAROs, equipped with the Seeder tool, navigates the virtual field, modifying the ground texture.}
+    \caption{AR projection of the Smart Farming scenario. The EMAROs, fitted with the Seeder tool, moves through the virtual field and modifies the ground texture.}
     \label{fig:smart_farming_ar}
 \end{figure}
 
 \section{Hardware and System Specifications}
-The performance of the Mixed Reality simulation is heavily dependent on the underlying hardware, as it must simultaneously handle physics calculations, ROS 2 communication, and stereoscopic rendering. The benchmarks for this thesis were conducted on a desktop workstation, while the reference measurements for the original VERA framework by Gehricke~\cite{Geh24} were performed on a high-performance laptop. The respective hardware configurations are summarized in Table~\ref{tab:hardware_specs}.
+The performance of the Mixed Reality simulation relies heavily on the hardware. It must handle physics calculations, ROS 2 communication, and stereoscopic rendering at once. The benchmarks for this thesis were done on a desktop workstation, while the original VERA framework by Gehricke~\cite{Geh24} was measured on a high-performance laptop. The different hardware configurations are shown in Table~\ref{tab:hardware_specs}.
 
 \begin{table}[H]
     \centering
@@ -124,7 +124,7 @@ The performance of the Mixed Reality simulation is heavily dependent on the unde
     \label{tab:hardware_specs}
     \begin{tabular}{lll}
         \toprule
-        \textbf{Component} & \textbf{Proposed System (Host)} & \textbf{VERA (Gehricke~\cite{Geh24})} \\ 
+        \textbf{Component} & \textbf{This Work} & \textbf{Original VERA~\cite{Geh24}} \\ 
         \midrule
         CPU    & Intel i7-8700K                 & Intel i9-14900HX \\
         GPU    & NVIDIA RTX 2070 Super (8 GB)   & N/A (CPU-based rendering) \\
@@ -134,7 +134,7 @@ The performance of the Mixed Reality simulation is heavily dependent on the unde
     \end{tabular}
 \end{table}
 \cite{check if correcte hw und cpu based rendering}
-%#########################################################################################################################
+%#############################################################fertig############################################################
 \section{Performance Analysis of Robotic Scenarios}
 \label{sec:scenario_performance}
 
