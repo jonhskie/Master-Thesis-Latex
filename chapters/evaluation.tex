@@ -32,7 +32,6 @@ Data visualization in VR is handled through two primary elements, as depicted in
 \end{figure}
 \subsection{Augmented Reality Projection}
 
-%###########################################################fertig##############################################################
 \label{subsec:eval_ar}
 
 The AR projection meets requirement \hyperref[req:FR-15]{FR-15} by mapping the virtual environment directly onto the physical floor. This setup allows observers without VR equipment to monitor the robot’s internal status and its virtual context in real time. The projection aligns well with the physical robot, especially in the center of the tracking area. There is some drift at the outer edges due to lens distortion in the camera of the ARuco tracking system, but the accuracy is still good enough for evaluating navigation tasks.
@@ -52,54 +51,55 @@ To showcase the system’s flexibility, four different scenarios were created. T
 Throughout all applications, the fundamental integration between the physical robot and the simulation was maintained through ROS 2 communication and the usage of a \texttt{/clock} topic for time synchronization (\hyperref[req:FR-04]{FR-04}, \hyperref[req:FR-05]{FR-05}).  The robot’s physical state was continuously reflected by its digital twin, ensuring that spatial relationships and coordinate transformations were consistent between the real and virtual worlds (\hyperref[req:FR-07]{FR-07}, \hyperref[req:FR-10]{FR-10}).  A system-wide safety watchdog operated during the entire evaluation. If the robot left the designated tracking area, the system issued a zero-velocity command to avoid the robot from leaving the tracking area (\hyperref[req:FR-08]{FR-08}).
 
 %#######################################################fertig##################################################################
-\subsection{Application 1: Dynamic Surface Interaction (Paint)}
-\label{subsec:eval_paint}
+\subsection{Application 1: Interactive Path Following}
+\label{subsec:eval_path_following}
 
-The first scenario creates an interactive workspace to evaluate the system's capacity for real-time environmental modification. The environment consists of a high-contrast white floor where the surface texture serves as the primary navigation medium. To realize this, the system utilizes the \texttt{TrackPainter} script attached to the robot and the \texttt{MouseSurfacePainter} used by the operator. Both components interact with a \texttt{SharedPaintTextureRegistry}, a specialized class that manages texture synchronization. This architecture ensures that when a user draws a path using the VR controller's ray-cast or the desktop mouse, the pixel data is instantly updated for all participants, enabling the robot to perceive the changes without delay (\hyperref[req:FR-13]{FR-13}).
+The first scenario, shown in Figure~\ref{fig:path_following_ar} evaluates the system's capacity for environmental modifications (\hyperref[req:FR-13]{FR-13}). In this application, the robot follows a line trajectory that the user draws onto the floor surface. The system ensures that paths drawn via VR controllers or mouse inputs are reflected in the texture data, enabling the robot to perceive and follow the line.
 
-The robotic application deployed in this scenario, shown in Figure~\ref{fig:paint_ar}, is a vision-based Line Follower. The robot operates without a pre-existing map, relying exclusively on the live video stream from its virtual camera to detect the path geometry (\hyperref[req:FR-11]{FR-11}). The control logic is governed by a finite state machine that autonomously transitions between searching for visual features, aligning the robot's heading with the path vector, and executing a PID-controlled following behavior based on the sensor data (\hyperref[req:FR-19]{FR-19}).
+The robotic application used in this scenario is a camera-based Line Follower. The robot operates solely on the live video feed from its virtual camera to detect the path (\hyperref[req:FR-11]{FR-11}). The control logic is based on a finite state machine, which autonomously switches between searching for visual features, aligning its heading with the path vector, and executing a PID-controlled following behavior based on the sensor data (\hyperref[req:FR-19]{FR-19}).
 
-During the evaluation, the robotic application demonstrated robust performance. The PID controller successfully maintained the robot's position on the line with minimal oscillation, even when the user drew complex curves. When the line ended or was cleared by the user, the robot immediately transitioned to a search behavior, rotating to scan for new visual features. Once a new line was drawn, the perception stack identified it within a single frame, and the robot successfully realigned its heading to resume tracking. This behavior confirms that the virtual user interactions serve as effective, real-time sensory inputs for the physical robot.
+The robotic application exhibited robust performance during the evaluation. The PID controller kept the robot on the line with minimal deviation. If the path ended or was erased by the user, the robot smoothly transitioned to a search state, looking for new visual inputs. When a new line was created, the perception system quickly detected it, allowing the robot to re-adjust its heading and continue tracking.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{images/paint_scenario_ar.jpg} % Placeholder
-    \caption{Augmented Reality projection of the Paint scenario. The physical EMAROs robot (center) follows a red path drawn by the user. The projected line serves as the visual stimulus for the robot's internal perception stack, closing the loop between user input and physical action.}
-    \label{fig:paint_ar}
+    \caption{Augmented Reality projection of the Path Following scenario. The physical EMAROs robot follows a red path drawn by the user.}
+    \label{fig:path_following_ar}
 \end{figure}
 
-\subsection{Application 2: Reactive Physics Interaction (Pong)}
+\subsection{Application 2: Arcade Game}
 \label{subsec:eval_pong}
 
-The Pong scenario evaluates the system's ability to facilitate continuous, dynamic interactions between a physical robot and virtual physics entities, as depicted in Figure~\ref{fig:pong_scenario}. The environment implements a classic arcade game logic, utilizing \texttt{PongGameManager} and \texttt{PongField} scripts to manage the game state and boundaries. The critical component for mixed reality interaction is the \texttt{PaddlePlank} script attached to the robot's digital twin. This script creates a kinematic box collider that mirrors the physical robot's transform, forming a solid barrier in the simulation. The ball's physics are governed by the \texttt{PongBall} script, which employs a hybrid control approach: it utilizes Unity's PhysX engine for collision detection but calculates reflection vectors mathematically. This ensures predictable energy conservation during high-speed impacts, regardless of friction settings (\hyperref[req:FR-02]{FR-02}).
+The Arcade Game scenario, shown in Figure~\ref{fig:pong_scenario}, evaluates dynamic interactions between the physical robot and virtual physics objects. The robot acts as a paddle in a simulated arcade game. A \texttt{PaddlePlank} script on the digital twin model creates a kinematic collider that reflects the physical movement and deflects the virtual ball. To maintain consistent physics (\hyperref[req:FR-02]{FR-02}), the system detects collisions using PhysX but calculates the ball's reflection vector separately from the physics engine. This prevents energy loss from simulated friction through the PhysX engine and keeps the ball's speed constant.
 
-In this application, the human operator acts as the high-level planner. Using the VR controller, the operator observes the trajectory of the virtual ball and issues navigation goals to the robot's navigation stack to intercept it via the \texttt{NavigationGoalController} (\hyperref[req:FR-17]{FR-17}).
+ The human operator acts as the high-level planner for this application. By observing the virtual ball's path in VR or AR, the operator sets navigation goals through the \texttt{NavigationGoalController} to position the robot for interception (\hyperref[req:FR-17]{FR-17}).
 
-The integration of the navigation stack proved effective for these dynamic interception tasks. Despite the latency inherent in wireless communication, the robot successfully reached the commanded goals in time to deflect the virtual ball. The physical-virtual coupling was validated by the ball's behavior; as the robot moved to intercept, the virtual paddle mirrored its transform exactly, causing the ball to bounce realistically off the moving robot (\hyperref[req:FR-13]{FR-13}). No "tunneling" artifacts were observed, confirming that the system supports time-sensitive, reactive control.
+The integration of the navigation stack proved effective for steering the robot and the interception task. The robot consistently reached its set goals, and the virtual paddle on the digital twin deflected the ball, showing realistic collisions behavior (\hyperref[req:FR-13]{FR-13}).
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{images/pong_scenario.jpg} % Placeholder
-    \caption{Top-down view of the Pong scenario. The user utilizes the Nav2 stack to position the physical robot (left) to intercept the virtual ball. The ball interacts with the digital twin's geometry, bouncing off the attached paddle based on the robot's real-world position.}
+    \caption{Overview of the Arcade Game scenario. The user steers the EMAROs robot to reflect the virtual ball via the navigation stack.}
     \label{fig:pong_scenario}
 \end{figure}
-%#########################################################################################################################
+
+
 \subsection{Application 3: Autonomous Logistics}
 \label{subsec:eval_logistics}
 
-The Logistics scenario assesses the system's support for complex, multi-stage missions, illustrated in Figure~\ref{fig:logistics_ar}, involving object manipulation and decision-making. The environment simulates a warehouse populated with colored transport boxes and delivery zones. Specific C\# components were implemented to handle the logic: \texttt{BoxEquipment} tags objects with semantic types (e.g., Red or Blue), and \texttt{DeliveryZone} scripts monitor spatial triggers. Crucially, the validation logic is decoupled from the robot; when a valid delivery occurs, the \texttt{LogisticsManager} acts as the simulation authority, formatting a status string and transmitting it via the ROS 2 network to the robot (\hyperref[req:FR-12]{FR-12}, \hyperref[req:FR-20]{FR-20}).
+The Logistics scenario, illustrated in Figure~\ref{fig:logistics_ar}, assesses the system's support for complex, multi-stage missions involving object manipulation and decision-making. The environment simulates a warehouse filled with colored transport boxes and delivery zones. Specific C\# components handle the game logic: \texttt{BoxEquipment} assigns semantic types (e.g., Red or Blue) to objects, while \texttt{DeliveryZone} scripts monitor specific areas. When a box enters a zone, the script checks if the object's type matches the zone's requirements. If the delivery is correct, the box is removed (\hyperref[req:FR-12]{FR-12}).
 
-The robotic application executes a Search-Transport-Deliver cycle driven by a state machine. The robot autonomously coordinates its navigation stack to search the floor plan, identifies targets using a color-based perception processor, and approaches them for pickup. Upon reaching a target, the robot triggers an attachment command, which is processed by the \texttt{AttachmentCommandManager} to kinematically lock the virtual box to the robot's chassis (\hyperref[req:FR-13]{FR-13}).
+The robotic application operates through a state machine that coordinates a sequence of autonomous behaviors. First, the robot utilizes its navigation stack to explore the environment and identify target objects via the perception system. Once a target is located, the robot approaches it and initiates a pickup sequence. This triggers an attachment command, which the \texttt{AttachmentCommandManager} processes to kinematically lock the virtual box to the robot's chassis for transport (\hyperref[req:FR-13]{FR-13}).
 
-The autonomous agent successfully completed the full logistics cycle without human intervention. The visual servoing logic reliably aligned the robot with the target boxes, and the attachment system prevented any visual jitter during transport. A key feature validated in this scenario is the robot's spatial memory logic; after locating a delivery zone once, the agent successfully stored the coordinates and navigated directly to them in subsequent runs, significantly reducing the mission time. Additionally, the robot's navigation stack successfully detected dynamic obstacles placed by the VR user, such as black walls, and replanned trajectories in real time, demonstrating the robustness of the autonomous behaviors in a changing environment.
+ The autonomous agent successfully completed the entire logistics process without any human help. The vision-based control logic accurately aligned the robot with the target boxes, and the mechanism for attaching and detaching objects worked correctly. Moreover, the robot's spatial memory logic was effective. After finding a delivery zone of a specific color once, the agent stored the coordinates and was able to navigate directly to them in later runs involving boxes of the same color. The robot's navigation stack also successfully detected dynamic obstacles placed by the VR user and adjusted its trajectories in real time.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{images/logistics_ar.jpg} % Placeholder
-    \caption{Augmented Reality projection of the Logistics scenario. The physical robot (center) navigates through the projected warehouse to transport a virtual box to the designated colored zone. The environment allows the VR user to dynamically place obstacles, forcing the robot to replan its path.}
+    \caption{Augmented Reality projection of the Logistics scenario. The robot navigates through the projected warehouse to transport a virtual box to the designated colored zone. The environment allows the VR user to dynamically place obstacles, forcing the robot to replan its path.}
     \label{fig:logistics_ar}
 \end{figure}
-%#########################################################################################################################
+%#############################################################fertig####################################################################
 \subsection{Application 4: Smart Farming}
 \label{subsec:eval_farming}
 
