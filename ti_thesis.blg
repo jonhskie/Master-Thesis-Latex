@@ -1,32 +1,25 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
 [0] Config.pm:310> INFO - Logfile is 'ti_thesis.blg'
-[69] biber:340> INFO - === Thu Jan  1, 2026, 21:17:05
-[82] Biber.pm:419> INFO - Reading 'ti_thesis.bcf'
-[158] Biber.pm:979> INFO - Found 67 citekeys in bib section 0
-[168] Biber.pm:4419> INFO - Processing section 0
-[175] Biber.pm:4610> INFO - Looking for bibtex file 'literatur.bib' for section 0
-[179] bibtex.pm:1713> INFO - LaTeX decoding ...
-[230] bibtex.pm:1519> INFO - Found BibTeX data source 'literatur.bib'
-[640] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[640] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[640] Biber.pm:4239> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-US'
-[640] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
-[690] bbl.pm:660> INFO - Writing 'ti_thesis.bbl' with encoding 'UTF-8'
-[713] bbl.pm:763> INFO - Output to ti_thesis.bbl
-[713] Biber.pm:131> WARN - legacy month field 'April' in entry 'EMAROs_Ref' is not an integer - this will probably not sort properly.
-[713] Biber.pm:131> WARN - legacy month field 'April' in entry 'foote2013tf' is not an integer - this will probably not sort properly.
-[714] Biber.pm:131> WARN - legacy month field 'Sep' in entry 'Gazebo' is not an integer - this will probably not sort properly.
-[714] Biber.pm:131> WARN - legacy month field 'March' in entry 'Fox1997' is not an integer - this will probably not sort properly.
-[714] Biber.pm:131> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
-[715] Biber.pm:131> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
-[715] Biber.pm:131> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
-[715] Biber.pm:131> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
-[715] Biber.pm:131> WARN - I didn't find a database entry for 'NOT FINAL' (section 0)
-[715] Biber.pm:131> WARN - I didn't find a database entry for 'Yang2019' (section 0)
-[715] Biber.pm:131> WARN - I didn't find a database entry for 'Fuer jede Phase ein debug bild einbauen' (section 0)
-[715] Biber.pm:131> WARN - I didn't find a database entry for 'hieer die unterschrieft adnerd und erwähneung im text' (section 0)
-[715] Biber.pm:131> WARN - I didn't find a database entry for 'hieer die unterschrieft adnerd und erwwähnung im text' (section 0)
-[715] Biber.pm:131> WARN - I didn't find a database entry for 'check if correcte hw und cpu based rendering' (section 0)
-[715] Biber.pm:131> WARN - I didn't find a database entry for 'Check ob ide werete correct in ghreicje' (section 0)
-[715] Biber.pm:131> WARN - I didn't find a database entry for 'chekc ob values pasen' (section 0)
-[715] Biber.pm:133> INFO - WARNINGS: 16
+[87] biber:340> INFO - === Fri Jan  2, 2026, 15:22:01
+[102] Biber.pm:419> INFO - Reading 'ti_thesis.bcf'
+[175] Biber.pm:979> INFO - Found 61 citekeys in bib section 0
+[184] Biber.pm:4419> INFO - Processing section 0
+[192] Biber.pm:4610> INFO - Looking for bibtex file 'literatur.bib' for section 0
+[195] bibtex.pm:1713> INFO - LaTeX decoding ...
+[245] bibtex.pm:1519> INFO - Found BibTeX data source 'literatur.bib'
+[663] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[663] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[663] Biber.pm:4239> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'en-US'
+[664] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[718] bbl.pm:660> INFO - Writing 'ti_thesis.bbl' with encoding 'UTF-8'
+[740] bbl.pm:763> INFO - Output to ti_thesis.bbl
+[740] Biber.pm:131> WARN - legacy month field 'April' in entry 'EMAROs_Ref' is not an integer - this will probably not sort properly.
+[740] Biber.pm:131> WARN - legacy month field 'April' in entry 'foote2013tf' is not an integer - this will probably not sort properly.
+[741] Biber.pm:131> WARN - legacy month field 'Sep' in entry 'Gazebo' is not an integer - this will probably not sort properly.
+[741] Biber.pm:131> WARN - legacy month field 'March' in entry 'Fox1997' is not an integer - this will probably not sort properly.
+[741] Biber.pm:131> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
+[741] Biber.pm:131> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
+[741] Biber.pm:131> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
+[741] Biber.pm:131> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
+[741] Biber.pm:131> WARN - I didn't find a database entry for 'NOT FINAL' (section 0)
+[741] Biber.pm:133> INFO - WARNINGS: 9

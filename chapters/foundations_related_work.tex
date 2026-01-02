@@ -157,7 +157,9 @@ However, for maximum robustness and precision for this thesis, the positioning s
         \includegraphics[width=\linewidth]{images/arcuo.jpg}
     \end{minipage}
     \caption{The original VERA used point clouds~\cite{Geh24}, while the current iteration uses ArUco markers for pose estimation~\cite{JuliaBA}.}
+    \label{fig:veps_comparison}
 \end{figure}
+
 The \textbf{Virtual Environment Manager} is the central brain of the simulation~\cite{Geh24}. Implemented as a C++ ROS~2 node, it parses environment definitions from standard Gazebo \texttt{world.sdf} files~\cite{Geh24}. It keeps track of the state of all virtual objects, including their positions and properties, such as whether an object is movable or static~\cite{Geh24}.
 One of the key roles of the manager is to manage the interactions of the robot with the virtual world~\cite{Geh24}. It operates a continuous loop, typically at 20 Hz, which checks the distance between the position of the robot given by the VEPS and the virtual objects~\cite{Geh24}. The manager triggers predefined actions if a collision is detected, such as removing a manipulatable object or stopping the robot~\cite{Geh24}. It relies on basic distance heuristics and not a physics engine, hence limiting interactions to simple ones~\cite{Geh24}.
 

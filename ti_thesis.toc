@@ -48,7 +48,7 @@
 \contentsline {subsection}{\numberline {4.6.2}Modular Perception Stack}{46}{subsection.4.6.2}%
 \contentsline {subsection}{\numberline {4.6.3}Application 1: Line Follower}{46}{subsection.4.6.3}%
 \contentsline {subsection}{\numberline {4.6.4}Application 2: Logistics}{48}{subsection.4.6.4}%
-\contentsline {subsection}{\numberline {4.6.5}Application 3: Smart Farming}{49}{subsection.4.6.5}%
+\contentsline {subsection}{\numberline {4.6.5}Application 3: Smart Farming}{50}{subsection.4.6.5}%
 \contentsline {section}{\numberline {4.7}Implementation Synthesis}{52}{section.4.7}%
 \contentsline {chapter}{\numberline {5}Evaluation}{55}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Mixed Reality Interface Validation}{55}{section.5.1}%
@@ -65,5 +65,5 @@
 \contentsline {section}{\numberline {5.6}Scalability and Stress Testing}{67}{section.5.6}%
 \contentsline {section}{\numberline {5.7}Latency Analysis}{69}{section.5.7}%
 \contentsline {chapter}{\numberline {6}Conclusion and Outlook}{71}{chapter.6}%
-\contentsline {chapter}{\nonumberline Bibliography}{81}{chapter*.5}%
+\contentsline {chapter}{\nonumberline Bibliography}{79}{chapter*.5}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

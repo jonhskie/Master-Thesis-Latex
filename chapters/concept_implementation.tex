@@ -184,7 +184,7 @@ At the same time, the controller disables collisions between the robot and the t
         \centering
         \includegraphics[width=\linewidth]{images/Detached.png} % Make sure extension is .png or .jpg
         \par\vspace{5pt} % Small gap between image and text
-        (a) Detached State
+        (a)
     \end{minipage}%
     \hfill % Spacer
     % Right Image (Attached)
@@ -192,7 +192,7 @@ At the same time, the controller disables collisions between the robot and the t
         \centering
         \includegraphics[width=\linewidth]{images/Attached.png} % Make sure extension is .png or .jpg
         \par\vspace{5pt}
-        (b) Attached State
+        (b)
     \end{minipage}
     \caption{The robot attachment logic. (a) The robot approaches the target object.\\ (b) The object is kinematically coupled to the robot chassis.}
     \label{fig:attachment_logic}
@@ -340,7 +340,6 @@ All processors inherit from a base class \texttt{base\_processor.py} that standa
 
 \subsection{Application 1: Line Follower}
 \label{subsec:app_line}
-\cite{Fuer jede Phase ein debug bild einbauen}
 The Line Follower application operates in an interactive playground where a user, using the robot, a mouse, or VR controllers, can draw paths on the virtual ground in real time. The robot must identify and track this line immediately.
 
 This implementation utilizes the dedicated node \texttt{line\_per\-ception\_node.py}:
@@ -386,7 +385,7 @@ To assist in debugging, the perception node publishes an annotated video stream 
         \centering
         \includegraphics[width=\linewidth]{images/logistics_debug.png}  % Make sure extension is .png or .jpg
         \par\vspace{5pt} % Small gap between image and text
-        (a) Detached State
+        (a)
     \end{minipage}%
     \hfill % Spacer
     % Right Image (Attached)
@@ -394,12 +393,11 @@ To assist in debugging, the perception node publishes an annotated video stream 
         \centering
         \includegraphics[width=\linewidth]{images/logistics_debug_1.png} % Make sure extension is .png or .jpg
         \par\vspace{5pt}
-        (b) Attached State
+        (b)
     \end{minipage}
-    \caption{Debug view of the Logistics application. The processor identifies a blue transport box in its ROI (green) and calculates the centroid (red dot).}
+    \caption{Example debug views of the Logistics application. (a) The processor identifies a blue transport box in its ROI (green) and calculates the centroid (red dot). (b) The system found a blue delivery zone and verifies its position.}
     \label{fig:logistics_debug}
 \end{figure}
-\cite{hieer die unterschrieft adnerd und erwähneung im text}
 
 The mission logic is defined in \texttt{mission\_state\_machine.py} as a YASMIN state machine~\cite{YASMIN} and implements a search, retrieve, and deliver loop. This application uses the YASMIN blackboard~\cite{YASMIN} to implement spatial memory to learn the positions of the delivery zones.
 \begin{enumerate}
@@ -431,22 +429,21 @@ A debug stream visualizes these detections on the \texttt{/perception/debug\_ima
     % Left Image (Detached)
     \begin{minipage}{0.49\textwidth}
         \centering
-        \includegraphics[width=\linewidth]{images/debug_view_edge_following.png}   % Make sure extension is .png or .jpg
+        \includegraphics[width=\linewidth]{images/debug_view_edge_following_1.png}   % Make sure extension is .png or .jpg
         \par\vspace{5pt} % Small gap between image and text
-        (a) Detached State
+        (a)
     \end{minipage}%
     \hfill % Spacer
     % Right Image (Attached)
     \begin{minipage}{0.49\textwidth}
         \centering
-        \includegraphics[width=\linewidth]{images/debug_view_edge_following_1.png}  % Make sure extension is .png or .jpg
+        \includegraphics[width=\linewidth]{images/debug_view_edge_following.png}  % Make sure extension is .png or .jpg
         \par\vspace{5pt}
-        (b) Attached State
+        (b)
     \end{minipage}
-    \caption{Debug view of the Smart Farming application during edge following. The processor identifies the boundary between the field (left) and the path (right). The green line represents the detected edge used for navigation, while the red dot indicates the centroid used to compute the lateral and angular errors displayed in the overlay.}    \label{fig:farm_debug}
+    \caption{Debug views of the Smart Farming application. (a) The processor identifies the boundary between the field and the white floor. (b) The robot follows the edge. The green line represents the detected edge used for navigation, while the red dot indicates the centroid used to compute the lateral and angular errors displayed in the overlay.}
     \label{fig:farm_debug}
 \end{figure}
-\cite{hieer die unterschrieft adnerd und erwwähnung im text}
 
 The mission is governed by a YASMIN state machine~\cite{YASMIN} which executes two distinct phases:
 
@@ -475,4 +472,4 @@ The development process described in this chapter has established the technical 
 The architecture comprises several functional layers. The core layer handles the synchronization of the digital twin and the generation of virtual LiDAR and camera streams. Above this, the environmental layer manages dynamic elements, including manipulable objects and modifiable surface textures. These automated features are complemented by the mixed reality interfaces, which provide visualization via floor projection and Virtual Reality control.
 
 Three specific robotic applications were implemented: Line Following, Logistics, and Smart Farming. These applications serve as consumers of the data and interaction mechanisms provided by the environment.
-\cite{NOT FINAL}With the software architecture defined and the functional modules integrated, the system is prepared for quantitative analysis. The following chapter addresses the measurement of technical performance metrics, including system latency, synchronization accuracy and resource utilization, to determine the operational limits of the platform.
+With the software architecture defined and the functional modules integrated, the system is prepared for comprehensive analysis. The following chapter addresses the qualitative validation of the mixed reality interfaces and scenario realizations, followed by a quantitative assessment of performance metrics such as system latency and resource utilization to determine the operational limits of the platform.
