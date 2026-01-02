@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.20)  1 JAN 2026 21:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.20)  2 JAN 2026 07:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1900,37 +1900,34 @@ File: images/vr_view.png Graphic file (type png)
 Package pdftex.def Info: images/vr_view.png  used on input line 18.
 (pdftex.def)             Requested size: 384.10965pt x 233.1194pt.
 [55]
-<images/vr_storage.png, id=953, 870.25125pt x 706.43925pt>
+<images/vr_storage.png, id=954, 870.25125pt x 706.43925pt>
 File: images/vr_storage.png Graphic file (type png)
 <use images/vr_storage.png>
 Package pdftex.def Info: images/vr_storage.png  used on input line 29.
 (pdftex.def)             Requested size: 384.10965pt x 311.81516pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 1997) has occurred while \output is active []
 
  [56 <./images/vr_view.png>]
-<images/ar_projection.jpg, id=962, 1218.80344pt x 725.71124pt>
+<images/ar_projection.jpg, id=964, 1218.80344pt x 725.71124pt>
 File: images/ar_projection.jpg Graphic file (type jpg)
 <use images/ar_projection.jpg>
 Package pdftex.def Info: images/ar_projection.jpg  used on input line 42.
 (pdftex.def)             Requested size: 384.10965pt x 228.71098pt.
  [57 <./images/vr_storage.png>] [58 <./images/ar_projection.jpg>]
-<images/paint_scenario_ar.jpg, id=983, 1926.19624pt x 1383.1675pt>
+<images/paint_scenario_ar.jpg, id=991, 1926.19624pt x 1383.1675pt>
 File: images/paint_scenario_ar.jpg Graphic file (type jpg)
 <use images/paint_scenario_ar.jpg>
 Package pdftex.def Info: images/paint_scenario_ar.jpg  used on input line 64.
 (pdftex.def)             Requested size: 341.43442pt x 245.16043pt.
-
-Underfull \vbox (badness 1796) has occurred while \output is active []
-
  [59 <./images/paint_scenario_ar.jpg>]
-<images/pong_scenario.jpg, id=994, 1926.19624pt x 1144.275pt>
+<images/pong_scenario.jpg, id=1002, 1926.19624pt x 1144.275pt>
 File: images/pong_scenario.jpg Graphic file (type jpg)
 <use images/pong_scenario.jpg>
 Package pdftex.def Info: images/pong_scenario.jpg  used on input line 80.
 (pdftex.def)             Requested size: 341.43442pt x 202.81776pt.
  [60 <./images/pong_scenario.jpg>]
-<images/logistics_ar.jpg, id=1004, 1926.19624pt x 1439.3775pt>
+<images/logistics_ar.jpg, id=1012, 1926.19624pt x 1439.3775pt>
 File: images/logistics_ar.jpg Graphic file (type jpg)
 <use images/logistics_ar.jpg>
 Package pdftex.def Info: images/logistics_ar.jpg  used on input line 97.
@@ -1939,7 +1936,7 @@ Package pdftex.def Info: images/logistics_ar.jpg  used on input line 97.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [61] [62 <./images/logistics_ar.jpg>]
-<images/smart_farming_ar.jpg, id=1017, 1926.19624pt x 982.67125pt>
+<images/smart_farming_ar.jpg, id=1025, 1926.19624pt x 982.67125pt>
 File: images/smart_farming_ar.jpg Graphic file (type jpg)
 <use images/smart_farming_ar.jpg>
 Package pdftex.def Info: images/smart_farming_ar.jpg  used on input line 113.
@@ -1951,7 +1948,7 @@ Underfull \vbox (badness 2134) has occurred while \output is active []
 
 LaTeX Warning: Citation 'check if correcte hw und cpu based rendering' on page 64 undefined on input line 136.
 
-<images/compinente break down.png, id=1030, 903.375pt x 526.96875pt>
+<images/compinente break down.png, id=1038, 903.375pt x 526.96875pt>
 File: images/compinente break down.png Graphic file (type png)
 <use images/compinente break down.png>
 Package pdftex.def Info: images/compinente break down.png  used on input line 147.
@@ -1964,28 +1961,30 @@ Overfull \hbox (5.27571pt too wide) in paragraph at lines 160--177
  [][] 
  []
 
-
-Underfull \vbox (badness 2027) has occurred while \output is active []
-
- [65 <./images/compinente break down.png>]
+[65 <./images/compinente break down.png>]
 
 LaTeX Warning: Citation 'Check ob ide werete correct in ghreicje' on page 66 undefined on input line 179.
 
 
-Overfull \hbox (10.8265pt too wide) in paragraph at lines 179--181
-\T1/mdbch/m/n/12 (-20) times av-er-aged 3.75 ms on the CPU [[][]Geh24[][]]. [[]] 
+Overfull \hbox (44.69342pt too wide) in paragraph at lines 179--181
+\T1/mdbch/m/n/12 (-20) der-ing times av-er-aged 3.75 ms on the CPU [[][]Geh24[][]]. [[]] 
  []
 
 
-Overfull \hbox (86.86998pt too wide) in paragraph at lines 192--203
+Overfull \hbox (23.85687pt too wide) in paragraph at lines 192--203
  [][] 
  []
 
 
-Underfull \vbox (badness 2181) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [66] [67]
-<images/scalability_comparison.png, id=1075, 1204.5pt x 702.625pt>
+ [66]
+Overfull \hbox (14.57109pt too wide) in paragraph at lines 207--208
+\T1/cmtt/m/n/12 LidarSensor \T1/mdbch/m/n/12 (-20) for ray-cast-ing, \T1/cmtt/m/n/12 TrackPainter \T1/mdbch/m/n/12 (-20) for tex-ture mod-i-fi-ca-tion, \T1/cmtt/m/n/12 ClockPublisher
+ []
+
+[67]
+<images/scalability_comparison.png, id=1082, 1204.5pt x 702.625pt>
 File: images/scalability_comparison.png Graphic file (type png)
 <use images/scalability_comparison.png>
 Package pdftex.def Info: images/scalability_comparison.png  used on input line 220.
@@ -1995,7 +1994,7 @@ Package pdftex.def Info: images/scalability_comparison.png  used on input line 2
 LaTeX Warning: Citation 'chekc ob values pasen' on page 68 undefined on input line 225.
 
 [68 <./images/scalability_comparison.png>]
-<images/latency.png, id=1090, 752.8125pt x 425.33907pt>
+<images/latency.png, id=1097, 752.8125pt x 425.33907pt>
 File: images/latency.png Graphic file (type png)
 <use images/latency.png>
 Package pdftex.def Info: images/latency.png  used on input line 240.
@@ -2106,18 +2105,18 @@ Package logreq Info: Writing requests to 'ti_thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 61052 strings out of 474222
- 1387086 string characters out of 5748732
- 2644947 words of memory out of 5000000
+ 61048 strings out of 474222
+ 1387038 string characters out of 5748732
+ 2644791 words of memory out of 5000000
  81636 multiletter control sequences out of 15000+600000
- 640209 words of font info for 489 fonts, out of 8000000 for 9000
+ 639891 words of font info for 486 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  108i,12n,131p,10936b,3335s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchri8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chb8t.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7t.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7y.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr8t.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chri7m.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chri8t.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8ac.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on ti_thesis.pdf (99 pages, 25436174 bytes).
+Output written on ti_thesis.pdf (99 pages, 25436181 bytes).
 PDF statistics:
- 1727 PDF objects out of 1728 (max. 8388607)
- 1499 compressed objects within 15 object streams
+ 1735 PDF objects out of 2073 (max. 8388607)
+ 1506 compressed objects within 16 object streams
  295 named destinations out of 1000 (max. 500000)
  79141 words of extra memory for PDF output out of 89155 (max. 10000000)
 
