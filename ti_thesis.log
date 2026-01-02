@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.20)  2 JAN 2026 16:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.20)  2 JAN 2026 17:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1358,15 +1358,7 @@ Package biblatex Info: Automatic encoding selection.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'ti_thesis.bbl' found.
- (./ti_thesis.bbl
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                NOT FINAL
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-)
+ (./ti_thesis.bbl)
 Package biblatex Info: Reference section=0 on input line 33.
 Package biblatex Info: Reference segment=0 on input line 33.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -1451,14 +1443,6 @@ LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 10.59595pt on input line 1.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 21.96893pt on input line 1.
-LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
-(Font)              scaled to size 11.52008pt on input line 6.
-
-
-LaTeX Warning: Citation 'NOT FINAL' on page 3 undefined on input line 9.
-
-LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
-(Font)              scaled to size 11.52008pt on input line 9.
 ) [3{/usr/share/texlive/texmf-dist/fonts/enc/dvips/ly1/texnansi.enc}] [4
 
 
@@ -1567,7 +1551,7 @@ chapter 2.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 15.25815pt on input line 4.
 [5]
-<images/vehicle_in_the_loop_dsr+22.jpg, id=316, 248.3679pt x 204.2832pt>
+<images/vehicle_in_the_loop_dsr+22.jpg, id=314, 248.3679pt x 204.2832pt>
 File: images/vehicle_in_the_loop_dsr+22.jpg Graphic file (type jpg)
 <use images/vehicle_in_the_loop_dsr+22.jpg>
 Package pdftex.def Info: images/vehicle_in_the_loop_dsr+22.jpg  used on input line 20.
@@ -1576,7 +1560,7 @@ Package pdftex.def Info: images/vehicle_in_the_loop_dsr+22.jpg  used on input li
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [6] [7 <./images/vehicle_in_the_loop_dsr+22.jpg>]
-<images/info_mirror_model_Grieves15.png, id=355, 813.0375pt x 434.8245pt>
+<images/info_mirror_model_Grieves15.png, id=353, 813.0375pt x 434.8245pt>
 File: images/info_mirror_model_Grieves15.png Graphic file (type png)
 <use images/info_mirror_model_Grieves15.png>
 Package pdftex.def Info: images/info_mirror_model_Grieves15.png  used on input line 39.
@@ -1585,7 +1569,7 @@ Package pdftex.def Info: images/info_mirror_model_Grieves15.png  used on input l
 Underfull \vbox (badness 7273) has occurred while \output is active []
 
  [8] [9 <./images/info_mirror_model_Grieves15.png>]
-<images/reality_virtuality_continuum_wpc+23.png, id=406, 1520.079pt x 410.13225pt>
+<images/reality_virtuality_continuum_wpc+23.png, id=404, 1520.079pt x 410.13225pt>
 File: images/reality_virtuality_continuum_wpc+23.png Graphic file (type png)
 <use images/reality_virtuality_continuum_wpc+23.png>
 Package pdftex.def Info: images/reality_virtuality_continuum_wpc+23.png  used on input line 58.
@@ -1601,7 +1585,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 9.6688pt on input line 98.
  [12{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}]
-<images/vera_setup.jpg, id=469, 2055.68pt x 1818.795pt>
+<images/vera_setup.jpg, id=467, 2055.68pt x 1818.795pt>
 File: images/vera_setup.jpg Graphic file (type jpg)
 <use images/vera_setup.jpg>
 Package pdftex.def Info: images/vera_setup.jpg  used on input line 120.
@@ -1612,7 +1596,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [13]
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 12.71512pt on input line 125.
-<images/EMAROs_robot.png, id=481, 263.3037pt x 276.0714pt>
+<images/EMAROs_robot.png, id=479, 263.3037pt x 276.0714pt>
 File: images/EMAROs_robot.png Graphic file (type png)
 <use images/EMAROs_robot.png>
 Package pdftex.def Info: images/EMAROs_robot.png  used on input line 132.
@@ -1621,18 +1605,20 @@ Package pdftex.def Info: images/EMAROs_robot.png  used on input line 132.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [14 <./images/vera_setup.jpg>] [15 <./images/EMAROs_robot.png>]
-<images/point_cloud.png, id=508, 1998.86775pt x 1135.8435pt>
+<images/point_cloud.png, id=506, 1998.86775pt x 1135.8435pt>
 File: images/point_cloud.png Graphic file (type png)
 <use images/point_cloud.png>
 Package pdftex.def Info: images/point_cloud.png  used on input line 151.
 (pdftex.def)             Requested size: 273.14622pt x 155.20406pt.
-<images/arcuo.jpg, id=509, 1394.20876pt x 1428.08531pt>
+<images/arcuo.jpg, id=507, 1394.20876pt x 1428.08531pt>
 File: images/arcuo.jpg Graphic file (type jpg)
 <use images/arcuo.jpg>
 Package pdftex.def Info: images/arcuo.jpg  used on input line 157.
 (pdftex.def)             Requested size: 153.64516pt x 157.37315pt.
+LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
+(Font)              scaled to size 11.52008pt on input line 163.
  [16 <./images/point_cloud.png> <./images/arcuo.jpg>]
-<images/pygame_visualizer.png, id=535, 807.61725pt x 701.62125pt>
+<images/pygame_visualizer.png, id=534, 807.61725pt x 701.62125pt>
 File: images/pygame_visualizer.png Graphic file (type png)
 <use images/pygame_visualizer.png>
 Package pdftex.def Info: images/pygame_visualizer.png  used on input line 171.
@@ -1683,7 +1669,7 @@ Underfull \vbox (badness 2326) has occurred while \output is active []
 
  (./chapters/concept_implementation.tex
 chapter 4.
-<images/implemantion_intro.jpg, id=646, 1926.19624pt x 888.31876pt>
+<images/implemantion_intro.jpg, id=645, 1926.19624pt x 888.31876pt>
 File: images/implemantion_intro.jpg Graphic file (type jpg)
 <use images/implemantion_intro.jpg>
 Package pdftex.def Info: images/implemantion_intro.jpg  used on input line 10.
@@ -1700,7 +1686,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 44--44
  []
 
 [28] [29]
-<images/hardware_topology.png, id=692, 1003.95074pt x 1003.95074pt>
+LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
+(Font)              scaled to size 11.52008pt on input line 77.
+<images/hardware_topology.png, id=691, 1003.95074pt x 1003.95074pt>
 File: images/hardware_topology.png Graphic file (type png)
 <use images/hardware_topology.png>
 Package pdftex.def Info: images/hardware_topology.png  used on input line 86.
@@ -1986,15 +1974,15 @@ Package logreq Info: Writing requests to 'ti_thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 61049 strings out of 474222
- 1387310 string characters out of 5748732
- 2644504 words of memory out of 5000000
- 81640 multiletter control sequences out of 15000+600000
- 639891 words of font info for 486 fonts, out of 8000000 for 9000
+ 61044 strings out of 474222
+ 1387256 string characters out of 5748732
+ 2644484 words of memory out of 5000000
+ 81639 multiletter control sequences out of 15000+600000
+ 639573 words of font info for 483 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  108i,12n,131p,10936b,3335s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchri8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chb8t.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7t.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7y.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr8t.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chri7m.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chri8t.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8ac.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on ti_thesis.pdf (95 pages, 25433738 bytes).
+Output written on ti_thesis.pdf (95 pages, 25432864 bytes).
 PDF statistics:
  1728 PDF objects out of 1728 (max. 8388607)
  1503 compressed objects within 16 object streams
