@@ -9,9 +9,9 @@ This section looks at the VR and AR interfaces to assess the system’s human-ro
 
 \subsection{Virtual Reality Interface}
 \label{subsec:eval_vr}
-The VR interface meets the requirement to view the digital twin in 3D space (\hyperref[req:FR-16]{FR-16}) by placing the operator directly inside the simulated environment. The environment is rendered at a 1:1 scale, allowing for a natural perception of the robot and its surroundings. Users can move through physical walking or joystick control, with discrete rotation steps added to reduce simulation sickness.
+The VR interface meets the requirement to view the Digital Twin in 3D space (\hyperref[req:FR-16]{FR-16}) by placing the operator directly inside the simulated environment. The environment is rendered at a 1:1 scale, allowing for a natural perception of the robot and its surroundings. Users can move through physical walking or joystick control, with discrete rotation steps added to reduce simulation sickness.
 
-Interaction with the environment is facilitated by a ray-casting mechanism controlled by the VR handheld controllers, as shown in Figure~\ref{fig:vr_interface_fpv}. When the input is triggered, a visual ray projects from the controller, serving as a tool for orientation and targeting. This mechanism is mainly used for two tasks: painting on the virtual ground and setting navigation goals for the ROS 2 navigation stack.
+Interaction with the environment is facilitated by a ray-casting mechanism controlled by the VR handheld controllers, as shown in Figure~\ref{fig:vr_interface_fpv}. When the input is triggered, a visual ray projects from the controller, serving as a tool for orientation and targeting. This mechanism is mainly used for two tasks: painting on the virtual ground and setting navigation goals for the ROS~2 navigation stack.
 
 \begin{figure}[H]
     \centering
@@ -22,19 +22,19 @@ Interaction with the environment is facilitated by a ray-casting mechanism contr
 
 To support dynamic scenario modification (\hyperref[req:FR-13]{FR-13}), a storage area is located adjacent to the robot's operating field. This area contains various manipulatable objects, including boxes and cuboids in different sizes and colors. A distance grab mechanism allows the user to pick up objects from a distance by pointing the controller at the target and pressing the grip button. This action snaps the object directly to the virtual hand, so the operator does not need to crouch to retrieve items. Users can take these objects and place them into the active simulation area to create obstacles or targets. The physics engine provides realistic collision handling. The placed objects can act as physical barriers that the robot must either push or navigate around.
 
-Data visualization in VR is handled through two primary elements, as depicted in Figure~\ref{fig:vr_overview}. First, a floating status billboard is attached to the robot’s digital twin (\hyperref[req:FR-14]{FR-14}). This billboard is designed to always face the user’s camera view, making sure that telemetry data is readable from any angle. Second, a large virtual monitor is positioned behind the robot's operation area. This monitor subscribes to image topics from the ROS 2 network, such as the raw camera feed or debug output from the perception stack. Users can switch the displayed video source by pressing a specific key on the keyboard.
+Data visualization in VR is handled through two primary elements, as depicted in Figure~\ref{fig:vr_overview}. First, a floating status billboard is attached to the robot’s Digital Twin (\hyperref[req:FR-14]{FR-14}). This billboard is designed to always face the user’s camera view, making sure that telemetry data is readable from any angle. Second, a large virtual monitor is positioned behind the robot's operation area. This monitor subscribes to image topics from the ROS~2 network, such as the raw camera feed or debug output from the perception stack. Users can switch the displayed video source by pressing a specific key on the keyboard.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{images/vr_storage.png} % Placeholder filename
-    \caption{ Overview of the Virtual Reality environment. The storage area containing manipulatable objects is visible next to the robot’s play area. A large virtual monitor displays the live camera stream from the ROS 2 network.}
+    \caption{ Overview of the Virtual Reality environment. The storage area containing manipulatable objects is visible next to the robot’s play area. A large virtual monitor displays the live camera stream from the ROS~2 network.}
     \label{fig:vr_overview}
 \end{figure}
 \subsection{Augmented Reality Projection}
 
 \label{subsec:eval_ar}
 
-The AR projection meets requirement \hyperref[req:FR-15]{FR-15} by mapping the virtual environment directly onto the physical floor. This setup allows observers without VR equipment to monitor the robot’s internal status and its virtual context in real time. The projection aligns well with the physical robot, especially in the center of the tracking area. There is some drift at the outer edges due to lens distortion in the camera of the ARuco tracking system, but the accuracy is still good enough for evaluating navigation tasks.
+The AR projection meets requirement \hyperref[req:FR-15]{FR-15} by mapping the virtual environment directly onto the physical floor. This setup allows observers without VR equipment to monitor the robot’s internal status and its virtual context in real time. The projection aligns well with the physical robot, especially in the center of the tracking area. There is some drift at the outer edges due to lens distortion in the camera of the ArUco tracking system, but the accuracy is still good enough for evaluating navigation tasks.
 Like the VR interface, the AR system displays a status billboard and a video feed plane. These elements are placed at a fixed distance behind the physical robot, as shown in Figure~\ref{fig:ar_projection}, to prevent the projection from being occluded by the robot's chassis or casting shadows. To ensure the visual clarity of the physical testbed for external observers or to modify the visual scene, the system allows for the selective activation and deactivation of individual components such as the digital body of the robot, light sources, and information panels via keyboard commands (\hyperref[req:FR-18]{FR-18}).
 
 \begin{figure}[H]
@@ -48,7 +48,7 @@ Like the VR interface, the AR system displays a status billboard and a video fee
 
 To showcase the system’s flexibility, four different scenarios were created. These test cases confirmed the environmental capabilities and the logic of the robot. Additionally, the system verified that it could load these various scenarios in real time, showing it can switch environments without restarting the main application (\hyperref[req:FR-06]{FR-06}). This capability, combined with the successful integration of diverse scenario scripts, demonstrates the modularity of the architecture (\hyperref[req:NFR-03]{NFR-03}).
 
-The robotic applications interact with the environment exclusively through ROS 2 (\hyperref[req:FR-20]{FR-20}). This interface design enables the system to operate in both the \hyperref[sec:robot_representation_and_control]{RitL Mode} and the \hyperref[sec:robot_representation_and_control]{Standalone Mode} (\hyperref[req:FR-04]{FR-04}, \hyperref[req:FR-09]{FR-09}). Time synchronization is maintained via the \texttt{/clock} topic (\hyperref[req:FR-05]{FR-05}). During hardware operation, the digital twin continuously mirrors the physical robot to ensure spatial consistency (\hyperref[req:FR-07]{FR-07}, \hyperref[req:FR-10]{FR-10}). Furthermore, a safety watchdog halts the robot if it leaves the designated tracking area (\hyperref[req:FR-08]{FR-08}).
+The robotic applications interact with the environment exclusively through ROS~2 (\hyperref[req:FR-20]{FR-20}). This interface design enables the system to operate in both the \hyperref[sec:robot_representation_and_control]{RitL Mode} and the \hyperref[sec:robot_representation_and_control]{Standalone Mode} (\hyperref[req:FR-04]{FR-04}, \hyperref[req:FR-09]{FR-09}). Time synchronization is maintained via the \texttt{/clock} topic (\hyperref[req:FR-05]{FR-05}). During hardware operation, the Digital Twin continuously mirrors the physical robot to ensure spatial consistency (\hyperref[req:FR-07]{FR-07}, \hyperref[req:FR-10]{FR-10}). Furthermore, a safety watchdog halts the robot if it leaves the designated tracking area (\hyperref[req:FR-08]{FR-08}).
 
 \subsection{Application 1: Interactive Path Following}
 \label{subsec:eval_path_following}
@@ -69,11 +69,11 @@ The robotic application exhibited robust performance during the evaluation. The 
 \subsection{Application 2: Arcade Game}
 \label{subsec:eval_pong}
 
-The Pong scenario, shown in Figure~\ref{fig:pong_scenario}, evaluates dynamic interactions between the physical robot and virtual physics objects. The robot acts as a paddle in a simulated arcade game. A \texttt{PaddlePlank} script on the digital twin model creates a kinematic collider that reflects the physical movement and deflects the virtual ball. To maintain consistent physics (\hyperref[req:FR-02]{FR-02}), the system detects collisions using PhysX but calculates the ball's reflection vector separately from the physics engine. This prevents energy loss from simulated friction through the PhysX engine and keeps the ball's speed constant.
+The Pong scenario, shown in Figure~\ref{fig:pong_scenario}, evaluates dynamic interactions between the physical robot and virtual physics objects. The robot acts as a paddle in a simulated arcade game. A \texttt{PaddlePlank} script on the Digital Twin model creates a kinematic collider that reflects the physical movement and deflects the virtual ball. To maintain consistent physics (\hyperref[req:FR-02]{FR-02}), the system detects collisions using PhysX but calculates the ball's reflection vector separately from the physics engine. This prevents energy loss from simulated friction through the PhysX engine and keeps the ball's speed constant.
 
 The human operator acts as the high-level planner for this application. By observing the virtual ball's path in VR or AR, the operator sets navigation goals through the \texttt{NavigationGoalController} to position the robot for interception (\hyperref[req:FR-17]{FR-17}).
 
-The integration of the navigation stack proved effective for steering the robot and the interception task. The robot consistently reached its set goals, and the virtual paddle on the digital twin deflected the ball, showing realistic collisions behavior (\hyperref[req:FR-13]{FR-13}).
+The integration of the navigation stack proved effective for steering the robot and the interception task. The robot consistently reached its set goals, and the virtual paddle on the Digital Twin deflected the ball, showing realistic collisions behavior (\hyperref[req:FR-13]{FR-13}).
 
 \begin{figure}[H]
     \centering
@@ -116,7 +116,7 @@ The application demonstrated high reliability in field boundary detection. The p
 \end{figure}
 
 \section{Hardware and System Specifications}
-The performance of the Mixed Reality simulation relies heavily on the hardware. It must handle physics calculations, ROS 2 communication, and stereoscopic rendering at once. The benchmarks for this thesis were done on a desktop workstation, while the original VERA framework by Gehricke~\cite{Geh24} was measured on a laptop. The different hardware configurations are shown in Table~\ref{tab:hardware_specs}.
+The performance of the Mixed Reality simulation relies heavily on the hardware. It must handle physics calculations, ROS~2 communication, and stereoscopic rendering at once. The benchmarks for this thesis were done on a desktop workstation, while the original VERA framework by Gehricke~\cite{Geh24} was measured on a laptop. The different hardware configurations are shown in Table~\ref{tab:hardware_specs}.
 
 \begin{table}[H]
     \centering
@@ -150,7 +150,7 @@ This data provides the primary validation for the frame rate requirement \hyperr
 
 The data shows that the system works efficiently in all scenarios. The total active CPU time, which includes physics, rendering, and script execution, averages between 2.7 ms and 3.8 ms. It’s important to note that while the VR hardware operates at a fixed 72 Hz refresh rate, needing a frame every 13.88 ms, the software finishes its calculations in less than 4 ms. This means the CPU remains idle for about $\approx$10 ms of each frame interval, waiting for the vertical synchronization (V-Sync) signal\cite{lavalle2023virtual}. This extra computational capacity proves that the system can manage more complex logic or additional sensor processing without dropping below the hardware's native frame rate.
 
-Script execution takes up the largest share of the active frame time, ranging from 2.5 ms in the \hyperref[subsec:eval_path_following]{Paint} scenario to over 3.5 ms in the \hyperref[subsec:eval_farming]{Farm} scenario. This processing load stems from the C\# logic responsible for ROS 2 serialization, message handling, and state management (\hyperref[req:FR-04]{FR-04}). Notably, in the \hyperref[subsec:eval_pong]{Pong} and \hyperref[subsec:eval_farming]{Farm} scenarios, the Digital Twin mode demonstrates shows slightly higher execution times (e.g., 3.55 ms versus 3.35 ms in Farm) than the Virtual Mode. This finding suggests that the overhead for synchronizing the digital twin with the pose tracking system (\hyperref[req:FR-07]{FR-07}) is computationally comparable to executing the physics-based motion control of the virtual robot.
+Script execution takes up the largest share of the active frame time, ranging from 2.5 ms in the \hyperref[subsec:eval_path_following]{Paint} scenario to over 3.5 ms in the \hyperref[subsec:eval_farming]{Farm} scenario. This processing load stems from the C\# logic responsible for ROS~2 serialization, message handling, and state management (\hyperref[req:FR-04]{FR-04}). Notably, in the \hyperref[subsec:eval_pong]{Pong} and \hyperref[subsec:eval_farming]{Farm} scenarios, the Digital Twin mode demonstrates slightly higher execution times (e.g., 3.55 ms versus 3.35 ms in Farm) than the Virtual Mode. This finding suggests that the overhead for synchronizing the Digital Twin with the pose tracking system (\hyperref[req:FR-07]{FR-07}) is computationally comparable to executing the physics-based motion control of the virtual robot.
 
 \begin{table}[H]
     \centering
@@ -201,11 +201,11 @@ It is important to mention that Deep Profiling adds extra overhead, significantl
     \end{tabular}
 \end{table}
 
-As summarized in Table~\ref{tab:script_impact}, the analysis identifies the image processing pipeline required for \hyperref[req:FR-11]{FR-11} Sensor Simulation and \hyperref[req:FR-15]{FR-15} AR Projection as the most demanding subsystem. The \texttt{CameraSensor.Update} method accounts for the majority of the script execution time. This cost is attributed to the \texttt{Texture2D.ReadPixels} operation, which transfers the rendered frame from the GPU to the CPU memory for serialization into a ROS 2 message. Similarly, the \texttt{RosImageToMaterial.Update}, which performs the inverse operation of uploading received textures to the GPU for AR projection, represents the second-largest cost.
+As summarized in Table~\ref{tab:script_impact}, the analysis identifies the image processing pipeline required for \hyperref[req:FR-11]{FR-11} Sensor Simulation and \hyperref[req:FR-15]{FR-15} AR Projection as the most demanding subsystem. The \texttt{CameraSensor.Update} method accounts for the majority of the script execution time. This cost is attributed to the \texttt{Texture2D.ReadPixels} operation, which transfers the rendered frame from the GPU to the CPU memory for serialization into a ROS~2 message. Similarly, the \texttt{RosImageToMaterial.Update}, which performs the inverse operation of uploading received textures to the GPU for AR projection, represents the second-largest cost.
 
 In contrast, the robotic logic and environmental interaction scripts showed a minimal computational footprint. The components detailed in Chapter \ref{ch:concept_and_implementation}, including the \texttt{LidarSensor} for raycasting, \texttt{TrackPainter} for texture modification, \texttt{ClockPublisher} for time sync, and \texttt{DynamicObjectManager}, all recorded execution times below 0.05 ms even under deep profiling instrumentation. 
 
-For example, the \texttt{PoseRobotController}, which handles the synchronization of the digital twin's transform, consumed only 0.59 ms in the physics loop. This confirms that the architectural bottleneck of the system lies entirely in the memory bandwidth required for video streaming, while the core simulation logic, physics interactions, and ROS~2 state synchronization are more efficient.
+For example, the \texttt{PoseRobotController}, which handles the synchronization of the Digital Twin's transform, consumed only 0.59 ms in the physics loop. This confirms that the architectural bottleneck of the system lies entirely in the memory bandwidth required for video streaming, while the core simulation logic, physics interactions, and ROS~2 state synchronization are more efficient.
 
 \section{Scalability and Stress Testing}
 \label{sec:scalability}

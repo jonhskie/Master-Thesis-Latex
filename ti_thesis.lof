@@ -12,7 +12,7 @@
 \contentsline {figure}{\numberline {2.9}{\ignorespaces Original VERA visualization via Pygame, showing a projection of the robot's path and virtual obstacles onto the floor.~\blx@tocontentsinit {0}\cite {Geh24}}}{17}{figure.2.9}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces The Mixed Reality Environment in operation. The physical robot interacts with a projected Smart Farming scenario, where the robot and the digital twin are synchronized via ROS~2.}}{27}{figure.4.1}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces The Mixed Reality Environment in operation. The physical robot interacts with a projected Smart Farming scenario, where the robot and the Digital Twin are synchronized via ROS~2.}}{27}{figure.4.1}%
 \contentsline {figure}{\numberline {4.2}{\ignorespaces The Hardware and Software Topology of the Mixed Reality Environment.}}{31}{figure.4.2}%
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Software Component Architecture. Unity scripts act as ROS~2 nodes, publishing sensor data and subscribing to control commands using ROS~2 topics.}}{33}{figure.4.3}%
 \contentsline {figure}{\numberline {4.4}{\ignorespaces The robot attachment logic. (a) The robot approaches the target object.\\ (b) The object is kinematically coupled to the robot chassis.}}{37}{figure.4.4}%
@@ -25,7 +25,7 @@
 \contentsline {figure}{\numberline {4.11}{\ignorespaces Debug views of the Smart Farming application. (a) The processor identifies the boundary between the field and the white floor. (b) The robot follows the edge. The green line represents the detected edge used for navigation, while the red dot indicates the centroid used to compute the lateral and angular errors displayed in the overlay.}}{51}{figure.4.11}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces First-person view of the VR interface. The user places objects in the virtual environment and utilizes a ray-cast from the controller to paint on the virtual ground.}}{56}{figure.5.1}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Overview of the Virtual Reality environment. The storage area containing manipulatable objects is visible next to the robot’s play area. A large virtual monitor displays the live camera stream from the ROS 2 network.}}{57}{figure.5.2}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Overview of the Virtual Reality environment. The storage area containing manipulatable objects is visible next to the robot’s play area. A large virtual monitor displays the live camera stream from the ROS~2 network.}}{57}{figure.5.2}%
 \contentsline {figure}{\numberline {5.3}{\ignorespaces The Augmented Reality projection in the physical laboratory. The system projects the virtual environment, the status billboard, and the live camera feed onto the floor, following the movement of the physical EMAROs robot.}}{58}{figure.5.3}%
 \contentsline {figure}{\numberline {5.4}{\ignorespaces Augmented Reality projection of the Paint scenario. The physical EMAROs robot follows a red path drawn by the user.}}{59}{figure.5.4}%
 \contentsline {figure}{\numberline {5.5}{\ignorespaces Overview of the Pong scenario. The user steers the EMAROs robot to reflect the virtual ball via the navigation stack.}}{60}{figure.5.5}%
