@@ -376,7 +376,7 @@ The application employs the modular \texttt{perception\_node.py}, switching betw
 
 To assist in debugging, the perception node publishes an annotated video stream (Figure~\ref{fig:logistics_debug}). In this example, the system draws bounding contours around valid targets and overlays classification labels (e.g., \texttt{RED BOX}) and the active search status directly onto the feed.
 
-\begin{figure}[H]
+\begin{figure}[htbp]
     \centering
     % Left Image (Detached)
     \begin{minipage}{0.49\textwidth}
@@ -422,7 +422,7 @@ The application utilizes four distinct perception processors depending on the ac
 
 A debug stream visualizes these detections on the \texttt{/perception/debug\_image} topic. For example, in Figure~\ref{fig:farm_debug}, it overlays the ROI and the regression line (green) onto the camera feed to visualize the tracking performance.
 
-\begin{figure}[H]
+\begin{figure}[htbp]
     \centering
     % Left Image (Detached)
     \begin{minipage}{0.49\textwidth}
