@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.20)  2 JAN 2026 17:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.20)  2 JAN 2026 19:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1706,31 +1706,31 @@ LaTeX Font Info:    Font shape `T1/cmtt/m/n' will be
 <images/software_architecture.png, id=721, 1243.64626pt x 1037.0745pt>
 File: images/software_architecture.png Graphic file (type png)
 <use images/software_architecture.png>
-Package pdftex.def Info: images/software_architecture.png  used on input line 123.
+Package pdftex.def Info: images/software_architecture.png  used on input line 122.
 (pdftex.def)             Requested size: 426.7914pt x 355.89215pt.
  [32] [33 <./images/software_architecture.png>] [34] [35]
 <images/Detached.png, id=759, 794.97pt x 993.7125pt>
 File: images/Detached.png Graphic file (type png)
 <use images/Detached.png>
-Package pdftex.def Info: images/Detached.png  used on input line 185.
+Package pdftex.def Info: images/Detached.png  used on input line 184.
 (pdftex.def)             Requested size: 209.13013pt x 261.40688pt.
 <images/Attached.png, id=760, 799.48688pt x 998.9822pt>
 File: images/Attached.png Graphic file (type png)
 <use images/Attached.png>
-Package pdftex.def Info: images/Attached.png  used on input line 193.
+Package pdftex.def Info: images/Attached.png  used on input line 192.
 (pdftex.def)             Requested size: 209.13013pt x 261.2993pt.
 Class scrbook Info: Workaround for not recommended usage of \\ or
-(scrbook)           \newlinein caption text  on input line 197.
+(scrbook)           \newlinein caption text  on input line 196.
  [36] [37 <./images/Detached.png> <./images/Attached.png>]
 <images/texture_painting.png, id=775, 2049.15562pt x 1241.38782pt>
 File: images/texture_painting.png Graphic file (type png)
 <use images/texture_painting.png>
-Package pdftex.def Info: images/texture_painting.png  used on input line 208.
+Package pdftex.def Info: images/texture_painting.png  used on input line 207.
 (pdftex.def)             Requested size: 341.43442pt x 206.828pt.
 <images/lidar_raycast.png, id=778, 2048.40282pt x 1182.66844pt>
 File: images/lidar_raycast.png Graphic file (type png)
 <use images/lidar_raycast.png>
-Package pdftex.def Info: images/lidar_raycast.png  used on input line 222.
+Package pdftex.def Info: images/lidar_raycast.png  used on input line 221.
 (pdftex.def)             Requested size: 341.43442pt x 197.11694pt.
  [38 <./images/texture_painting.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1739,17 +1739,17 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 <images/projection_mapping.png, id=805, 1121.3895pt x 408.92775pt>
 File: images/projection_mapping.png Graphic file (type png)
 <use images/projection_mapping.png>
-Package pdftex.def Info: images/projection_mapping.png  used on input line 264.
+Package pdftex.def Info: images/projection_mapping.png  used on input line 262.
 (pdftex.def)             Requested size: 384.10965pt x 140.06938pt.
  [41 <./images/projection_mapping.png>]
-Overfull \hbox (9.46991pt too wide) in paragraph at lines 274--275
+Overfull \hbox (9.46991pt too wide) in paragraph at lines 272--273
 \T1/mdbch/m/n/12 (-20) the screen-space co-or-di-nates of the robot's an-chor us-ing \T1/cmtt/m/n/12 Camera.WorldToScreenPoint
  []
 
 <images/BillBoard_Camera_Projection.png, id=815, 1101.36469pt x 823.57687pt>
 File: images/BillBoard_Camera_Projection.png Graphic file (type png)
 <use images/BillBoard_Camera_Projection.png>
-Package pdftex.def Info: images/BillBoard_Camera_Projection.png  used on input line 288.
+Package pdftex.def Info: images/BillBoard_Camera_Projection.png  used on input line 286.
 (pdftex.def)             Requested size: 341.43442pt x 255.31876pt.
 
 Underfull \vbox (badness 2529) has occurred while \output is active []
@@ -1758,18 +1758,18 @@ Underfull \vbox (badness 2529) has occurred while \output is active []
 <images/line_follower_debug.png, id=856, 1509.38907pt x 1132.98282pt>
 File: images/line_follower_debug.png Graphic file (type png)
 <use images/line_follower_debug.png>
-Package pdftex.def Info: images/line_follower_debug.png  used on input line 356.
+Package pdftex.def Info: images/line_follower_debug.png  used on input line 354.
 (pdftex.def)             Requested size: 256.07744pt x 192.20691pt.
  [46] [47 <./images/line_follower_debug.png>]
 <images/logistics_debug.png, id=876, 1249.66875pt x 934.99312pt>
 File: images/logistics_debug.png Graphic file (type png)
 <use images/logistics_debug.png>
-Package pdftex.def Info: images/logistics_debug.png  used on input line 386.
+Package pdftex.def Info: images/logistics_debug.png  used on input line 384.
 (pdftex.def)             Requested size: 209.13013pt x 156.4643pt.
 <images/logistics_debug_1.png, id=877, 1250.42157pt x 937.25156pt>
 File: images/logistics_debug_1.png Graphic file (type png)
 <use images/logistics_debug_1.png>
-Package pdftex.def Info: images/logistics_debug_1.png  used on input line 394.
+Package pdftex.def Info: images/logistics_debug_1.png  used on input line 392.
 (pdftex.def)             Requested size: 209.13013pt x 156.74211pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1778,15 +1778,15 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 <images/debug_view_edge_following_1.png, id=901, 953.06062pt x 712.91344pt>
 File: images/debug_view_edge_following_1.png Graphic file (type png)
 <use images/debug_view_edge_following_1.png>
-Package pdftex.def Info: images/debug_view_edge_following_1.png  used on input line 432.
+Package pdftex.def Info: images/debug_view_edge_following_1.png  used on input line 430.
 (pdftex.def)             Requested size: 209.13013pt x 156.42807pt.
 <images/debug_view_edge_following.png, id=902, 1557.56906pt x 1170.62344pt>
 File: images/debug_view_edge_following.png Graphic file (type png)
 <use images/debug_view_edge_following.png>
-Package pdftex.def Info: images/debug_view_edge_following.png  used on input line 440.
+Package pdftex.def Info: images/debug_view_edge_following.png  used on input line 438.
 (pdftex.def)             Requested size: 209.13013pt x 157.16995pt.
  [50]
-Overfull \hbox (0.46489pt too wide) in paragraph at lines 454--455
+Overfull \hbox (0.46489pt too wide) in paragraph at lines 452--453
 []\T1/mdbch/b/n/12 (-20) AdjustToEdge: \T1/mdbch/m/n/12 (-20) The robot ro-tates in place un-til the \T1/cmtt/m/n/12 EdgeAdjustmentProcessor
  []
 
@@ -1848,9 +1848,6 @@ File: images/smart_farming_ar.jpg Graphic file (type jpg)
 <use images/smart_farming_ar.jpg>
 Package pdftex.def Info: images/smart_farming_ar.jpg  used on input line 113.
 (pdftex.def)             Requested size: 341.43442pt x 174.17421pt.
-
-Underfull \vbox (badness 2134) has occurred while \output is active []
-
  [63 <./images/smart_farming_ar.jpg>]
 <images/compinente break down.png, id=1041, 903.375pt x 526.96875pt>
 File: images/compinente break down.png Graphic file (type png)
@@ -1861,7 +1858,7 @@ Package pdftex.def Info: images/compinente break down.png  used on input line 14
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [64]
-Overfull \hbox (5.27571pt too wide) in paragraph at lines 159--176
+Overfull \hbox (28.42772pt too wide) in paragraph at lines 159--176
  [][] 
  []
 
@@ -1873,12 +1870,7 @@ Overfull \hbox (23.85687pt too wide) in paragraph at lines 191--202
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [66]
-Overfull \hbox (14.57109pt too wide) in paragraph at lines 206--207
-\T1/cmtt/m/n/12 LidarSensor \T1/mdbch/m/n/12 (-20) for ray-cast-ing, \T1/cmtt/m/n/12 TrackPainter \T1/mdbch/m/n/12 (-20) for tex-ture mod-i-fi-ca-tion, \T1/cmtt/m/n/12 ClockPublisher
- []
-
-[67]
+ [66] [67]
 <images/scalability_comparison.png, id=1085, 1204.5pt x 702.625pt>
 File: images/scalability_comparison.png Graphic file (type png)
 <use images/scalability_comparison.png>
@@ -1976,16 +1968,16 @@ Package logreq Info: Writing requests to 'ti_thesis.run.xml'.
 Here is how much of TeX's memory you used:
  61044 strings out of 474222
  1387256 string characters out of 5748732
- 2644484 words of memory out of 5000000
+ 2644490 words of memory out of 5000000
  81639 multiletter control sequences out of 15000+600000
  639573 words of font info for 483 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  108i,12n,131p,10936b,3335s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchri8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chb8t.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7t.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr7y.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chr8t.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chri7m.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chri8t.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8ac.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on ti_thesis.pdf (95 pages, 25433011 bytes).
+Output written on ti_thesis.pdf (95 pages, 25432945 bytes).
 PDF statistics:
- 1728 PDF objects out of 1728 (max. 8388607)
- 1503 compressed objects within 16 object streams
+ 1729 PDF objects out of 2073 (max. 8388607)
+ 1504 compressed objects within 16 object streams
  292 named destinations out of 1000 (max. 500000)
  79141 words of extra memory for PDF output out of 89155 (max. 10000000)
 

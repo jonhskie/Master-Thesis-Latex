@@ -14,13 +14,13 @@ The central concept of this environment is the projection of a simulated world d
 
 To enable these applications, the system integrates several key functions into an architecture to realize the Mixed Reality Environment. First, it maintains a Digital Twin of the robot. This Digital Twin is synchronized with the movement of the physical hardware but can interact with the simulation's physics engine. This allows for complex actions, such as pushing virtual boxes or colliding with moving objects. This ensures that the simulation responds realistically to the robot's physical presence rather than serving as a static background.
 
-In addition to maintaining a Digital Twin, the system also simulates sensors for the robot. It generates virtual LiDAR scans and camera images from the robot's perspective, allowing robotic applications to receive virtual sensor data. This enables thorough testing of navigation and vision algorithms within the mixed reality environment.
+In addition, the system simulates sensors for the robot. It generates virtual LiDAR scans and camera images from the robot's perspective, allowing robotic applications to receive virtual sensor data. This enables thorough testing of navigation and vision algorithms within the Mixed Reality Environment.
 
 The architecture uses ROS~2~\cite{MFG22} as the primary communication backbone. By integrating ROS~2 nodes directly into the simulation engine, the virtual environment acts as a first-party participant in the robot's network. It manages time synchronization to prevent timing-related errors, handles the loading of different scenarios and provides two-way exchange of status data and control commands.
 
 Besides sensor simulation, the environment also supports real-time diagnostic feedback. The system functions as a monitoring tool by projecting the robot's internal operating data back onto the physical workspace and the VR interface. Performance metrics, such as temperature, Random Access Memory (RAM) usage, and location coordinates, are shown on information panels attached to the Digital Twin in the 3D environment. Moreover, the system shows the robot's live camera feed within the virtual scene. This allows operators to observe the robot's physical behavior alongside its internal status and visual perception in real time.
 
-The platform provides an adaptable and scalable testing solution by integrating physics, sensor simulation, and autonomous control logic into a synchronized mixed reality environment. The only factor limiting the test environment's complexity is software, not its physical design. The technological decisions, system architecture, and particular implementation of these elements will be covered in detail in the sections that follow.
+The platform provides an adaptable and scalable testing solution by integrating physics, sensor simulation, and autonomous control logic into a synchronized Mixed Reality Environment. The only factor limiting the test environment's complexity is software, not its physical design. The technological decisions, system architecture, and particular implementation of these elements will be covered in detail in the sections that follow.
 
 \section{Comparative Analysis}
 The simulation engines that were considered as candidates to implement the Mixed Reality Environment are: Gazebo~\cite{Gazebo}, Isaac Sim~\cite{IsaacSim}, Unreal Engine~\cite{unrealengine}, and Unity~\cite{Uni23}. All were evaluated based on five critical criteria: visual fidelity, physics capabilities, learning curve, community support, and native integration with VR, AR, and ROS~2. Table~\ref{tab:sim_comparison} summarizes the results of this evaluation.
@@ -76,7 +76,7 @@ To ensure high performance and support for specific hardware peripherals, the sy
     
     \item \textbf{Control Environment (WSL 2):} The computationally intensive robotic software runs on Ubuntu 24.04 within the Windows Subsystem for Linux (WSL) on the same workstation. This isolation allows the \textit{Nav2 Stack}, \textit{Robotic Applications Logic} and the \textit{ArUco Tracking System} to run in a native Linux environment while communicating with the Windows host via a low-latency Localhost connection.
     
-    \item \textbf{Physical Robot (EMAROs):} The mobile robot\cite{EMAROs_Ref} operates as an independent node running Ubuntu 24.04 and ROS~2~Jazzy Jalisco. The onboard software is launched by the \texttt{emaros\_launch} package, which manages hardware drivers for motor controllers and sensors. It connects to the system wirelessly via Wi-Fi.
+    \item \textbf{Physical Robot (EMAROs):} The mobile robot~\cite{EMAROs_Ref} operates as an independent node running Ubuntu 24.04 and ROS~2~Jazzy Jalisco. The onboard software is launched by the \texttt{emaros\_launch} package, which manages hardware drivers for motor controllers and sensors. It connects to the system wirelessly via Wi-Fi.
 
     \item \textbf{VR Interface (Meta Quest Pro):} The VR headset functions as a standalone client running Meta Horizon OS. It executes the ALVR Client~\cite{ALVR_Github} application, which is responsible for decoding the incoming video stream and handling spatial input.
 \end{enumerate}
@@ -112,11 +112,10 @@ The functionality of the Digital Twin is driven by such scripts that interact wi
     \item \textbf{Rendering Loop (\texttt{Update}):} This method runs once every frame. It is utilized for logic that is not physics-related, like updating UI elements, rendering diagnostic lines, or capturing camera frames for visualization. This separation ensures that high-frequency visual updates do not interfere with the stability of the physics engine.
 \end{itemize}
 
-Figure~\ref{fig:software_architecture} provides an overview of how these Unity scripts interact with the external ROS~2 nodes via topics. Detailed descriptions of these components follow in Sections \hyperref[sec:robot_representation_and_control]{4.3.} and \hyperref[sec:environmental_simulation_capabilities]{4.4.}
+Figure~\ref{fig:software_architecture} provides an overview of how these Unity scripts interact with the external ROS~2 nodes via topics. Detailed descriptions of these components follow in Sections~\ref{sec:robot_representation_and_control} and~\ref{sec:environmental_simulation_capabilities}.
 
 \begin{figure}[H]
     \centering
-    % TODO: Create a diagram showing:
     % Left side: Unity Components (LidarSensor, CameraSensor, VirtualRobotController).
     % Middle: Arrows representing ROS Topics (/scan, /camera/image, /cmd_vel).
     % Right side: ROS Nodes (Nav2 Stack, Perception Node, Mission State Machine).
@@ -141,7 +140,7 @@ To ensure consistency, a \texttt{RosTimeHelper.cs} utility is used by all ROS~2 
 The robot in the Mixed Reality Environment runs in one of two modes: either as a completely simulated virtual robot or as a synchronized Digital Twin of the physical EMAROs~\cite{EMAROs_Ref} platform. To ensure consistency, both of these modes use the same visual and geometric model. This model is a simple cylinder that approximates the physical size of the robot for collision detection while keeping computational costs low. The behavior of this cylinder depends on the active control script, allowing the system to switch between physics-based simulation and position-based synchronization based on the requirements of the test. To select the desired mode, the user can enable in the Unity Editor either the model of the Digital Twin or the purely virtual robot.
 
 \subsection{The Purely Virtual Robot}
-In the standalone simulation mode, the robot is controlled by the \texttt{Virtual\-Robot\-Controller.cs} (\hyperref[req:FR-09]{FR-09}). This component allows for the validation of high-level control logic in a safe environment before it is deployed on real hardware. Unlike simulations that teleport a robot to a target point, this implementation uses the Unity physics engine PhysX to simulate realistic movement.
+In the Standalone Mode, the robot is controlled by the \texttt{Virtual\-Robot\-Controller.cs} (\hyperref[req:FR-09]{FR-09}). This component allows for the validation of high-level control logic in a safe environment before it is deployed on real hardware. Unlike simulations that teleport a robot to a target point, this implementation uses the Unity physics engine PhysX to simulate realistic movement.
 
 The controller acts as a ROS~2 node that accepts velocity commands (\texttt{cmd\_vel}) and publishes odometry data. To handle data exchange between the asynchronous ROS~2 thread and the Unity main thread, incoming commands are buffered in a thread-safe \texttt{ConcurrentQueue}. During the physics step of Unity (\texttt{FixedUpdate}), the controller retrieves the latest command and applies it to the \texttt{Rigidbody} of the robot.
 
@@ -150,18 +149,18 @@ The script does not directly change the position of the robot. Instead, it modif
 Simultaneously, the controller provides ground truth data. It tracks the movement of the robot in Unity, converts the coordinates to the ROS~2 standard~\cite{MFG22} and publishes a timestamped odometry and tf messages (\hyperref[req:FR-10]{FR-10}). This closes the control loop for the external navigation logic.
 
 \subsection{The Digital Twin Implementation}
-When operating in RitL mode, the \texttt{PoseRobotController.cs} takes control. In this configuration, the virtual robot stops acting as a dynamic entity and instead becomes a Digital Twin of the real EMAROs~\cite{EMAROs_Ref} robot (\hyperref[req:FR-07]{FR-07}).
+When operating in RitL Mode, the \texttt{PoseRobotController.cs} takes control. In this configuration, the virtual robot stops acting as a dynamic entity and instead becomes a Digital Twin of the real EMAROs~\cite{EMAROs_Ref} robot (\hyperref[req:FR-07]{FR-07}).
 
 The controller listens to a pose topic given by the external ArUco tracking~\cite{JuliaBA} to move the Digital Twin. The incoming pose is provided in pixel coordinates from the tracking camera. It must be mapped onto the defined virtual area. On every new incoming pose, the script converts the pixel coordinates into Unity world space. To ensure alignment, an offset parameter enables the operator to perform a calibration of the Digital Twin so that its center is aligned with the physical mounting position of the tracking marker. The script republishes the synchronized pose as odometry and tf messages (\hyperref[req:FR-10]{FR-10}).
 
 Unlike the purely virtual robot, the Digital Twin overrides the physics engine. It is set to a kinematic state, meaning it is immune to virtual forces. If the physical robot moves, the Digital Twin moves with it, ignoring virtual barriers. This allows the physical robot to push virtual objects with absolute force. This way, the state of the virtual world always reflects physical reality.
 
 \subsection{Safety and Failsafe Mechanisms}
-A major challenge in mixed reality testing is signal latency or loss. If the physical robot leaves the tracking area or if the ArUco marker is blocked, position updates will stop. Without a failsafe, the Digital Twin would freeze while the physical robot continues to move blindly, causing a mismatch between reality and simulation.
+A major challenge in Mixed Reality testing is signal latency or loss. If the physical robot leaves the tracking area or if the ArUco marker is blocked, position updates will stop. Without a failsafe, the Digital Twin would freeze while the physical robot continues to move blindly, causing a mismatch between reality and simulation.
 
-To prevent this, the \texttt{PoseRobotController.cs} implements a safety watchdog  (\hyperref[req:FR-08]{FR-08}). The system continuously checks how long it has been since receiving the last pose update. If this delay exceeds a given safety limit, the system assumes tracking has been lost.
+To prevent this, the \texttt{PoseRobotController.cs} implements a safety watchdog (\hyperref[req:FR-08]{FR-08}). The system continuously checks how long it has been since receiving the last pose update. If this delay exceeds a given safety limit, the system assumes tracking has been lost.
 
-When this occurs, the controller marks the tracking state as invalid. Although the Digital Twin will stop moving in the simulation, the physical Robot might continue moving. For this reason, the system is designed to send a stop command over the \texttt{cmd\_vel} topic to the motors of the physical robot. This ensures the robot does not perform actions without simulation guidance. Once the tracking system re-acquires the robot, the watchdog resets and the Digital Twin resumes synchronization immediately.
+When this occurs, the controller marks the tracking state as invalid. Although the Digital Twin will stop moving in the simulation, the physical robot might continue moving. For this reason, the system is designed to send a stop command over the \texttt{cmd\_vel} topic to the motors of the physical robot. This ensures the robot does not perform actions without simulation guidance. Once the tracking system re-acquires the robot, the watchdog resets and the Digital Twin resumes synchronization immediately.
 
 \section{Environmental Simulation Capabilities}
 \label{sec:environmental_simulation_capabilities}
@@ -201,7 +200,7 @@ At the same time, the controller disables collisions between the robot and the t
 \subsection{Surface Modification}
 To fulfill the requirement for dynamic environment interaction regarding surface textures (\hyperref[req:FR-13]{FR-13}), the system implements a modification mechanism. 
 
-The modification logic relies on physics raycasting to identify the coordinates of the surface at the point of contact. When a valid hit is detected on the target surface, the \texttt{TrackPainter.cs}, which is attached to the robot model, calculates the pixel coordinates on the texture map. It then modifies the pixel buffer directly using \texttt{SetPixels32}, allowing the robot to paint on the ground as visible in Figure~\ref{fig:texture_painting}, changing the color to a configured color and thickness. These changes are committed to the GPU using the \texttt{Apply} method. In complex scenarios, multiple robotic applications (e.g., the robot, a VR controller, or a mouse interface) may attempt to modify the terrain simultaneously. To manage this, the \texttt{SharedPaintTextureRegistry.cs} functions as a singleton manager. It maintains a dictionary of active textures and guarantees that all painters operate on a single, shared instance of the \texttt{Texture2D}. This prevents race conditions where one application or user overwrites the work of another and guarantees data consistency across the simulation.
+The modification logic relies on physics raycasting to identify the coordinates of the surface at the point of contact. When a valid hit is detected on the target surface, the \texttt{TrackPainter.cs}, which is attached to the robot model, calculates the pixel coordinates on the texture map. It then modifies the pixel buffer directly using \texttt{SetPixels32}, allowing the robot to paint on the ground, as visible in Figure~\ref{fig:texture_painting}. This operation changes the color to a configured color and thickness. These changes are committed to the GPU using the \texttt{Apply} method. In complex scenarios, multiple robotic applications (e.g., the robot, a VR controller, or a mouse interface) may attempt to modify the terrain simultaneously. To manage this, the \texttt{SharedPaintTextureRegistry.cs} functions as a singleton manager. It maintains a dictionary of active textures and guarantees that all painters operate on a single, shared instance of the \texttt{Texture2D}. This prevents race conditions where one application or user overwrites the work of another and guarantees data consistency across the simulation.
 
 \begin{figure}[H]
     \centering
@@ -260,7 +259,6 @@ The camera is positioned at a fixed height looking downward. The alignment with 
 
 \begin{figure}[H]
     \centering
-    % TODO: Replace with the actual schematic image file
     \includegraphics[width=0.9\textwidth]{images/projection_mapping.png} 
     \caption{Schematic of the Environment Projection logic. The Unity Orthographic Camera (left) is calibrated such that its \texttt{orthographicSize} corresponds exactly to half the physical height of the projection area on the laboratory floor (right), ensuring a 1:1 metric scale.}
     \label{fig:projection_mapping}
@@ -277,7 +275,7 @@ In contrast, screen-space rendering is unsuitable for Virtual Reality due to dep
 
 \subsection{Sensor Data Projection}
 \label{subsec:sensor_data_projection}
-To integrate the robot's visual perception directly into the mixed reality workspace, the system utilizes the \texttt{RosImageToMaterial.cs} component to project sensor streams into the environment.
+To integrate the robot's visual perception directly into the Mixed Reality workspace, the system utilizes the \texttt{RosImageToMaterial.cs} component to project sensor streams into the environment.
 
 This component subscribes to ROS~2 camera topics. Upon receiving a frame, it decodes the data into a Unity \texttt{Texture2D} and applies it to a material on a planar mesh attached to the model of the robot.
 
@@ -301,7 +299,7 @@ To support dynamic scenarios like Line Following, the user must be able to alter
 
 Beyond painting, the VR interface leverages the physics engine to allow direct object manipulation. Users can grab and move interactive objects using the VR controller's grip function. This allows for the manual reset of test scenarios or the introduction of dynamic obstacles (e.g., dropping a box in the robot's path) to validate the system's reactive planning capabilities.
 
-In complex mixed reality scenarios, the density of visual information can become overwhelming. To manage this, the \texttt{VisibilityToggleManager.cs} (\hyperref[req:FR-18]{FR-18}) allows users to selectively hide or reveal specific visualization aids attached to the robot. This component maps input actions to the rendering state of objects such as the \texttt{RobotInfoBillboard.cs}, the projected camera plane, light source or the robot's visual cylinder body. This feature allows operators to declutter the view when necessary.
+In complex Mixed Reality scenarios, the density of visual information can become overwhelming. To manage this, the \texttt{VisibilityToggleManager.cs} (\hyperref[req:FR-18]{FR-18}) allows users to selectively hide or reveal specific visualization aids attached to the robot. This component maps input actions to the rendering state of objects such as the \texttt{RobotInfoBillboard.cs}, the projected camera plane, light source or the robot's visual cylinder body. This feature allows operators to declutter the view when necessary.
 
 \section{Implementation of Robotic Applications}
 \label{sec:robotic_applications}
@@ -372,7 +370,7 @@ The Logistics application operates in a warehouse environment populated with col
 
 The application employs the modular \texttt{perception\_node.py}, switching between two specialized processors based on the mission phase:
 \begin{enumerate}
-    \item \textbf{Box Detection (\texttt{BoxDetectionProcessor}):} This processor isolates colored objects from the background. It applies an Hue, Saturation, Value (HSV) color mask to filter target colors and utilizes \texttt{cv2.findContours}~\cite{OpenCV} to identify object blobs, filtering them by a minimum area threshold to reject sensor noise. The centroid of the largest valid contour is calculated using \texttt{cv2.moments}~\cite{OpenCV} to provide a steering target.
+    \item \textbf{Box Detection (\texttt{BoxDetectionProcessor}):} This processor isolates colored objects from the background. It applies a Hue, Saturation, Value (HSV) color mask to filter target colors and utilizes \texttt{cv2.findContours}~\cite{OpenCV} to identify object blobs, filtering them by a minimum area threshold to reject sensor noise. The centroid of the largest valid contour is calculated using \texttt{cv2.moments}~\cite{OpenCV} to provide a steering target.
     \item \textbf{Zone Detection (\texttt{ZoneDetectionProcessor}):} This processor is tuned to detect the flat, projected delivery zones on the floor. While similar to box detection, it uses distinct HSV ranges and calculates the zone's center.
 \end{enumerate}
 
@@ -412,7 +410,7 @@ The mission logic is defined in \texttt{mission\_state\_machine.py} as a YASMIN 
 \subsection{Application 3: Smart Farming}
 \label{subsec:app_farming}
 
-This application represents the most complex use case, operating in a simulated farm with an agricultural field. The goal is to identify the field boundaries and position and sequentially apply three tools: a plow, seeder and  harvester to the field.
+This application represents the most complex use case, operating in a simulated farm with an agricultural field. The goal is to identify the field boundaries and position and sequentially apply three tools: a plow, a seeder, and a harvester to the field.
 
 The application utilizes four distinct perception processors depending on the active state:
 \begin{enumerate}
@@ -422,7 +420,7 @@ The application utilizes four distinct perception processors depending on the ac
     \item \textbf{EquipmentDetection (\texttt{EquipmentDetectionProcessor}):} Active during tool search. It isolates specific tool colors using HSV masking and calculates the object's centroid to guide the docking approach.
 \end{enumerate}
 
-A debug stream visualizes these detections on the \texttt{/perception/debug\_image} topic. For example in figure~\ref{fig:farm_debug}, it overlays the ROI and the regression line (green) onto the camera feed to visualize the tracking performance.
+A debug stream visualizes these detections on the \texttt{/perception/debug\_image} topic. For example, in Figure~\ref{fig:farm_debug}, it overlays the ROI and the regression line (green) onto the camera feed to visualize the tracking performance.
 
 \begin{figure}[H]
     \centering
@@ -469,7 +467,7 @@ The mission is governed by a YASMIN state machine~\cite{YASMIN} which executes t
 
 The development process described in this chapter has established the technical architecture of the Mixed Reality Environment. The system integrates the rendering and physics capabilities of the Unity engine with the decentralized communication infrastructure of ROS~2. This integration creates a bidirectional data pipeline: the physical robot transmits its state to the Digital Twin, while the simulation engine generates sensor data and physical feedback.
 
-The architecture comprises several functional layers. The core layer handles the synchronization of the Digital Twin and the generation of virtual LiDAR and camera streams. Above this, the environmental layer manages dynamic elements, including manipulable objects and modifiable surface textures. These automated features are complemented by the mixed reality interfaces, which provide visualization via floor projection and Virtual Reality control.
+The architecture comprises several functional layers. The core layer handles the synchronization of the Digital Twin and the generation of virtual LiDAR and camera streams. Above this, the environmental layer manages dynamic elements, including manipulable objects and modifiable surface textures. These automated features are complemented by the Mixed Reality interfaces, which provide visualization via floor projection and Virtual Reality control.
 
 Three specific robotic applications were implemented: Line Following, Logistics, and Smart Farming. These applications serve as consumers of the data and interaction mechanisms provided by the environment.
-With the software architecture defined and the functional modules integrated, the system is prepared for comprehensive analysis. The following chapter addresses the qualitative validation of the mixed reality interfaces and scenario realizations, followed by a quantitative assessment of performance metrics such as system latency and resource utilization to determine the operational limits of the platform.
+With the software architecture defined and the functional modules integrated, the system is prepared for comprehensive analysis. The following chapter addresses the qualitative validation of the Mixed Reality interfaces and scenario realizations, followed by a quantitative assessment of performance metrics such as system latency and resource utilization to determine the operational limits of the platform.

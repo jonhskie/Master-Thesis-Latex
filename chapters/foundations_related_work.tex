@@ -18,7 +18,7 @@ The RitL paradigm has been widely applied to validate complex autonomous systems
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.9\textwidth]{images/vehicle_in_the_loop_dsr+22.jpg}
-\caption{An example of a VitL setup. A real car on a test track connected to a high-fidelity simulator like CARLA that generates virtual traffic and sensor data.~\cite{DSR22}}
+\caption{An example of a VitL setup. A real car on a test track connected to a high-fidelity simulator like CARLA that generates virtual traffic and sensor data.~\cite{DSR22}.}
 \label{fig:vitl_setup}
 \end{figure}
 
@@ -26,7 +26,7 @@ These examples show a trend towards using game engine based simulators to evalua
 
 The X-in-the-Loop approach is found in many different areas. In marine robotics, a VitL framework was developed to test the long-term autonomy of a robot swarm. In this system, an Autonomous Surface Vehicle (ASV) interacts with multiple simulated underwater sensor nodes to test cooperative behaviors without the logistical cost of deploying a full swarm~\cite{Babic2020}. In the aerospace domain, the RFlySim platform uses a Field Programmable Gate Array (FPGA)-based HitL system to create a high-fidelity simulation for testing Unmanned Aerial Vehicle (UAV) autopilot systems in a lab, which reduces the need for expensive and risky outdoor flights~\cite{Dai2021}.
 
-These approaches continue to move toward deeper integration. The Scenario-in-the-Loop (SciL) paradigm creates a mixed reality that blurs the boundary between physical testing and virtual simulation~\cite{Varga2021}. Unlike standard HitL methods, SciL allows the simulation to actively drive the physical environment~\cite{Horvath2019}. A central software system uses virtual triggers to physically actuate real-world infrastructure, such as moving robotic dummies or changing traffic signals~\cite{Horvath2019}. Simultaneously, the system manipulates the vehicle's perception using Augmented Reality (AR) to inject synthetic data directly into the vehicle's communication network alongside physical sensor readings~\cite{Varga2021}. As a result, the vehicle cannot distinguish between physical objects and virtual ones~\cite{Varga2021}. This indistinguishable perception compels the vehicle to execute real control maneuvers, such as emergency braking, in response to purely digital stimuli~\cite{Varga2021}.
+These approaches continue to move toward deeper integration. The Scenario-in-the-Loop (SciL) paradigm creates a Mixed Reality that blurs the boundary between physical testing and virtual simulation~\cite{Varga2021}. Unlike standard HitL methods, SciL allows the simulation to actively drive the physical environment~\cite{Horvath2019}. A central software system uses virtual triggers to physically actuate real-world infrastructure, such as moving robotic dummies or changing traffic signals~\cite{Horvath2019}. Simultaneously, the system manipulates the vehicle's perception using Augmented Reality (AR) to inject synthetic data directly into the vehicle's communication network alongside physical sensor readings~\cite{Varga2021}. As a result, the vehicle cannot distinguish between physical objects and virtual ones~\cite{Varga2021}. This indistinguishable perception compels the vehicle to execute real control maneuvers, such as emergency braking, in response to purely digital stimuli~\cite{Varga2021}.
 
 \section{Digital Twins}
 \label{sec:DT}
@@ -37,26 +37,26 @@ This concept was initially known as the Information Mirroring Model and consists
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\textwidth]{images/info_mirror_model_Grieves15.png}
-\caption{The foundational concept of a Digital Twin, illustrating the three core components: the physical entity, the virtual model and the bi-directional data connection that links them~\cite{Grieves2017, Leng2021}.~\cite{Grieves15}}
+\caption{The foundational concept of a Digital Twin, illustrating the three core components: the physical entity, the virtual model and the bi-directional data connection that links them~\cite{Grieves2017, Leng2021, Grieves15}.}
 \label{fig:dt_concept}
 \end{figure}
 
-Digital Twins in robotics are frequently created using simulation software and the middleware that connects the virtual simulation to the actual hardware is often the Robot Operating System (ROS)~\cite{MFG22}. Stączek et al. used the Gazebo simulator with ROS to create a digital twin of a factory floor, which they used to test and optimize the navigation algorithms of a mobile robot in narrow corridors~\cite{Staczek2021}. To validate a deep learning-based harvesting robot, R. Singh et al. adopted a similar strategy and created a digital twin of a greenhouse in Gazebo~\cite{Singh2024a}. Other simulators like CoppeliaSim and Webots are also common. Magrin et al. used CoppeliaSim and ROS to create a digital twin as a learning tool for mobile robot design~\cite{Magrin2021}, while Marques et al. used Webots for an Automated Guided Vehicle (AGV), synchronizing it via an OPC-UA server~\cite{Marques2024}. These examples show a common approach of using simulators to simulate robot kinematics and sensor feedback for closed-loop testing.
+Digital Twins in robotics are frequently created using simulation software and the middleware that connects the virtual simulation to the actual hardware is often the Robot Operating System (ROS)~\cite{MFG22}. Stączek et al. used the Gazebo simulator with ROS to create a Digital Twin of a factory floor, which they used to test and optimize the navigation algorithms of a mobile robot in narrow corridors~\cite{Staczek2021}. To validate a deep learning-based harvesting robot, R. Singh et al. adopted a similar strategy and created a Digital Twin of a greenhouse in Gazebo~\cite{Singh2024a}. Other simulators like CoppeliaSim and Webots are also common. Magrin et al. used CoppeliaSim and ROS to create a Digital Twin as a learning tool for mobile robot design~\cite{Magrin2021}, while Marques et al. used Webots for an Automated Guided Vehicle (AGV), synchronizing it via an OPC-UA server~\cite{Marques2024}. These examples show a common approach of using simulators to simulate robot kinematics and sensor feedback for closed-loop testing.
  
-More recently, game engines have become a popular choice for creating Digital Twins, as they offer more realistic graphics and physics. Unity~\cite{Uni23}, for instance, is used to build highly realistic virtual environments. Pérez et al. utilized Unity to develop a digital twin of a robotic cell, which is a manufacturing station where robots, conveyors, and safety systems work together to perform tasks~\cite{Perez2020}. In this framework, the digital twin acts as a live mirror of the physical cell~\cite{Perez2020}. The system uses the game engine to simulate physical laws and mechanical behaviors, ensuring that the virtual robots act exactly like the real ones~\cite{Perez2020}. To achieve this synchronization, the virtual model connects directly to the facility's control network to read real-time data from the sensors~\cite{Perez2020}. This connectivity allows engineers to virtually validate the cell's design and logic before any equipment is installed and subsequently enables operators to train safely alongside the virtual robots~\cite{Perez2020}.
+ More recently, game engines have become a popular choice for creating Digital Twins, as they offer more realistic graphics and physics. Unity~\cite{Uni23}, for instance, is used to build highly realistic virtual environments. Pérez et al. utilized Unity to develop a Digital Twin of a robotic cell, which is a manufacturing station where robots, conveyors, and safety systems work together to perform tasks~\cite{Perez2020}. In this framework, the Digital Twin acts as a live mirror of the physical cell~\cite{Perez2020}. The system uses the game engine to simulate physical laws and mechanical behaviors, ensuring that the virtual robots act exactly like the real ones~\cite{Perez2020}. To achieve this synchronization, the virtual model connects directly to the facility's control network to read real-time data from the sensors~\cite{Perez2020}. This connectivity allows engineers to virtually validate the cell's design and logic before any equipment is installed and subsequently enables operators to train safely alongside the virtual robots~\cite{Perez2020}.
 
 Another important consideration is the technical capabilities of these engines. Yang et al.~\cite{Yang2020} simulated the physics of a UAV using Unity and its built-in NVIDIA PhysX engine. They also demonstrated the creation of virtual sensors, such as a Light Detection and Ranging (LiDAR) sensor, directly within the game engine using its raycasting Application Programming Interface (API)~\cite{Yang2020}. Research has also been done on the performance and reliability of these game engine-based frameworks. Kwon et al. developed a safety-critical Digital Twin integrated with Unity and ROS~2, which achieves minimal data transmission latency to enable the prediction of collisions in real time~\cite{Kwon2025}. 
 
 \section{Mixed Reality}
 \label{sec:MR}
-Beyond the testing paradigm and the digital twin, the way a user interacts with the system is another part of a robotics framework. Virtual, Augmented, and Mixed Reality have become promising technologies for improving the information exchange between humans and robots~\cite{Walker2023}. In robotics, Augmented Reality (AR) is an especially useful tool for enhancing Human-Robot Interaction (HRI) by integrating virtual objects into a real-world environment in real time~\cite{MV20}.
+Beyond the testing paradigm and the Digital Twin, the way a user interacts with the system is another part of a robotics framework. Virtual, Augmented, and Mixed Reality have become promising technologies for improving the information exchange between humans and robots~\cite{Walker2023}. In robotics, Augmented Reality (AR) is an especially useful tool for enhancing Human-Robot Interaction (HRI) by integrating virtual objects into a real-world environment in real time~\cite{MV20}.
 
 The relationship between these technologies is formally described by the foundational Reality-Virtuality Continuum concept, first introduced by Milgram and Kishino~\cite{MK94}. As illustrated in Figure~\ref{fig:rv_continuum}, this continuum is a scale that is anchored by a purely real environment at one end and a completely virtual one at the other~\cite{MK94, Skarbez2021, MV20}.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.9\textwidth]{images/reality_virtuality_continuum_wpc+23.png}
-\caption{The Reality-Virtuality Continuum, illustrating the spectrum from a real environment to a completely virtual one.~\cite{Walker2023}}
+\caption{The Reality-Virtuality Continuum, illustrating the spectrum from a real environment to a completely virtual one.~\cite{Walker2023}.}
 \label{fig:rv_continuum}
 \end{figure}
 
@@ -107,7 +107,7 @@ An essential part of any mobile robot is coordinate frame management, which in R
 \end{figure}
 
 In the architecture of this thesis, ROS~2 provides the central data backbone, a term borrowed from digital engineering that defines an integrated communication layer for all relevant system knowledge~\cite{perzylo2020backbone}. This acts as the bridge that couples the physical EMAROs robot and its tracking system with the simulation environment. The Digital Twin of the EMAROs robot subscribes to ROS~2 topics to receive real-time data from the physical world and can synchronize its state through this communication layer~\cite{singh2024unity}.
-For navigation of both the physical and virtual robots, this thesis utilizes Navigation2 (Nav2), the official, next-generation autonomous navigation framework for ROS~2 ~\cite{macenski2020marathon2}. Nav2 was designed from the ground up to orchestrate planning, control and recovery tasks using configurable Behavior Trees that are highly modular and can be changed at runtime to create custom navigation behaviors ~\cite{macenski2020marathon2}. Core to its operation, Nav2 separates the navigation task into two closely related, yet distinct components, namely a global planner, which seeks out an acceptable, long-range path through the environment and a local trajectory planner or controller, which generates velocity commands in order to follow that route while reacting to immediate obstacles ~\cite{macenski2023survey}. Using the Nav2 stack, a high-level goal, e.g., a coordinate in the environment, can be sent via a ROS~2 action to a robot and the system will take care of all complex path planning and collision avoidance autonomously.
+For navigation of both the physical and virtual robots, this thesis utilizes Navigation2 (Nav2), the official, next-generation autonomous navigation framework for ROS~2~\cite{macenski2020marathon2}. Nav2 was designed from the ground up to orchestrate planning, control, and recovery tasks using configurable Behavior Trees that are highly modular and can be changed at runtime to create custom navigation behaviors~\cite{macenski2020marathon2}. Core to its operation, Nav2 separates the navigation task into two closely related, yet distinct components, namely a global planner, which seeks out an acceptable, long-range path through the environment and a local trajectory planner or controller, which generates velocity commands in order to follow that route while reacting to immediate obstacles~\cite{macenski2023survey}. Using the Nav2 stack, a high-level goal, e.g., a coordinate in the environment, can be sent via a ROS~2 action to a robot and the system will take care of all complex path planning and collision avoidance autonomously.
 \section{The VERA Framework}
 \label{sec:vera}
 
@@ -118,7 +118,7 @@ The core idea of VERA is projecting a dynamic, interactive virtual world onto th
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{images/vera_setup.jpg}
-    \caption{The physical setup of the VERA platform: A projector and tracking system are mounted on a frame above the test area.~\cite{Geh24}}
+    \caption{The physical setup of the VERA platform: A projector and tracking system are mounted on a frame above the test area.~\cite{Geh24}.}
     \label{fig:vera_setup}
 \end{figure}
 
@@ -130,7 +130,7 @@ The modular hardware architecture of EMAROs is based on three main PCBs: a Host 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\textwidth]{images/EMAROs_robot.png}
-    \caption{The EMAROs robot is the robotic platform used in the testbed, equipped with a modular sensor suite and running ROS~2.~\cite{Geh24}}
+    \caption{The EMAROs robot is the robotic platform used in the testbed, equipped with a modular sensor suite and running ROS~2.~\cite{Geh24}.}
     \label{fig:EMAROs_robot}
 \end{figure}
 
@@ -169,7 +169,7 @@ The visualizer subscribes to the object lists published by the Manager and the r
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{images/pygame_visualizer.png}
-    \caption{Original VERA visualization via Pygame, showing a projection of the robot's path and virtual obstacles onto the floor.~\cite{Geh24}}
+    \caption{Original VERA visualization via Pygame, showing a projection of the robot's path and virtual obstacles onto the floor.~\cite{Geh24}.}
     \label{fig:pygame_vis}
 \end{figure}
 
@@ -203,12 +203,12 @@ A few other simulators were found in literature but considered less appropriate 
 \subsection{High Visual Fidelity and Game-Based Engines}
 Game engines have been widely adopted within the robotics community to overcome the visualization limitations of traditional robotics simulators.
 
-\textbf{NVIDIA Isaac Sim} is the state-of-the-art in industrial simulation~\cite{dosSantos2025}. The platform is capable of photorealism through ray-tracing and has advanced GPU-accelerated physics through PhysX~\cite{dosSantos2025}. It excels in generating synthetic data for AI perception~\cite{Kargar2024}. But Isaac Sim has a very high hardware barrier where high-end NVIDIA RTX GPUs are specifically mandatory~\cite{dosSantos2025}. Being proprietary, it is more restricting for use in educational contexts compared to more open-source or widely accessible game engines~\cite{dosSantos2025}.
+\textbf{NVIDIA Isaac Sim} is the state of the art in industrial simulation~\cite{dosSantos2025}. The platform is capable of photorealism through ray-tracing and has advanced GPU-accelerated physics through PhysX~\cite{dosSantos2025}. It excels in generating synthetic data for AI perception~\cite{Kargar2024}. But Isaac Sim has a very high hardware barrier where high-end NVIDIA RTX GPUs are mandatory~\cite{dosSantos2025}. Being proprietary, it is more restricting for use in educational contexts compared to more open-source or widely accessible game engines~\cite{dosSantos2025}.
 
 \textbf{Unreal Engine} is renowned for photorealistic visuals and is capable of handling big, open-world environments~\cite{Gonzalez2025}. But it has a steep learning curve because of its dependency on C++, and therefore is not very well-suited for rapid prototyping compared to other engines like Unity~\cite{Coronado2023}.
 
 \textbf{Unity Engine} is establishing itself as the primary platform for Industry 5.0 applications, in particular those focusing on HRI and MR~\cite{Gonzalez2025}. It boasts a balance of high-fidelity graphics with a robust physics engine, PhysX~\cite{Singh2025}. Unity is also known for having one of the most mature MR ecosystems, along with an asset store, which lowers the barrier to entry for developers~\cite{Singh2025, Coronado2023}. Literature points out that the user-friendly interface of Unity and supportive community help with a softer learning curve compared to Gazebo or Unreal, particularly for users without deep C++ expertise~\cite{Singh2025, Coronado2023}.
-ROS~2~\cite{MFG22} is not natively supported by Unity. Support must be provided through third-party plugins. For the work described in this thesis, the ROS2 For Unity plugin from Robotec.AI has been used~\cite{Rob24}. This asset offers high-performance communication by loading the ROS~2 middleware layer (RCL layer) directly inside the Unity engine~\cite{Rob24}. Unlike bridged solutions, simulation entities now can act as native ROS~2 nodes in the context of Unity, thus respecting QoS and reaching lower latencies ~\cite{Rob24}.
+ROS~2~\cite{MFG22} is not natively supported by Unity. Support must be provided through third-party plugins. For the work described in this thesis, the \texttt{ROS2ForUnity} plugin from Robotec.AI has been used~\cite{Rob24}. This asset offers high-performance communication by loading the ROS~2 middleware layer (RCL layer) directly inside the Unity engine~\cite{Rob24}. Unlike bridged solutions, simulation entities now can act as native ROS~2 nodes in the context of Unity, thus respecting QoS and reaching lower latencies~\cite{Rob24}.
 
 \section{Background Synthesis}
 \label{sec:synthesis_objectives}
@@ -217,4 +217,4 @@ The review of related work confirms that RitL testing~\cite{Hu05} combined with 
 
 However, due to its reliance on custom software components, the original VERA framework has significant technical limitations~\cite{Geh24}. As explained in Section~\ref{sec:vera_limitations}, the Pygame-based visualizer experiences performance bottlenecks in complex scenes and realistic object manipulation is impossible due to the lack of a dedicated physics engine~\cite{Geh24}. Moreover, the potential for researching Human-Robot Collaboration is limited by the lack of Virtual Reality support~\cite{Geh24}.
 
-To overcome these limitations, this thesis proposes integrating a simulation engine into the architecture of VERA using the ROS~2~\cite{MFG22}. The goal is to establish a robust, physics-enabled MR environment that bridges the gap between simulation and reality. This new development will be verified by creating demonstration scenarios where the EMAROs robot actively interacts with virtual elements and will serve as a proof of concept for improved system physical realism, scalability, and immersive interaction.
+To overcome these limitations, this thesis proposes integrating a simulation engine into the architecture of VERA using ROS~2~\cite{MFG22}. The goal is to establish a robust, physics-enabled MR environment that bridges the gap between simulation and reality. This new development will be verified by creating demonstration scenarios where the EMAROs robot actively interacts with virtual elements and will serve as a proof of concept for improved system physical realism, scalability, and immersive interaction.

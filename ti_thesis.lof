@@ -1,15 +1,15 @@
 \babel@toc {english}{}\relax 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces An example of a VitL setup. A real car on a test track connected to a high-fidelity simulator like CARLA that generates virtual traffic and sensor data.~\blx@tocontentsinit {0}\cite {DSR22}}}{7}{figure.2.1}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces The foundational concept of a Digital Twin, illustrating the three core components: the physical entity, the virtual model and the bi-directional data connection that links them~\blx@tocontentsinit {0}\cite {Grieves2017, Leng2021}.~\blx@tocontentsinit {0}\cite {Grieves15}}}{9}{figure.2.2}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces The Reality-Virtuality Continuum, illustrating the spectrum from a real environment to a completely virtual one.~\blx@tocontentsinit {0}\cite {Walker2023}}}{10}{figure.2.3}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces An example of a VitL setup. A real car on a test track connected to a high-fidelity simulator like CARLA that generates virtual traffic and sensor data.~\blx@tocontentsinit {0}\cite {DSR22}.}}{7}{figure.2.1}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces The foundational concept of a Digital Twin, illustrating the three core components: the physical entity, the virtual model and the bi-directional data connection that links them~\blx@tocontentsinit {0}\cite {Grieves2017, Leng2021, Grieves15}.}}{9}{figure.2.2}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces The Reality-Virtuality Continuum, illustrating the spectrum from a real environment to a completely virtual one.~\blx@tocontentsinit {0}\cite {Walker2023}.}}{10}{figure.2.3}%
 \contentsline {figure}{\numberline {2.4}{\ignorespaces The ROS~2 publish-subscribe model. Node A publishes messages onto a central topic and any number of subscriber nodes (B and C) may receive that data without direct knowledge of the publisher.}}{12}{figure.2.4}%
 \contentsline {figure}{\numberline {2.5}{\ignorespaces A simplified example of a ROS~2 transform tree (tf tree). The library maintains the hierarchical relationships so that a program can easily determine the transform from the \texttt {camera\_link} to the \texttt {world} frame, for instance.}}{12}{figure.2.5}%
-\contentsline {figure}{\numberline {2.6}{\ignorespaces The physical setup of the VERA platform: A projector and tracking system are mounted on a frame above the test area.~\blx@tocontentsinit {0}\cite {Geh24}}}{14}{figure.2.6}%
-\contentsline {figure}{\numberline {2.7}{\ignorespaces The EMAROs robot is the robotic platform used in the testbed, equipped with a modular sensor suite and running ROS~2.~\blx@tocontentsinit {0}\cite {Geh24}}}{15}{figure.2.7}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces The physical setup of the VERA platform: A projector and tracking system are mounted on a frame above the test area.~\blx@tocontentsinit {0}\cite {Geh24}.}}{14}{figure.2.6}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces The EMAROs robot is the robotic platform used in the testbed, equipped with a modular sensor suite and running ROS~2.~\blx@tocontentsinit {0}\cite {Geh24}.}}{15}{figure.2.7}%
 \contentsline {figure}{\numberline {2.8}{\ignorespaces The original VERA used point clouds~\blx@tocontentsinit {0}\cite {Geh24}, while the current iteration uses ArUco markers for pose estimation~\blx@tocontentsinit {0}\cite {JuliaBA}.}}{16}{figure.2.8}%
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Original VERA visualization via Pygame, showing a projection of the robot's path and virtual obstacles onto the floor.~\blx@tocontentsinit {0}\cite {Geh24}}}{17}{figure.2.9}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Original VERA visualization via Pygame, showing a projection of the robot's path and virtual obstacles onto the floor.~\blx@tocontentsinit {0}\cite {Geh24}.}}{17}{figure.2.9}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces The Mixed Reality Environment in operation. The physical robot interacts with a projected Smart Farming scenario, where the robot and the Digital Twin are synchronized via ROS~2.}}{27}{figure.4.1}%
@@ -30,9 +30,9 @@
 \contentsline {figure}{\numberline {5.4}{\ignorespaces Augmented Reality projection of the Paint scenario. The physical EMAROs robot follows a red path drawn by the user.}}{59}{figure.5.4}%
 \contentsline {figure}{\numberline {5.5}{\ignorespaces Overview of the Pong scenario. The user steers the EMAROs robot to reflect the virtual ball via the navigation stack.}}{60}{figure.5.5}%
 \contentsline {figure}{\numberline {5.6}{\ignorespaces Augmented Reality projection of the Logistics scenario. The robot navigates through the projected warehouse to transport a virtual box to the designated colored zone. The environment allows the VR user to dynamically place obstacles, forcing the robot to replan its path.}}{62}{figure.5.6}%
-\contentsline {figure}{\numberline {5.7}{\ignorespaces AR projection of the Farm scenario. The EMAROs, fitted with the Seeder tool, moves through the virtual field and modifies the ground texture.}}{63}{figure.5.7}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces AR projection of the Smart Farming scenario. The EMAROs, fitted with the Seeder tool, moves through the virtual field and modifies the ground texture.}}{63}{figure.5.7}%
 \contentsline {figure}{\numberline {5.8}{\ignorespaces Performance breakdown illustrating the CPU execution time for Physics, Rendering, and Scripts across the four operational scenarios. The total active frame time remains well below the 16.67 ms threshold required for 60 FPS.}}{65}{figure.5.8}%
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Scalability stress test illustrating CPU frame time vs. object count. The 60 FPS target (16.67 ms) serves as the threshold for visual stability in Mixed Reality.}}{68}{figure.5.9}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Scalability stress test illustrating CPU frame time vs. object count. The 60 FPS target (16.67~ms) serves as the threshold for visual stability in Mixed Reality.}}{68}{figure.5.9}%
 \contentsline {figure}{\numberline {5.10}{\ignorespaces Visualization latency measured across four application scenarios. The chart compares the delay between pose reception and frame completion in AR Projection mode versus Virtual Reality mode. Error bars indicate the jitter (min/max range).}}{70}{figure.5.10}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }

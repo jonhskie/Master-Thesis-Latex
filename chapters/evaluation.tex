@@ -1,7 +1,7 @@
 \chapter{Evaluation}
 \label{ch:evaluation}
 
-This chapter provides an evaluation of the developed Mixed Reality Environment. It starts with a qualitative analysis of the system’s functional capabilities, particularly the mixed reality interfaces and the practical execution of the robotic application scenarios. Next, the chapter details the technical setup and then presents a quantitative analysis of the system’s performance. This analysis aims to identify the operational limits and efficiency of the framework.
+This chapter provides an evaluation of the developed Mixed Reality Environment. It starts with a qualitative analysis of the system’s functional capabilities, particularly the Mixed Reality interfaces and the practical execution of the robotic application scenarios. Next, the chapter details the technical setup and then presents a quantitative analysis of the system’s performance. This analysis aims to identify the operational limits and efficiency of the framework.
 \section{Mixed Reality Interface Validation}
 \label{sec:mr_validation}
 
@@ -22,12 +22,12 @@ Interaction with the environment is facilitated by a ray-casting mechanism contr
 
 To support dynamic scenario modification (\hyperref[req:FR-13]{FR-13}), a storage area is located adjacent to the robot's operating field. This area contains various manipulatable objects, including boxes and cuboids in different sizes and colors. A distance grab mechanism allows the user to pick up objects from a distance by pointing the controller at the target and pressing the grip button. This action snaps the object directly to the virtual hand, so the operator does not need to crouch to retrieve items. Users can take these objects and place them into the active simulation area to create obstacles or targets. The physics engine provides realistic collision handling. The placed objects can act as physical barriers that the robot must either push or navigate around.
 
-Data visualization in VR is handled through two primary elements, as depicted in Figure~\ref{fig:vr_overview}. First, a floating status billboard is attached to the robot’s Digital Twin (\hyperref[req:FR-14]{FR-14}). This billboard is designed to always face the user’s camera view, making sure that telemetry data is readable from any angle. Second, a large virtual monitor is positioned behind the robot's operation area. This monitor subscribes to image topics from the ROS~2 network, such as the raw camera feed or debug output from the perception stack. Users can switch the displayed video source by pressing a specific key on the keyboard.
+Data visualization in VR is handled through two primary elements, as depicted in Figure~\ref{fig:vr_overview}. First, a floating status billboard is attached to the robot’s Digital Twin (\hyperref[req:FR-14]{FR-14}). This billboard is designed to always face the user’s camera view, ensuring that telemetry data is readable from any angle. Second, a large virtual monitor is positioned behind the robot's operation area. This monitor subscribes to image topics from the ROS~2 network, such as the raw camera feed or debug output from the perception stack. Users can switch the displayed video source by pressing a specific key on the keyboard.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{images/vr_storage.png} % Placeholder filename
-    \caption{ Overview of the Virtual Reality environment. The storage area containing manipulatable objects is visible next to the robot’s play area. A large virtual monitor displays the live camera stream from the ROS~2 network.}
+    \caption{Overview of the Virtual Reality environment. The storage area containing manipulatable objects is visible next to the robot’s play area. A large virtual monitor displays the live camera stream from the ROS~2 network.}
     \label{fig:vr_overview}
 \end{figure}
 \subsection{Augmented Reality Projection}
@@ -53,7 +53,7 @@ The robotic applications interact with the environment exclusively through ROS~2
 \subsection{Application 1: Interactive Path Following}
 \label{subsec:eval_path_following}
 
-The Paint scenario, shown in Figure~\ref{fig:path_following_ar} evaluates the system's capacity for environmental modifications (\hyperref[req:FR-13]{FR-13}). In this application, the robot follows a line trajectory that the user draws onto the floor surface. The system ensures that paths drawn via VR controllers or mouse inputs are reflected in the texture data, enabling the robot to perceive and follow the line.
+The Paint scenario, shown in Figure~\ref{fig:path_following_ar}, evaluates the system's capacity for environmental modifications (\hyperref[req:FR-13]{FR-13}). In this application, the robot follows a line trajectory that the user draws onto the floor surface. The system ensures that paths drawn via VR controllers or mouse inputs are reflected in the texture data, enabling the robot to perceive and follow the line.
 
 The robotic application used in this scenario is a camera-based Line Follower. The robot operates solely on the live video feed from its virtual camera to detect the path (\hyperref[req:FR-01]{FR-01}, \hyperref[req:FR-11]{FR-11}). The control logic is based on a finite state machine, which autonomously switches between searching for visual features, aligning its heading with the path vector, and executing a PID-controlled following behavior based on the sensor data (\hyperref[req:FR-19]{FR-19}).
 
@@ -69,11 +69,11 @@ The robotic application exhibited robust performance during the evaluation. The 
 \subsection{Application 2: Arcade Game}
 \label{subsec:eval_pong}
 
-The Pong scenario, shown in Figure~\ref{fig:pong_scenario}, evaluates dynamic interactions between the physical robot and virtual physics objects. The robot acts as a paddle in a simulated arcade game. A \texttt{PaddlePlank} script on the Digital Twin model creates a kinematic collider that reflects the physical movement and deflects the virtual ball. To maintain consistent physics (\hyperref[req:FR-02]{FR-02}), the system detects collisions using PhysX but calculates the ball's reflection vector separately from the physics engine. This prevents energy loss from simulated friction through the PhysX engine and keeps the ball's speed constant.
+The Pong scenario, shown in Figure~\ref{fig:pong_scenario}, evaluates dynamic interactions between the physical robot and virtual physics objects. The robot acts as a paddle in a simulated arcade game. A \texttt{PaddlePlank.cs} script on the Digital Twin model creates a kinematic collider that reflects the physical movement and deflects the virtual ball. To maintain consistent physics (\hyperref[req:FR-02]{FR-02}), the system detects collisions using PhysX but calculates the ball's reflection vector separately from the physics engine. This prevents energy loss from simulated friction through the PhysX engine and keeps the ball's speed constant.
 
-The human operator acts as the high-level planner for this application. By observing the virtual ball's path in VR or AR, the operator sets navigation goals through the \texttt{NavigationGoalController} to position the robot for interception (\hyperref[req:FR-17]{FR-17}).
+The human operator acts as the high-level planner for this application. By observing the virtual ball's path in VR or AR, the operator sets navigation goals through the \texttt{NavigationGoalController.cs} to position the robot for interception (\hyperref[req:FR-17]{FR-17}).
 
-The integration of the navigation stack proved effective for steering the robot and the interception task. The robot consistently reached its set goals, and the virtual paddle on the Digital Twin deflected the ball, showing realistic collisions behavior (\hyperref[req:FR-13]{FR-13}).
+The integration of the navigation stack proved effective for steering the robot and the interception task. The robot consistently reached its set goals, and the virtual paddle on the Digital Twin deflected the ball, showing realistic collision behavior (\hyperref[req:FR-13]{FR-13}).
 
 \begin{figure}[H]
     \centering
@@ -86,11 +86,11 @@ The integration of the navigation stack proved effective for steering the robot 
 \subsection{Application 3: Autonomous Logistics}
 \label{subsec:eval_logistics}
 
-The Logistics scenario, illustrated in Figure~\ref{fig:logistics_ar}, assesses the system's support for complex, multi-stage missions involving object manipulation and decision-making. The environment simulates a warehouse filled with colored transport boxes and delivery zones. Specific C\# components handle the game logic: \texttt{BoxEquipment} assigns semantic types (e.g., Red or Blue) to objects, while \texttt{DeliveryZone} scripts monitor specific areas. When a box enters a zone, the script checks if the object's type matches the zone's requirements. If the delivery is correct, the box is removed (\hyperref[req:FR-12]{FR-12}).
+The Logistics scenario, illustrated in Figure~\ref{fig:logistics_ar}, assesses the system's support for complex, multi-stage missions involving object manipulation and decision-making. The environment simulates a warehouse filled with colored transport boxes and delivery zones. Specific C\# components handle the game logic: \texttt{BoxEquipment.cs} assigns semantic types (e.g., Red or Blue) to objects, while \texttt{DeliveryZone.cs} scripts monitor specific areas. When a box enters a zone, the script checks if the object's type matches the zone's requirements. If the delivery is correct, the box is removed (\hyperref[req:FR-12]{FR-12}).
 
-The robotic application operates through a state machine that coordinates a sequence of autonomous behaviors. First, the robot utilizes its navigation stack to explore the environment and identify target objects via the perception system. Once a target is located, the robot approaches it and initiates a pickup sequence. This triggers an attachment command, which the \texttt{AttachmentCommandManager} processes to kinematically lock the virtual box to the robot's chassis for transport (\hyperref[req:FR-13]{FR-13}).
+The robotic application operates through a state machine that coordinates a sequence of autonomous behaviors. First, the robot utilizes its navigation stack to explore the environment and identify target objects via the perception system. Once a target is located, the robot approaches it and initiates a pickup sequence. This triggers an attachment command, which the \texttt{AttachmentCommandManager.cs} processes to kinematically lock the virtual box to the robot's chassis for transport (\hyperref[req:FR-13]{FR-13}).
 
- The autonomous agent successfully completed the entire logistics process without any human help. The vision-based control logic accurately aligned the robot with the target boxes, and the mechanism for attaching and detaching objects worked correctly. Moreover, the robot's spatial memory logic was effective. After finding a delivery zone of a specific color once, the agent stored the coordinates and was able to navigate directly to them in later runs involving boxes of the same color. The robot's navigation stack also successfully detected dynamic obstacles placed by the VR user and adjusted its trajectories in real time.
+The autonomous agent successfully completed the entire logistics process without any human help. The vision-based control logic accurately aligned the robot with the target boxes, and the mechanism for attaching and detaching objects worked correctly. Moreover, the robot's spatial memory logic was effective. After finding a delivery zone of a specific color once, the agent stored the coordinates and was able to navigate directly to them in later runs involving boxes of the same color. The robot's navigation stack also successfully detected dynamic obstacles placed by the VR user and adjusted its trajectories in real time.
 
 \begin{figure}[H]
     \centering
@@ -102,16 +102,16 @@ The robotic application operates through a state machine that coordinates a sequ
 \subsection{Application 4: Smart Farming}
 \label{subsec:eval_farming}
 
-The Farm scenario in Figure~\ref{fig:smart_farming_ar}, serves as the most comprehensive integration test. It combines navigation, complex state management, and tool-based environmental modification. The scenario has a \texttt{FieldTileSystem} that manages the visual state of an agricultural field. It handles transitions between stages like "Untouched", "Seeded", and "Growing". The robot operates interchangeable tools such as a Plow, a Seeder, and a Harvester to modify the field state. These tools operate with the \texttt{FarmEquipmentBase} script, which uses multiple raycasts to detect the specific tiles beneath the robot (\hyperref[req:FR-13]{FR-13}). The state of the tiles only changes when the tool is attached and active.
+The Smart Farming scenario in Figure~\ref{fig:smart_farming_ar}, serves as the most comprehensive integration test. It combines navigation, complex state management, and tool-based environmental modification. The scenario has a \texttt{FieldTileSystem.cs} that manages the visual state of an agricultural field. It handles transitions between stages like ``Untouched'', ``Seeded'', and ``Growing''. The robot operates interchangeable tools such as a Plow, a Seeder, and a Harvester to modify the field state. These tools operate with the \texttt{FarmEquipmentBase.cs} script, which uses multiple raycasts to detect the specific tiles beneath the robot (\hyperref[req:FR-13]{FR-13}). The state of the tiles only changes when the tool is attached and active.
 
-The robotic application follows a sequential workflow. This includes field mapping, tool searching and attachment, and path planning. The robot must find field boundaries on its own using edge detection. It also needs to swap tools and drive precise rows to process the field
+The robotic application follows a sequential workflow. This includes field mapping, tool searching and attachment, and path planning. The robot must find field boundaries on its own using edge detection. It also needs to swap tools and drive precise rows to process the field.
 
 The application demonstrated high reliability in field boundary detection. The perception system consistently distinguished the transition between the field texture and the outer floor, enabling the robot to trace the perimeter and accurately map the field's four corners. Based on this layout, the coverage path planner generated valid waypoints, and the navigation stack executed the trajectory with sufficient precision to ensure full coverage. Additionally, the robot independently executed the tool exchange sequence. It located the required implements, stored their coordinates, and returned each tool to its original position before retrieving the next one. The evaluation confirmed that the tools modified the field only when physically attached to the robot, correctly updating the terrain state as the robot progressed. Furthermore, the robot handled user interference effectively. When the VR operator placed obstacles in the field, the robot successfully navigated around them or skipped unreachable waypoints (\hyperref[req:FR-17]{FR-17}).
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{images/smart_farming_ar.jpg} % Placeholder
-    \caption{AR projection of the Farm scenario. The EMAROs, fitted with the Seeder tool, moves through the virtual field and modifies the ground texture.}
+    \caption{AR projection of the Smart Farming scenario. The EMAROs, fitted with the Seeder tool, moves through the virtual field and modifies the ground texture.}
     \label{fig:smart_farming_ar}
 \end{figure}
 
@@ -137,9 +137,9 @@ The performance of the Mixed Reality simulation relies heavily on the hardware. 
 \section{Performance Analysis of Robotic Scenarios}
 \label{sec:scenario_performance}
 
-To evaluate the system's performance under realistic operating conditions, a granular profiling analysis was conducted during the execution of the four target scenarios described in Section~\ref{sec:scenario_analysis}. A custom \texttt{PerformanceBreakdownLogger} script utilized the Unity \textit{ProfilerRecorder} API to capture the Main Thread execution time of three key subsystems: Physics (\texttt{Physics.Simulate}), Rendering (\texttt{Camera.Render}), and Scripts (\texttt{Update.ScriptRunBehaviour}). 
+To evaluate the system's performance under realistic operating conditions, a granular profiling analysis was conducted during the execution of the four target scenarios described in Section~\ref{sec:scenario_analysis}. A custom \texttt{PerformanceBreakdownLogger.cs} script utilized the Unity \textit{ProfilerRecorder} API to capture the Main Thread execution time of three key subsystems: Physics (\texttt{Physics.Simulate}), Rendering (\texttt{Camera.Render}), and Scripts (\texttt{Update.ScriptRunBehaviour}). 
 
-This data provides the primary validation for the frame rate requirement \hyperref[req:NFR-02]{NFR-02}, demonstrating the system's ability to maintain real time performance during complex robotic tasks. Figure~\ref{fig:component_breakdown} visualizes the distribution of CPU time, while Table~\ref{tab:component_data} details the specific execution metrics.
+This data provides the primary validation for the frame rate requirement \hyperref[req:NFR-02]{NFR-02}, demonstrating the system's ability to maintain real-time performance during complex robotic tasks. Figure~\ref{fig:component_breakdown} visualizes the distribution of CPU time, while Table~\ref{tab:component_data} details the specific execution metrics.
 
 \begin{figure}[H]
     \centering
@@ -150,7 +150,7 @@ This data provides the primary validation for the frame rate requirement \hyperr
 
 The data shows that the system works efficiently in all scenarios. The total active CPU time, which includes physics, rendering, and script execution, averages between 2.7 ms and 3.8 ms. It’s important to note that while the VR hardware operates at a fixed 72 Hz refresh rate, needing a frame every 13.88 ms, the software finishes its calculations in less than 4 ms. This means the CPU remains idle for about $\approx$10 ms of each frame interval, waiting for the vertical synchronization (V-Sync) signal\cite{lavalle2023virtual}. This extra computational capacity proves that the system can manage more complex logic or additional sensor processing without dropping below the hardware's native frame rate.
 
-Script execution takes up the largest share of the active frame time, ranging from 2.5 ms in the \hyperref[subsec:eval_path_following]{Paint} scenario to over 3.5 ms in the \hyperref[subsec:eval_farming]{Farm} scenario. This processing load stems from the C\# logic responsible for ROS~2 serialization, message handling, and state management (\hyperref[req:FR-04]{FR-04}). Notably, in the \hyperref[subsec:eval_pong]{Pong} and \hyperref[subsec:eval_farming]{Farm} scenarios, the Digital Twin mode demonstrates slightly higher execution times (e.g., 3.55 ms versus 3.35 ms in Farm) than the Virtual Mode. This finding suggests that the overhead for synchronizing the Digital Twin with the pose tracking system (\hyperref[req:FR-07]{FR-07}) is computationally comparable to executing the physics-based motion control of the virtual robot.
+Script execution takes up the largest share of the active frame time, ranging from 2.5 ms in the \hyperref[subsec:eval_path_following]{Paint} scenario to over 3.5 ms in the \hyperref[subsec:eval_farming]{Farm} scenario. This processing load stems from the C\# logic responsible for ROS~2 serialization, message handling, and state management (\hyperref[req:FR-04]{FR-04}). Notably, in the \hyperref[subsec:eval_pong]{Pong} and \hyperref[subsec:eval_farming]{Farm} scenarios, the RitL Mode demonstrates slightly higher execution times (e.g., 3.55 ms versus 3.35 ms in Farm) than the Standalone Mode. This finding suggests that the overhead for synchronizing the Digital Twin with the pose tracking system (\hyperref[req:FR-07]{FR-07}) is computationally comparable to executing the physics-based motion control of the virtual robot.
 
 \begin{table}[H]
     \centering
@@ -160,17 +160,17 @@ Script execution takes up the largest share of the active frame time, ranging fr
         \toprule
         \textbf{Scenario} & \textbf{Mode} & \textbf{Physics (ms)} & \textbf{Render (ms)} & \textbf{Scripts (ms)} & \textbf{Memory (MB)} \\ 
         \midrule
-        Paint & DT Mode & 0.215 & 0.009 & 2.523 & 4374.05 \\
-         & Virtual Mode & 0.251 & 0.008 & 2.532 & 4643.03 \\
+        Paint & RitL Mode & 0.215 & 0.009 & 2.523 & 4374.05 \\
+         & Standalone Mode & 0.251 & 0.008 & 2.532 & 4643.03 \\
         \midrule
-        Pong & DT Mode & 0.210 & 0.012 & 3.342 & 4459.98 \\
-         & Virtual Mode & 0.187 & 0.008 & 2.746 & 4664.51 \\
+        Pong & RitL Mode & 0.210 & 0.012 & 3.342 & 4459.98 \\
+         & Standalone Mode & 0.187 & 0.008 & 2.746 & 4664.51 \\
         \midrule
-        Logistics & DT Mode & 0.212 & 0.008 & 3.313 & 4433.06 \\
-         & Virtual Mode & 0.204 & 0.008 & 3.189 & 4626.84 \\
+        Logistics & RitL Mode & 0.212 & 0.008 & 3.313 & 4433.06 \\
+         & Standalone Mode & 0.204 & 0.008 & 3.189 & 4626.84 \\
         \midrule
-        Farm & DT Mode & 0.245 & 0.011 & 3.554 & 4379.40 \\
-         & Virtual Mode & 0.220 & 0.007 & 3.352 & 4632.64 \\
+        Farm & RitL Mode & 0.245 & 0.011 & 3.554 & 4379.40 \\
+         & Standalone Mode & 0.220 & 0.007 & 3.352 & 4632.64 \\
         \bottomrule
     \end{tabular}
 \end{table}
@@ -180,13 +180,13 @@ On the other hand, the Physics and Render components barely contribute to the CP
 \section{Deep Profiling and Script Impact Analysis}
 \label{sec:deep_profiling}
 
-To understand why the Scripts consume the majority of the frame budget in the operational scenarios, a Deep Profiling session was conducted. Unlike standard profiling, which only captures high-level timing data, Deep Profiling tracks every C\# method call to provide a granular breakdown of the execution stack~\cite{UnityDocumentation}. 
+To understand why the Scripts consume the majority of the frame budget in the operational scenarios, a deep profiling session was conducted. Unlike standard profiling, which only captures high-level timing data, deep profiling tracks every C\# method call to provide a granular breakdown of the execution stack~\cite{UnityDocumentation}. 
 
-It is important to mention that Deep Profiling adds extra overhead, significantly increasing the execution time of small methods. Therefore, the absolute values in this section should not be seen as typical editor execution times but as relative indicators of computational complexity.
+It is important to mention that deep profiling adds extra overhead, significantly increasing the execution time of small methods. Therefore, the absolute values in this section should not be seen as typical editor execution times but as relative indicators of computational complexity.
 
 \begin{table}[H]
     \centering
-    \caption{Relative impact of key scripts during a Deep Profiling session.}
+    \caption{Relative impact of key scripts during a deep profiling session.}
     \label{tab:script_impact}
     \begin{tabular}{lrr}
         \toprule
@@ -203,9 +203,9 @@ It is important to mention that Deep Profiling adds extra overhead, significantl
 
 As summarized in Table~\ref{tab:script_impact}, the analysis identifies the image processing pipeline required for \hyperref[req:FR-11]{FR-11} Sensor Simulation and \hyperref[req:FR-15]{FR-15} AR Projection as the most demanding subsystem. The \texttt{CameraSensor.Update} method accounts for the majority of the script execution time. This cost is attributed to the \texttt{Texture2D.ReadPixels} operation, which transfers the rendered frame from the GPU to the CPU memory for serialization into a ROS~2 message. Similarly, the \texttt{RosImageToMaterial.Update}, which performs the inverse operation of uploading received textures to the GPU for AR projection, represents the second-largest cost.
 
-In contrast, the robotic logic and environmental interaction scripts showed a minimal computational footprint. The components detailed in Chapter \ref{ch:concept_and_implementation}, including the \texttt{LidarSensor} for raycasting, \texttt{TrackPainter} for texture modification, \texttt{ClockPublisher} for time sync, and \texttt{DynamicObjectManager}, all recorded execution times below 0.05 ms even under deep profiling instrumentation. 
+In contrast, the robotic logic and environmental interaction scripts showed a minimal computational footprint. The components detailed in Chapter~\ref{ch:concept_and_implementation}, including the \texttt{LidarSensor.cs} for raycasting, \texttt{TrackPainter.cs} for texture modification, \texttt{ClockPublisher.cs} for time sync, and \texttt{DynamicObjectManager.cs}, all recorded execution times below 0.05 ms even under deep profiling instrumentation. 
 
-For example, the \texttt{PoseRobotController}, which handles the synchronization of the Digital Twin's transform, consumed only 0.59 ms in the physics loop. This confirms that the architectural bottleneck of the system lies entirely in the memory bandwidth required for video streaming, while the core simulation logic, physics interactions, and ROS~2 state synchronization are more efficient.
+For example, the \texttt{PoseRobotController.cs}, which handles the synchronization of the Digital Twin's transform, consumed only 0.59 ms in the physics loop. This confirms that the architectural bottleneck of the system lies entirely in the memory bandwidth required for video streaming, while the core simulation logic, physics interactions, and ROS~2 state synchronization are more efficient.
 
 \section{Scalability and Stress Testing}
 \label{sec:scalability}
@@ -217,20 +217,20 @@ To ensure consistent results, objects were spawned in fixed batches followed by 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.95\textwidth]{images/scalability_comparison.png}
-    \caption{Scalability stress test illustrating CPU frame time vs. object count. The 60 FPS target (16.67 ms) serves as the threshold for visual stability in Mixed Reality.}
+    \caption{Scalability stress test illustrating CPU frame time vs. object count. The 60 FPS target (16.67~ms) serves as the threshold for visual stability in Mixed Reality.}
     \label{fig:scalability_chart}
 \end{figure}
 
-The evaluation of settled objects (\textit{Non-VR Settled}) on a desktop display shows the engine’s rendering efficiency, keeping a frame time between 3.12 ms and 3.68 ms for up to 9,000 objects. Gehricke~\cite{Geh24} reported an average update time of approximately 3.75 ms for his 2D Pygame visualizer, with spikes occurring around 11,250 objects. The proposed Unity-based architecture matches and slightly improves upon this baseline, despite rendering a full 3D environment.
+The evaluation of settled objects (\textit{Non-VR Settled}) on a desktop display shows the engine's rendering efficiency, keeping a frame time between 3.12~ms and 3.68~ms for up to 9,000 objects. Gehricke~\cite{Geh24} reported an average update time of approximately 3.75~ms for his 2D Pygame visualizer, with spikes occurring around 11,250 objects. The proposed Unity-based architecture matches and slightly improves upon this baseline, despite rendering a full 3D environment.
 
-When activating Virtual Reality (\textit{VR Settled}), the frame time stabilizes at around 13.8 ms. This constant overhead is characteristic of the stereoscopic rendering pipeline and the synchronization needed for the 72 Hz display of the Meta Quest Pro (\hyperref[req:FR-03]{FR-03}). As noted in the scenario analysis, this figure mainly reflects V-Sync wait time instead of active computation limits. In this static state, the system successfully maintains the required 60 FPS threshold for up to 30,000 objects, significantly surpassing the limit seen in the original VERA framework~\cite{Geh24}.
+When activating Virtual Reality (\textit{VR Settled}), the frame time stabilizes at around 13.8~ms. This constant overhead is characteristic of the stereoscopic rendering pipeline and the synchronization needed for the 72~Hz display of the Meta Quest Pro (\hyperref[req:FR-03]{FR-03}). As noted in the scenario analysis, this figure mainly reflects V-Sync wait time instead of active computation limits. In this static state, the system successfully maintains the required 60 FPS threshold for up to 30,000 objects, significantly surpassing the limit seen in the original VERA framework~\cite{Geh24}.
 
-However, the evaluation of dynamic physical interactions (\textit{Active}) reveals the computational bottleneck. Unlike the previous work which relied on simple distance heuristics, this system simulates mass, inertia, and friction using Nvidia PhysX. While rendering scales linearly, the cost of resolving thousands of simultaneous physical collisions increases exponentially. The system remains performant for up to 3,000 dynamic objects, but exceeds the 16.67 ms threshold beyond 5,000 objects. This limit is well above the needs of the implemented scenarios, such as the \hyperref[subsec:eval_farming]{Farm} or \hyperref[subsec:eval_logistics]{Logistics} applications, which contain fewer than 50 dynamic objects.
+However, the evaluation of dynamic physical interactions (\textit{Active}) reveals the computational bottleneck. Unlike the previous work which relied on simple distance heuristics, this system simulates mass, inertia, and friction using Nvidia PhysX. While rendering scales linearly, the cost of resolving thousands of simultaneous physical collisions increases exponentially. The system remains performant for up to 3,000 dynamic objects, but exceeds the 16.67~ms threshold beyond 5,000 objects. This limit is well above the needs of the implemented scenarios, such as the \hyperref[subsec:eval_farming]{Smart Farming} or \hyperref[subsec:eval_logistics]{Logistics} applications, which contain fewer than 50 dynamic objects.
 
 \section{Latency Analysis}
 \label{sec:latency_analysis}
 
-System responsiveness was evaluated by measuring the visualization latency to validate the low latency requirement (\hyperref[req:NFR-01]{NFR-01}). This metric represents the time between receiving a pose update from the ArUco tracking system and finishing the rendered frame that shows that update. A custom \texttt{LatencyMonitor} script was utilized to capture timestamps across the four operational scenarios.
+System responsiveness was evaluated by measuring the visualization latency to validate the low latency requirement (\hyperref[req:NFR-01]{NFR-01}). This metric represents the time between receiving a pose update from the ArUco tracking system and finishing the rendered frame that shows that update. A custom \texttt{LatencyMonitor.cs} script was utilized to capture timestamps across the four operational scenarios.
 
 Figure~\ref{fig:latency_chart} shows the recorded latency for both the standalone AR Projection setup and the mixed AR and VR operation. When using the AR Projection alone, the system shows high responsiveness. Average latencies range from 3.02 ms in the simple \hyperref[subsec:eval_path_following]{Paint} scenario to 4.41 ms in the more complex \hyperref[subsec:eval_farming]{Farm} environment.
 
