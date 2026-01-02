@@ -227,7 +227,7 @@ The evaluation of settled objects (\textit{Non-VR Settled}) on a desktop display
 When activating Virtual Reality (\textit{VR Settled}), the frame time stabilizes at around 13.8 ms. This constant overhead is characteristic of the stereoscopic rendering pipeline and the synchronization needed for the 72 Hz display of the Meta Quest Pro (\hyperref[req:FR-03]{FR-03}). As noted in the scenario analysis, this figure mainly reflects V-Sync wait time instead of active computation limits. In this static state, the system successfully maintains the required 60 FPS threshold for up to 30,000 objects, significantly surpassing the limit seen in the original VERA framework~\cite{Geh24}.
 
 However, the evaluation of dynamic physical interactions (\textit{Active}) reveals the computational bottleneck. Unlike the previous work which relied on simple distance heuristics, this system simulates mass, inertia, and friction using Nvidia PhysX. While rendering scales linearly, the cost of resolving thousands of simultaneous physical collisions increases exponentially. The system remains performant for up to 3,000 dynamic objects, but exceeds the 16.67 ms threshold beyond 5,000 objects. This limit is well above the needs of the implemented scenarios, such as the \hyperref[subsec:eval_farming]{Farm} or \hyperref[subsec:eval_logistics]{Logistics} applications, which contain fewer than 50 dynamic objects.
-%#########################################################################################################################
+%#####################################################fertig####################################################################
 \section{Latency Analysis}
 \label{sec:latency_analysis}
 
